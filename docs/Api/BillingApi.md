@@ -1,4 +1,4 @@
-# Swagger\Client\BillingApi
+# Anketolog\BillingApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **billingPaymentCreate**
-> \Swagger\Client\Model\BillingPayment billingPaymentCreate($body)
+> \Anketolog\Model\BillingPayment billingPaymentCreate($body)
 
 
 
@@ -24,12 +24,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BillingApi();
-$body = new \Swagger\Client\Model\Body(); // \Swagger\Client\Model\Body | 
+$api_instance = new Anketolog\Api\BillingApi();
+$body = new \Anketolog\Model\Body(); // \Anketolog\Model\Body | 
 
 try {
     $result = $api_instance->billingPaymentCreate($body);
@@ -44,11 +44,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body**](../Model/\Swagger\Client\Model\Body.md)|  |
+ **body** | [**\Anketolog\Model\Body**](../Model/\Anketolog\Model\Body.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\BillingPayment**](../Model/BillingPayment.md)
+[**\Anketolog\Model\BillingPayment**](../Model/BillingPayment.md)
 
 ### Authorization
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingPaymentInfo**
-> \Swagger\Client\Model\BillingPayment billingPaymentInfo($body)
+> \Anketolog\Model\BillingPayment billingPaymentInfo($body)
 
 
 
@@ -74,12 +74,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BillingApi();
-$body = new \Swagger\Client\Model\Body1(); // \Swagger\Client\Model\Body1 | 
+$api_instance = new Anketolog\Api\BillingApi();
+$body = new \Anketolog\Model\Body1(); // \Anketolog\Model\Body1 | 
 
 try {
     $result = $api_instance->billingPaymentInfo($body);
@@ -94,11 +94,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body1**](../Model/\Swagger\Client\Model\Body1.md)|  |
+ **body** | [**\Anketolog\Model\Body1**](../Model/\Anketolog\Model\Body1.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\BillingPayment**](../Model/BillingPayment.md)
+[**\Anketolog\Model\BillingPayment**](../Model/BillingPayment.md)
 
 ### Authorization
 
@@ -112,7 +112,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingPaymentList**
-> \Swagger\Client\Model\BillingPayment[] billingPaymentList()
+> \Anketolog\Model\BillingPayment[] billingPaymentList()
 
 
 
@@ -124,11 +124,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BillingApi();
+$api_instance = new Anketolog\Api\BillingApi();
 
 try {
     $result = $api_instance->billingPaymentList();
@@ -144,7 +144,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\BillingPayment[]**](../Model/BillingPayment.md)
+[**\Anketolog\Model\BillingPayment[]**](../Model/BillingPayment.md)
 
 ### Authorization
 
@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingTransferInfo**
-> \Swagger\Client\Model\BillingTransfer billingTransferInfo($body)
+> \Anketolog\Model\BillingTransfer billingTransferInfo($body)
 
 
 
@@ -170,12 +170,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BillingApi();
-$body = new \Swagger\Client\Model\Body2(); // \Swagger\Client\Model\Body2 | 
+$api_instance = new Anketolog\Api\BillingApi();
+$body = new \Anketolog\Model\Body2(); // \Anketolog\Model\Body2 | 
 
 try {
     $result = $api_instance->billingTransferInfo($body);
@@ -190,11 +190,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body2**](../Model/\Swagger\Client\Model\Body2.md)|  |
+ **body** | [**\Anketolog\Model\Body2**](../Model/\Anketolog\Model\Body2.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\BillingTransfer**](../Model/BillingTransfer.md)
+[**\Anketolog\Model\BillingTransfer**](../Model/BillingTransfer.md)
 
 ### Authorization
 
@@ -208,7 +208,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingTransferList**
-> \Swagger\Client\Model\BillingTransfer[] billingTransferList()
+> \Anketolog\Model\BillingTransfer[] billingTransferList()
 
 
 
@@ -220,11 +220,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\BillingApi();
+$api_instance = new Anketolog\Api\BillingApi();
 
 try {
     $result = $api_instance->billingTransferList();
@@ -240,7 +240,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\BillingTransfer[]**](../Model/BillingTransfer.md)
+[**\Anketolog\Model\BillingTransfer[]**](../Model/BillingTransfer.md)
 
 ### Authorization
 

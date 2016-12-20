@@ -5,7 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **survey_id** | **int** | ID опроса | 
 **name** | **string** | Название кампании | 
-**targeting** | [**\Swagger\Client\Model\CampaignTargeting**](CampaignTargeting.md) |  | 
+**targeting** | [**\Anketolog\Model\CampaignTargeting**](CampaignTargeting.md) |  | 
 **unique_respondents** | **bool** | Исключить повторные ответы | 
 **answer_count** | **int** | Количество ответов | 
 **answer_price** | **int** | Стоимсоть ответа | 

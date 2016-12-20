@@ -1,4 +1,4 @@
-# Swagger\Client\PlanApi
+# Anketolog\PlanApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **planManageChange**
-> \Swagger\Client\Model\PlanUserPlan planManageChange($body)
+> \Anketolog\Model\PlanUserPlan planManageChange($body)
 
 
 
@@ -22,12 +22,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\PlanApi();
-$body = new \Swagger\Client\Model\Body23(); // \Swagger\Client\Model\Body23 | 
+$api_instance = new Anketolog\Api\PlanApi();
+$body = new \Anketolog\Model\Body23(); // \Anketolog\Model\Body23 | 
 
 try {
     $result = $api_instance->planManageChange($body);
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body23**](../Model/\Swagger\Client\Model\Body23.md)|  |
+ **body** | [**\Anketolog\Model\Body23**](../Model/\Anketolog\Model\Body23.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\PlanUserPlan**](../Model/PlanUserPlan.md)
+[**\Anketolog\Model\PlanUserPlan**](../Model/PlanUserPlan.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **planManageCurrent**
-> \Swagger\Client\Model\PlanUserPlan planManageCurrent()
+> \Anketolog\Model\PlanUserPlan planManageCurrent()
 
 
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\PlanApi();
+$api_instance = new Anketolog\Api\PlanApi();
 
 try {
     $result = $api_instance->planManageCurrent();
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\PlanUserPlan**](../Model/PlanUserPlan.md)
+[**\Anketolog\Model\PlanUserPlan**](../Model/PlanUserPlan.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **planManageList**
-> \Swagger\Client\Model\PlanPlan[] planManageList()
+> \Anketolog\Model\PlanPlan[] planManageList()
 
 
 
@@ -118,11 +118,11 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\PlanApi();
+$api_instance = new Anketolog\Api\PlanApi();
 
 try {
     $result = $api_instance->planManageList();
@@ -138,7 +138,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\PlanPlan[]**](../Model/PlanPlan.md)
+[**\Anketolog\Model\PlanPlan[]**](../Model/PlanPlan.md)
 
 ### Authorization
 

@@ -22,7 +22,7 @@ Name | Type | Description | Notes
 **disable_ad** | **bool** | Отключить рекламу в опросе | 
 **custom_css** | **string** | Пользователькая css | 
 **credentials_enable** | **bool** | Заполнения опроса по логину и паролю | 
-**credentials** | [**\Swagger\Client\Model\SurveyCredential[]**](SurveyCredential.md) |  | 
+**credentials** | [**\Anketolog\Model\SurveyCredential[]**](SurveyCredential.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

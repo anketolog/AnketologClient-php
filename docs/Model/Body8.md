@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **campaign_id** | **int** |  | 
 **survey_id** | **int** | ID опроса | [optional] 
 **name** | **string** | Название кампании | [optional] 
-**targeting** | [**\Swagger\Client\Model\CampaignTargeting**](CampaignTargeting.md) |  | [optional] 
+**targeting** | [**\Anketolog\Model\CampaignTargeting**](CampaignTargeting.md) |  | [optional] 
 **unique_respondents** | **bool** | Исключить повторные ответы | [optional] 
 **answer_count** | **int** | Количество ответов | [optional] 
 **answer_price** | **int** | Стоимсоть ответа | [optional] 

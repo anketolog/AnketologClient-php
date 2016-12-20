@@ -13,10 +13,6 @@
         {
             "name": "Swagger and contributors",
             "homepage": "https://github.com/swagger-api/swagger-codegen"
-        },
-        {
-            "name": "Anketolog",
-            "homepage": "https://anketolog.ru"
         }
     ],
     "require": {
@@ -31,9 +27,9 @@
         "squizlabs/php_codesniffer": "~2.6"
     },
     "autoload": {
-        "psr-4": { "Swagger\\Client\\" : "lib/" }
+        "psr-4": { "Anketolog\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Swagger\\Client\\" : "test/" }
+        "psr-4": { "Anketolog\\" : "test/" }
     }
 }

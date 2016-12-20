@@ -1,4 +1,4 @@
-# Swagger\Client\CampaignApi
+# Anketolog\CampaignApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **campaignManageCalculate**
-> \Swagger\Client\Model\CampaignCalculate campaignManageCalculate($body)
+> \Anketolog\Model\CampaignCalculate campaignManageCalculate($body)
 
 
 
@@ -28,12 +28,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body3(); // \Swagger\Client\Model\Body3 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body3(); // \Anketolog\Model\Body3 | 
 
 try {
     $result = $api_instance->campaignManageCalculate($body);
@@ -48,11 +48,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body3**](../Model/\Swagger\Client\Model\Body3.md)|  |
+ **body** | [**\Anketolog\Model\Body3**](../Model/\Anketolog\Model\Body3.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCalculate**](../Model/CampaignCalculate.md)
+[**\Anketolog\Model\CampaignCalculate**](../Model/CampaignCalculate.md)
 
 ### Authorization
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageCreate**
-> \Swagger\Client\Model\CampaignCampaign campaignManageCreate($body)
+> \Anketolog\Model\CampaignCampaign campaignManageCreate($body)
 
 
 
@@ -78,12 +78,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body4(); // \Swagger\Client\Model\Body4 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body4(); // \Anketolog\Model\Body4 | 
 
 try {
     $result = $api_instance->campaignManageCreate($body);
@@ -98,11 +98,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body4**](../Model/\Swagger\Client\Model\Body4.md)|  |
+ **body** | [**\Anketolog\Model\Body4**](../Model/\Anketolog\Model\Body4.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
+[**\Anketolog\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
 
 ### Authorization
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageFinish**
-> \Swagger\Client\Model\CampaignCampaign campaignManageFinish($body)
+> \Anketolog\Model\CampaignCampaign campaignManageFinish($body)
 
 
 
@@ -128,12 +128,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body5(); // \Swagger\Client\Model\Body5 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body5(); // \Anketolog\Model\Body5 | 
 
 try {
     $result = $api_instance->campaignManageFinish($body);
@@ -148,11 +148,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body5**](../Model/\Swagger\Client\Model\Body5.md)|  |
+ **body** | [**\Anketolog\Model\Body5**](../Model/\Anketolog\Model\Body5.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
+[**\Anketolog\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
 
 ### Authorization
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageInfo**
-> \Swagger\Client\Model\CampaignCampaign campaignManageInfo($body)
+> \Anketolog\Model\CampaignCampaign campaignManageInfo($body)
 
 
 
@@ -178,12 +178,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body6(); // \Swagger\Client\Model\Body6 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body6(); // \Anketolog\Model\Body6 | 
 
 try {
     $result = $api_instance->campaignManageInfo($body);
@@ -198,11 +198,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body6**](../Model/\Swagger\Client\Model\Body6.md)|  |
+ **body** | [**\Anketolog\Model\Body6**](../Model/\Anketolog\Model\Body6.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
+[**\Anketolog\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
 
 ### Authorization
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageList**
-> \Swagger\Client\Model\CampaignCampaign[] campaignManageList()
+> \Anketolog\Model\CampaignCampaign[] campaignManageList()
 
 
 
@@ -228,11 +228,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
+$api_instance = new Anketolog\Api\CampaignApi();
 
 try {
     $result = $api_instance->campaignManageList();
@@ -248,7 +248,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCampaign[]**](../Model/CampaignCampaign.md)
+[**\Anketolog\Model\CampaignCampaign[]**](../Model/CampaignCampaign.md)
 
 ### Authorization
 
@@ -262,7 +262,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageStart**
-> \Swagger\Client\Model\CampaignCampaign campaignManageStart($body)
+> \Anketolog\Model\CampaignCampaign campaignManageStart($body)
 
 
 
@@ -274,12 +274,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body7(); // \Swagger\Client\Model\Body7 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body7(); // \Anketolog\Model\Body7 | 
 
 try {
     $result = $api_instance->campaignManageStart($body);
@@ -294,11 +294,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body7**](../Model/\Swagger\Client\Model\Body7.md)|  |
+ **body** | [**\Anketolog\Model\Body7**](../Model/\Anketolog\Model\Body7.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
+[**\Anketolog\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
 
 ### Authorization
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageUpdate**
-> \Swagger\Client\Model\CampaignCampaign campaignManageUpdate($body)
+> \Anketolog\Model\CampaignCampaign campaignManageUpdate($body)
 
 
 
@@ -324,12 +324,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body8(); // \Swagger\Client\Model\Body8 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body8(); // \Anketolog\Model\Body8 | 
 
 try {
     $result = $api_instance->campaignManageUpdate($body);
@@ -344,11 +344,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body8**](../Model/\Swagger\Client\Model\Body8.md)|  |
+ **body** | [**\Anketolog\Model\Body8**](../Model/\Anketolog\Model\Body8.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
+[**\Anketolog\Model\CampaignCampaign**](../Model/CampaignCampaign.md)
 
 ### Authorization
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignTransferInfo**
-> \Swagger\Client\Model\CampaignTransfer campaignTransferInfo($body)
+> \Anketolog\Model\CampaignTransfer campaignTransferInfo($body)
 
 
 
@@ -374,12 +374,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
-$body = new \Swagger\Client\Model\Body9(); // \Swagger\Client\Model\Body9 | 
+$api_instance = new Anketolog\Api\CampaignApi();
+$body = new \Anketolog\Model\Body9(); // \Anketolog\Model\Body9 | 
 
 try {
     $result = $api_instance->campaignTransferInfo($body);
@@ -394,11 +394,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body9**](../Model/\Swagger\Client\Model\Body9.md)|  |
+ **body** | [**\Anketolog\Model\Body9**](../Model/\Anketolog\Model\Body9.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignTransfer**](../Model/CampaignTransfer.md)
+[**\Anketolog\Model\CampaignTransfer**](../Model/CampaignTransfer.md)
 
 ### Authorization
 
@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignTransferList**
-> \Swagger\Client\Model\CampaignTransfer[] campaignTransferList()
+> \Anketolog\Model\CampaignTransfer[] campaignTransferList()
 
 
 
@@ -424,11 +424,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\CampaignApi();
+$api_instance = new Anketolog\Api\CampaignApi();
 
 try {
     $result = $api_instance->campaignTransferList();
@@ -444,7 +444,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\CampaignTransfer[]**](../Model/CampaignTransfer.md)
+[**\Anketolog\Model\CampaignTransfer[]**](../Model/CampaignTransfer.md)
 
 ### Authorization
 

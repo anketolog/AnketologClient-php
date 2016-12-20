@@ -1,4 +1,4 @@
-# Swagger\Client\SurveyApi
+# Anketolog\SurveyApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 
 # **surveyAnswerInfo**
-> \Swagger\Client\Model\SurveyAnswer surveyAnswerInfo($body)
+> \Anketolog\Model\SurveyAnswer surveyAnswerInfo($body)
 
 
 
@@ -53,12 +53,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body24(); // \Swagger\Client\Model\Body24 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body24(); // \Anketolog\Model\Body24 | 
 
 try {
     $result = $api_instance->surveyAnswerInfo($body);
@@ -73,11 +73,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body24**](../Model/\Swagger\Client\Model\Body24.md)|  |
+ **body** | [**\Anketolog\Model\Body24**](../Model/\Anketolog\Model\Body24.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyAnswer**](../Model/SurveyAnswer.md)
+[**\Anketolog\Model\SurveyAnswer**](../Model/SurveyAnswer.md)
 
 ### Authorization
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyAnswerList**
-> \Swagger\Client\Model\SurveyAnswer[] surveyAnswerList($body)
+> \Anketolog\Model\SurveyAnswer[] surveyAnswerList($body)
 
 
 
@@ -103,12 +103,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body25(); // \Swagger\Client\Model\Body25 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body25(); // \Anketolog\Model\Body25 | 
 
 try {
     $result = $api_instance->surveyAnswerList($body);
@@ -123,11 +123,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body25**](../Model/\Swagger\Client\Model\Body25.md)|  |
+ **body** | [**\Anketolog\Model\Body25**](../Model/\Anketolog\Model\Body25.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyAnswer[]**](../Model/SurveyAnswer.md)
+[**\Anketolog\Model\SurveyAnswer[]**](../Model/SurveyAnswer.md)
 
 ### Authorization
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorCreatealias**
-> \Swagger\Client\Model\SurveyAliasCollector surveyCollectorCreatealias($body)
+> \Anketolog\Model\SurveyAliasCollector surveyCollectorCreatealias($body)
 
 
 
@@ -153,12 +153,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body26(); // \Swagger\Client\Model\Body26 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body26(); // \Anketolog\Model\Body26 | 
 
 try {
     $result = $api_instance->surveyCollectorCreatealias($body);
@@ -173,11 +173,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body26**](../Model/\Swagger\Client\Model\Body26.md)|  |
+ **body** | [**\Anketolog\Model\Body26**](../Model/\Anketolog\Model\Body26.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyAliasCollector**](../Model/SurveyAliasCollector.md)
+[**\Anketolog\Model\SurveyAliasCollector**](../Model/SurveyAliasCollector.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorCreateextralink**
-> \Swagger\Client\Model\SurveyExtralinkCollector surveyCollectorCreateextralink($body)
+> \Anketolog\Model\SurveyExtralinkCollector surveyCollectorCreateextralink($body)
 
 
 
@@ -203,12 +203,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body27(); // \Swagger\Client\Model\Body27 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body27(); // \Anketolog\Model\Body27 | 
 
 try {
     $result = $api_instance->surveyCollectorCreateextralink($body);
@@ -223,11 +223,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body27**](../Model/\Swagger\Client\Model\Body27.md)|  |
+ **body** | [**\Anketolog\Model\Body27**](../Model/\Anketolog\Model\Body27.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyExtralinkCollector**](../Model/SurveyExtralinkCollector.md)
+[**\Anketolog\Model\SurveyExtralinkCollector**](../Model/SurveyExtralinkCollector.md)
 
 ### Authorization
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorCreatewidget**
-> \Swagger\Client\Model\SurveyWidgetCollector surveyCollectorCreatewidget($body)
+> \Anketolog\Model\SurveyWidgetCollector surveyCollectorCreatewidget($body)
 
 
 
@@ -253,12 +253,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body28(); // \Swagger\Client\Model\Body28 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body28(); // \Anketolog\Model\Body28 | 
 
 try {
     $result = $api_instance->surveyCollectorCreatewidget($body);
@@ -273,11 +273,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body28**](../Model/\Swagger\Client\Model\Body28.md)|  |
+ **body** | [**\Anketolog\Model\Body28**](../Model/\Anketolog\Model\Body28.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyWidgetCollector**](../Model/SurveyWidgetCollector.md)
+[**\Anketolog\Model\SurveyWidgetCollector**](../Model/SurveyWidgetCollector.md)
 
 ### Authorization
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorList**
-> \Swagger\Client\Model\SurveyCollector surveyCollectorList($body)
+> \Anketolog\Model\SurveyCollector surveyCollectorList($body)
 
 
 
@@ -303,12 +303,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body29(); // \Swagger\Client\Model\Body29 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body29(); // \Anketolog\Model\Body29 | 
 
 try {
     $result = $api_instance->surveyCollectorList($body);
@@ -323,11 +323,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body29**](../Model/\Swagger\Client\Model\Body29.md)|  |
+ **body** | [**\Anketolog\Model\Body29**](../Model/\Anketolog\Model\Body29.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyCollector**](../Model/SurveyCollector.md)
+[**\Anketolog\Model\SurveyCollector**](../Model/SurveyCollector.md)
 
 ### Authorization
 
@@ -353,12 +353,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body30(); // \Swagger\Client\Model\Body30 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body30(); // \Anketolog\Model\Body30 | 
 
 try {
     $result = $api_instance->surveyCollectorRemoveextralink($body);
@@ -373,7 +373,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body30**](../Model/\Swagger\Client\Model\Body30.md)|  |
+ **body** | [**\Anketolog\Model\Body30**](../Model/\Anketolog\Model\Body30.md)|  |
 
 ### Return type
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorUpdatealias**
-> \Swagger\Client\Model\SurveyAliasCollector surveyCollectorUpdatealias($body)
+> \Anketolog\Model\SurveyAliasCollector surveyCollectorUpdatealias($body)
 
 
 
@@ -403,12 +403,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body31(); // \Swagger\Client\Model\Body31 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body31(); // \Anketolog\Model\Body31 | 
 
 try {
     $result = $api_instance->surveyCollectorUpdatealias($body);
@@ -423,11 +423,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body31**](../Model/\Swagger\Client\Model\Body31.md)|  |
+ **body** | [**\Anketolog\Model\Body31**](../Model/\Anketolog\Model\Body31.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyAliasCollector**](../Model/SurveyAliasCollector.md)
+[**\Anketolog\Model\SurveyAliasCollector**](../Model/SurveyAliasCollector.md)
 
 ### Authorization
 
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorUpdateextralink**
-> \Swagger\Client\Model\SurveyExtralinkCollector surveyCollectorUpdateextralink($body)
+> \Anketolog\Model\SurveyExtralinkCollector surveyCollectorUpdateextralink($body)
 
 
 
@@ -453,12 +453,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body32(); // \Swagger\Client\Model\Body32 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body32(); // \Anketolog\Model\Body32 | 
 
 try {
     $result = $api_instance->surveyCollectorUpdateextralink($body);
@@ -473,11 +473,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body32**](../Model/\Swagger\Client\Model\Body32.md)|  |
+ **body** | [**\Anketolog\Model\Body32**](../Model/\Anketolog\Model\Body32.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyExtralinkCollector**](../Model/SurveyExtralinkCollector.md)
+[**\Anketolog\Model\SurveyExtralinkCollector**](../Model/SurveyExtralinkCollector.md)
 
 ### Authorization
 
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorUpdatewidget**
-> \Swagger\Client\Model\SurveyWidgetCollector surveyCollectorUpdatewidget($body)
+> \Anketolog\Model\SurveyWidgetCollector surveyCollectorUpdatewidget($body)
 
 
 
@@ -503,12 +503,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body33(); // \Swagger\Client\Model\Body33 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body33(); // \Anketolog\Model\Body33 | 
 
 try {
     $result = $api_instance->surveyCollectorUpdatewidget($body);
@@ -523,11 +523,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body33**](../Model/\Swagger\Client\Model\Body33.md)|  |
+ **body** | [**\Anketolog\Model\Body33**](../Model/\Anketolog\Model\Body33.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyWidgetCollector**](../Model/SurveyWidgetCollector.md)
+[**\Anketolog\Model\SurveyWidgetCollector**](../Model/SurveyWidgetCollector.md)
 
 ### Authorization
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyFilterCreate**
-> \Swagger\Client\Model\SurveyFilter surveyFilterCreate($body)
+> \Anketolog\Model\SurveyFilter surveyFilterCreate($body)
 
 
 
@@ -553,12 +553,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body34(); // \Swagger\Client\Model\Body34 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body34(); // \Anketolog\Model\Body34 | 
 
 try {
     $result = $api_instance->surveyFilterCreate($body);
@@ -573,11 +573,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body34**](../Model/\Swagger\Client\Model\Body34.md)|  |
+ **body** | [**\Anketolog\Model\Body34**](../Model/\Anketolog\Model\Body34.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyFilter**](../Model/SurveyFilter.md)
+[**\Anketolog\Model\SurveyFilter**](../Model/SurveyFilter.md)
 
 ### Authorization
 
@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyFilterInfo**
-> \Swagger\Client\Model\SurveyFilter surveyFilterInfo($body)
+> \Anketolog\Model\SurveyFilter surveyFilterInfo($body)
 
 
 
@@ -603,12 +603,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body35(); // \Swagger\Client\Model\Body35 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body35(); // \Anketolog\Model\Body35 | 
 
 try {
     $result = $api_instance->surveyFilterInfo($body);
@@ -623,11 +623,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body35**](../Model/\Swagger\Client\Model\Body35.md)|  |
+ **body** | [**\Anketolog\Model\Body35**](../Model/\Anketolog\Model\Body35.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyFilter**](../Model/SurveyFilter.md)
+[**\Anketolog\Model\SurveyFilter**](../Model/SurveyFilter.md)
 
 ### Authorization
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyFilterList**
-> \Swagger\Client\Model\SurveyFilter[] surveyFilterList()
+> \Anketolog\Model\SurveyFilter[] surveyFilterList()
 
 
 
@@ -653,11 +653,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
+$api_instance = new Anketolog\Api\SurveyApi();
 
 try {
     $result = $api_instance->surveyFilterList();
@@ -673,7 +673,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyFilter[]**](../Model/SurveyFilter.md)
+[**\Anketolog\Model\SurveyFilter[]**](../Model/SurveyFilter.md)
 
 ### Authorization
 
@@ -687,7 +687,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageArchive**
-> \Swagger\Client\Model\SurveySurvey surveyManageArchive($body)
+> \Anketolog\Model\SurveySurvey surveyManageArchive($body)
 
 
 
@@ -699,12 +699,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body36(); // \Swagger\Client\Model\Body36 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body36(); // \Anketolog\Model\Body36 | 
 
 try {
     $result = $api_instance->surveyManageArchive($body);
@@ -719,11 +719,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body36**](../Model/\Swagger\Client\Model\Body36.md)|  |
+ **body** | [**\Anketolog\Model\Body36**](../Model/\Anketolog\Model\Body36.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageCopy**
-> \Swagger\Client\Model\SurveySurvey surveyManageCopy($body)
+> \Anketolog\Model\SurveySurvey surveyManageCopy($body)
 
 
 
@@ -749,12 +749,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body37(); // \Swagger\Client\Model\Body37 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body37(); // \Anketolog\Model\Body37 | 
 
 try {
     $result = $api_instance->surveyManageCopy($body);
@@ -769,11 +769,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body37**](../Model/\Swagger\Client\Model\Body37.md)|  |
+ **body** | [**\Anketolog\Model\Body37**](../Model/\Anketolog\Model\Body37.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -787,7 +787,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageCreate**
-> \Swagger\Client\Model\SurveySurvey surveyManageCreate($body)
+> \Anketolog\Model\SurveySurvey surveyManageCreate($body)
 
 
 
@@ -799,12 +799,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body38(); // \Swagger\Client\Model\Body38 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body38(); // \Anketolog\Model\Body38 | 
 
 try {
     $result = $api_instance->surveyManageCreate($body);
@@ -819,11 +819,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body38**](../Model/\Swagger\Client\Model\Body38.md)|  |
+ **body** | [**\Anketolog\Model\Body38**](../Model/\Anketolog\Model\Body38.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -849,12 +849,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body39(); // \Swagger\Client\Model\Body39 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body39(); // \Anketolog\Model\Body39 | 
 
 try {
     $result = $api_instance->surveyManageDelete($body);
@@ -869,7 +869,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body39**](../Model/\Swagger\Client\Model\Body39.md)|  |
+ **body** | [**\Anketolog\Model\Body39**](../Model/\Anketolog\Model\Body39.md)|  |
 
 ### Return type
 
@@ -887,7 +887,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageInfo**
-> \Swagger\Client\Model\SurveySurvey surveyManageInfo($body)
+> \Anketolog\Model\SurveySurvey surveyManageInfo($body)
 
 
 
@@ -899,12 +899,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body40(); // \Swagger\Client\Model\Body40 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body40(); // \Anketolog\Model\Body40 | 
 
 try {
     $result = $api_instance->surveyManageInfo($body);
@@ -919,11 +919,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body40**](../Model/\Swagger\Client\Model\Body40.md)|  |
+ **body** | [**\Anketolog\Model\Body40**](../Model/\Anketolog\Model\Body40.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -937,7 +937,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageList**
-> \Swagger\Client\Model\SurveySurvey[] surveyManageList()
+> \Anketolog\Model\SurveySurvey[] surveyManageList()
 
 
 
@@ -949,11 +949,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
+$api_instance = new Anketolog\Api\SurveyApi();
 
 try {
     $result = $api_instance->surveyManageList();
@@ -969,7 +969,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey[]**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey[]**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -983,7 +983,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageRestore**
-> \Swagger\Client\Model\SurveySurvey surveyManageRestore($body)
+> \Anketolog\Model\SurveySurvey surveyManageRestore($body)
 
 
 
@@ -995,12 +995,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body41(); // \Swagger\Client\Model\Body41 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body41(); // \Anketolog\Model\Body41 | 
 
 try {
     $result = $api_instance->surveyManageRestore($body);
@@ -1015,11 +1015,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body41**](../Model/\Swagger\Client\Model\Body41.md)|  |
+ **body** | [**\Anketolog\Model\Body41**](../Model/\Anketolog\Model\Body41.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageUpdate**
-> \Swagger\Client\Model\SurveySurvey surveyManageUpdate($body)
+> \Anketolog\Model\SurveySurvey surveyManageUpdate($body)
 
 
 
@@ -1045,12 +1045,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body42(); // \Swagger\Client\Model\Body42 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body42(); // \Anketolog\Model\Body42 | 
 
 try {
     $result = $api_instance->surveyManageUpdate($body);
@@ -1065,11 +1065,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body42**](../Model/\Swagger\Client\Model\Body42.md)|  |
+ **body** | [**\Anketolog\Model\Body42**](../Model/\Anketolog\Model\Body42.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySurvey**](../Model/SurveySurvey.md)
+[**\Anketolog\Model\SurveySurvey**](../Model/SurveySurvey.md)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportAggregate**
-> \Swagger\Client\Model\SurveyReportAggregate surveyReportAggregate($body)
+> \Anketolog\Model\SurveyReportAggregate surveyReportAggregate($body)
 
 
 
@@ -1095,12 +1095,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body43(); // \Swagger\Client\Model\Body43 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body43(); // \Anketolog\Model\Body43 | 
 
 try {
     $result = $api_instance->surveyReportAggregate($body);
@@ -1115,11 +1115,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body43**](../Model/\Swagger\Client\Model\Body43.md)|  |
+ **body** | [**\Anketolog\Model\Body43**](../Model/\Anketolog\Model\Body43.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyReportAggregate**](../Model/SurveyReportAggregate.md)
+[**\Anketolog\Model\SurveyReportAggregate**](../Model/SurveyReportAggregate.md)
 
 ### Authorization
 
@@ -1133,7 +1133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportCreate**
-> \Swagger\Client\Model\SurveyReport surveyReportCreate($body)
+> \Anketolog\Model\SurveyReport surveyReportCreate($body)
 
 
 
@@ -1145,12 +1145,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body44(); // \Swagger\Client\Model\Body44 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body44(); // \Anketolog\Model\Body44 | 
 
 try {
     $result = $api_instance->surveyReportCreate($body);
@@ -1165,11 +1165,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body44**](../Model/\Swagger\Client\Model\Body44.md)|  |
+ **body** | [**\Anketolog\Model\Body44**](../Model/\Anketolog\Model\Body44.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyReport**](../Model/SurveyReport.md)
+[**\Anketolog\Model\SurveyReport**](../Model/SurveyReport.md)
 
 ### Authorization
 
@@ -1183,7 +1183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportDetail**
-> \Swagger\Client\Model\SurveyReportDetail surveyReportDetail($body)
+> \Anketolog\Model\SurveyReportDetail surveyReportDetail($body)
 
 
 
@@ -1195,12 +1195,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body45(); // \Swagger\Client\Model\Body45 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body45(); // \Anketolog\Model\Body45 | 
 
 try {
     $result = $api_instance->surveyReportDetail($body);
@@ -1215,11 +1215,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body45**](../Model/\Swagger\Client\Model\Body45.md)|  |
+ **body** | [**\Anketolog\Model\Body45**](../Model/\Anketolog\Model\Body45.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyReportDetail**](../Model/SurveyReportDetail.md)
+[**\Anketolog\Model\SurveyReportDetail**](../Model/SurveyReportDetail.md)
 
 ### Authorization
 
@@ -1233,7 +1233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportInfo**
-> \Swagger\Client\Model\SurveyReport surveyReportInfo($body)
+> \Anketolog\Model\SurveyReport surveyReportInfo($body)
 
 
 
@@ -1245,12 +1245,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body46(); // \Swagger\Client\Model\Body46 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body46(); // \Anketolog\Model\Body46 | 
 
 try {
     $result = $api_instance->surveyReportInfo($body);
@@ -1265,11 +1265,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body46**](../Model/\Swagger\Client\Model\Body46.md)|  |
+ **body** | [**\Anketolog\Model\Body46**](../Model/\Anketolog\Model\Body46.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyReport**](../Model/SurveyReport.md)
+[**\Anketolog\Model\SurveyReport**](../Model/SurveyReport.md)
 
 ### Authorization
 
@@ -1283,7 +1283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportList**
-> \Swagger\Client\Model\SurveyReport[] surveyReportList($body)
+> \Anketolog\Model\SurveyReport[] surveyReportList($body)
 
 
 
@@ -1295,12 +1295,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body47(); // \Swagger\Client\Model\Body47 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body47(); // \Anketolog\Model\Body47 | 
 
 try {
     $result = $api_instance->surveyReportList($body);
@@ -1315,11 +1315,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body47**](../Model/\Swagger\Client\Model\Body47.md)|  |
+ **body** | [**\Anketolog\Model\Body47**](../Model/\Anketolog\Model\Body47.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyReport[]**](../Model/SurveyReport.md)
+[**\Anketolog\Model\SurveyReport[]**](../Model/SurveyReport.md)
 
 ### Authorization
 
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyRevisionInfo**
-> \Swagger\Client\Model\SurveyRevision surveyRevisionInfo($body)
+> \Anketolog\Model\SurveyRevision surveyRevisionInfo($body)
 
 
 
@@ -1345,12 +1345,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body48(); // \Swagger\Client\Model\Body48 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body48(); // \Anketolog\Model\Body48 | 
 
 try {
     $result = $api_instance->surveyRevisionInfo($body);
@@ -1365,11 +1365,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body48**](../Model/\Swagger\Client\Model\Body48.md)|  |
+ **body** | [**\Anketolog\Model\Body48**](../Model/\Anketolog\Model\Body48.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyRevision**](../Model/SurveyRevision.md)
+[**\Anketolog\Model\SurveyRevision**](../Model/SurveyRevision.md)
 
 ### Authorization
 
@@ -1383,7 +1383,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyRevisionList**
-> \Swagger\Client\Model\SurveyRevision[] surveyRevisionList($body)
+> \Anketolog\Model\SurveyRevision[] surveyRevisionList($body)
 
 
 
@@ -1395,12 +1395,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body49(); // \Swagger\Client\Model\Body49 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body49(); // \Anketolog\Model\Body49 | 
 
 try {
     $result = $api_instance->surveyRevisionList($body);
@@ -1415,11 +1415,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body49**](../Model/\Swagger\Client\Model\Body49.md)|  |
+ **body** | [**\Anketolog\Model\Body49**](../Model/\Anketolog\Model\Body49.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyRevision[]**](../Model/SurveyRevision.md)
+[**\Anketolog\Model\SurveyRevision[]**](../Model/SurveyRevision.md)
 
 ### Authorization
 
@@ -1433,7 +1433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeCreate**
-> \Swagger\Client\Model\SurveySubscribe surveySubscribeCreate($body)
+> \Anketolog\Model\SurveySubscribe surveySubscribeCreate($body)
 
 
 
@@ -1445,12 +1445,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body50(); // \Swagger\Client\Model\Body50 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body50(); // \Anketolog\Model\Body50 | 
 
 try {
     $result = $api_instance->surveySubscribeCreate($body);
@@ -1465,11 +1465,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body50**](../Model/\Swagger\Client\Model\Body50.md)|  |
+ **body** | [**\Anketolog\Model\Body50**](../Model/\Anketolog\Model\Body50.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySubscribe**](../Model/SurveySubscribe.md)
+[**\Anketolog\Model\SurveySubscribe**](../Model/SurveySubscribe.md)
 
 ### Authorization
 
@@ -1483,7 +1483,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeDelete**
-> \Swagger\Client\Model\CountryItem surveySubscribeDelete($body)
+> \Anketolog\Model\CountryItem surveySubscribeDelete($body)
 
 
 
@@ -1495,12 +1495,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body51(); // \Swagger\Client\Model\Body51 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body51(); // \Anketolog\Model\Body51 | 
 
 try {
     $result = $api_instance->surveySubscribeDelete($body);
@@ -1515,11 +1515,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body51**](../Model/\Swagger\Client\Model\Body51.md)|  |
+ **body** | [**\Anketolog\Model\Body51**](../Model/\Anketolog\Model\Body51.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\CountryItem**](../Model/CountryItem.md)
+[**\Anketolog\Model\CountryItem**](../Model/CountryItem.md)
 
 ### Authorization
 
@@ -1533,7 +1533,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeInfo**
-> \Swagger\Client\Model\SurveySubscribe surveySubscribeInfo($body)
+> \Anketolog\Model\SurveySubscribe surveySubscribeInfo($body)
 
 
 
@@ -1545,12 +1545,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body52(); // \Swagger\Client\Model\Body52 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body52(); // \Anketolog\Model\Body52 | 
 
 try {
     $result = $api_instance->surveySubscribeInfo($body);
@@ -1565,11 +1565,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body52**](../Model/\Swagger\Client\Model\Body52.md)|  |
+ **body** | [**\Anketolog\Model\Body52**](../Model/\Anketolog\Model\Body52.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySubscribe**](../Model/SurveySubscribe.md)
+[**\Anketolog\Model\SurveySubscribe**](../Model/SurveySubscribe.md)
 
 ### Authorization
 
@@ -1583,7 +1583,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeList**
-> \Swagger\Client\Model\SurveySubscribe[] surveySubscribeList($body)
+> \Anketolog\Model\SurveySubscribe[] surveySubscribeList($body)
 
 
 
@@ -1595,12 +1595,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body53(); // \Swagger\Client\Model\Body53 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body53(); // \Anketolog\Model\Body53 | 
 
 try {
     $result = $api_instance->surveySubscribeList($body);
@@ -1615,11 +1615,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body53**](../Model/\Swagger\Client\Model\Body53.md)|  |
+ **body** | [**\Anketolog\Model\Body53**](../Model/\Anketolog\Model\Body53.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySubscribe[]**](../Model/SurveySubscribe.md)
+[**\Anketolog\Model\SurveySubscribe[]**](../Model/SurveySubscribe.md)
 
 ### Authorization
 
@@ -1633,7 +1633,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeUpdate**
-> \Swagger\Client\Model\SurveySubscribe surveySubscribeUpdate($body)
+> \Anketolog\Model\SurveySubscribe surveySubscribeUpdate($body)
 
 
 
@@ -1645,12 +1645,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
-$body = new \Swagger\Client\Model\Body54(); // \Swagger\Client\Model\Body54 | 
+$api_instance = new Anketolog\Api\SurveyApi();
+$body = new \Anketolog\Model\Body54(); // \Anketolog\Model\Body54 | 
 
 try {
     $result = $api_instance->surveySubscribeUpdate($body);
@@ -1665,11 +1665,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body54**](../Model/\Swagger\Client\Model\Body54.md)|  |
+ **body** | [**\Anketolog\Model\Body54**](../Model/\Anketolog\Model\Body54.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveySubscribe**](../Model/SurveySubscribe.md)
+[**\Anketolog\Model\SurveySubscribe**](../Model/SurveySubscribe.md)
 
 ### Authorization
 
@@ -1683,7 +1683,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyTemplateList**
-> \Swagger\Client\Model\SurveyTemplate surveyTemplateList()
+> \Anketolog\Model\SurveyTemplate surveyTemplateList()
 
 
 
@@ -1695,11 +1695,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\SurveyApi();
+$api_instance = new Anketolog\Api\SurveyApi();
 
 try {
     $result = $api_instance->surveyTemplateList();
@@ -1715,7 +1715,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\SurveyTemplate**](../Model/SurveyTemplate.md)
+[**\Anketolog\Model\SurveyTemplate**](../Model/SurveyTemplate.md)
 
 ### Authorization
 

@@ -12,13 +12,13 @@ Name | Type | Description | Notes
 **has_comment** | **bool** | Отображать комментарий | 
 **comment** | **string** | Текст комментария | 
 **has_unable_answer** | **bool** | Вариант \&quot;затрудняюсь ответить\&quot; | 
-**branchrules** | [**\Swagger\Client\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
-**visiblerules** | [**\Swagger\Client\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
+**branchrules** | [**\Anketolog\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
+**visiblerules** | [**\Anketolog\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
 **max_value** | **int** | Максимальное значение | 
 **max_value_title** | **string** | Единицы измерения | [default to 'баллов']
 **is_show_residue** | **bool** | Отображение остатка | 
-**options** | [**\Swagger\Client\Model\SurveyOption[]**](SurveyOption.md) |  | 
-**options_sort** | [**\Swagger\Client\Model\SurveySort**](SurveySort.md) |  | 
+**options** | [**\Anketolog\Model\SurveyOption[]**](SurveyOption.md) |  | 
+**options_sort** | [**\Anketolog\Model\SurveySort**](SurveySort.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

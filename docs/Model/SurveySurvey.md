@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **is_locked** | **int** | Заблокирована модератором | 
 **is_archive** | **int** | В архиве | 
 **revision_id** | **int** | ID ревизии | 
-**personalpage** | [**\Swagger\Client\Model\SurveyPersonalpage**](SurveyPersonalpage.md) |  | 
-**meta** | [**\Swagger\Client\Model\SurveyMeta**](SurveyMeta.md) |  | 
-**settings** | [**\Swagger\Client\Model\SurveySettings**](SurveySettings.md) |  | 
+**personalpage** | [**\Anketolog\Model\SurveyPersonalpage**](SurveyPersonalpage.md) |  | 
+**meta** | [**\Anketolog\Model\SurveyMeta**](SurveyMeta.md) |  | 
+**settings** | [**\Anketolog\Model\SurveySettings**](SurveySettings.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

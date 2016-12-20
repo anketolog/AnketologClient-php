@@ -1,4 +1,4 @@
-# Swagger\Client\FileApi
+# Anketolog\FileApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **fileManageInfo**
-> \Swagger\Client\Model\FileFile fileManageInfo($body)
+> \Anketolog\Model\FileFile fileManageInfo($body)
 
 
 
@@ -22,12 +22,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\FileApi();
-$body = new \Swagger\Client\Model\Body10(); // \Swagger\Client\Model\Body10 | 
+$api_instance = new Anketolog\Api\FileApi();
+$body = new \Anketolog\Model\Body10(); // \Anketolog\Model\Body10 | 
 
 try {
     $result = $api_instance->fileManageInfo($body);
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body10**](../Model/\Swagger\Client\Model\Body10.md)|  |
+ **body** | [**\Anketolog\Model\Body10**](../Model/\Anketolog\Model\Body10.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\FileFile**](../Model/FileFile.md)
+[**\Anketolog\Model\FileFile**](../Model/FileFile.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileManageList**
-> \Swagger\Client\Model\FileFile[] fileManageList()
+> \Anketolog\Model\FileFile[] fileManageList()
 
 
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\FileApi();
+$api_instance = new Anketolog\Api\FileApi();
 
 try {
     $result = $api_instance->fileManageList();
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Swagger\Client\Model\FileFile[]**](../Model/FileFile.md)
+[**\Anketolog\Model\FileFile[]**](../Model/FileFile.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileManageUpload**
-> \Swagger\Client\Model\FileFile fileManageUpload($body)
+> \Anketolog\Model\FileFile fileManageUpload($body)
 
 
 
@@ -118,12 +118,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Swagger\Client\Api\FileApi();
-$body = new \Swagger\Client\Model\Body11(); // \Swagger\Client\Model\Body11 | 
+$api_instance = new Anketolog\Api\FileApi();
+$body = new \Anketolog\Model\Body11(); // \Anketolog\Model\Body11 | 
 
 try {
     $result = $api_instance->fileManageUpload($body);
@@ -138,11 +138,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\Body11**](../Model/\Swagger\Client\Model\Body11.md)|  |
+ **body** | [**\Anketolog\Model\Body11**](../Model/\Anketolog\Model\Body11.md)|  |
 
 ### Return type
 
-[**\Swagger\Client\Model\FileFile**](../Model/FileFile.md)
+[**\Anketolog\Model\FileFile**](../Model/FileFile.md)
 
 ### Authorization
 
