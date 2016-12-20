@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Фильтр ответов
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -73,7 +73,7 @@ class SurveyFilter implements ArrayAccess
         'join' => 'string',
         'create_date' => 'int',
         'update_date' => 'int',
-        'conditions' => '\Anketolog\Model\SurveyFilterCondition[]'
+        'conditions' => '\AnketologClient\Model\SurveyFilterCondition[]'
     );
 
     public static function swaggerTypes()
@@ -383,7 +383,7 @@ class SurveyFilter implements ArrayAccess
 
     /**
      * Gets conditions
-     * @return \Anketolog\Model\SurveyFilterCondition[]
+     * @return \AnketologClient\Model\SurveyFilterCondition[]
      */
     public function getConditions()
     {
@@ -392,7 +392,7 @@ class SurveyFilter implements ArrayAccess
 
     /**
      * Sets conditions
-     * @param \Anketolog\Model\SurveyFilterCondition[] $conditions
+     * @param \AnketologClient\Model\SurveyFilterCondition[] $conditions
      * @return $this
      */
     public function setConditions($conditions)
@@ -453,10 +453,10 @@ class SurveyFilter implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

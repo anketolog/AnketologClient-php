@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Вопрос \&quot;одиночный выбор\&quot;
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -76,12 +76,12 @@ class SurveyQuestionSelect implements ArrayAccess
         'has_comment' => 'bool',
         'comment' => 'string',
         'has_unable_answer' => 'bool',
-        'branchrules' => '\Anketolog\Model\SurveyBranchrule[]',
-        'visiblerules' => '\Anketolog\Model\SurveyVisiblerule[]',
+        'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
+        'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
         'has_other_answer' => 'bool',
         'has_nothing_answer' => 'bool',
-        'options' => '\Anketolog\Model\SurveyOption[]',
-        'options_sort' => '\Anketolog\Model\SurveySort'
+        'options' => '\AnketologClient\Model\SurveyOption[]',
+        'options_sort' => '\AnketologClient\Model\SurveySort'
     );
 
     public static function swaggerTypes()
@@ -501,7 +501,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Gets branchrules
-     * @return \Anketolog\Model\SurveyBranchrule[]
+     * @return \AnketologClient\Model\SurveyBranchrule[]
      */
     public function getBranchrules()
     {
@@ -510,7 +510,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Sets branchrules
-     * @param \Anketolog\Model\SurveyBranchrule[] $branchrules
+     * @param \AnketologClient\Model\SurveyBranchrule[] $branchrules
      * @return $this
      */
     public function setBranchrules($branchrules)
@@ -522,7 +522,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Gets visiblerules
-     * @return \Anketolog\Model\SurveyVisiblerule[]
+     * @return \AnketologClient\Model\SurveyVisiblerule[]
      */
     public function getVisiblerules()
     {
@@ -531,7 +531,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Sets visiblerules
-     * @param \Anketolog\Model\SurveyVisiblerule[] $visiblerules
+     * @param \AnketologClient\Model\SurveyVisiblerule[] $visiblerules
      * @return $this
      */
     public function setVisiblerules($visiblerules)
@@ -585,7 +585,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Anketolog\Model\SurveyOption[]
+     * @return \AnketologClient\Model\SurveyOption[]
      */
     public function getOptions()
     {
@@ -594,7 +594,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Anketolog\Model\SurveyOption[] $options
+     * @param \AnketologClient\Model\SurveyOption[] $options
      * @return $this
      */
     public function setOptions($options)
@@ -606,7 +606,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Gets options_sort
-     * @return \Anketolog\Model\SurveySort
+     * @return \AnketologClient\Model\SurveySort
      */
     public function getOptionsSort()
     {
@@ -615,7 +615,7 @@ class SurveyQuestionSelect implements ArrayAccess
 
     /**
      * Sets options_sort
-     * @param \Anketolog\Model\SurveySort $options_sort
+     * @param \AnketologClient\Model\SurveySort $options_sort
      * @return $this
      */
     public function setOptionsSort($options_sort)
@@ -676,10 +676,10 @@ class SurveyQuestionSelect implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Выравнивание виджета  * &#x60;left-middle&#x60; - слева в центре * &#x60;left-top&#x60; - слева вверху * &#x60;left-bottom&#x60; - слева внизу * &#x60;right-middle&#x60; - справа в центре * &#x60;right-top&#x60; - справа вверху * &#x60;right-bottom&#x60; - справа внизу * &#x60;top-center&#x60; - сверху в центре * &#x60;bottom-center&#x60; - снизу в центре
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -48,7 +48,7 @@ use \ArrayAccess;
  *
  * @category    Class */
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -67,9 +67,9 @@ class Body42 implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
-        'settings' => '\Anketolog\Model\SurveySettings',
-        'appearance' => '\Anketolog\Model\SurveyAppearance',
-        'struct' => '\Anketolog\Model\SurveyStruct'
+        'settings' => '\AnketologClient\Model\SurveySettings',
+        'appearance' => '\AnketologClient\Model\SurveyAppearance',
+        'struct' => '\AnketologClient\Model\SurveyStruct'
     );
 
     public static function swaggerTypes()
@@ -217,7 +217,7 @@ class Body42 implements ArrayAccess
 
     /**
      * Gets settings
-     * @return \Anketolog\Model\SurveySettings
+     * @return \AnketologClient\Model\SurveySettings
      */
     public function getSettings()
     {
@@ -226,7 +226,7 @@ class Body42 implements ArrayAccess
 
     /**
      * Sets settings
-     * @param \Anketolog\Model\SurveySettings $settings
+     * @param \AnketologClient\Model\SurveySettings $settings
      * @return $this
      */
     public function setSettings($settings)
@@ -238,7 +238,7 @@ class Body42 implements ArrayAccess
 
     /**
      * Gets appearance
-     * @return \Anketolog\Model\SurveyAppearance
+     * @return \AnketologClient\Model\SurveyAppearance
      */
     public function getAppearance()
     {
@@ -247,7 +247,7 @@ class Body42 implements ArrayAccess
 
     /**
      * Sets appearance
-     * @param \Anketolog\Model\SurveyAppearance $appearance
+     * @param \AnketologClient\Model\SurveyAppearance $appearance
      * @return $this
      */
     public function setAppearance($appearance)
@@ -259,7 +259,7 @@ class Body42 implements ArrayAccess
 
     /**
      * Gets struct
-     * @return \Anketolog\Model\SurveyStruct
+     * @return \AnketologClient\Model\SurveyStruct
      */
     public function getStruct()
     {
@@ -268,7 +268,7 @@ class Body42 implements ArrayAccess
 
     /**
      * Sets struct
-     * @param \Anketolog\Model\SurveyStruct $struct
+     * @param \AnketologClient\Model\SurveyStruct $struct
      * @return $this
      */
     public function setStruct($struct)
@@ -329,10 +329,10 @@ class Body42 implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,13 +39,13 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog;
+namespace AnketologClient;
 
 /**
  * ObjectSerializer Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -286,7 +286,7 @@ class ObjectSerializer
         } else {
             // If a discriminator is defined and points to a valid subclass, use it.
             if (!empty($discriminator) && isset($data->{$discriminator}) && is_string($data->{$discriminator})) {
-                $subclass = '\Anketolog\Model\\' . $data->{$discriminator};
+                $subclass = '\AnketologClient\Model\\' . $data->{$discriminator};
                 if (is_subclass_of($subclass, $class)) {
                     $class = $subclass;
                 }

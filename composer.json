@@ -1,6 +1,6 @@
 {
     "name": "anketolog/AnketologClient-php",
-    "description": "",
+    "description": "Anketolog Client PHP",
     "keywords": [
         "swagger",
         "php",
@@ -13,6 +13,10 @@
         {
             "name": "Swagger and contributors",
             "homepage": "https://github.com/swagger-api/swagger-codegen"
+        },
+        {
+            "name": "IOM Anketolog",
+            "homepage": "https://github.com/anketolog/AnketologClient-php"
         }
     ],
     "require": {
@@ -27,9 +31,9 @@
         "squizlabs/php_codesniffer": "~2.6"
     },
     "autoload": {
-        "psr-4": { "Anketolog\\" : "lib/" }
+        "psr-4": { "AnketologClient\\" : "lib/" }
     },
     "autoload-dev": {
-        "psr-4": { "Anketolog\\" : "test/" }
+        "psr-4": { "AnketologClient\\" : "test/" }
     }
 }

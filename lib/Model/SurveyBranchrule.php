@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Логическое правило
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -70,7 +70,7 @@ class SurveyBranchrule implements ArrayAccess
         'id' => 'int',
         'rule_type' => 'string',
         'operator' => 'string',
-        'events' => '\Anketolog\Model\SurveyBranchruleEventType[]',
+        'events' => '\AnketologClient\Model\SurveyBranchruleEventType[]',
         'page_id' => 'int'
     );
 
@@ -327,7 +327,7 @@ class SurveyBranchrule implements ArrayAccess
 
     /**
      * Gets events
-     * @return \Anketolog\Model\SurveyBranchruleEventType[]
+     * @return \AnketologClient\Model\SurveyBranchruleEventType[]
      */
     public function getEvents()
     {
@@ -336,7 +336,7 @@ class SurveyBranchrule implements ArrayAccess
 
     /**
      * Sets events
-     * @param \Anketolog\Model\SurveyBranchruleEventType[] $events
+     * @param \AnketologClient\Model\SurveyBranchruleEventType[] $events
      * @return $this
      */
     public function setEvents($events)
@@ -418,10 +418,10 @@ class SurveyBranchrule implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Тарифный план пользователя
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -70,7 +70,7 @@ class PlanUserPlan implements ArrayAccess
         'plan_id' => 'string',
         'since_date' => 'string',
         'expire_date' => 'string',
-        'permission_scheme' => '\Anketolog\Model\PlanPermissionScheme'
+        'permission_scheme' => '\AnketologClient\Model\PlanPermissionScheme'
     );
 
     public static function swaggerTypes()
@@ -260,7 +260,7 @@ class PlanUserPlan implements ArrayAccess
 
     /**
      * Gets permission_scheme
-     * @return \Anketolog\Model\PlanPermissionScheme
+     * @return \AnketologClient\Model\PlanPermissionScheme
      */
     public function getPermissionScheme()
     {
@@ -269,7 +269,7 @@ class PlanUserPlan implements ArrayAccess
 
     /**
      * Sets permission_scheme
-     * @param \Anketolog\Model\PlanPermissionScheme $permission_scheme
+     * @param \AnketologClient\Model\PlanPermissionScheme $permission_scheme
      * @return $this
      */
     public function setPermissionScheme($permission_scheme)
@@ -330,10 +330,10 @@ class PlanUserPlan implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

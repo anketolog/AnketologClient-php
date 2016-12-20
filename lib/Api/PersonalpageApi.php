@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -13,7 +13,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Api;
+namespace AnketologClient\Api;
 
-use \Anketolog\Configuration;
-use \Anketolog\ApiClient;
-use \Anketolog\ApiException;
-use \Anketolog\ObjectSerializer;
+use \AnketologClient\Configuration;
+use \AnketologClient\ApiClient;
+use \AnketologClient\ApiException;
+use \AnketologClient\ObjectSerializer;
 
 /**
  * PersonalpageApi Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -60,16 +60,16 @@ class PersonalpageApi
     /**
      * API Client
      *
-     * @var \Anketolog\ApiClient instance of the ApiClient
+     * @var \AnketologClient\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Anketolog\ApiClient|null $apiClient The api client to use
+     * @param \AnketologClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Anketolog\ApiClient $apiClient = null)
+    public function __construct(\AnketologClient\ApiClient $apiClient = null)
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
@@ -82,7 +82,7 @@ class PersonalpageApi
     /**
      * Get API client
      *
-     * @return \Anketolog\ApiClient get the API client
+     * @return \AnketologClient\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -92,11 +92,11 @@ class PersonalpageApi
     /**
      * Set the API client
      *
-     * @param \Anketolog\ApiClient $apiClient set the API client
+     * @param \AnketologClient\ApiClient $apiClient set the API client
      *
      * @return PersonalpageApi
      */
-    public function setApiClient(\Anketolog\ApiClient $apiClient)
+    public function setApiClient(\AnketologClient\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -107,9 +107,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body19 $body  (required)
-     * @return \Anketolog\Model\PersonalPagePersonalPage
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body19 $body  (required)
+     * @return \AnketologClient\Model\PersonalPagePersonalPage
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsManageArchive($body)
     {
@@ -122,9 +122,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body19 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body19 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsManageArchiveWithHttpInfo($body)
     {
@@ -172,15 +172,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPagePersonalPage',
+                '\AnketologClient\Model\PersonalPagePersonalPage',
                 '/personalpage/manage/archive'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -194,9 +194,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body14 $body  (required)
-     * @return \Anketolog\Model\PersonalPageAliasCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body14 $body  (required)
+     * @return \AnketologClient\Model\PersonalPageAliasCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorCreatealias($body)
     {
@@ -209,9 +209,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body14 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPageAliasCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body14 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPageAliasCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorCreatealiasWithHttpInfo($body)
     {
@@ -259,15 +259,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPageAliasCollector',
+                '\AnketologClient\Model\PersonalPageAliasCollector',
                 '/personalpage/collector/createalias'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPageAliasCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageAliasCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPageAliasCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPageAliasCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -281,9 +281,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body15 $body  (required)
-     * @return \Anketolog\Model\PersonalPageWidgetCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body15 $body  (required)
+     * @return \AnketologClient\Model\PersonalPageWidgetCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorCreatewidget($body)
     {
@@ -296,9 +296,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body15 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPageWidgetCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body15 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPageWidgetCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorCreatewidgetWithHttpInfo($body)
     {
@@ -346,15 +346,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPageWidgetCollector',
+                '\AnketologClient\Model\PersonalPageWidgetCollector',
                 '/personalpage/collector/createwidget'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPageWidgetCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageWidgetCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPageWidgetCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPageWidgetCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,9 +368,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body16 $body  (required)
-     * @return \Anketolog\Model\PersonalPageCollector[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body16 $body  (required)
+     * @return \AnketologClient\Model\PersonalPageCollector[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorList($body)
     {
@@ -383,9 +383,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body16 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPageCollector[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body16 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPageCollector[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorListWithHttpInfo($body)
     {
@@ -433,15 +433,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPageCollector[]',
+                '\AnketologClient\Model\PersonalPageCollector[]',
                 '/personalpage/collector/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPageCollector[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageCollector[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPageCollector[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPageCollector[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -455,9 +455,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body17 $body  (required)
-     * @return \Anketolog\Model\PersonalPageAliasCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body17 $body  (required)
+     * @return \AnketologClient\Model\PersonalPageAliasCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorUpdatealias($body)
     {
@@ -470,9 +470,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body17 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPageAliasCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body17 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPageAliasCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorUpdatealiasWithHttpInfo($body)
     {
@@ -520,15 +520,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPageAliasCollector',
+                '\AnketologClient\Model\PersonalPageAliasCollector',
                 '/personalpage/collector/updatealias'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPageAliasCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageAliasCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPageAliasCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPageAliasCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -542,9 +542,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body18 $body  (required)
-     * @return \Anketolog\Model\PersonalPageWidgetCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body18 $body  (required)
+     * @return \AnketologClient\Model\PersonalPageWidgetCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorUpdatewidget($body)
     {
@@ -557,9 +557,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body18 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPageWidgetCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body18 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPageWidgetCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageCollectorUpdatewidgetWithHttpInfo($body)
     {
@@ -607,15 +607,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPageWidgetCollector',
+                '\AnketologClient\Model\PersonalPageWidgetCollector',
                 '/personalpage/collector/updatewidget'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPageWidgetCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageWidgetCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPageWidgetCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPageWidgetCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -629,8 +629,8 @@ class PersonalpageApi
      *
      * 
      *
-     * @return \Anketolog\Model\PersonalPagePersonalPage
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\PersonalPagePersonalPage
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageCreate()
     {
@@ -643,8 +643,8 @@ class PersonalpageApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageCreateWithHttpInfo()
     {
@@ -683,15 +683,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPagePersonalPage',
+                '\AnketologClient\Model\PersonalPagePersonalPage',
                 '/personalpage/manage/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -705,9 +705,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body20 $body  (required)
-     * @return \Anketolog\Model\PersonalPagePersonalPage
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body20 $body  (required)
+     * @return \AnketologClient\Model\PersonalPagePersonalPage
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageInfo($body)
     {
@@ -720,9 +720,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body20 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body20 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageInfoWithHttpInfo($body)
     {
@@ -770,15 +770,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPagePersonalPage',
+                '\AnketologClient\Model\PersonalPagePersonalPage',
                 '/personalpage/manage/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -792,8 +792,8 @@ class PersonalpageApi
      *
      * 
      *
-     * @return \Anketolog\Model\PersonalPagePersonalPage[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\PersonalPagePersonalPage[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageList()
     {
@@ -806,8 +806,8 @@ class PersonalpageApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\PersonalPagePersonalPage[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageListWithHttpInfo()
     {
@@ -846,15 +846,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPagePersonalPage[]',
+                '\AnketologClient\Model\PersonalPagePersonalPage[]',
                 '/personalpage/manage/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPagePersonalPage[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPagePersonalPage[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -868,9 +868,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body21 $body  (required)
-     * @return \Anketolog\Model\PersonalPagePersonalPage
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body21 $body  (required)
+     * @return \AnketologClient\Model\PersonalPagePersonalPage
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageRestore($body)
     {
@@ -883,9 +883,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body21 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body21 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageRestoreWithHttpInfo($body)
     {
@@ -933,15 +933,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPagePersonalPage',
+                '\AnketologClient\Model\PersonalPagePersonalPage',
                 '/personalpage/manage/restore'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -955,9 +955,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body22 $body  (required)
-     * @return \Anketolog\Model\PersonalPagePersonalPage
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body22 $body  (required)
+     * @return \AnketologClient\Model\PersonalPagePersonalPage
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageUpdate($body)
     {
@@ -970,9 +970,9 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body22 $body  (required)
-     * @return Array of \Anketolog\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body22 $body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function personalpageManageUpdateWithHttpInfo($body)
     {
@@ -1020,15 +1020,15 @@ class PersonalpageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\PersonalPagePersonalPage',
+                '\AnketologClient\Model\PersonalPagePersonalPage',
                 '/personalpage/manage/update'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

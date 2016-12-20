@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **is_locked** | **int** | Заблокирована модератором | 
 **is_archive** | **int** | В архиве | 
 **revision_id** | **int** | ID ревизии | 
-**personalpage** | [**\Anketolog\Model\SurveyPersonalpage**](SurveyPersonalpage.md) |  | 
-**meta** | [**\Anketolog\Model\SurveyMeta**](SurveyMeta.md) |  | 
-**settings** | [**\Anketolog\Model\SurveySettings**](SurveySettings.md) |  | 
+**personalpage** | [**\AnketologClient\Model\SurveyPersonalpage**](SurveyPersonalpage.md) |  | 
+**meta** | [**\AnketologClient\Model\SurveyMeta**](SurveyMeta.md) |  | 
+**settings** | [**\AnketologClient\Model\SurveySettings**](SurveySettings.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

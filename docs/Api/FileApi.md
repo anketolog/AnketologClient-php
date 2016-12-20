@@ -1,4 +1,4 @@
-# Anketolog\FileApi
+# AnketologClient\FileApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **fileManageInfo**
-> \Anketolog\Model\FileFile fileManageInfo($body)
+> \AnketologClient\Model\FileFile fileManageInfo($body)
 
 
 
@@ -22,12 +22,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\FileApi();
-$body = new \Anketolog\Model\Body10(); // \Anketolog\Model\Body10 | 
+$api_instance = new AnketologClient\Api\FileApi();
+$body = new \AnketologClient\Model\Body10(); // \AnketologClient\Model\Body10 | 
 
 try {
     $result = $api_instance->fileManageInfo($body);
@@ -42,11 +42,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body10**](../Model/\Anketolog\Model\Body10.md)|  |
+ **body** | [**\AnketologClient\Model\Body10**](../Model/\AnketologClient\Model\Body10.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\FileFile**](../Model/FileFile.md)
+[**\AnketologClient\Model\FileFile**](../Model/FileFile.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileManageList**
-> \Anketolog\Model\FileFile[] fileManageList()
+> \AnketologClient\Model\FileFile[] fileManageList()
 
 
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\FileApi();
+$api_instance = new AnketologClient\Api\FileApi();
 
 try {
     $result = $api_instance->fileManageList();
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Anketolog\Model\FileFile[]**](../Model/FileFile.md)
+[**\AnketologClient\Model\FileFile[]**](../Model/FileFile.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileManageUpload**
-> \Anketolog\Model\FileFile fileManageUpload($body)
+> \AnketologClient\Model\FileFile fileManageUpload($body)
 
 
 
@@ -118,12 +118,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\FileApi();
-$body = new \Anketolog\Model\Body11(); // \Anketolog\Model\Body11 | 
+$api_instance = new AnketologClient\Api\FileApi();
+$body = new \AnketologClient\Model\Body11(); // \AnketologClient\Model\Body11 | 
 
 try {
     $result = $api_instance->fileManageUpload($body);
@@ -138,11 +138,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body11**](../Model/\Anketolog\Model\Body11.md)|  |
+ **body** | [**\AnketologClient\Model\Body11**](../Model/\AnketologClient\Model\Body11.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\FileFile**](../Model/FileFile.md)
+[**\AnketologClient\Model\FileFile**](../Model/FileFile.md)
 
 ### Authorization
 

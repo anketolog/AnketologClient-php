@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,13 +39,13 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog;
+namespace AnketologClient;
 
 /**
  * ApiClient Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -80,7 +80,7 @@ class ApiClient
      *
      * @param Configuration $config config for this ApiClient
      */
-    public function __construct(\Anketolog\Configuration $config = null)
+    public function __construct(\AnketologClient\Configuration $config = null)
     {
         if ($config == null) {
             $config = Configuration::getDefaultConfiguration();
@@ -146,7 +146,7 @@ class ApiClient
      * @param string $responseType expected response type of the endpoint
      * @param string $endpointPath path to method endpoint before expanding parameters
      *
-     * @throws \Anketolog\ApiException on a non 2xx response
+     * @throws \AnketologClient\ApiException on a non 2xx response
      * @return mixed
      */
     public function callApi($resourcePath, $method, $queryParams, $postData, $headerParams, $responseType = null, $endpointPath = null)
@@ -168,7 +168,7 @@ class ApiClient
         if ($postData and in_array('Content-Type: application/x-www-form-urlencoded', $headers)) {
             $postData = http_build_query($postData);
         } elseif ((is_object($postData) or is_array($postData)) and !in_array('Content-Type: multipart/form-data', $headers)) { // json model
-            $postData = json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($postData));
+            $postData = json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($postData));
         }
 
         $url = $this->config->getHost() . $resourcePath;

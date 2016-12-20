@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -13,7 +13,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Api;
+namespace AnketologClient\Api;
 
-use \Anketolog\Configuration;
-use \Anketolog\ApiClient;
-use \Anketolog\ApiException;
-use \Anketolog\ObjectSerializer;
+use \AnketologClient\Configuration;
+use \AnketologClient\ApiClient;
+use \AnketologClient\ApiException;
+use \AnketologClient\ObjectSerializer;
 
 /**
  * CampaignApi Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -60,16 +60,16 @@ class CampaignApi
     /**
      * API Client
      *
-     * @var \Anketolog\ApiClient instance of the ApiClient
+     * @var \AnketologClient\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Anketolog\ApiClient|null $apiClient The api client to use
+     * @param \AnketologClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Anketolog\ApiClient $apiClient = null)
+    public function __construct(\AnketologClient\ApiClient $apiClient = null)
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
@@ -82,7 +82,7 @@ class CampaignApi
     /**
      * Get API client
      *
-     * @return \Anketolog\ApiClient get the API client
+     * @return \AnketologClient\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -92,11 +92,11 @@ class CampaignApi
     /**
      * Set the API client
      *
-     * @param \Anketolog\ApiClient $apiClient set the API client
+     * @param \AnketologClient\ApiClient $apiClient set the API client
      *
      * @return CampaignApi
      */
-    public function setApiClient(\Anketolog\ApiClient $apiClient)
+    public function setApiClient(\AnketologClient\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -107,9 +107,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body3 $body  (required)
-     * @return \Anketolog\Model\CampaignCalculate
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body3 $body  (required)
+     * @return \AnketologClient\Model\CampaignCalculate
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageCalculate($body)
     {
@@ -122,9 +122,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body3 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignCalculate, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body3 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignCalculate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageCalculateWithHttpInfo($body)
     {
@@ -172,15 +172,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCalculate',
+                '\AnketologClient\Model\CampaignCalculate',
                 '/campaign/manage/calculate'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCalculate', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCalculate', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCalculate', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCalculate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -194,9 +194,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body4 $body  (required)
-     * @return \Anketolog\Model\CampaignCampaign
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body4 $body  (required)
+     * @return \AnketologClient\Model\CampaignCampaign
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageCreate($body)
     {
@@ -209,9 +209,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body4 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body4 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageCreateWithHttpInfo($body)
     {
@@ -259,15 +259,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCampaign',
+                '\AnketologClient\Model\CampaignCampaign',
                 '/campaign/manage/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCampaign', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCampaign', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -281,9 +281,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body5 $body  (required)
-     * @return \Anketolog\Model\CampaignCampaign
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body5 $body  (required)
+     * @return \AnketologClient\Model\CampaignCampaign
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageFinish($body)
     {
@@ -296,9 +296,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body5 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body5 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageFinishWithHttpInfo($body)
     {
@@ -346,15 +346,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCampaign',
+                '\AnketologClient\Model\CampaignCampaign',
                 '/campaign/manage/finish'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCampaign', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCampaign', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,9 +368,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body6 $body  (required)
-     * @return \Anketolog\Model\CampaignCampaign
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body6 $body  (required)
+     * @return \AnketologClient\Model\CampaignCampaign
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageInfo($body)
     {
@@ -383,9 +383,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body6 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body6 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageInfoWithHttpInfo($body)
     {
@@ -433,15 +433,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCampaign',
+                '\AnketologClient\Model\CampaignCampaign',
                 '/campaign/manage/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCampaign', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCampaign', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -455,8 +455,8 @@ class CampaignApi
      *
      * 
      *
-     * @return \Anketolog\Model\CampaignCampaign[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\CampaignCampaign[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageList()
     {
@@ -469,8 +469,8 @@ class CampaignApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\CampaignCampaign[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\CampaignCampaign[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageListWithHttpInfo()
     {
@@ -509,15 +509,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCampaign[]',
+                '\AnketologClient\Model\CampaignCampaign[]',
                 '/campaign/manage/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCampaign[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCampaign[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCampaign[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCampaign[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -531,9 +531,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body7 $body  (required)
-     * @return \Anketolog\Model\CampaignCampaign
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body7 $body  (required)
+     * @return \AnketologClient\Model\CampaignCampaign
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageStart($body)
     {
@@ -546,9 +546,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body7 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body7 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageStartWithHttpInfo($body)
     {
@@ -596,15 +596,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCampaign',
+                '\AnketologClient\Model\CampaignCampaign',
                 '/campaign/manage/start'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCampaign', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCampaign', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -618,9 +618,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body8 $body  (required)
-     * @return \Anketolog\Model\CampaignCampaign
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body8 $body  (required)
+     * @return \AnketologClient\Model\CampaignCampaign
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageUpdate($body)
     {
@@ -633,9 +633,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body8 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body8 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignManageUpdateWithHttpInfo($body)
     {
@@ -683,15 +683,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignCampaign',
+                '\AnketologClient\Model\CampaignCampaign',
                 '/campaign/manage/update'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignCampaign', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignCampaign', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignCampaign', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -705,9 +705,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body9 $body  (required)
-     * @return \Anketolog\Model\CampaignTransfer
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body9 $body  (required)
+     * @return \AnketologClient\Model\CampaignTransfer
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignTransferInfo($body)
     {
@@ -720,9 +720,9 @@ class CampaignApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body9 $body  (required)
-     * @return Array of \Anketolog\Model\CampaignTransfer, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body9 $body  (required)
+     * @return Array of \AnketologClient\Model\CampaignTransfer, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignTransferInfoWithHttpInfo($body)
     {
@@ -770,15 +770,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignTransfer',
+                '\AnketologClient\Model\CampaignTransfer',
                 '/campaign/transfer/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignTransfer', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignTransfer', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignTransfer', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignTransfer', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -792,8 +792,8 @@ class CampaignApi
      *
      * 
      *
-     * @return \Anketolog\Model\CampaignTransfer[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\CampaignTransfer[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignTransferList()
     {
@@ -806,8 +806,8 @@ class CampaignApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\CampaignTransfer[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\CampaignTransfer[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function campaignTransferListWithHttpInfo()
     {
@@ -846,15 +846,15 @@ class CampaignApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CampaignTransfer[]',
+                '\AnketologClient\Model\CampaignTransfer[]',
                 '/campaign/transfer/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CampaignTransfer[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CampaignTransfer[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CampaignTransfer[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CampaignTransfer[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

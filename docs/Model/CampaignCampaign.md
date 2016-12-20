@@ -15,8 +15,8 @@ Name | Type | Description | Notes
 **unique_respondents** | **bool** | Исключить повторные ответы | 
 **answer_price** | **int** | Стоимость одного ответа | 
 **answer_count** | **int** | Количество ответов | 
-**targeting** | [**\Anketolog\Model\CampaignTargeting**](CampaignTargeting.md) |  | 
-**survey** | [**\Anketolog\Model\SurveySurvey**](SurveySurvey.md) |  | 
+**targeting** | [**\AnketologClient\Model\CampaignTargeting**](CampaignTargeting.md) |  | 
+**survey** | [**\AnketologClient\Model\SurveySurvey**](SurveySurvey.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

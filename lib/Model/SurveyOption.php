@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Вариант ответа у вопроса
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -69,8 +69,8 @@ class SurveyOption implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'title' => 'string',
-        'image' => '\Anketolog\Model\FileFile',
-        'values' => '\Anketolog\Model\SurveyOptionValue[]'
+        'image' => '\AnketologClient\Model\FileFile',
+        'values' => '\AnketologClient\Model\SurveyOptionValue[]'
     );
 
     public static function swaggerTypes()
@@ -239,7 +239,7 @@ class SurveyOption implements ArrayAccess
 
     /**
      * Gets image
-     * @return \Anketolog\Model\FileFile
+     * @return \AnketologClient\Model\FileFile
      */
     public function getImage()
     {
@@ -248,7 +248,7 @@ class SurveyOption implements ArrayAccess
 
     /**
      * Sets image
-     * @param \Anketolog\Model\FileFile $image
+     * @param \AnketologClient\Model\FileFile $image
      * @return $this
      */
     public function setImage($image)
@@ -260,7 +260,7 @@ class SurveyOption implements ArrayAccess
 
     /**
      * Gets values
-     * @return \Anketolog\Model\SurveyOptionValue[]
+     * @return \AnketologClient\Model\SurveyOptionValue[]
      */
     public function getValues()
     {
@@ -269,7 +269,7 @@ class SurveyOption implements ArrayAccess
 
     /**
      * Sets values
-     * @param \Anketolog\Model\SurveyOptionValue[] $values
+     * @param \AnketologClient\Model\SurveyOptionValue[] $values
      * @return $this
      */
     public function setValues($values)
@@ -330,10 +330,10 @@ class SurveyOption implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

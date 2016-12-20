@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -13,7 +13,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Api;
+namespace AnketologClient\Api;
 
-use \Anketolog\Configuration;
-use \Anketolog\ApiClient;
-use \Anketolog\ApiException;
-use \Anketolog\ObjectSerializer;
+use \AnketologClient\Configuration;
+use \AnketologClient\ApiClient;
+use \AnketologClient\ApiException;
+use \AnketologClient\ObjectSerializer;
 
 /**
  * FileApi Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -60,16 +60,16 @@ class FileApi
     /**
      * API Client
      *
-     * @var \Anketolog\ApiClient instance of the ApiClient
+     * @var \AnketologClient\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Anketolog\ApiClient|null $apiClient The api client to use
+     * @param \AnketologClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Anketolog\ApiClient $apiClient = null)
+    public function __construct(\AnketologClient\ApiClient $apiClient = null)
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
@@ -82,7 +82,7 @@ class FileApi
     /**
      * Get API client
      *
-     * @return \Anketolog\ApiClient get the API client
+     * @return \AnketologClient\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -92,11 +92,11 @@ class FileApi
     /**
      * Set the API client
      *
-     * @param \Anketolog\ApiClient $apiClient set the API client
+     * @param \AnketologClient\ApiClient $apiClient set the API client
      *
      * @return FileApi
      */
-    public function setApiClient(\Anketolog\ApiClient $apiClient)
+    public function setApiClient(\AnketologClient\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -107,9 +107,9 @@ class FileApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body10 $body  (required)
-     * @return \Anketolog\Model\FileFile
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body10 $body  (required)
+     * @return \AnketologClient\Model\FileFile
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function fileManageInfo($body)
     {
@@ -122,9 +122,9 @@ class FileApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body10 $body  (required)
-     * @return Array of \Anketolog\Model\FileFile, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body10 $body  (required)
+     * @return Array of \AnketologClient\Model\FileFile, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function fileManageInfoWithHttpInfo($body)
     {
@@ -172,15 +172,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\FileFile',
+                '\AnketologClient\Model\FileFile',
                 '/file/manage/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\FileFile', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\FileFile', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\FileFile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\FileFile', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -194,8 +194,8 @@ class FileApi
      *
      * 
      *
-     * @return \Anketolog\Model\FileFile[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\FileFile[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function fileManageList()
     {
@@ -208,8 +208,8 @@ class FileApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\FileFile[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\FileFile[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function fileManageListWithHttpInfo()
     {
@@ -248,15 +248,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\FileFile[]',
+                '\AnketologClient\Model\FileFile[]',
                 '/file/manage/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\FileFile[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\FileFile[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\FileFile[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\FileFile[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -270,9 +270,9 @@ class FileApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body11 $body  (required)
-     * @return \Anketolog\Model\FileFile
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body11 $body  (required)
+     * @return \AnketologClient\Model\FileFile
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function fileManageUpload($body)
     {
@@ -285,9 +285,9 @@ class FileApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body11 $body  (required)
-     * @return Array of \Anketolog\Model\FileFile, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body11 $body  (required)
+     * @return Array of \AnketologClient\Model\FileFile, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function fileManageUploadWithHttpInfo($body)
     {
@@ -335,15 +335,15 @@ class FileApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\FileFile',
+                '\AnketologClient\Model\FileFile',
                 '/file/manage/upload'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\FileFile', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\FileFile', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\FileFile', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\FileFile', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

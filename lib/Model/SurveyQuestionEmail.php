@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Вопрос \&quot;e-mail\&quot;
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -76,8 +76,8 @@ class SurveyQuestionEmail implements ArrayAccess
         'has_comment' => 'bool',
         'comment' => 'string',
         'has_unable_answer' => 'bool',
-        'branchrules' => '\Anketolog\Model\SurveyBranchrule[]',
-        'visiblerules' => '\Anketolog\Model\SurveyVisiblerule[]',
+        'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
+        'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
         'placeholder' => 'string'
     );
 
@@ -468,7 +468,7 @@ class SurveyQuestionEmail implements ArrayAccess
 
     /**
      * Gets branchrules
-     * @return \Anketolog\Model\SurveyBranchrule[]
+     * @return \AnketologClient\Model\SurveyBranchrule[]
      */
     public function getBranchrules()
     {
@@ -477,7 +477,7 @@ class SurveyQuestionEmail implements ArrayAccess
 
     /**
      * Sets branchrules
-     * @param \Anketolog\Model\SurveyBranchrule[] $branchrules
+     * @param \AnketologClient\Model\SurveyBranchrule[] $branchrules
      * @return $this
      */
     public function setBranchrules($branchrules)
@@ -489,7 +489,7 @@ class SurveyQuestionEmail implements ArrayAccess
 
     /**
      * Gets visiblerules
-     * @return \Anketolog\Model\SurveyVisiblerule[]
+     * @return \AnketologClient\Model\SurveyVisiblerule[]
      */
     public function getVisiblerules()
     {
@@ -498,7 +498,7 @@ class SurveyQuestionEmail implements ArrayAccess
 
     /**
      * Sets visiblerules
-     * @param \Anketolog\Model\SurveyVisiblerule[] $visiblerules
+     * @param \AnketologClient\Model\SurveyVisiblerule[] $visiblerules
      * @return $this
      */
     public function setVisiblerules($visiblerules)
@@ -580,10 +580,10 @@ class SurveyQuestionEmail implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

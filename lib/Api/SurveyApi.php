@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -13,7 +13,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Api;
+namespace AnketologClient\Api;
 
-use \Anketolog\Configuration;
-use \Anketolog\ApiClient;
-use \Anketolog\ApiException;
-use \Anketolog\ObjectSerializer;
+use \AnketologClient\Configuration;
+use \AnketologClient\ApiClient;
+use \AnketologClient\ApiException;
+use \AnketologClient\ObjectSerializer;
 
 /**
  * SurveyApi Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -60,16 +60,16 @@ class SurveyApi
     /**
      * API Client
      *
-     * @var \Anketolog\ApiClient instance of the ApiClient
+     * @var \AnketologClient\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Anketolog\ApiClient|null $apiClient The api client to use
+     * @param \AnketologClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Anketolog\ApiClient $apiClient = null)
+    public function __construct(\AnketologClient\ApiClient $apiClient = null)
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
@@ -82,7 +82,7 @@ class SurveyApi
     /**
      * Get API client
      *
-     * @return \Anketolog\ApiClient get the API client
+     * @return \AnketologClient\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -92,11 +92,11 @@ class SurveyApi
     /**
      * Set the API client
      *
-     * @param \Anketolog\ApiClient $apiClient set the API client
+     * @param \AnketologClient\ApiClient $apiClient set the API client
      *
      * @return SurveyApi
      */
-    public function setApiClient(\Anketolog\ApiClient $apiClient)
+    public function setApiClient(\AnketologClient\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -107,9 +107,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body24 $body  (required)
-     * @return \Anketolog\Model\SurveyAnswer
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body24 $body  (required)
+     * @return \AnketologClient\Model\SurveyAnswer
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyAnswerInfo($body)
     {
@@ -122,9 +122,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body24 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyAnswer, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body24 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyAnswer, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyAnswerInfoWithHttpInfo($body)
     {
@@ -172,15 +172,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyAnswer',
+                '\AnketologClient\Model\SurveyAnswer',
                 '/survey/answer/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyAnswer', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyAnswer', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyAnswer', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyAnswer', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -194,9 +194,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body25 $body  (required)
-     * @return \Anketolog\Model\SurveyAnswer[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body25 $body  (required)
+     * @return \AnketologClient\Model\SurveyAnswer[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyAnswerList($body)
     {
@@ -209,9 +209,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body25 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyAnswer[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body25 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyAnswer[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyAnswerListWithHttpInfo($body)
     {
@@ -259,15 +259,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyAnswer[]',
+                '\AnketologClient\Model\SurveyAnswer[]',
                 '/survey/answer/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyAnswer[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyAnswer[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyAnswer[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyAnswer[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -281,9 +281,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body26 $body  (required)
-     * @return \Anketolog\Model\SurveyAliasCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body26 $body  (required)
+     * @return \AnketologClient\Model\SurveyAliasCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorCreatealias($body)
     {
@@ -296,9 +296,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body26 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyAliasCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body26 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyAliasCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorCreatealiasWithHttpInfo($body)
     {
@@ -346,15 +346,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyAliasCollector',
+                '\AnketologClient\Model\SurveyAliasCollector',
                 '/survey/collector/createalias'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyAliasCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyAliasCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyAliasCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyAliasCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -368,9 +368,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body27 $body  (required)
-     * @return \Anketolog\Model\SurveyExtralinkCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body27 $body  (required)
+     * @return \AnketologClient\Model\SurveyExtralinkCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorCreateextralink($body)
     {
@@ -383,9 +383,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body27 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyExtralinkCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body27 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyExtralinkCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorCreateextralinkWithHttpInfo($body)
     {
@@ -433,15 +433,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyExtralinkCollector',
+                '\AnketologClient\Model\SurveyExtralinkCollector',
                 '/survey/collector/createextralink'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyExtralinkCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyExtralinkCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyExtralinkCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyExtralinkCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -455,9 +455,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body28 $body  (required)
-     * @return \Anketolog\Model\SurveyWidgetCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body28 $body  (required)
+     * @return \AnketologClient\Model\SurveyWidgetCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorCreatewidget($body)
     {
@@ -470,9 +470,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body28 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyWidgetCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body28 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyWidgetCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorCreatewidgetWithHttpInfo($body)
     {
@@ -520,15 +520,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyWidgetCollector',
+                '\AnketologClient\Model\SurveyWidgetCollector',
                 '/survey/collector/createwidget'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyWidgetCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyWidgetCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyWidgetCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyWidgetCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -542,9 +542,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body29 $body  (required)
-     * @return \Anketolog\Model\SurveyCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body29 $body  (required)
+     * @return \AnketologClient\Model\SurveyCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorList($body)
     {
@@ -557,9 +557,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body29 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body29 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorListWithHttpInfo($body)
     {
@@ -607,15 +607,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyCollector',
+                '\AnketologClient\Model\SurveyCollector',
                 '/survey/collector/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -629,9 +629,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body30 $body  (required)
+     * @param \AnketologClient\Model\Body30 $body  (required)
      * @return string
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorRemoveextralink($body)
     {
@@ -644,9 +644,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body30 $body  (required)
+     * @param \AnketologClient\Model\Body30 $body  (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorRemoveextralinkWithHttpInfo($body)
     {
@@ -716,9 +716,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body31 $body  (required)
-     * @return \Anketolog\Model\SurveyAliasCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body31 $body  (required)
+     * @return \AnketologClient\Model\SurveyAliasCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorUpdatealias($body)
     {
@@ -731,9 +731,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body31 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyAliasCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body31 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyAliasCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorUpdatealiasWithHttpInfo($body)
     {
@@ -781,15 +781,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyAliasCollector',
+                '\AnketologClient\Model\SurveyAliasCollector',
                 '/survey/collector/updatealias'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyAliasCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyAliasCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyAliasCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyAliasCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -803,9 +803,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body32 $body  (required)
-     * @return \Anketolog\Model\SurveyExtralinkCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body32 $body  (required)
+     * @return \AnketologClient\Model\SurveyExtralinkCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorUpdateextralink($body)
     {
@@ -818,9 +818,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body32 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyExtralinkCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body32 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyExtralinkCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorUpdateextralinkWithHttpInfo($body)
     {
@@ -868,15 +868,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyExtralinkCollector',
+                '\AnketologClient\Model\SurveyExtralinkCollector',
                 '/survey/collector/updateextralink'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyExtralinkCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyExtralinkCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyExtralinkCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyExtralinkCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -890,9 +890,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body33 $body  (required)
-     * @return \Anketolog\Model\SurveyWidgetCollector
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body33 $body  (required)
+     * @return \AnketologClient\Model\SurveyWidgetCollector
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorUpdatewidget($body)
     {
@@ -905,9 +905,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body33 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyWidgetCollector, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body33 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyWidgetCollector, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyCollectorUpdatewidgetWithHttpInfo($body)
     {
@@ -955,15 +955,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyWidgetCollector',
+                '\AnketologClient\Model\SurveyWidgetCollector',
                 '/survey/collector/updatewidget'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyWidgetCollector', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyWidgetCollector', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyWidgetCollector', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyWidgetCollector', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -977,9 +977,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body34 $body  (required)
-     * @return \Anketolog\Model\SurveyFilter
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body34 $body  (required)
+     * @return \AnketologClient\Model\SurveyFilter
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyFilterCreate($body)
     {
@@ -992,9 +992,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body34 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body34 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyFilterCreateWithHttpInfo($body)
     {
@@ -1042,15 +1042,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyFilter',
+                '\AnketologClient\Model\SurveyFilter',
                 '/survey/filter/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyFilter', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyFilter', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyFilter', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyFilter', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1064,9 +1064,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body35 $body  (required)
-     * @return \Anketolog\Model\SurveyFilter
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body35 $body  (required)
+     * @return \AnketologClient\Model\SurveyFilter
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyFilterInfo($body)
     {
@@ -1079,9 +1079,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body35 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body35 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyFilterInfoWithHttpInfo($body)
     {
@@ -1129,15 +1129,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyFilter',
+                '\AnketologClient\Model\SurveyFilter',
                 '/survey/filter/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyFilter', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyFilter', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyFilter', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyFilter', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1151,8 +1151,8 @@ class SurveyApi
      *
      * 
      *
-     * @return \Anketolog\Model\SurveyFilter[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\SurveyFilter[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyFilterList()
     {
@@ -1165,8 +1165,8 @@ class SurveyApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\SurveyFilter[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\SurveyFilter[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyFilterListWithHttpInfo()
     {
@@ -1205,15 +1205,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyFilter[]',
+                '\AnketologClient\Model\SurveyFilter[]',
                 '/survey/filter/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyFilter[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyFilter[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyFilter[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyFilter[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1227,9 +1227,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body36 $body  (required)
-     * @return \Anketolog\Model\SurveySurvey
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body36 $body  (required)
+     * @return \AnketologClient\Model\SurveySurvey
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageArchive($body)
     {
@@ -1242,9 +1242,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body36 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body36 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageArchiveWithHttpInfo($body)
     {
@@ -1292,15 +1292,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey',
+                '\AnketologClient\Model\SurveySurvey',
                 '/survey/manage/archive'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1314,9 +1314,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body37 $body  (required)
-     * @return \Anketolog\Model\SurveySurvey
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body37 $body  (required)
+     * @return \AnketologClient\Model\SurveySurvey
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageCopy($body)
     {
@@ -1329,9 +1329,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body37 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body37 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageCopyWithHttpInfo($body)
     {
@@ -1379,15 +1379,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey',
+                '\AnketologClient\Model\SurveySurvey',
                 '/survey/manage/copy'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1401,9 +1401,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body38 $body  (required)
-     * @return \Anketolog\Model\SurveySurvey
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body38 $body  (required)
+     * @return \AnketologClient\Model\SurveySurvey
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageCreate($body)
     {
@@ -1416,9 +1416,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body38 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body38 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageCreateWithHttpInfo($body)
     {
@@ -1466,15 +1466,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey',
+                '\AnketologClient\Model\SurveySurvey',
                 '/survey/manage/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1488,9 +1488,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body39 $body  (required)
+     * @param \AnketologClient\Model\Body39 $body  (required)
      * @return string
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageDelete($body)
     {
@@ -1503,9 +1503,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body39 $body  (required)
+     * @param \AnketologClient\Model\Body39 $body  (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageDeleteWithHttpInfo($body)
     {
@@ -1575,9 +1575,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body40 $body  (required)
-     * @return \Anketolog\Model\SurveySurvey
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body40 $body  (required)
+     * @return \AnketologClient\Model\SurveySurvey
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageInfo($body)
     {
@@ -1590,9 +1590,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body40 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body40 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageInfoWithHttpInfo($body)
     {
@@ -1640,15 +1640,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey',
+                '\AnketologClient\Model\SurveySurvey',
                 '/survey/manage/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1662,8 +1662,8 @@ class SurveyApi
      *
      * 
      *
-     * @return \Anketolog\Model\SurveySurvey[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\SurveySurvey[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageList()
     {
@@ -1676,8 +1676,8 @@ class SurveyApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\SurveySurvey[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\SurveySurvey[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageListWithHttpInfo()
     {
@@ -1716,15 +1716,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey[]',
+                '\AnketologClient\Model\SurveySurvey[]',
                 '/survey/manage/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1738,9 +1738,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body41 $body  (required)
-     * @return \Anketolog\Model\SurveySurvey
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body41 $body  (required)
+     * @return \AnketologClient\Model\SurveySurvey
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageRestore($body)
     {
@@ -1753,9 +1753,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body41 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body41 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageRestoreWithHttpInfo($body)
     {
@@ -1803,15 +1803,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey',
+                '\AnketologClient\Model\SurveySurvey',
                 '/survey/manage/restore'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1825,9 +1825,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body42 $body  (required)
-     * @return \Anketolog\Model\SurveySurvey
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body42 $body  (required)
+     * @return \AnketologClient\Model\SurveySurvey
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageUpdate($body)
     {
@@ -1840,9 +1840,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body42 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body42 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageUpdateWithHttpInfo($body)
     {
@@ -1890,15 +1890,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySurvey',
+                '\AnketologClient\Model\SurveySurvey',
                 '/survey/manage/update'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySurvey', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySurvey', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySurvey', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1912,9 +1912,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body43 $body  (required)
-     * @return \Anketolog\Model\SurveyReportAggregate
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body43 $body  (required)
+     * @return \AnketologClient\Model\SurveyReportAggregate
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportAggregate($body)
     {
@@ -1927,9 +1927,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body43 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyReportAggregate, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body43 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyReportAggregate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportAggregateWithHttpInfo($body)
     {
@@ -1977,15 +1977,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyReportAggregate',
+                '\AnketologClient\Model\SurveyReportAggregate',
                 '/survey/report/aggregate'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyReportAggregate', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyReportAggregate', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyReportAggregate', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyReportAggregate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -1999,9 +1999,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body44 $body  (required)
-     * @return \Anketolog\Model\SurveyReport
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body44 $body  (required)
+     * @return \AnketologClient\Model\SurveyReport
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportCreate($body)
     {
@@ -2014,9 +2014,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body44 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyReport, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body44 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyReport, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportCreateWithHttpInfo($body)
     {
@@ -2064,15 +2064,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyReport',
+                '\AnketologClient\Model\SurveyReport',
                 '/survey/report/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyReport', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyReport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyReport', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyReport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2086,9 +2086,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body45 $body  (required)
-     * @return \Anketolog\Model\SurveyReportDetail
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body45 $body  (required)
+     * @return \AnketologClient\Model\SurveyReportDetail
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportDetail($body)
     {
@@ -2101,9 +2101,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body45 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyReportDetail, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body45 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyReportDetail, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportDetailWithHttpInfo($body)
     {
@@ -2151,15 +2151,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyReportDetail',
+                '\AnketologClient\Model\SurveyReportDetail',
                 '/survey/report/detail'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyReportDetail', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyReportDetail', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyReportDetail', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyReportDetail', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2173,9 +2173,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body46 $body  (required)
-     * @return \Anketolog\Model\SurveyReport
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body46 $body  (required)
+     * @return \AnketologClient\Model\SurveyReport
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportInfo($body)
     {
@@ -2188,9 +2188,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body46 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyReport, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body46 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyReport, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportInfoWithHttpInfo($body)
     {
@@ -2238,15 +2238,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyReport',
+                '\AnketologClient\Model\SurveyReport',
                 '/survey/report/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyReport', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyReport', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyReport', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyReport', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2260,9 +2260,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body47 $body  (required)
-     * @return \Anketolog\Model\SurveyReport[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body47 $body  (required)
+     * @return \AnketologClient\Model\SurveyReport[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportList($body)
     {
@@ -2275,9 +2275,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body47 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyReport[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body47 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyReport[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyReportListWithHttpInfo($body)
     {
@@ -2325,15 +2325,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyReport[]',
+                '\AnketologClient\Model\SurveyReport[]',
                 '/survey/report/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyReport[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyReport[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyReport[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyReport[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2347,9 +2347,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body48 $body  (required)
-     * @return \Anketolog\Model\SurveyRevision
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body48 $body  (required)
+     * @return \AnketologClient\Model\SurveyRevision
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyRevisionInfo($body)
     {
@@ -2362,9 +2362,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body48 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyRevision, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body48 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyRevision, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyRevisionInfoWithHttpInfo($body)
     {
@@ -2412,15 +2412,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyRevision',
+                '\AnketologClient\Model\SurveyRevision',
                 '/survey/revision/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyRevision', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyRevision', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyRevision', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyRevision', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2434,9 +2434,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body49 $body  (required)
-     * @return \Anketolog\Model\SurveyRevision[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body49 $body  (required)
+     * @return \AnketologClient\Model\SurveyRevision[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyRevisionList($body)
     {
@@ -2449,9 +2449,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body49 $body  (required)
-     * @return Array of \Anketolog\Model\SurveyRevision[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body49 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveyRevision[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyRevisionListWithHttpInfo($body)
     {
@@ -2499,15 +2499,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyRevision[]',
+                '\AnketologClient\Model\SurveyRevision[]',
                 '/survey/revision/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyRevision[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyRevision[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyRevision[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyRevision[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2521,9 +2521,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body50 $body  (required)
-     * @return \Anketolog\Model\SurveySubscribe
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body50 $body  (required)
+     * @return \AnketologClient\Model\SurveySubscribe
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeCreate($body)
     {
@@ -2536,9 +2536,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body50 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body50 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeCreateWithHttpInfo($body)
     {
@@ -2586,15 +2586,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySubscribe',
+                '\AnketologClient\Model\SurveySubscribe',
                 '/survey/subscribe/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySubscribe', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySubscribe', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySubscribe', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySubscribe', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2608,9 +2608,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body51 $body  (required)
-     * @return \Anketolog\Model\CountryItem
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body51 $body  (required)
+     * @return \AnketologClient\Model\CountryItem
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeDelete($body)
     {
@@ -2623,9 +2623,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body51 $body  (required)
-     * @return Array of \Anketolog\Model\CountryItem, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body51 $body  (required)
+     * @return Array of \AnketologClient\Model\CountryItem, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeDeleteWithHttpInfo($body)
     {
@@ -2673,15 +2673,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\CountryItem',
+                '\AnketologClient\Model\CountryItem',
                 '/survey/subscribe/delete'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\CountryItem', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CountryItem', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\CountryItem', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CountryItem', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2695,9 +2695,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body52 $body  (required)
-     * @return \Anketolog\Model\SurveySubscribe
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body52 $body  (required)
+     * @return \AnketologClient\Model\SurveySubscribe
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeInfo($body)
     {
@@ -2710,9 +2710,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body52 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body52 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeInfoWithHttpInfo($body)
     {
@@ -2760,15 +2760,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySubscribe',
+                '\AnketologClient\Model\SurveySubscribe',
                 '/survey/subscribe/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySubscribe', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySubscribe', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySubscribe', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySubscribe', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2782,9 +2782,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body53 $body  (required)
-     * @return \Anketolog\Model\SurveySubscribe[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body53 $body  (required)
+     * @return \AnketologClient\Model\SurveySubscribe[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeList($body)
     {
@@ -2797,9 +2797,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body53 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySubscribe[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body53 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySubscribe[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeListWithHttpInfo($body)
     {
@@ -2847,15 +2847,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySubscribe[]',
+                '\AnketologClient\Model\SurveySubscribe[]',
                 '/survey/subscribe/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySubscribe[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySubscribe[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySubscribe[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySubscribe[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2869,9 +2869,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body54 $body  (required)
-     * @return \Anketolog\Model\SurveySubscribe
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body54 $body  (required)
+     * @return \AnketologClient\Model\SurveySubscribe
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeUpdate($body)
     {
@@ -2884,9 +2884,9 @@ class SurveyApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body54 $body  (required)
-     * @return Array of \Anketolog\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body54 $body  (required)
+     * @return Array of \AnketologClient\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeUpdateWithHttpInfo($body)
     {
@@ -2934,15 +2934,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveySubscribe',
+                '\AnketologClient\Model\SurveySubscribe',
                 '/survey/subscribe/update'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveySubscribe', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySubscribe', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveySubscribe', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySubscribe', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -2956,8 +2956,8 @@ class SurveyApi
      *
      * 
      *
-     * @return \Anketolog\Model\SurveyTemplate
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\SurveyTemplate
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyTemplateList()
     {
@@ -2970,8 +2970,8 @@ class SurveyApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\SurveyTemplate, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\SurveyTemplate, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyTemplateListWithHttpInfo()
     {
@@ -3010,15 +3010,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\SurveyTemplate',
+                '\AnketologClient\Model\SurveyTemplate',
                 '/survey/template/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\SurveyTemplate', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyTemplate', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\SurveyTemplate', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyTemplate', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

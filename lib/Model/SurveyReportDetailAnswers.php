@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -48,7 +48,7 @@ use \ArrayAccess;
  *
  * @category    Class */
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -71,7 +71,7 @@ class SurveyReportDetailAnswers implements ArrayAccess
         'revision_id' => 'int',
         'start_date' => 'int',
         'finish_date' => 'int',
-        'questions_answers' => '\Anketolog\Model\SurveyReportDetailQuestionsAnswers[]'
+        'questions_answers' => '\AnketologClient\Model\SurveyReportDetailQuestionsAnswers[]'
     );
 
     public static function swaggerTypes()
@@ -323,7 +323,7 @@ class SurveyReportDetailAnswers implements ArrayAccess
 
     /**
      * Gets questions_answers
-     * @return \Anketolog\Model\SurveyReportDetailQuestionsAnswers[]
+     * @return \AnketologClient\Model\SurveyReportDetailQuestionsAnswers[]
      */
     public function getQuestionsAnswers()
     {
@@ -332,7 +332,7 @@ class SurveyReportDetailAnswers implements ArrayAccess
 
     /**
      * Sets questions_answers
-     * @param \Anketolog\Model\SurveyReportDetailQuestionsAnswers[] $questions_answers
+     * @param \AnketologClient\Model\SurveyReportDetailQuestionsAnswers[] $questions_answers
      * @return $this
      */
     public function setQuestionsAnswers($questions_answers)
@@ -393,10 +393,10 @@ class SurveyReportDetailAnswers implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

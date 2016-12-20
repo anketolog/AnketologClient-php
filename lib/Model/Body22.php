@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -48,7 +48,7 @@ use \ArrayAccess;
  *
  * @category    Class */
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -70,8 +70,8 @@ class Body22 implements ArrayAccess
         'description' => 'string',
         'categories' => 'string[]',
         'surveys' => 'int[]',
-        'offices' => '\Anketolog\Model\PersonalpagemanageupdateOffices[]',
-        'appearance' => '\Anketolog\Model\PersonalpagemanageupdateAppearance'
+        'offices' => '\AnketologClient\Model\PersonalpagemanageupdateOffices[]',
+        'appearance' => '\AnketologClient\Model\PersonalpagemanageupdateAppearance'
     );
 
     public static function swaggerTypes()
@@ -296,7 +296,7 @@ class Body22 implements ArrayAccess
 
     /**
      * Gets offices
-     * @return \Anketolog\Model\PersonalpagemanageupdateOffices[]
+     * @return \AnketologClient\Model\PersonalpagemanageupdateOffices[]
      */
     public function getOffices()
     {
@@ -305,7 +305,7 @@ class Body22 implements ArrayAccess
 
     /**
      * Sets offices
-     * @param \Anketolog\Model\PersonalpagemanageupdateOffices[] $offices Контакты персональной страницы
+     * @param \AnketologClient\Model\PersonalpagemanageupdateOffices[] $offices Контакты персональной страницы
      * @return $this
      */
     public function setOffices($offices)
@@ -317,7 +317,7 @@ class Body22 implements ArrayAccess
 
     /**
      * Gets appearance
-     * @return \Anketolog\Model\PersonalpagemanageupdateAppearance
+     * @return \AnketologClient\Model\PersonalpagemanageupdateAppearance
      */
     public function getAppearance()
     {
@@ -326,7 +326,7 @@ class Body22 implements ArrayAccess
 
     /**
      * Sets appearance
-     * @param \Anketolog\Model\PersonalpagemanageupdateAppearance $appearance
+     * @param \AnketologClient\Model\PersonalpagemanageupdateAppearance $appearance
      * @return $this
      */
     public function setAppearance($appearance)
@@ -387,10 +387,10 @@ class Body22 implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

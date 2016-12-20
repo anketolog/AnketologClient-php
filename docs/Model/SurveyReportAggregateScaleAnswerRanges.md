@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **range_id** | **int** |  | 
-**options** | [**\Anketolog\Model\SurveyReportAggregateDropdownAnswerOptions[]**](SurveyReportAggregateDropdownAnswerOptions.md) |  | 
+**options** | [**\AnketologClient\Model\SurveyReportAggregateDropdownAnswerOptions[]**](SurveyReportAggregateDropdownAnswerOptions.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

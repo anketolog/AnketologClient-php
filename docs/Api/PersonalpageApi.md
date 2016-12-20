@@ -1,4 +1,4 @@
-# Anketolog\PersonalpageApi
+# AnketologClient\PersonalpageApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **listsManageArchive**
-> \Anketolog\Model\PersonalPagePersonalPage listsManageArchive($body)
+> \AnketologClient\Model\PersonalPagePersonalPage listsManageArchive($body)
 
 
 
@@ -30,12 +30,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body19(); // \Anketolog\Model\Body19 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body19(); // \AnketologClient\Model\Body19 | 
 
 try {
     $result = $api_instance->listsManageArchive($body);
@@ -50,11 +50,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body19**](../Model/\Anketolog\Model\Body19.md)|  |
+ **body** | [**\AnketologClient\Model\Body19**](../Model/\AnketologClient\Model\Body19.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
+[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
 
 ### Authorization
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorCreatealias**
-> \Anketolog\Model\PersonalPageAliasCollector personalpageCollectorCreatealias($body)
+> \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorCreatealias($body)
 
 
 
@@ -80,12 +80,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body14(); // \Anketolog\Model\Body14 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body14(); // \AnketologClient\Model\Body14 | 
 
 try {
     $result = $api_instance->personalpageCollectorCreatealias($body);
@@ -100,11 +100,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body14**](../Model/\Anketolog\Model\Body14.md)|  |
+ **body** | [**\AnketologClient\Model\Body14**](../Model/\AnketologClient\Model\Body14.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPageAliasCollector**](../Model/PersonalPageAliasCollector.md)
+[**\AnketologClient\Model\PersonalPageAliasCollector**](../Model/PersonalPageAliasCollector.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorCreatewidget**
-> \Anketolog\Model\PersonalPageWidgetCollector personalpageCollectorCreatewidget($body)
+> \AnketologClient\Model\PersonalPageWidgetCollector personalpageCollectorCreatewidget($body)
 
 
 
@@ -130,12 +130,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body15(); // \Anketolog\Model\Body15 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body15(); // \AnketologClient\Model\Body15 | 
 
 try {
     $result = $api_instance->personalpageCollectorCreatewidget($body);
@@ -150,11 +150,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body15**](../Model/\Anketolog\Model\Body15.md)|  |
+ **body** | [**\AnketologClient\Model\Body15**](../Model/\AnketologClient\Model\Body15.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPageWidgetCollector**](../Model/PersonalPageWidgetCollector.md)
+[**\AnketologClient\Model\PersonalPageWidgetCollector**](../Model/PersonalPageWidgetCollector.md)
 
 ### Authorization
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorList**
-> \Anketolog\Model\PersonalPageCollector[] personalpageCollectorList($body)
+> \AnketologClient\Model\PersonalPageCollector[] personalpageCollectorList($body)
 
 
 
@@ -180,12 +180,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body16(); // \Anketolog\Model\Body16 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body16(); // \AnketologClient\Model\Body16 | 
 
 try {
     $result = $api_instance->personalpageCollectorList($body);
@@ -200,11 +200,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body16**](../Model/\Anketolog\Model\Body16.md)|  |
+ **body** | [**\AnketologClient\Model\Body16**](../Model/\AnketologClient\Model\Body16.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPageCollector[]**](../Model/PersonalPageCollector.md)
+[**\AnketologClient\Model\PersonalPageCollector[]**](../Model/PersonalPageCollector.md)
 
 ### Authorization
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorUpdatealias**
-> \Anketolog\Model\PersonalPageAliasCollector personalpageCollectorUpdatealias($body)
+> \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorUpdatealias($body)
 
 
 
@@ -230,12 +230,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body17(); // \Anketolog\Model\Body17 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body17(); // \AnketologClient\Model\Body17 | 
 
 try {
     $result = $api_instance->personalpageCollectorUpdatealias($body);
@@ -250,11 +250,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body17**](../Model/\Anketolog\Model\Body17.md)|  |
+ **body** | [**\AnketologClient\Model\Body17**](../Model/\AnketologClient\Model\Body17.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPageAliasCollector**](../Model/PersonalPageAliasCollector.md)
+[**\AnketologClient\Model\PersonalPageAliasCollector**](../Model/PersonalPageAliasCollector.md)
 
 ### Authorization
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorUpdatewidget**
-> \Anketolog\Model\PersonalPageWidgetCollector personalpageCollectorUpdatewidget($body)
+> \AnketologClient\Model\PersonalPageWidgetCollector personalpageCollectorUpdatewidget($body)
 
 
 
@@ -280,12 +280,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body18(); // \Anketolog\Model\Body18 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body18(); // \AnketologClient\Model\Body18 | 
 
 try {
     $result = $api_instance->personalpageCollectorUpdatewidget($body);
@@ -300,11 +300,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body18**](../Model/\Anketolog\Model\Body18.md)|  |
+ **body** | [**\AnketologClient\Model\Body18**](../Model/\AnketologClient\Model\Body18.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPageWidgetCollector**](../Model/PersonalPageWidgetCollector.md)
+[**\AnketologClient\Model\PersonalPageWidgetCollector**](../Model/PersonalPageWidgetCollector.md)
 
 ### Authorization
 
@@ -318,7 +318,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageCreate**
-> \Anketolog\Model\PersonalPagePersonalPage personalpageManageCreate()
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageCreate()
 
 
 
@@ -330,11 +330,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
+$api_instance = new AnketologClient\Api\PersonalpageApi();
 
 try {
     $result = $api_instance->personalpageManageCreate();
@@ -350,7 +350,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
+[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
 
 ### Authorization
 
@@ -364,7 +364,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageInfo**
-> \Anketolog\Model\PersonalPagePersonalPage personalpageManageInfo($body)
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageInfo($body)
 
 
 
@@ -376,12 +376,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body20(); // \Anketolog\Model\Body20 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body20(); // \AnketologClient\Model\Body20 | 
 
 try {
     $result = $api_instance->personalpageManageInfo($body);
@@ -396,11 +396,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body20**](../Model/\Anketolog\Model\Body20.md)|  |
+ **body** | [**\AnketologClient\Model\Body20**](../Model/\AnketologClient\Model\Body20.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
+[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
 
 ### Authorization
 
@@ -414,7 +414,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageList**
-> \Anketolog\Model\PersonalPagePersonalPage[] personalpageManageList()
+> \AnketologClient\Model\PersonalPagePersonalPage[] personalpageManageList()
 
 
 
@@ -426,11 +426,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
+$api_instance = new AnketologClient\Api\PersonalpageApi();
 
 try {
     $result = $api_instance->personalpageManageList();
@@ -446,7 +446,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPagePersonalPage[]**](../Model/PersonalPagePersonalPage.md)
+[**\AnketologClient\Model\PersonalPagePersonalPage[]**](../Model/PersonalPagePersonalPage.md)
 
 ### Authorization
 
@@ -460,7 +460,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageRestore**
-> \Anketolog\Model\PersonalPagePersonalPage personalpageManageRestore($body)
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageRestore($body)
 
 
 
@@ -472,12 +472,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body21(); // \Anketolog\Model\Body21 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body21(); // \AnketologClient\Model\Body21 | 
 
 try {
     $result = $api_instance->personalpageManageRestore($body);
@@ -492,11 +492,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body21**](../Model/\Anketolog\Model\Body21.md)|  |
+ **body** | [**\AnketologClient\Model\Body21**](../Model/\AnketologClient\Model\Body21.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
+[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
 
 ### Authorization
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageUpdate**
-> \Anketolog\Model\PersonalPagePersonalPage personalpageManageUpdate($body)
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageUpdate($body)
 
 
 
@@ -522,12 +522,12 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\PersonalpageApi();
-$body = new \Anketolog\Model\Body22(); // \Anketolog\Model\Body22 | 
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$body = new \AnketologClient\Model\Body22(); // \AnketologClient\Model\Body22 | 
 
 try {
     $result = $api_instance->personalpageManageUpdate($body);
@@ -542,11 +542,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body22**](../Model/\Anketolog\Model\Body22.md)|  |
+ **body** | [**\AnketologClient\Model\Body22**](../Model/\AnketologClient\Model\Body22.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
+[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
 
 ### Authorization
 

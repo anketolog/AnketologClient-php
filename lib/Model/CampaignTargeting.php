@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Целевая аудитория кампании
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -67,34 +67,34 @@ class CampaignTargeting implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'vozrast' => '\Anketolog\Model\CampaignTargetingVozrast',
-        'pol' => '\Anketolog\Model\CampaignTargetingPol',
-        'mesto_zhitelstva' => '\Anketolog\Model\CampaignTargetingMestoZhitelstva',
-        'obrazovanie' => '\Anketolog\Model\CampaignTargetingObrazovanie',
-        'zanyatost' => '\Anketolog\Model\CampaignTargetingZanyatost',
-        'semya_i_deti' => '\Anketolog\Model\CampaignTargetingSemyaIDeti',
-        'dohody_i_rashody' => '\Anketolog\Model\CampaignTargetingDohodyIRashody',
-        'zhilischnye_usloviya' => '\Anketolog\Model\CampaignTargetingZhilischnyeUsloviya',
-        'lichnyy_transport' => '\Anketolog\Model\CampaignTargetingLichnyyTransport',
-        'peredvizhenie_po_gorodu' => '\Anketolog\Model\CampaignTargetingPeredvizheniePoGorodu',
-        'aviaperelety' => '\Anketolog\Model\CampaignTargetingAviaperelety',
-        'poyezdkizhd' => '\Anketolog\Model\CampaignTargetingPoyezdkizhd',
-        'produkty_pitaniya_i_alkogol' => '\Anketolog\Model\CampaignTargetingProduktyPitaniyaIAlkogol',
-        'kurenie' => '\Anketolog\Model\CampaignTargetingKurenie',
-        'odezhda_obuv' => '\Anketolog\Model\CampaignTargetingOdezhdaObuv',
-        'elektronika' => '\Anketolog\Model\CampaignTargetingElektronika',
-        'mobilnyy_telefon' => '\Anketolog\Model\CampaignTargetingMobilnyyTelefon',
-        'internet' => '\Anketolog\Model\CampaignTargetingInternet',
-        'domashnie_zhivotnye' => '\Anketolog\Model\CampaignTargetingDomashnieZhivotnye',
-        'platnye_uslugi' => '\Anketolog\Model\CampaignTargetingPlatnyeUslugi',
-        'krasota' => '\Anketolog\Model\CampaignTargetingKrasota',
-        'zdorove' => '\Anketolog\Model\CampaignTargetingZdorove',
-        'kultura_i_dosug' => '\Anketolog\Model\CampaignTargetingKulturaIDosug',
-        'sport_i_aktivnyy_otdyh' => '\Anketolog\Model\CampaignTargetingSportIAktivnyyOtdyh',
-        'uvlecheniya_i_interesy' => '\Anketolog\Model\CampaignTargetingUvlecheniyaIInteresy',
-        'puteshestviya' => '\Anketolog\Model\CampaignTargetingPuteshestviya',
-        'religioznaya_prinadlezhnost' => '\Anketolog\Model\CampaignTargetingReligioznayaPrinadlezhnost',
-        'politicheskaya_prinadlezhnost' => '\Anketolog\Model\CampaignTargetingPoliticheskayaPrinadlezhnost'
+        'vozrast' => '\AnketologClient\Model\CampaignTargetingVozrast',
+        'pol' => '\AnketologClient\Model\CampaignTargetingPol',
+        'mesto_zhitelstva' => '\AnketologClient\Model\CampaignTargetingMestoZhitelstva',
+        'obrazovanie' => '\AnketologClient\Model\CampaignTargetingObrazovanie',
+        'zanyatost' => '\AnketologClient\Model\CampaignTargetingZanyatost',
+        'semya_i_deti' => '\AnketologClient\Model\CampaignTargetingSemyaIDeti',
+        'dohody_i_rashody' => '\AnketologClient\Model\CampaignTargetingDohodyIRashody',
+        'zhilischnye_usloviya' => '\AnketologClient\Model\CampaignTargetingZhilischnyeUsloviya',
+        'lichnyy_transport' => '\AnketologClient\Model\CampaignTargetingLichnyyTransport',
+        'peredvizhenie_po_gorodu' => '\AnketologClient\Model\CampaignTargetingPeredvizheniePoGorodu',
+        'aviaperelety' => '\AnketologClient\Model\CampaignTargetingAviaperelety',
+        'poyezdkizhd' => '\AnketologClient\Model\CampaignTargetingPoyezdkizhd',
+        'produkty_pitaniya_i_alkogol' => '\AnketologClient\Model\CampaignTargetingProduktyPitaniyaIAlkogol',
+        'kurenie' => '\AnketologClient\Model\CampaignTargetingKurenie',
+        'odezhda_obuv' => '\AnketologClient\Model\CampaignTargetingOdezhdaObuv',
+        'elektronika' => '\AnketologClient\Model\CampaignTargetingElektronika',
+        'mobilnyy_telefon' => '\AnketologClient\Model\CampaignTargetingMobilnyyTelefon',
+        'internet' => '\AnketologClient\Model\CampaignTargetingInternet',
+        'domashnie_zhivotnye' => '\AnketologClient\Model\CampaignTargetingDomashnieZhivotnye',
+        'platnye_uslugi' => '\AnketologClient\Model\CampaignTargetingPlatnyeUslugi',
+        'krasota' => '\AnketologClient\Model\CampaignTargetingKrasota',
+        'zdorove' => '\AnketologClient\Model\CampaignTargetingZdorove',
+        'kultura_i_dosug' => '\AnketologClient\Model\CampaignTargetingKulturaIDosug',
+        'sport_i_aktivnyy_otdyh' => '\AnketologClient\Model\CampaignTargetingSportIAktivnyyOtdyh',
+        'uvlecheniya_i_interesy' => '\AnketologClient\Model\CampaignTargetingUvlecheniyaIInteresy',
+        'puteshestviya' => '\AnketologClient\Model\CampaignTargetingPuteshestviya',
+        'religioznaya_prinadlezhnost' => '\AnketologClient\Model\CampaignTargetingReligioznayaPrinadlezhnost',
+        'politicheskaya_prinadlezhnost' => '\AnketologClient\Model\CampaignTargetingPoliticheskayaPrinadlezhnost'
     );
 
     public static function swaggerTypes()
@@ -293,7 +293,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets vozrast
-     * @return \Anketolog\Model\CampaignTargetingVozrast
+     * @return \AnketologClient\Model\CampaignTargetingVozrast
      */
     public function getVozrast()
     {
@@ -302,7 +302,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets vozrast
-     * @param \Anketolog\Model\CampaignTargetingVozrast $vozrast
+     * @param \AnketologClient\Model\CampaignTargetingVozrast $vozrast
      * @return $this
      */
     public function setVozrast($vozrast)
@@ -314,7 +314,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets pol
-     * @return \Anketolog\Model\CampaignTargetingPol
+     * @return \AnketologClient\Model\CampaignTargetingPol
      */
     public function getPol()
     {
@@ -323,7 +323,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets pol
-     * @param \Anketolog\Model\CampaignTargetingPol $pol
+     * @param \AnketologClient\Model\CampaignTargetingPol $pol
      * @return $this
      */
     public function setPol($pol)
@@ -335,7 +335,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets mesto_zhitelstva
-     * @return \Anketolog\Model\CampaignTargetingMestoZhitelstva
+     * @return \AnketologClient\Model\CampaignTargetingMestoZhitelstva
      */
     public function getMestoZhitelstva()
     {
@@ -344,7 +344,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets mesto_zhitelstva
-     * @param \Anketolog\Model\CampaignTargetingMestoZhitelstva $mesto_zhitelstva
+     * @param \AnketologClient\Model\CampaignTargetingMestoZhitelstva $mesto_zhitelstva
      * @return $this
      */
     public function setMestoZhitelstva($mesto_zhitelstva)
@@ -356,7 +356,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets obrazovanie
-     * @return \Anketolog\Model\CampaignTargetingObrazovanie
+     * @return \AnketologClient\Model\CampaignTargetingObrazovanie
      */
     public function getObrazovanie()
     {
@@ -365,7 +365,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets obrazovanie
-     * @param \Anketolog\Model\CampaignTargetingObrazovanie $obrazovanie
+     * @param \AnketologClient\Model\CampaignTargetingObrazovanie $obrazovanie
      * @return $this
      */
     public function setObrazovanie($obrazovanie)
@@ -377,7 +377,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets zanyatost
-     * @return \Anketolog\Model\CampaignTargetingZanyatost
+     * @return \AnketologClient\Model\CampaignTargetingZanyatost
      */
     public function getZanyatost()
     {
@@ -386,7 +386,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets zanyatost
-     * @param \Anketolog\Model\CampaignTargetingZanyatost $zanyatost
+     * @param \AnketologClient\Model\CampaignTargetingZanyatost $zanyatost
      * @return $this
      */
     public function setZanyatost($zanyatost)
@@ -398,7 +398,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets semya_i_deti
-     * @return \Anketolog\Model\CampaignTargetingSemyaIDeti
+     * @return \AnketologClient\Model\CampaignTargetingSemyaIDeti
      */
     public function getSemyaIDeti()
     {
@@ -407,7 +407,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets semya_i_deti
-     * @param \Anketolog\Model\CampaignTargetingSemyaIDeti $semya_i_deti
+     * @param \AnketologClient\Model\CampaignTargetingSemyaIDeti $semya_i_deti
      * @return $this
      */
     public function setSemyaIDeti($semya_i_deti)
@@ -419,7 +419,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets dohody_i_rashody
-     * @return \Anketolog\Model\CampaignTargetingDohodyIRashody
+     * @return \AnketologClient\Model\CampaignTargetingDohodyIRashody
      */
     public function getDohodyIRashody()
     {
@@ -428,7 +428,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets dohody_i_rashody
-     * @param \Anketolog\Model\CampaignTargetingDohodyIRashody $dohody_i_rashody
+     * @param \AnketologClient\Model\CampaignTargetingDohodyIRashody $dohody_i_rashody
      * @return $this
      */
     public function setDohodyIRashody($dohody_i_rashody)
@@ -440,7 +440,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets zhilischnye_usloviya
-     * @return \Anketolog\Model\CampaignTargetingZhilischnyeUsloviya
+     * @return \AnketologClient\Model\CampaignTargetingZhilischnyeUsloviya
      */
     public function getZhilischnyeUsloviya()
     {
@@ -449,7 +449,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets zhilischnye_usloviya
-     * @param \Anketolog\Model\CampaignTargetingZhilischnyeUsloviya $zhilischnye_usloviya
+     * @param \AnketologClient\Model\CampaignTargetingZhilischnyeUsloviya $zhilischnye_usloviya
      * @return $this
      */
     public function setZhilischnyeUsloviya($zhilischnye_usloviya)
@@ -461,7 +461,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets lichnyy_transport
-     * @return \Anketolog\Model\CampaignTargetingLichnyyTransport
+     * @return \AnketologClient\Model\CampaignTargetingLichnyyTransport
      */
     public function getLichnyyTransport()
     {
@@ -470,7 +470,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets lichnyy_transport
-     * @param \Anketolog\Model\CampaignTargetingLichnyyTransport $lichnyy_transport
+     * @param \AnketologClient\Model\CampaignTargetingLichnyyTransport $lichnyy_transport
      * @return $this
      */
     public function setLichnyyTransport($lichnyy_transport)
@@ -482,7 +482,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets peredvizhenie_po_gorodu
-     * @return \Anketolog\Model\CampaignTargetingPeredvizheniePoGorodu
+     * @return \AnketologClient\Model\CampaignTargetingPeredvizheniePoGorodu
      */
     public function getPeredvizheniePoGorodu()
     {
@@ -491,7 +491,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets peredvizhenie_po_gorodu
-     * @param \Anketolog\Model\CampaignTargetingPeredvizheniePoGorodu $peredvizhenie_po_gorodu
+     * @param \AnketologClient\Model\CampaignTargetingPeredvizheniePoGorodu $peredvizhenie_po_gorodu
      * @return $this
      */
     public function setPeredvizheniePoGorodu($peredvizhenie_po_gorodu)
@@ -503,7 +503,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets aviaperelety
-     * @return \Anketolog\Model\CampaignTargetingAviaperelety
+     * @return \AnketologClient\Model\CampaignTargetingAviaperelety
      */
     public function getAviaperelety()
     {
@@ -512,7 +512,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets aviaperelety
-     * @param \Anketolog\Model\CampaignTargetingAviaperelety $aviaperelety
+     * @param \AnketologClient\Model\CampaignTargetingAviaperelety $aviaperelety
      * @return $this
      */
     public function setAviaperelety($aviaperelety)
@@ -524,7 +524,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets poyezdkizhd
-     * @return \Anketolog\Model\CampaignTargetingPoyezdkizhd
+     * @return \AnketologClient\Model\CampaignTargetingPoyezdkizhd
      */
     public function getPoyezdkizhd()
     {
@@ -533,7 +533,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets poyezdkizhd
-     * @param \Anketolog\Model\CampaignTargetingPoyezdkizhd $poyezdkizhd
+     * @param \AnketologClient\Model\CampaignTargetingPoyezdkizhd $poyezdkizhd
      * @return $this
      */
     public function setPoyezdkizhd($poyezdkizhd)
@@ -545,7 +545,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets produkty_pitaniya_i_alkogol
-     * @return \Anketolog\Model\CampaignTargetingProduktyPitaniyaIAlkogol
+     * @return \AnketologClient\Model\CampaignTargetingProduktyPitaniyaIAlkogol
      */
     public function getProduktyPitaniyaIAlkogol()
     {
@@ -554,7 +554,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets produkty_pitaniya_i_alkogol
-     * @param \Anketolog\Model\CampaignTargetingProduktyPitaniyaIAlkogol $produkty_pitaniya_i_alkogol
+     * @param \AnketologClient\Model\CampaignTargetingProduktyPitaniyaIAlkogol $produkty_pitaniya_i_alkogol
      * @return $this
      */
     public function setProduktyPitaniyaIAlkogol($produkty_pitaniya_i_alkogol)
@@ -566,7 +566,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets kurenie
-     * @return \Anketolog\Model\CampaignTargetingKurenie
+     * @return \AnketologClient\Model\CampaignTargetingKurenie
      */
     public function getKurenie()
     {
@@ -575,7 +575,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets kurenie
-     * @param \Anketolog\Model\CampaignTargetingKurenie $kurenie
+     * @param \AnketologClient\Model\CampaignTargetingKurenie $kurenie
      * @return $this
      */
     public function setKurenie($kurenie)
@@ -587,7 +587,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets odezhda_obuv
-     * @return \Anketolog\Model\CampaignTargetingOdezhdaObuv
+     * @return \AnketologClient\Model\CampaignTargetingOdezhdaObuv
      */
     public function getOdezhdaObuv()
     {
@@ -596,7 +596,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets odezhda_obuv
-     * @param \Anketolog\Model\CampaignTargetingOdezhdaObuv $odezhda_obuv
+     * @param \AnketologClient\Model\CampaignTargetingOdezhdaObuv $odezhda_obuv
      * @return $this
      */
     public function setOdezhdaObuv($odezhda_obuv)
@@ -608,7 +608,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets elektronika
-     * @return \Anketolog\Model\CampaignTargetingElektronika
+     * @return \AnketologClient\Model\CampaignTargetingElektronika
      */
     public function getElektronika()
     {
@@ -617,7 +617,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets elektronika
-     * @param \Anketolog\Model\CampaignTargetingElektronika $elektronika
+     * @param \AnketologClient\Model\CampaignTargetingElektronika $elektronika
      * @return $this
      */
     public function setElektronika($elektronika)
@@ -629,7 +629,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets mobilnyy_telefon
-     * @return \Anketolog\Model\CampaignTargetingMobilnyyTelefon
+     * @return \AnketologClient\Model\CampaignTargetingMobilnyyTelefon
      */
     public function getMobilnyyTelefon()
     {
@@ -638,7 +638,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets mobilnyy_telefon
-     * @param \Anketolog\Model\CampaignTargetingMobilnyyTelefon $mobilnyy_telefon
+     * @param \AnketologClient\Model\CampaignTargetingMobilnyyTelefon $mobilnyy_telefon
      * @return $this
      */
     public function setMobilnyyTelefon($mobilnyy_telefon)
@@ -650,7 +650,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets internet
-     * @return \Anketolog\Model\CampaignTargetingInternet
+     * @return \AnketologClient\Model\CampaignTargetingInternet
      */
     public function getInternet()
     {
@@ -659,7 +659,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets internet
-     * @param \Anketolog\Model\CampaignTargetingInternet $internet
+     * @param \AnketologClient\Model\CampaignTargetingInternet $internet
      * @return $this
      */
     public function setInternet($internet)
@@ -671,7 +671,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets domashnie_zhivotnye
-     * @return \Anketolog\Model\CampaignTargetingDomashnieZhivotnye
+     * @return \AnketologClient\Model\CampaignTargetingDomashnieZhivotnye
      */
     public function getDomashnieZhivotnye()
     {
@@ -680,7 +680,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets domashnie_zhivotnye
-     * @param \Anketolog\Model\CampaignTargetingDomashnieZhivotnye $domashnie_zhivotnye
+     * @param \AnketologClient\Model\CampaignTargetingDomashnieZhivotnye $domashnie_zhivotnye
      * @return $this
      */
     public function setDomashnieZhivotnye($domashnie_zhivotnye)
@@ -692,7 +692,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets platnye_uslugi
-     * @return \Anketolog\Model\CampaignTargetingPlatnyeUslugi
+     * @return \AnketologClient\Model\CampaignTargetingPlatnyeUslugi
      */
     public function getPlatnyeUslugi()
     {
@@ -701,7 +701,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets platnye_uslugi
-     * @param \Anketolog\Model\CampaignTargetingPlatnyeUslugi $platnye_uslugi
+     * @param \AnketologClient\Model\CampaignTargetingPlatnyeUslugi $platnye_uslugi
      * @return $this
      */
     public function setPlatnyeUslugi($platnye_uslugi)
@@ -713,7 +713,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets krasota
-     * @return \Anketolog\Model\CampaignTargetingKrasota
+     * @return \AnketologClient\Model\CampaignTargetingKrasota
      */
     public function getKrasota()
     {
@@ -722,7 +722,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets krasota
-     * @param \Anketolog\Model\CampaignTargetingKrasota $krasota
+     * @param \AnketologClient\Model\CampaignTargetingKrasota $krasota
      * @return $this
      */
     public function setKrasota($krasota)
@@ -734,7 +734,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets zdorove
-     * @return \Anketolog\Model\CampaignTargetingZdorove
+     * @return \AnketologClient\Model\CampaignTargetingZdorove
      */
     public function getZdorove()
     {
@@ -743,7 +743,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets zdorove
-     * @param \Anketolog\Model\CampaignTargetingZdorove $zdorove
+     * @param \AnketologClient\Model\CampaignTargetingZdorove $zdorove
      * @return $this
      */
     public function setZdorove($zdorove)
@@ -755,7 +755,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets kultura_i_dosug
-     * @return \Anketolog\Model\CampaignTargetingKulturaIDosug
+     * @return \AnketologClient\Model\CampaignTargetingKulturaIDosug
      */
     public function getKulturaIDosug()
     {
@@ -764,7 +764,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets kultura_i_dosug
-     * @param \Anketolog\Model\CampaignTargetingKulturaIDosug $kultura_i_dosug
+     * @param \AnketologClient\Model\CampaignTargetingKulturaIDosug $kultura_i_dosug
      * @return $this
      */
     public function setKulturaIDosug($kultura_i_dosug)
@@ -776,7 +776,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets sport_i_aktivnyy_otdyh
-     * @return \Anketolog\Model\CampaignTargetingSportIAktivnyyOtdyh
+     * @return \AnketologClient\Model\CampaignTargetingSportIAktivnyyOtdyh
      */
     public function getSportIAktivnyyOtdyh()
     {
@@ -785,7 +785,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets sport_i_aktivnyy_otdyh
-     * @param \Anketolog\Model\CampaignTargetingSportIAktivnyyOtdyh $sport_i_aktivnyy_otdyh
+     * @param \AnketologClient\Model\CampaignTargetingSportIAktivnyyOtdyh $sport_i_aktivnyy_otdyh
      * @return $this
      */
     public function setSportIAktivnyyOtdyh($sport_i_aktivnyy_otdyh)
@@ -797,7 +797,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets uvlecheniya_i_interesy
-     * @return \Anketolog\Model\CampaignTargetingUvlecheniyaIInteresy
+     * @return \AnketologClient\Model\CampaignTargetingUvlecheniyaIInteresy
      */
     public function getUvlecheniyaIInteresy()
     {
@@ -806,7 +806,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets uvlecheniya_i_interesy
-     * @param \Anketolog\Model\CampaignTargetingUvlecheniyaIInteresy $uvlecheniya_i_interesy
+     * @param \AnketologClient\Model\CampaignTargetingUvlecheniyaIInteresy $uvlecheniya_i_interesy
      * @return $this
      */
     public function setUvlecheniyaIInteresy($uvlecheniya_i_interesy)
@@ -818,7 +818,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets puteshestviya
-     * @return \Anketolog\Model\CampaignTargetingPuteshestviya
+     * @return \AnketologClient\Model\CampaignTargetingPuteshestviya
      */
     public function getPuteshestviya()
     {
@@ -827,7 +827,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets puteshestviya
-     * @param \Anketolog\Model\CampaignTargetingPuteshestviya $puteshestviya
+     * @param \AnketologClient\Model\CampaignTargetingPuteshestviya $puteshestviya
      * @return $this
      */
     public function setPuteshestviya($puteshestviya)
@@ -839,7 +839,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets religioznaya_prinadlezhnost
-     * @return \Anketolog\Model\CampaignTargetingReligioznayaPrinadlezhnost
+     * @return \AnketologClient\Model\CampaignTargetingReligioznayaPrinadlezhnost
      */
     public function getReligioznayaPrinadlezhnost()
     {
@@ -848,7 +848,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets religioznaya_prinadlezhnost
-     * @param \Anketolog\Model\CampaignTargetingReligioznayaPrinadlezhnost $religioznaya_prinadlezhnost
+     * @param \AnketologClient\Model\CampaignTargetingReligioznayaPrinadlezhnost $religioznaya_prinadlezhnost
      * @return $this
      */
     public function setReligioznayaPrinadlezhnost($religioznaya_prinadlezhnost)
@@ -860,7 +860,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Gets politicheskaya_prinadlezhnost
-     * @return \Anketolog\Model\CampaignTargetingPoliticheskayaPrinadlezhnost
+     * @return \AnketologClient\Model\CampaignTargetingPoliticheskayaPrinadlezhnost
      */
     public function getPoliticheskayaPrinadlezhnost()
     {
@@ -869,7 +869,7 @@ class CampaignTargeting implements ArrayAccess
 
     /**
      * Sets politicheskaya_prinadlezhnost
-     * @param \Anketolog\Model\CampaignTargetingPoliticheskayaPrinadlezhnost $politicheskaya_prinadlezhnost
+     * @param \AnketologClient\Model\CampaignTargetingPoliticheskayaPrinadlezhnost $politicheskaya_prinadlezhnost
      * @return $this
      */
     public function setPoliticheskayaPrinadlezhnost($politicheskaya_prinadlezhnost)
@@ -930,10 +930,10 @@ class CampaignTargeting implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

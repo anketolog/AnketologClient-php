@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -48,7 +48,7 @@ use \ArrayAccess;
  *
  * @category    Class */
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -70,8 +70,8 @@ class Body33 implements ArrayAccess
         'label_text' => 'string',
         'text_color' => 'string',
         'background_color' => 'string',
-        'orientation' => '\Anketolog\Model\WidgetOrientation',
-        'align' => '\Anketolog\Model\WidgetAlign'
+        'orientation' => '\AnketologClient\Model\WidgetOrientation',
+        'align' => '\AnketologClient\Model\WidgetAlign'
     );
 
     public static function swaggerTypes()
@@ -302,7 +302,7 @@ class Body33 implements ArrayAccess
 
     /**
      * Gets orientation
-     * @return \Anketolog\Model\WidgetOrientation
+     * @return \AnketologClient\Model\WidgetOrientation
      */
     public function getOrientation()
     {
@@ -311,7 +311,7 @@ class Body33 implements ArrayAccess
 
     /**
      * Sets orientation
-     * @param \Anketolog\Model\WidgetOrientation $orientation
+     * @param \AnketologClient\Model\WidgetOrientation $orientation
      * @return $this
      */
     public function setOrientation($orientation)
@@ -323,7 +323,7 @@ class Body33 implements ArrayAccess
 
     /**
      * Gets align
-     * @return \Anketolog\Model\WidgetAlign
+     * @return \AnketologClient\Model\WidgetAlign
      */
     public function getAlign()
     {
@@ -332,7 +332,7 @@ class Body33 implements ArrayAccess
 
     /**
      * Sets align
-     * @param \Anketolog\Model\WidgetAlign $align
+     * @param \AnketologClient\Model\WidgetAlign $align
      * @return $this
      */
     public function setAlign($align)
@@ -393,10 +393,10 @@ class Body33 implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

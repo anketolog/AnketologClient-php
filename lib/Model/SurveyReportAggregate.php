@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Сгруппированная статистика
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -69,8 +69,8 @@ class SurveyReportAggregate implements ArrayAccess
     protected static $swaggerTypes = array(
         'question_id' => 'int',
         'answer_count' => 'int',
-        'answers' => '\Anketolog\Model\SurveyReportAggregateAnswer[]',
-        'filters' => '\Anketolog\Model\SurveyReportFilter[]'
+        'answers' => '\AnketologClient\Model\SurveyReportAggregateAnswer[]',
+        'filters' => '\AnketologClient\Model\SurveyReportFilter[]'
     );
 
     public static function swaggerTypes()
@@ -239,7 +239,7 @@ class SurveyReportAggregate implements ArrayAccess
 
     /**
      * Gets answers
-     * @return \Anketolog\Model\SurveyReportAggregateAnswer[]
+     * @return \AnketologClient\Model\SurveyReportAggregateAnswer[]
      */
     public function getAnswers()
     {
@@ -248,7 +248,7 @@ class SurveyReportAggregate implements ArrayAccess
 
     /**
      * Sets answers
-     * @param \Anketolog\Model\SurveyReportAggregateAnswer[] $answers Список ответов
+     * @param \AnketologClient\Model\SurveyReportAggregateAnswer[] $answers Список ответов
      * @return $this
      */
     public function setAnswers($answers)
@@ -260,7 +260,7 @@ class SurveyReportAggregate implements ArrayAccess
 
     /**
      * Gets filters
-     * @return \Anketolog\Model\SurveyReportFilter[]
+     * @return \AnketologClient\Model\SurveyReportFilter[]
      */
     public function getFilters()
     {
@@ -269,7 +269,7 @@ class SurveyReportAggregate implements ArrayAccess
 
     /**
      * Sets filters
-     * @param \Anketolog\Model\SurveyReportFilter[] $filters
+     * @param \AnketologClient\Model\SurveyReportFilter[] $filters
      * @return $this
      */
     public function setFilters($filters)
@@ -330,10 +330,10 @@ class SurveyReportAggregate implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

@@ -12,10 +12,10 @@ Name | Type | Description | Notes
 **has_comment** | **bool** | Отображать комментарий | 
 **comment** | **string** | Текст комментария | 
 **has_unable_answer** | **bool** | Вариант \&quot;затрудняюсь ответить\&quot; | 
-**branchrules** | [**\Anketolog\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
-**visiblerules** | [**\Anketolog\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
-**options** | [**\Anketolog\Model\SurveyOption[]**](SurveyOption.md) |  | 
-**ranges** | [**\Anketolog\Model\SurveyRange[]**](SurveyRange.md) |  | 
+**branchrules** | [**\AnketologClient\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
+**visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
+**options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
+**ranges** | [**\AnketologClient\Model\SurveyRange[]**](SurveyRange.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

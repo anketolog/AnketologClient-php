@@ -14,10 +14,10 @@ Name | Type | Description | Notes
 **archive_date** | **int** | Дата архивирования | 
 **lock_date** | **int** | Дата блокировки | 
 **suspend_date** | **int** | Дата приостановки | 
-**logo** | [**\Anketolog\Model\FileFile**](FileFile.md) |  | 
+**logo** | [**\AnketologClient\Model\FileFile**](FileFile.md) |  | 
 **disable_ad** | **bool** | Реклама | 
 **background_color** | **string** | Цвет фона | 
-**background** | [**\Anketolog\Model\FileFile**](FileFile.md) |  | 
+**background** | [**\AnketologClient\Model\FileFile**](FileFile.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

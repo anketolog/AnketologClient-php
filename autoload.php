@@ -3,7 +3,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -26,10 +26,10 @@
  * An example of a project-specific implementation.
  *
  * After registering this autoload function with SPL, the following line
- * would cause the function to attempt to load the \Anketolog\Baz\Qux class
+ * would cause the function to attempt to load the \AnketologClient\Baz\Qux class
  * from /path/to/project/lib/Baz/Qux.php:
  *
- *      new \Anketolog\Baz\Qux;
+ *      new \AnketologClient\Baz\Qux;
  *
  * @param string $class The fully-qualified class name.
  *
@@ -38,7 +38,7 @@
 spl_autoload_register(function ($class) {
 
     // project-specific namespace prefix
-    $prefix = 'Anketolog\\';
+    $prefix = 'AnketologClient\\';
 
     // base directory for the namespace prefix
     $base_dir = __DIR__ . '/lib/';

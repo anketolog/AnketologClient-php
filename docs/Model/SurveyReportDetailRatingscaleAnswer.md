@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**options** | [**\Anketolog\Model\SurveyReportAggregateFreelistAnswerInnerOptions[]**](SurveyReportAggregateFreelistAnswerInnerOptions.md) |  | 
+**options** | [**\AnketologClient\Model\SurveyReportAggregateFreelistAnswerInnerOptions[]**](SurveyReportAggregateFreelistAnswerInnerOptions.md) |  | 
 **total** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

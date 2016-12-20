@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Платеж
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -72,8 +72,8 @@ class BillingPayment implements ArrayAccess
         'create_date' => 'int',
         'approve_date' => 'int',
         'amount' => 'int',
-        'system' => '\Anketolog\Model\BillingPaymentSystem',
-        'profile' => '\Anketolog\Model\BillingPaymentProfile',
+        'system' => '\AnketologClient\Model\BillingPaymentSystem',
+        'profile' => '\AnketologClient\Model\BillingPaymentProfile',
         'url' => 'string'
     );
 
@@ -334,7 +334,7 @@ class BillingPayment implements ArrayAccess
 
     /**
      * Gets system
-     * @return \Anketolog\Model\BillingPaymentSystem
+     * @return \AnketologClient\Model\BillingPaymentSystem
      */
     public function getSystem()
     {
@@ -343,7 +343,7 @@ class BillingPayment implements ArrayAccess
 
     /**
      * Sets system
-     * @param \Anketolog\Model\BillingPaymentSystem $system
+     * @param \AnketologClient\Model\BillingPaymentSystem $system
      * @return $this
      */
     public function setSystem($system)
@@ -355,7 +355,7 @@ class BillingPayment implements ArrayAccess
 
     /**
      * Gets profile
-     * @return \Anketolog\Model\BillingPaymentProfile
+     * @return \AnketologClient\Model\BillingPaymentProfile
      */
     public function getProfile()
     {
@@ -364,7 +364,7 @@ class BillingPayment implements ArrayAccess
 
     /**
      * Sets profile
-     * @param \Anketolog\Model\BillingPaymentProfile $profile
+     * @param \AnketologClient\Model\BillingPaymentProfile $profile
      * @return $this
      */
     public function setProfile($profile)
@@ -446,10 +446,10 @@ class BillingPayment implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

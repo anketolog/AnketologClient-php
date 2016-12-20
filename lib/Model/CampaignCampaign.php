@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Кампания
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -79,8 +79,8 @@ class CampaignCampaign implements ArrayAccess
         'unique_respondents' => 'bool',
         'answer_price' => 'int',
         'answer_count' => 'int',
-        'targeting' => '\Anketolog\Model\CampaignTargeting',
-        'survey' => '\Anketolog\Model\SurveySurvey'
+        'targeting' => '\AnketologClient\Model\CampaignTargeting',
+        'survey' => '\AnketologClient\Model\SurveySurvey'
     );
 
     public static function swaggerTypes()
@@ -619,7 +619,7 @@ class CampaignCampaign implements ArrayAccess
 
     /**
      * Gets targeting
-     * @return \Anketolog\Model\CampaignTargeting
+     * @return \AnketologClient\Model\CampaignTargeting
      */
     public function getTargeting()
     {
@@ -628,7 +628,7 @@ class CampaignCampaign implements ArrayAccess
 
     /**
      * Sets targeting
-     * @param \Anketolog\Model\CampaignTargeting $targeting
+     * @param \AnketologClient\Model\CampaignTargeting $targeting
      * @return $this
      */
     public function setTargeting($targeting)
@@ -640,7 +640,7 @@ class CampaignCampaign implements ArrayAccess
 
     /**
      * Gets survey
-     * @return \Anketolog\Model\SurveySurvey
+     * @return \AnketologClient\Model\SurveySurvey
      */
     public function getSurvey()
     {
@@ -649,7 +649,7 @@ class CampaignCampaign implements ArrayAccess
 
     /**
      * Sets survey
-     * @param \Anketolog\Model\SurveySurvey $survey
+     * @param \AnketologClient\Model\SurveySurvey $survey
      * @return $this
      */
     public function setSurvey($survey)
@@ -710,10 +710,10 @@ class CampaignCampaign implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

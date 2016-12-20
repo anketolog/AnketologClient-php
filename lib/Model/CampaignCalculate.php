@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Целевая аудитория кампании
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -69,7 +69,7 @@ class CampaignCalculate implements ArrayAccess
     protected static $swaggerTypes = array(
         'min_answer_price' => 'int',
         'max_answer_count' => 'int',
-        'targeting_info' => '\Anketolog\Model\CampaignCalculateTargetingInfo[]'
+        'targeting_info' => '\AnketologClient\Model\CampaignCalculateTargetingInfo[]'
     );
 
     public static function swaggerTypes()
@@ -228,7 +228,7 @@ class CampaignCalculate implements ArrayAccess
 
     /**
      * Gets targeting_info
-     * @return \Anketolog\Model\CampaignCalculateTargetingInfo[]
+     * @return \AnketologClient\Model\CampaignCalculateTargetingInfo[]
      */
     public function getTargetingInfo()
     {
@@ -237,7 +237,7 @@ class CampaignCalculate implements ArrayAccess
 
     /**
      * Sets targeting_info
-     * @param \Anketolog\Model\CampaignCalculateTargetingInfo[] $targeting_info Целевая аудитория
+     * @param \AnketologClient\Model\CampaignCalculateTargetingInfo[] $targeting_info Целевая аудитория
      * @return $this
      */
     public function setTargetingInfo($targeting_info)
@@ -298,10 +298,10 @@ class CampaignCalculate implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

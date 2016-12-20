@@ -1,4 +1,4 @@
-# Anketolog\ListsApi
+# AnketologClient\ListsApi
 
 All URIs are relative to *https://apiv2.anketolog.loc/*
 
@@ -22,12 +22,12 @@ Method | HTTP request | Description
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\ListsApi();
-$body = new \Anketolog\Model\Body12(); // \Anketolog\Model\Body12 | 
+$api_instance = new AnketologClient\Api\ListsApi();
+$body = new \AnketologClient\Model\Body12(); // \AnketologClient\Model\Body12 | 
 
 try {
     $result = $api_instance->listsCityList($body);
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body12**](../Model/\Anketolog\Model\Body12.md)|  |
+ **body** | [**\AnketologClient\Model\Body12**](../Model/\AnketologClient\Model\Body12.md)|  |
 
 ### Return type
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsCountryList**
-> \Anketolog\Model\RegionItem listsCountryList()
+> \AnketologClient\Model\RegionItem listsCountryList()
 
 
 
@@ -72,11 +72,11 @@ Name | Type | Description  | Notes
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\ListsApi();
+$api_instance = new AnketologClient\Api\ListsApi();
 
 try {
     $result = $api_instance->listsCountryList();
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\Anketolog\Model\RegionItem**](../Model/RegionItem.md)
+[**\AnketologClient\Model\RegionItem**](../Model/RegionItem.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsRegionList**
-> \Anketolog\Model\CityItem listsRegionList($body)
+> \AnketologClient\Model\CityItem listsRegionList($body)
 
 
 
@@ -118,12 +118,12 @@ This endpoint does not need any parameter.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Anketolog\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Anketolog\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
-$api_instance = new Anketolog\Api\ListsApi();
-$body = new \Anketolog\Model\Body13(); // \Anketolog\Model\Body13 | 
+$api_instance = new AnketologClient\Api\ListsApi();
+$body = new \AnketologClient\Model\Body13(); // \AnketologClient\Model\Body13 | 
 
 try {
     $result = $api_instance->listsRegionList($body);
@@ -138,11 +138,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Anketolog\Model\Body13**](../Model/\Anketolog\Model\Body13.md)|  |
+ **body** | [**\AnketologClient\Model\Body13**](../Model/\AnketologClient\Model\Body13.md)|  |
 
 ### Return type
 
-[**\Anketolog\Model\CityItem**](../Model/CityItem.md)
+[**\AnketologClient\Model\CityItem**](../Model/CityItem.md)
 
 ### Authorization
 

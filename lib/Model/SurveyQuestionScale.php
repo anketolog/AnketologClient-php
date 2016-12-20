@@ -5,7 +5,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -39,7 +39,7 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Model;
+namespace AnketologClient\Model;
 
 use \ArrayAccess;
 
@@ -49,7 +49,7 @@ use \ArrayAccess;
  * @category    Class */
  // @description Вопрос \&quot;шкала\&quot;
 /** 
- * @package     Anketolog
+ * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -76,10 +76,10 @@ class SurveyQuestionScale implements ArrayAccess
         'has_comment' => 'bool',
         'comment' => 'string',
         'has_unable_answer' => 'bool',
-        'branchrules' => '\Anketolog\Model\SurveyBranchrule[]',
-        'visiblerules' => '\Anketolog\Model\SurveyVisiblerule[]',
-        'options' => '\Anketolog\Model\SurveyOption[]',
-        'ranges' => '\Anketolog\Model\SurveyRange[]'
+        'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
+        'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
+        'options' => '\AnketologClient\Model\SurveyOption[]',
+        'ranges' => '\AnketologClient\Model\SurveyRange[]'
     );
 
     public static function swaggerTypes()
@@ -479,7 +479,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Gets branchrules
-     * @return \Anketolog\Model\SurveyBranchrule[]
+     * @return \AnketologClient\Model\SurveyBranchrule[]
      */
     public function getBranchrules()
     {
@@ -488,7 +488,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Sets branchrules
-     * @param \Anketolog\Model\SurveyBranchrule[] $branchrules
+     * @param \AnketologClient\Model\SurveyBranchrule[] $branchrules
      * @return $this
      */
     public function setBranchrules($branchrules)
@@ -500,7 +500,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Gets visiblerules
-     * @return \Anketolog\Model\SurveyVisiblerule[]
+     * @return \AnketologClient\Model\SurveyVisiblerule[]
      */
     public function getVisiblerules()
     {
@@ -509,7 +509,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Sets visiblerules
-     * @param \Anketolog\Model\SurveyVisiblerule[] $visiblerules
+     * @param \AnketologClient\Model\SurveyVisiblerule[] $visiblerules
      * @return $this
      */
     public function setVisiblerules($visiblerules)
@@ -521,7 +521,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Gets options
-     * @return \Anketolog\Model\SurveyOption[]
+     * @return \AnketologClient\Model\SurveyOption[]
      */
     public function getOptions()
     {
@@ -530,7 +530,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Sets options
-     * @param \Anketolog\Model\SurveyOption[] $options
+     * @param \AnketologClient\Model\SurveyOption[] $options
      * @return $this
      */
     public function setOptions($options)
@@ -542,7 +542,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Gets ranges
-     * @return \Anketolog\Model\SurveyRange[]
+     * @return \AnketologClient\Model\SurveyRange[]
      */
     public function getRanges()
     {
@@ -551,7 +551,7 @@ class SurveyQuestionScale implements ArrayAccess
 
     /**
      * Sets ranges
-     * @param \Anketolog\Model\SurveyRange[] $ranges
+     * @param \AnketologClient\Model\SurveyRange[] $ranges
      * @return $this
      */
     public function setRanges($ranges)
@@ -612,10 +612,10 @@ class SurveyQuestionScale implements ArrayAccess
     public function __toString()
     {
         if (defined('JSON_PRETTY_PRINT')) { // use JSON pretty print
-            return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
+            return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this), JSON_PRETTY_PRINT);
         }
 
-        return json_encode(\Anketolog\ObjectSerializer::sanitizeForSerialization($this));
+        return json_encode(\AnketologClient\ObjectSerializer::sanitizeForSerialization($this));
     }
 }
 

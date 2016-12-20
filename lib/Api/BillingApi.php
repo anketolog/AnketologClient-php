@@ -4,7 +4,7 @@
  * PHP version 5
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -13,7 +13,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs2/Api.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -38,18 +38,18 @@
  * Do not edit the class manually.
  */
 
-namespace Anketolog\Api;
+namespace AnketologClient\Api;
 
-use \Anketolog\Configuration;
-use \Anketolog\ApiClient;
-use \Anketolog\ApiException;
-use \Anketolog\ObjectSerializer;
+use \AnketologClient\Configuration;
+use \AnketologClient\ApiClient;
+use \AnketologClient\ApiException;
+use \AnketologClient\ObjectSerializer;
 
 /**
  * BillingApi Class Doc Comment
  *
  * @category Class
- * @package  Anketolog
+ * @package  AnketologClient
  * @author   http://github.com/swagger-api/swagger-codegen
  * @license  http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link     https://github.com/swagger-api/swagger-codegen
@@ -60,16 +60,16 @@ class BillingApi
     /**
      * API Client
      *
-     * @var \Anketolog\ApiClient instance of the ApiClient
+     * @var \AnketologClient\ApiClient instance of the ApiClient
      */
     protected $apiClient;
 
     /**
      * Constructor
      *
-     * @param \Anketolog\ApiClient|null $apiClient The api client to use
+     * @param \AnketologClient\ApiClient|null $apiClient The api client to use
      */
-    public function __construct(\Anketolog\ApiClient $apiClient = null)
+    public function __construct(\AnketologClient\ApiClient $apiClient = null)
     {
         if ($apiClient == null) {
             $apiClient = new ApiClient();
@@ -82,7 +82,7 @@ class BillingApi
     /**
      * Get API client
      *
-     * @return \Anketolog\ApiClient get the API client
+     * @return \AnketologClient\ApiClient get the API client
      */
     public function getApiClient()
     {
@@ -92,11 +92,11 @@ class BillingApi
     /**
      * Set the API client
      *
-     * @param \Anketolog\ApiClient $apiClient set the API client
+     * @param \AnketologClient\ApiClient $apiClient set the API client
      *
      * @return BillingApi
      */
-    public function setApiClient(\Anketolog\ApiClient $apiClient)
+    public function setApiClient(\AnketologClient\ApiClient $apiClient)
     {
         $this->apiClient = $apiClient;
         return $this;
@@ -107,9 +107,9 @@ class BillingApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body $body  (required)
-     * @return \Anketolog\Model\BillingPayment
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body $body  (required)
+     * @return \AnketologClient\Model\BillingPayment
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingPaymentCreate($body)
     {
@@ -122,9 +122,9 @@ class BillingApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body $body  (required)
-     * @return Array of \Anketolog\Model\BillingPayment, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body $body  (required)
+     * @return Array of \AnketologClient\Model\BillingPayment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingPaymentCreateWithHttpInfo($body)
     {
@@ -172,15 +172,15 @@ class BillingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\BillingPayment',
+                '\AnketologClient\Model\BillingPayment',
                 '/billing/payment/create'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\BillingPayment', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\BillingPayment', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\BillingPayment', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\BillingPayment', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -194,9 +194,9 @@ class BillingApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body1 $body  (required)
-     * @return \Anketolog\Model\BillingPayment
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body1 $body  (required)
+     * @return \AnketologClient\Model\BillingPayment
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingPaymentInfo($body)
     {
@@ -209,9 +209,9 @@ class BillingApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body1 $body  (required)
-     * @return Array of \Anketolog\Model\BillingPayment, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body1 $body  (required)
+     * @return Array of \AnketologClient\Model\BillingPayment, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingPaymentInfoWithHttpInfo($body)
     {
@@ -259,15 +259,15 @@ class BillingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\BillingPayment',
+                '\AnketologClient\Model\BillingPayment',
                 '/billing/payment/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\BillingPayment', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\BillingPayment', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\BillingPayment', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\BillingPayment', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -281,8 +281,8 @@ class BillingApi
      *
      * 
      *
-     * @return \Anketolog\Model\BillingPayment[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\BillingPayment[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingPaymentList()
     {
@@ -295,8 +295,8 @@ class BillingApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\BillingPayment[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\BillingPayment[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingPaymentListWithHttpInfo()
     {
@@ -335,15 +335,15 @@ class BillingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\BillingPayment[]',
+                '\AnketologClient\Model\BillingPayment[]',
                 '/billing/payment/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\BillingPayment[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\BillingPayment[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\BillingPayment[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\BillingPayment[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -357,9 +357,9 @@ class BillingApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body2 $body  (required)
-     * @return \Anketolog\Model\BillingTransfer
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body2 $body  (required)
+     * @return \AnketologClient\Model\BillingTransfer
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingTransferInfo($body)
     {
@@ -372,9 +372,9 @@ class BillingApi
      *
      * 
      *
-     * @param \Anketolog\Model\Body2 $body  (required)
-     * @return Array of \Anketolog\Model\BillingTransfer, HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @param \AnketologClient\Model\Body2 $body  (required)
+     * @return Array of \AnketologClient\Model\BillingTransfer, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingTransferInfoWithHttpInfo($body)
     {
@@ -422,15 +422,15 @@ class BillingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\BillingTransfer',
+                '\AnketologClient\Model\BillingTransfer',
                 '/billing/transfer/info'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\BillingTransfer', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\BillingTransfer', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\BillingTransfer', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\BillingTransfer', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -444,8 +444,8 @@ class BillingApi
      *
      * 
      *
-     * @return \Anketolog\Model\BillingTransfer[]
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return \AnketologClient\Model\BillingTransfer[]
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingTransferList()
     {
@@ -458,8 +458,8 @@ class BillingApi
      *
      * 
      *
-     * @return Array of \Anketolog\Model\BillingTransfer[], HTTP status code, HTTP response headers (array of strings)
-     * @throws \Anketolog\ApiException on non-2xx response
+     * @return Array of \AnketologClient\Model\BillingTransfer[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function billingTransferListWithHttpInfo()
     {
@@ -498,15 +498,15 @@ class BillingApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\Anketolog\Model\BillingTransfer[]',
+                '\AnketologClient\Model\BillingTransfer[]',
                 '/billing/transfer/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\Anketolog\Model\BillingTransfer[]', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\BillingTransfer[]', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\Anketolog\Model\BillingTransfer[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\BillingTransfer[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
