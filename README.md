@@ -59,14 +59,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
 Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\BillingApi();
-$body = new \Swagger\Client\Model\Body(); // \Swagger\Client\Model\Body | 
 
 try {
-    $result = $api_instance->billingPaymentCreate($body);
+    $result = $api_instance->billingPaymentInfo(['payment_id' => 11223344]);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingApi->billingPaymentCreate: ', $e->getMessage(), PHP_EOL;
