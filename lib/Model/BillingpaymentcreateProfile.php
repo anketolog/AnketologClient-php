@@ -1,6 +1,6 @@
 <?php
 /**
- * BillingPaymentCreateBody
+ * BillingpaymentcreateProfile
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * BillingPaymentCreateBody Class Doc Comment
+ * BillingpaymentcreateProfile Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,21 +53,23 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class BillingPaymentCreateBody implements ArrayAccess
+class BillingpaymentcreateProfile implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'BillingPaymentCreateBody';
+    protected static $swaggerModelName = 'billingpaymentcreate_profile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'amount' => 'float',
-        'profile' => '\AnketologClient\Model\BillingpaymentcreateProfile'
+        'type' => 'string',
+        'legal_name' => 'string',
+        'natural_name' => 'string',
+        'natural_address' => 'string'
     );
 
     public static function swaggerTypes()
@@ -80,8 +82,10 @@ class BillingPaymentCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'amount' => 'amount',
-        'profile' => 'profile'
+        'type' => 'type',
+        'legal_name' => 'legal_name',
+        'natural_name' => 'natural_name',
+        'natural_address' => 'natural_address'
     );
 
     public static function attributeMap()
@@ -94,8 +98,10 @@ class BillingPaymentCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'amount' => 'setAmount',
-        'profile' => 'setProfile'
+        'type' => 'setType',
+        'legal_name' => 'setLegalName',
+        'natural_name' => 'setNaturalName',
+        'natural_address' => 'setNaturalAddress'
     );
 
     public static function setters()
@@ -108,8 +114,10 @@ class BillingPaymentCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'amount' => 'getAmount',
-        'profile' => 'getProfile'
+        'type' => 'getType',
+        'legal_name' => 'getLegalName',
+        'natural_name' => 'getNaturalName',
+        'natural_address' => 'getNaturalAddress'
     );
 
     public static function getters()
@@ -117,8 +125,22 @@ class BillingPaymentCreateBody implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_LEGAL = 'legal';
+    const TYPE_NATURAL = 'natural';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_LEGAL,
+            self::TYPE_NATURAL,
+        ];
+    }
     
 
     /**
@@ -133,8 +155,10 @@ class BillingPaymentCreateBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
-        $this->container['profile'] = isset($data['profile']) ? $data['profile'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['legal_name'] = isset($data['legal_name']) ? $data['legal_name'] : null;
+        $this->container['natural_name'] = isset($data['natural_name']) ? $data['natural_name'] : null;
+        $this->container['natural_address'] = isset($data['natural_address']) ? $data['natural_address'] : null;
     }
 
     /**
@@ -145,9 +169,14 @@ class BillingPaymentCreateBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['amount'] === null) {
-            $invalid_properties[] = "'amount' can't be null";
+        if ($this->container['type'] === null) {
+            $invalid_properties[] = "'type' can't be null";
         }
+        $allowed_values = array("legal", "natural");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -159,7 +188,11 @@ class BillingPaymentCreateBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['amount'] === null) {
+        if ($this->container['type'] === null) {
+            return false;
+        }
+        $allowed_values = array("legal", "natural");
+        if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
         return true;
@@ -167,43 +200,89 @@ class BillingPaymentCreateBody implements ArrayAccess
 
 
     /**
-     * Gets amount
-     * @return float
+     * Gets type
+     * @return string
      */
-    public function getAmount()
+    public function getType()
     {
-        return $this->container['amount'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets amount
-     * @param float $amount Сумма платежа
+     * Sets type
+     * @param string $type Тип плательщика  * `legal` - юр. лицо * `natural` - физ. лицо
      * @return $this
      */
-    public function setAmount($amount)
+    public function setType($type)
     {
-        $this->container['amount'] = $amount;
+        $allowed_values = array('legal', 'natural');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'legal', 'natural'");
+        }
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets profile
-     * @return \AnketologClient\Model\BillingpaymentcreateProfile
+     * Gets legal_name
+     * @return string
      */
-    public function getProfile()
+    public function getLegalName()
     {
-        return $this->container['profile'];
+        return $this->container['legal_name'];
     }
 
     /**
-     * Sets profile
-     * @param \AnketologClient\Model\BillingpaymentcreateProfile $profile
+     * Sets legal_name
+     * @param string $legal_name Название юр. лица [type=legal]
      * @return $this
      */
-    public function setProfile($profile)
+    public function setLegalName($legal_name)
     {
-        $this->container['profile'] = $profile;
+        $this->container['legal_name'] = $legal_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets natural_name
+     * @return string
+     */
+    public function getNaturalName()
+    {
+        return $this->container['natural_name'];
+    }
+
+    /**
+     * Sets natural_name
+     * @param string $natural_name Имя физ. лица [type=natural]
+     * @return $this
+     */
+    public function setNaturalName($natural_name)
+    {
+        $this->container['natural_name'] = $natural_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets natural_address
+     * @return string
+     */
+    public function getNaturalAddress()
+    {
+        return $this->container['natural_address'];
+    }
+
+    /**
+     * Sets natural_address
+     * @param string $natural_address Адрес физ. лица [type=natural]
+     * @return $this
+     */
+    public function setNaturalAddress($natural_address)
+    {
+        $this->container['natural_address'] = $natural_address;
 
         return $this;
     }
