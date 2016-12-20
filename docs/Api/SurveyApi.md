@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 
 # **surveyAnswerInfo**
-> \AnketologClient\Model\SurveyAnswer surveyAnswerInfo($body)
+> \AnketologClient\Model\SurveyAnswer surveyAnswerInfo($survey_answer_info_body)
 
 
 
@@ -58,10 +58,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body24(); // \AnketologClient\Model\Body24 | 
+$survey_answer_info_body = new \AnketologClient\Model\SurveyAnswerInfoBody(); // \AnketologClient\Model\SurveyAnswerInfoBody | 
 
 try {
-    $result = $api_instance->surveyAnswerInfo($body);
+    $result = $api_instance->surveyAnswerInfo($survey_answer_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyAnswerInfo: ', $e->getMessage(), PHP_EOL;
@@ -73,7 +73,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body24**](../Model/\AnketologClient\Model\Body24.md)|  |
+ **survey_answer_info_body** | [**\AnketologClient\Model\SurveyAnswerInfoBody**](../Model/\AnketologClient\Model\SurveyAnswerInfoBody.md)|  |
 
 ### Return type
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyAnswerList**
-> \AnketologClient\Model\SurveyAnswer[] surveyAnswerList($body)
+> \AnketologClient\Model\SurveyAnswer[] surveyAnswerList($survey_answer_list_body)
 
 
 
@@ -108,10 +108,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body25(); // \AnketologClient\Model\Body25 | 
+$survey_answer_list_body = new \AnketologClient\Model\SurveyAnswerListBody(); // \AnketologClient\Model\SurveyAnswerListBody | 
 
 try {
-    $result = $api_instance->surveyAnswerList($body);
+    $result = $api_instance->surveyAnswerList($survey_answer_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyAnswerList: ', $e->getMessage(), PHP_EOL;
@@ -123,7 +123,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body25**](../Model/\AnketologClient\Model\Body25.md)|  |
+ **survey_answer_list_body** | [**\AnketologClient\Model\SurveyAnswerListBody**](../Model/\AnketologClient\Model\SurveyAnswerListBody.md)|  |
 
 ### Return type
 
@@ -141,7 +141,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorCreatealias**
-> \AnketologClient\Model\SurveyAliasCollector surveyCollectorCreatealias($body)
+> \AnketologClient\Model\SurveyAliasCollector surveyCollectorCreatealias($survey_collector_createalias_body)
 
 
 
@@ -158,10 +158,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body26(); // \AnketologClient\Model\Body26 | 
+$survey_collector_createalias_body = new \AnketologClient\Model\SurveyCollectorCreatealiasBody(); // \AnketologClient\Model\SurveyCollectorCreatealiasBody | 
 
 try {
-    $result = $api_instance->surveyCollectorCreatealias($body);
+    $result = $api_instance->surveyCollectorCreatealias($survey_collector_createalias_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorCreatealias: ', $e->getMessage(), PHP_EOL;
@@ -173,7 +173,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body26**](../Model/\AnketologClient\Model\Body26.md)|  |
+ **survey_collector_createalias_body** | [**\AnketologClient\Model\SurveyCollectorCreatealiasBody**](../Model/\AnketologClient\Model\SurveyCollectorCreatealiasBody.md)|  |
 
 ### Return type
 
@@ -191,7 +191,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorCreateextralink**
-> \AnketologClient\Model\SurveyExtralinkCollector surveyCollectorCreateextralink($body)
+> \AnketologClient\Model\SurveyExtralinkCollector surveyCollectorCreateextralink($survey_collector_createextralink_body)
 
 
 
@@ -208,10 +208,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body27(); // \AnketologClient\Model\Body27 | 
+$survey_collector_createextralink_body = new \AnketologClient\Model\SurveyCollectorCreateextralinkBody(); // \AnketologClient\Model\SurveyCollectorCreateextralinkBody | 
 
 try {
-    $result = $api_instance->surveyCollectorCreateextralink($body);
+    $result = $api_instance->surveyCollectorCreateextralink($survey_collector_createextralink_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorCreateextralink: ', $e->getMessage(), PHP_EOL;
@@ -223,7 +223,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body27**](../Model/\AnketologClient\Model\Body27.md)|  |
+ **survey_collector_createextralink_body** | [**\AnketologClient\Model\SurveyCollectorCreateextralinkBody**](../Model/\AnketologClient\Model\SurveyCollectorCreateextralinkBody.md)|  |
 
 ### Return type
 
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorCreatewidget**
-> \AnketologClient\Model\SurveyWidgetCollector surveyCollectorCreatewidget($body)
+> \AnketologClient\Model\SurveyWidgetCollector surveyCollectorCreatewidget($survey_collector_createwidget_body)
 
 
 
@@ -258,10 +258,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body28(); // \AnketologClient\Model\Body28 | 
+$survey_collector_createwidget_body = new \AnketologClient\Model\SurveyCollectorCreatewidgetBody(); // \AnketologClient\Model\SurveyCollectorCreatewidgetBody | 
 
 try {
-    $result = $api_instance->surveyCollectorCreatewidget($body);
+    $result = $api_instance->surveyCollectorCreatewidget($survey_collector_createwidget_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorCreatewidget: ', $e->getMessage(), PHP_EOL;
@@ -273,7 +273,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body28**](../Model/\AnketologClient\Model\Body28.md)|  |
+ **survey_collector_createwidget_body** | [**\AnketologClient\Model\SurveyCollectorCreatewidgetBody**](../Model/\AnketologClient\Model\SurveyCollectorCreatewidgetBody.md)|  |
 
 ### Return type
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorList**
-> \AnketologClient\Model\SurveyCollector surveyCollectorList($body)
+> \AnketologClient\Model\SurveyCollector surveyCollectorList($survey_collector_list_body)
 
 
 
@@ -308,10 +308,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body29(); // \AnketologClient\Model\Body29 | 
+$survey_collector_list_body = new \AnketologClient\Model\SurveyCollectorListBody(); // \AnketologClient\Model\SurveyCollectorListBody | 
 
 try {
-    $result = $api_instance->surveyCollectorList($body);
+    $result = $api_instance->surveyCollectorList($survey_collector_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorList: ', $e->getMessage(), PHP_EOL;
@@ -323,7 +323,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body29**](../Model/\AnketologClient\Model\Body29.md)|  |
+ **survey_collector_list_body** | [**\AnketologClient\Model\SurveyCollectorListBody**](../Model/\AnketologClient\Model\SurveyCollectorListBody.md)|  |
 
 ### Return type
 
@@ -341,7 +341,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorRemoveextralink**
-> string surveyCollectorRemoveextralink($body)
+> string surveyCollectorRemoveextralink($survey_collector_removeextralink_body)
 
 
 
@@ -358,10 +358,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body30(); // \AnketologClient\Model\Body30 | 
+$survey_collector_removeextralink_body = new \AnketologClient\Model\SurveyCollectorRemoveextralinkBody(); // \AnketologClient\Model\SurveyCollectorRemoveextralinkBody | 
 
 try {
-    $result = $api_instance->surveyCollectorRemoveextralink($body);
+    $result = $api_instance->surveyCollectorRemoveextralink($survey_collector_removeextralink_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorRemoveextralink: ', $e->getMessage(), PHP_EOL;
@@ -373,7 +373,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body30**](../Model/\AnketologClient\Model\Body30.md)|  |
+ **survey_collector_removeextralink_body** | [**\AnketologClient\Model\SurveyCollectorRemoveextralinkBody**](../Model/\AnketologClient\Model\SurveyCollectorRemoveextralinkBody.md)|  |
 
 ### Return type
 
@@ -391,7 +391,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorUpdatealias**
-> \AnketologClient\Model\SurveyAliasCollector surveyCollectorUpdatealias($body)
+> \AnketologClient\Model\SurveyAliasCollector surveyCollectorUpdatealias($survey_collector_updatealias_body)
 
 
 
@@ -408,10 +408,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body31(); // \AnketologClient\Model\Body31 | 
+$survey_collector_updatealias_body = new \AnketologClient\Model\SurveyCollectorUpdatealiasBody(); // \AnketologClient\Model\SurveyCollectorUpdatealiasBody | 
 
 try {
-    $result = $api_instance->surveyCollectorUpdatealias($body);
+    $result = $api_instance->surveyCollectorUpdatealias($survey_collector_updatealias_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorUpdatealias: ', $e->getMessage(), PHP_EOL;
@@ -423,7 +423,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body31**](../Model/\AnketologClient\Model\Body31.md)|  |
+ **survey_collector_updatealias_body** | [**\AnketologClient\Model\SurveyCollectorUpdatealiasBody**](../Model/\AnketologClient\Model\SurveyCollectorUpdatealiasBody.md)|  |
 
 ### Return type
 
@@ -441,7 +441,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorUpdateextralink**
-> \AnketologClient\Model\SurveyExtralinkCollector surveyCollectorUpdateextralink($body)
+> \AnketologClient\Model\SurveyExtralinkCollector surveyCollectorUpdateextralink($survey_collector_updateextralink_body)
 
 
 
@@ -458,10 +458,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body32(); // \AnketologClient\Model\Body32 | 
+$survey_collector_updateextralink_body = new \AnketologClient\Model\SurveyCollectorUpdateextralinkBody(); // \AnketologClient\Model\SurveyCollectorUpdateextralinkBody | 
 
 try {
-    $result = $api_instance->surveyCollectorUpdateextralink($body);
+    $result = $api_instance->surveyCollectorUpdateextralink($survey_collector_updateextralink_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorUpdateextralink: ', $e->getMessage(), PHP_EOL;
@@ -473,7 +473,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body32**](../Model/\AnketologClient\Model\Body32.md)|  |
+ **survey_collector_updateextralink_body** | [**\AnketologClient\Model\SurveyCollectorUpdateextralinkBody**](../Model/\AnketologClient\Model\SurveyCollectorUpdateextralinkBody.md)|  |
 
 ### Return type
 
@@ -491,7 +491,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorUpdatewidget**
-> \AnketologClient\Model\SurveyWidgetCollector surveyCollectorUpdatewidget($body)
+> \AnketologClient\Model\SurveyWidgetCollector surveyCollectorUpdatewidget($survey_collector_updatewidget_body)
 
 
 
@@ -508,10 +508,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body33(); // \AnketologClient\Model\Body33 | 
+$survey_collector_updatewidget_body = new \AnketologClient\Model\SurveyCollectorUpdatewidgetBody(); // \AnketologClient\Model\SurveyCollectorUpdatewidgetBody | 
 
 try {
-    $result = $api_instance->surveyCollectorUpdatewidget($body);
+    $result = $api_instance->surveyCollectorUpdatewidget($survey_collector_updatewidget_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyCollectorUpdatewidget: ', $e->getMessage(), PHP_EOL;
@@ -523,7 +523,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body33**](../Model/\AnketologClient\Model\Body33.md)|  |
+ **survey_collector_updatewidget_body** | [**\AnketologClient\Model\SurveyCollectorUpdatewidgetBody**](../Model/\AnketologClient\Model\SurveyCollectorUpdatewidgetBody.md)|  |
 
 ### Return type
 
@@ -541,7 +541,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyFilterCreate**
-> \AnketologClient\Model\SurveyFilter surveyFilterCreate($body)
+> \AnketologClient\Model\SurveyFilter surveyFilterCreate($survey_filter_create_body)
 
 
 
@@ -558,10 +558,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body34(); // \AnketologClient\Model\Body34 | 
+$survey_filter_create_body = new \AnketologClient\Model\SurveyFilterCreateBody(); // \AnketologClient\Model\SurveyFilterCreateBody | 
 
 try {
-    $result = $api_instance->surveyFilterCreate($body);
+    $result = $api_instance->surveyFilterCreate($survey_filter_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyFilterCreate: ', $e->getMessage(), PHP_EOL;
@@ -573,7 +573,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body34**](../Model/\AnketologClient\Model\Body34.md)|  |
+ **survey_filter_create_body** | [**\AnketologClient\Model\SurveyFilterCreateBody**](../Model/\AnketologClient\Model\SurveyFilterCreateBody.md)|  |
 
 ### Return type
 
@@ -591,7 +591,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyFilterInfo**
-> \AnketologClient\Model\SurveyFilter surveyFilterInfo($body)
+> \AnketologClient\Model\SurveyFilter surveyFilterInfo($survey_filter_info_body)
 
 
 
@@ -608,10 +608,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body35(); // \AnketologClient\Model\Body35 | 
+$survey_filter_info_body = new \AnketologClient\Model\SurveyFilterInfoBody(); // \AnketologClient\Model\SurveyFilterInfoBody | 
 
 try {
-    $result = $api_instance->surveyFilterInfo($body);
+    $result = $api_instance->surveyFilterInfo($survey_filter_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyFilterInfo: ', $e->getMessage(), PHP_EOL;
@@ -623,7 +623,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body35**](../Model/\AnketologClient\Model\Body35.md)|  |
+ **survey_filter_info_body** | [**\AnketologClient\Model\SurveyFilterInfoBody**](../Model/\AnketologClient\Model\SurveyFilterInfoBody.md)|  |
 
 ### Return type
 
@@ -687,7 +687,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageArchive**
-> \AnketologClient\Model\SurveySurvey surveyManageArchive($body)
+> \AnketologClient\Model\SurveySurvey surveyManageArchive($survey_manage_archive_body)
 
 
 
@@ -704,10 +704,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body36(); // \AnketologClient\Model\Body36 | 
+$survey_manage_archive_body = new \AnketologClient\Model\SurveyManageArchiveBody(); // \AnketologClient\Model\SurveyManageArchiveBody | 
 
 try {
-    $result = $api_instance->surveyManageArchive($body);
+    $result = $api_instance->surveyManageArchive($survey_manage_archive_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageArchive: ', $e->getMessage(), PHP_EOL;
@@ -719,7 +719,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body36**](../Model/\AnketologClient\Model\Body36.md)|  |
+ **survey_manage_archive_body** | [**\AnketologClient\Model\SurveyManageArchiveBody**](../Model/\AnketologClient\Model\SurveyManageArchiveBody.md)|  |
 
 ### Return type
 
@@ -737,7 +737,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageCopy**
-> \AnketologClient\Model\SurveySurvey surveyManageCopy($body)
+> \AnketologClient\Model\SurveySurvey surveyManageCopy($survey_manage_copy_body)
 
 
 
@@ -754,10 +754,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body37(); // \AnketologClient\Model\Body37 | 
+$survey_manage_copy_body = new \AnketologClient\Model\SurveyManageCopyBody(); // \AnketologClient\Model\SurveyManageCopyBody | 
 
 try {
-    $result = $api_instance->surveyManageCopy($body);
+    $result = $api_instance->surveyManageCopy($survey_manage_copy_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageCopy: ', $e->getMessage(), PHP_EOL;
@@ -769,7 +769,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body37**](../Model/\AnketologClient\Model\Body37.md)|  |
+ **survey_manage_copy_body** | [**\AnketologClient\Model\SurveyManageCopyBody**](../Model/\AnketologClient\Model\SurveyManageCopyBody.md)|  |
 
 ### Return type
 
@@ -787,7 +787,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageCreate**
-> \AnketologClient\Model\SurveySurvey surveyManageCreate($body)
+> \AnketologClient\Model\SurveySurvey surveyManageCreate($survey_manage_create_body)
 
 
 
@@ -804,10 +804,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body38(); // \AnketologClient\Model\Body38 | 
+$survey_manage_create_body = new \AnketologClient\Model\SurveyManageCreateBody(); // \AnketologClient\Model\SurveyManageCreateBody | 
 
 try {
-    $result = $api_instance->surveyManageCreate($body);
+    $result = $api_instance->surveyManageCreate($survey_manage_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageCreate: ', $e->getMessage(), PHP_EOL;
@@ -819,7 +819,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body38**](../Model/\AnketologClient\Model\Body38.md)|  |
+ **survey_manage_create_body** | [**\AnketologClient\Model\SurveyManageCreateBody**](../Model/\AnketologClient\Model\SurveyManageCreateBody.md)|  |
 
 ### Return type
 
@@ -837,7 +837,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageDelete**
-> string surveyManageDelete($body)
+> string surveyManageDelete($survey_manage_delete_body)
 
 
 
@@ -854,10 +854,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body39(); // \AnketologClient\Model\Body39 | 
+$survey_manage_delete_body = new \AnketologClient\Model\SurveyManageDeleteBody(); // \AnketologClient\Model\SurveyManageDeleteBody | 
 
 try {
-    $result = $api_instance->surveyManageDelete($body);
+    $result = $api_instance->surveyManageDelete($survey_manage_delete_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageDelete: ', $e->getMessage(), PHP_EOL;
@@ -869,7 +869,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body39**](../Model/\AnketologClient\Model\Body39.md)|  |
+ **survey_manage_delete_body** | [**\AnketologClient\Model\SurveyManageDeleteBody**](../Model/\AnketologClient\Model\SurveyManageDeleteBody.md)|  |
 
 ### Return type
 
@@ -887,7 +887,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageInfo**
-> \AnketologClient\Model\SurveySurvey surveyManageInfo($body)
+> \AnketologClient\Model\SurveySurvey surveyManageInfo($survey_manage_info_body)
 
 
 
@@ -904,10 +904,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body40(); // \AnketologClient\Model\Body40 | 
+$survey_manage_info_body = new \AnketologClient\Model\SurveyManageInfoBody(); // \AnketologClient\Model\SurveyManageInfoBody | 
 
 try {
-    $result = $api_instance->surveyManageInfo($body);
+    $result = $api_instance->surveyManageInfo($survey_manage_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageInfo: ', $e->getMessage(), PHP_EOL;
@@ -919,7 +919,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body40**](../Model/\AnketologClient\Model\Body40.md)|  |
+ **survey_manage_info_body** | [**\AnketologClient\Model\SurveyManageInfoBody**](../Model/\AnketologClient\Model\SurveyManageInfoBody.md)|  |
 
 ### Return type
 
@@ -983,7 +983,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageRestore**
-> \AnketologClient\Model\SurveySurvey surveyManageRestore($body)
+> \AnketologClient\Model\SurveySurvey surveyManageRestore($survey_manage_restore_body)
 
 
 
@@ -1000,10 +1000,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body41(); // \AnketologClient\Model\Body41 | 
+$survey_manage_restore_body = new \AnketologClient\Model\SurveyManageRestoreBody(); // \AnketologClient\Model\SurveyManageRestoreBody | 
 
 try {
-    $result = $api_instance->surveyManageRestore($body);
+    $result = $api_instance->surveyManageRestore($survey_manage_restore_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageRestore: ', $e->getMessage(), PHP_EOL;
@@ -1015,7 +1015,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body41**](../Model/\AnketologClient\Model\Body41.md)|  |
+ **survey_manage_restore_body** | [**\AnketologClient\Model\SurveyManageRestoreBody**](../Model/\AnketologClient\Model\SurveyManageRestoreBody.md)|  |
 
 ### Return type
 
@@ -1033,7 +1033,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyManageUpdate**
-> \AnketologClient\Model\SurveySurvey surveyManageUpdate($body)
+> \AnketologClient\Model\SurveySurvey surveyManageUpdate($survey_manage_update_body)
 
 
 
@@ -1050,10 +1050,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body42(); // \AnketologClient\Model\Body42 | 
+$survey_manage_update_body = new \AnketologClient\Model\SurveyManageUpdateBody(); // \AnketologClient\Model\SurveyManageUpdateBody | 
 
 try {
-    $result = $api_instance->surveyManageUpdate($body);
+    $result = $api_instance->surveyManageUpdate($survey_manage_update_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyManageUpdate: ', $e->getMessage(), PHP_EOL;
@@ -1065,7 +1065,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body42**](../Model/\AnketologClient\Model\Body42.md)|  |
+ **survey_manage_update_body** | [**\AnketologClient\Model\SurveyManageUpdateBody**](../Model/\AnketologClient\Model\SurveyManageUpdateBody.md)|  |
 
 ### Return type
 
@@ -1083,7 +1083,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportAggregate**
-> \AnketologClient\Model\SurveyReportAggregate surveyReportAggregate($body)
+> \AnketologClient\Model\SurveyReportAggregate surveyReportAggregate($survey_report_aggregate_body)
 
 
 
@@ -1100,10 +1100,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body43(); // \AnketologClient\Model\Body43 | 
+$survey_report_aggregate_body = new \AnketologClient\Model\SurveyReportAggregateBody(); // \AnketologClient\Model\SurveyReportAggregateBody | 
 
 try {
-    $result = $api_instance->surveyReportAggregate($body);
+    $result = $api_instance->surveyReportAggregate($survey_report_aggregate_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyReportAggregate: ', $e->getMessage(), PHP_EOL;
@@ -1115,7 +1115,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body43**](../Model/\AnketologClient\Model\Body43.md)|  |
+ **survey_report_aggregate_body** | [**\AnketologClient\Model\SurveyReportAggregateBody**](../Model/\AnketologClient\Model\SurveyReportAggregateBody.md)|  |
 
 ### Return type
 
@@ -1133,7 +1133,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportCreate**
-> \AnketologClient\Model\SurveyReport surveyReportCreate($body)
+> \AnketologClient\Model\SurveyReport surveyReportCreate($survey_report_create_body)
 
 
 
@@ -1150,10 +1150,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body44(); // \AnketologClient\Model\Body44 | 
+$survey_report_create_body = new \AnketologClient\Model\SurveyReportCreateBody(); // \AnketologClient\Model\SurveyReportCreateBody | 
 
 try {
-    $result = $api_instance->surveyReportCreate($body);
+    $result = $api_instance->surveyReportCreate($survey_report_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyReportCreate: ', $e->getMessage(), PHP_EOL;
@@ -1165,7 +1165,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body44**](../Model/\AnketologClient\Model\Body44.md)|  |
+ **survey_report_create_body** | [**\AnketologClient\Model\SurveyReportCreateBody**](../Model/\AnketologClient\Model\SurveyReportCreateBody.md)|  |
 
 ### Return type
 
@@ -1183,7 +1183,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportDetail**
-> \AnketologClient\Model\SurveyReportDetail surveyReportDetail($body)
+> \AnketologClient\Model\SurveyReportDetail surveyReportDetail($survey_report_detail_body)
 
 
 
@@ -1200,10 +1200,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body45(); // \AnketologClient\Model\Body45 | 
+$survey_report_detail_body = new \AnketologClient\Model\SurveyReportDetailBody(); // \AnketologClient\Model\SurveyReportDetailBody | 
 
 try {
-    $result = $api_instance->surveyReportDetail($body);
+    $result = $api_instance->surveyReportDetail($survey_report_detail_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyReportDetail: ', $e->getMessage(), PHP_EOL;
@@ -1215,7 +1215,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body45**](../Model/\AnketologClient\Model\Body45.md)|  |
+ **survey_report_detail_body** | [**\AnketologClient\Model\SurveyReportDetailBody**](../Model/\AnketologClient\Model\SurveyReportDetailBody.md)|  |
 
 ### Return type
 
@@ -1233,7 +1233,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportInfo**
-> \AnketologClient\Model\SurveyReport surveyReportInfo($body)
+> \AnketologClient\Model\SurveyReport surveyReportInfo($survey_report_info_body)
 
 
 
@@ -1250,10 +1250,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body46(); // \AnketologClient\Model\Body46 | 
+$survey_report_info_body = new \AnketologClient\Model\SurveyReportInfoBody(); // \AnketologClient\Model\SurveyReportInfoBody | 
 
 try {
-    $result = $api_instance->surveyReportInfo($body);
+    $result = $api_instance->surveyReportInfo($survey_report_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyReportInfo: ', $e->getMessage(), PHP_EOL;
@@ -1265,7 +1265,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body46**](../Model/\AnketologClient\Model\Body46.md)|  |
+ **survey_report_info_body** | [**\AnketologClient\Model\SurveyReportInfoBody**](../Model/\AnketologClient\Model\SurveyReportInfoBody.md)|  |
 
 ### Return type
 
@@ -1283,7 +1283,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyReportList**
-> \AnketologClient\Model\SurveyReport[] surveyReportList($body)
+> \AnketologClient\Model\SurveyReport[] surveyReportList($survey_report_list_body)
 
 
 
@@ -1300,10 +1300,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body47(); // \AnketologClient\Model\Body47 | 
+$survey_report_list_body = new \AnketologClient\Model\SurveyReportListBody(); // \AnketologClient\Model\SurveyReportListBody | 
 
 try {
-    $result = $api_instance->surveyReportList($body);
+    $result = $api_instance->surveyReportList($survey_report_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyReportList: ', $e->getMessage(), PHP_EOL;
@@ -1315,7 +1315,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body47**](../Model/\AnketologClient\Model\Body47.md)|  |
+ **survey_report_list_body** | [**\AnketologClient\Model\SurveyReportListBody**](../Model/\AnketologClient\Model\SurveyReportListBody.md)|  |
 
 ### Return type
 
@@ -1333,7 +1333,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyRevisionInfo**
-> \AnketologClient\Model\SurveyRevision surveyRevisionInfo($body)
+> \AnketologClient\Model\SurveyRevision surveyRevisionInfo($survey_revision_info_body)
 
 
 
@@ -1350,10 +1350,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body48(); // \AnketologClient\Model\Body48 | 
+$survey_revision_info_body = new \AnketologClient\Model\SurveyRevisionInfoBody(); // \AnketologClient\Model\SurveyRevisionInfoBody | 
 
 try {
-    $result = $api_instance->surveyRevisionInfo($body);
+    $result = $api_instance->surveyRevisionInfo($survey_revision_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyRevisionInfo: ', $e->getMessage(), PHP_EOL;
@@ -1365,7 +1365,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body48**](../Model/\AnketologClient\Model\Body48.md)|  |
+ **survey_revision_info_body** | [**\AnketologClient\Model\SurveyRevisionInfoBody**](../Model/\AnketologClient\Model\SurveyRevisionInfoBody.md)|  |
 
 ### Return type
 
@@ -1383,7 +1383,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyRevisionList**
-> \AnketologClient\Model\SurveyRevision[] surveyRevisionList($body)
+> \AnketologClient\Model\SurveyRevision[] surveyRevisionList($survey_revision_list_body)
 
 
 
@@ -1400,10 +1400,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body49(); // \AnketologClient\Model\Body49 | 
+$survey_revision_list_body = new \AnketologClient\Model\SurveyRevisionListBody(); // \AnketologClient\Model\SurveyRevisionListBody | 
 
 try {
-    $result = $api_instance->surveyRevisionList($body);
+    $result = $api_instance->surveyRevisionList($survey_revision_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyRevisionList: ', $e->getMessage(), PHP_EOL;
@@ -1415,7 +1415,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body49**](../Model/\AnketologClient\Model\Body49.md)|  |
+ **survey_revision_list_body** | [**\AnketologClient\Model\SurveyRevisionListBody**](../Model/\AnketologClient\Model\SurveyRevisionListBody.md)|  |
 
 ### Return type
 
@@ -1433,7 +1433,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeCreate**
-> \AnketologClient\Model\SurveySubscribe surveySubscribeCreate($body)
+> \AnketologClient\Model\SurveySubscribe surveySubscribeCreate($survey_subscribe_create_body)
 
 
 
@@ -1450,10 +1450,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body50(); // \AnketologClient\Model\Body50 | 
+$survey_subscribe_create_body = new \AnketologClient\Model\SurveySubscribeCreateBody(); // \AnketologClient\Model\SurveySubscribeCreateBody | 
 
 try {
-    $result = $api_instance->surveySubscribeCreate($body);
+    $result = $api_instance->surveySubscribeCreate($survey_subscribe_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveySubscribeCreate: ', $e->getMessage(), PHP_EOL;
@@ -1465,7 +1465,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body50**](../Model/\AnketologClient\Model\Body50.md)|  |
+ **survey_subscribe_create_body** | [**\AnketologClient\Model\SurveySubscribeCreateBody**](../Model/\AnketologClient\Model\SurveySubscribeCreateBody.md)|  |
 
 ### Return type
 
@@ -1483,7 +1483,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeDelete**
-> \AnketologClient\Model\CountryItem surveySubscribeDelete($body)
+> \AnketologClient\Model\CountryItem surveySubscribeDelete($survey_subscribe_delete_body)
 
 
 
@@ -1500,10 +1500,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body51(); // \AnketologClient\Model\Body51 | 
+$survey_subscribe_delete_body = new \AnketologClient\Model\SurveySubscribeDeleteBody(); // \AnketologClient\Model\SurveySubscribeDeleteBody | 
 
 try {
-    $result = $api_instance->surveySubscribeDelete($body);
+    $result = $api_instance->surveySubscribeDelete($survey_subscribe_delete_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveySubscribeDelete: ', $e->getMessage(), PHP_EOL;
@@ -1515,7 +1515,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body51**](../Model/\AnketologClient\Model\Body51.md)|  |
+ **survey_subscribe_delete_body** | [**\AnketologClient\Model\SurveySubscribeDeleteBody**](../Model/\AnketologClient\Model\SurveySubscribeDeleteBody.md)|  |
 
 ### Return type
 
@@ -1533,7 +1533,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeInfo**
-> \AnketologClient\Model\SurveySubscribe surveySubscribeInfo($body)
+> \AnketologClient\Model\SurveySubscribe surveySubscribeInfo($survey_subscribe_info_body)
 
 
 
@@ -1550,10 +1550,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body52(); // \AnketologClient\Model\Body52 | 
+$survey_subscribe_info_body = new \AnketologClient\Model\SurveySubscribeInfoBody(); // \AnketologClient\Model\SurveySubscribeInfoBody | 
 
 try {
-    $result = $api_instance->surveySubscribeInfo($body);
+    $result = $api_instance->surveySubscribeInfo($survey_subscribe_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveySubscribeInfo: ', $e->getMessage(), PHP_EOL;
@@ -1565,7 +1565,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body52**](../Model/\AnketologClient\Model\Body52.md)|  |
+ **survey_subscribe_info_body** | [**\AnketologClient\Model\SurveySubscribeInfoBody**](../Model/\AnketologClient\Model\SurveySubscribeInfoBody.md)|  |
 
 ### Return type
 
@@ -1583,7 +1583,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeList**
-> \AnketologClient\Model\SurveySubscribe[] surveySubscribeList($body)
+> \AnketologClient\Model\SurveySubscribe[] surveySubscribeList($survey_subscribe_list_body)
 
 
 
@@ -1600,10 +1600,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body53(); // \AnketologClient\Model\Body53 | 
+$survey_subscribe_list_body = new \AnketologClient\Model\SurveySubscribeListBody(); // \AnketologClient\Model\SurveySubscribeListBody | 
 
 try {
-    $result = $api_instance->surveySubscribeList($body);
+    $result = $api_instance->surveySubscribeList($survey_subscribe_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveySubscribeList: ', $e->getMessage(), PHP_EOL;
@@ -1615,7 +1615,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body53**](../Model/\AnketologClient\Model\Body53.md)|  |
+ **survey_subscribe_list_body** | [**\AnketologClient\Model\SurveySubscribeListBody**](../Model/\AnketologClient\Model\SurveySubscribeListBody.md)|  |
 
 ### Return type
 
@@ -1633,7 +1633,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeUpdate**
-> \AnketologClient\Model\SurveySubscribe surveySubscribeUpdate($body)
+> \AnketologClient\Model\SurveySubscribe surveySubscribeUpdate($survey_subscribe_update_body)
 
 
 
@@ -1650,10 +1650,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
-$body = new \AnketologClient\Model\Body54(); // \AnketologClient\Model\Body54 | 
+$survey_subscribe_update_body = new \AnketologClient\Model\SurveySubscribeUpdateBody(); // \AnketologClient\Model\SurveySubscribeUpdateBody | 
 
 try {
-    $result = $api_instance->surveySubscribeUpdate($body);
+    $result = $api_instance->surveySubscribeUpdate($survey_subscribe_update_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveySubscribeUpdate: ', $e->getMessage(), PHP_EOL;
@@ -1665,7 +1665,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body54**](../Model/\AnketologClient\Model\Body54.md)|  |
+ **survey_subscribe_update_body** | [**\AnketologClient\Model\SurveySubscribeUpdateBody**](../Model/\AnketologClient\Model\SurveySubscribeUpdateBody.md)|  |
 
 ### Return type
 

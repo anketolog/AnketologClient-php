@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 
 # **campaignManageCalculate**
-> \AnketologClient\Model\CampaignCalculate campaignManageCalculate($body)
+> \AnketologClient\Model\CampaignCalculate campaignManageCalculate($campaign_manage_calculate_body)
 
 
 
@@ -33,10 +33,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body3(); // \AnketologClient\Model\Body3 | 
+$campaign_manage_calculate_body = new \AnketologClient\Model\CampaignManageCalculateBody(); // \AnketologClient\Model\CampaignManageCalculateBody | 
 
 try {
-    $result = $api_instance->campaignManageCalculate($body);
+    $result = $api_instance->campaignManageCalculate($campaign_manage_calculate_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignManageCalculate: ', $e->getMessage(), PHP_EOL;
@@ -48,7 +48,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body3**](../Model/\AnketologClient\Model\Body3.md)|  |
+ **campaign_manage_calculate_body** | [**\AnketologClient\Model\CampaignManageCalculateBody**](../Model/\AnketologClient\Model\CampaignManageCalculateBody.md)|  |
 
 ### Return type
 
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageCreate**
-> \AnketologClient\Model\CampaignCampaign campaignManageCreate($body)
+> \AnketologClient\Model\CampaignCampaign campaignManageCreate($campaign_manage_create_body)
 
 
 
@@ -83,10 +83,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body4(); // \AnketologClient\Model\Body4 | 
+$campaign_manage_create_body = new \AnketologClient\Model\CampaignManageCreateBody(); // \AnketologClient\Model\CampaignManageCreateBody | 
 
 try {
-    $result = $api_instance->campaignManageCreate($body);
+    $result = $api_instance->campaignManageCreate($campaign_manage_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignManageCreate: ', $e->getMessage(), PHP_EOL;
@@ -98,7 +98,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body4**](../Model/\AnketologClient\Model\Body4.md)|  |
+ **campaign_manage_create_body** | [**\AnketologClient\Model\CampaignManageCreateBody**](../Model/\AnketologClient\Model\CampaignManageCreateBody.md)|  |
 
 ### Return type
 
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageFinish**
-> \AnketologClient\Model\CampaignCampaign campaignManageFinish($body)
+> \AnketologClient\Model\CampaignCampaign campaignManageFinish($campaign_manage_finish_body)
 
 
 
@@ -133,10 +133,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body5(); // \AnketologClient\Model\Body5 | 
+$campaign_manage_finish_body = new \AnketologClient\Model\CampaignManageFinishBody(); // \AnketologClient\Model\CampaignManageFinishBody | 
 
 try {
-    $result = $api_instance->campaignManageFinish($body);
+    $result = $api_instance->campaignManageFinish($campaign_manage_finish_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignManageFinish: ', $e->getMessage(), PHP_EOL;
@@ -148,7 +148,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body5**](../Model/\AnketologClient\Model\Body5.md)|  |
+ **campaign_manage_finish_body** | [**\AnketologClient\Model\CampaignManageFinishBody**](../Model/\AnketologClient\Model\CampaignManageFinishBody.md)|  |
 
 ### Return type
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageInfo**
-> \AnketologClient\Model\CampaignCampaign campaignManageInfo($body)
+> \AnketologClient\Model\CampaignCampaign campaignManageInfo($campaign_manage_info_body)
 
 
 
@@ -183,10 +183,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body6(); // \AnketologClient\Model\Body6 | 
+$campaign_manage_info_body = new \AnketologClient\Model\CampaignManageInfoBody(); // \AnketologClient\Model\CampaignManageInfoBody | 
 
 try {
-    $result = $api_instance->campaignManageInfo($body);
+    $result = $api_instance->campaignManageInfo($campaign_manage_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignManageInfo: ', $e->getMessage(), PHP_EOL;
@@ -198,7 +198,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body6**](../Model/\AnketologClient\Model\Body6.md)|  |
+ **campaign_manage_info_body** | [**\AnketologClient\Model\CampaignManageInfoBody**](../Model/\AnketologClient\Model\CampaignManageInfoBody.md)|  |
 
 ### Return type
 
@@ -262,7 +262,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageStart**
-> \AnketologClient\Model\CampaignCampaign campaignManageStart($body)
+> \AnketologClient\Model\CampaignCampaign campaignManageStart($campaign_manage_start_body)
 
 
 
@@ -279,10 +279,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body7(); // \AnketologClient\Model\Body7 | 
+$campaign_manage_start_body = new \AnketologClient\Model\CampaignManageStartBody(); // \AnketologClient\Model\CampaignManageStartBody | 
 
 try {
-    $result = $api_instance->campaignManageStart($body);
+    $result = $api_instance->campaignManageStart($campaign_manage_start_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignManageStart: ', $e->getMessage(), PHP_EOL;
@@ -294,7 +294,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body7**](../Model/\AnketologClient\Model\Body7.md)|  |
+ **campaign_manage_start_body** | [**\AnketologClient\Model\CampaignManageStartBody**](../Model/\AnketologClient\Model\CampaignManageStartBody.md)|  |
 
 ### Return type
 
@@ -312,7 +312,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignManageUpdate**
-> \AnketologClient\Model\CampaignCampaign campaignManageUpdate($body)
+> \AnketologClient\Model\CampaignCampaign campaignManageUpdate($campaign_manage_update_body)
 
 
 
@@ -329,10 +329,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body8(); // \AnketologClient\Model\Body8 | 
+$campaign_manage_update_body = new \AnketologClient\Model\CampaignManageUpdateBody(); // \AnketologClient\Model\CampaignManageUpdateBody | 
 
 try {
-    $result = $api_instance->campaignManageUpdate($body);
+    $result = $api_instance->campaignManageUpdate($campaign_manage_update_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignManageUpdate: ', $e->getMessage(), PHP_EOL;
@@ -344,7 +344,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body8**](../Model/\AnketologClient\Model\Body8.md)|  |
+ **campaign_manage_update_body** | [**\AnketologClient\Model\CampaignManageUpdateBody**](../Model/\AnketologClient\Model\CampaignManageUpdateBody.md)|  |
 
 ### Return type
 
@@ -362,7 +362,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignTransferInfo**
-> \AnketologClient\Model\CampaignTransfer campaignTransferInfo($body)
+> \AnketologClient\Model\CampaignTransfer campaignTransferInfo($campaign_transfer_info_body)
 
 
 
@@ -379,10 +379,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
-$body = new \AnketologClient\Model\Body9(); // \AnketologClient\Model\Body9 | 
+$campaign_transfer_info_body = new \AnketologClient\Model\CampaignTransferInfoBody(); // \AnketologClient\Model\CampaignTransferInfoBody | 
 
 try {
-    $result = $api_instance->campaignTransferInfo($body);
+    $result = $api_instance->campaignTransferInfo($campaign_transfer_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignTransferInfo: ', $e->getMessage(), PHP_EOL;
@@ -394,7 +394,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body9**](../Model/\AnketologClient\Model\Body9.md)|  |
+ **campaign_transfer_info_body** | [**\AnketologClient\Model\CampaignTransferInfoBody**](../Model/\AnketologClient\Model\CampaignTransferInfoBody.md)|  |
 
 ### Return type
 

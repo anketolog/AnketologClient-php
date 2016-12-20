@@ -107,13 +107,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body24 $body  (required)
+     * @param \AnketologClient\Model\SurveyAnswerInfoBody $survey_answer_info_body  (required)
      * @return \AnketologClient\Model\SurveyAnswer
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyAnswerInfo($body)
+    public function surveyAnswerInfo($survey_answer_info_body)
     {
-        list($response) = $this->surveyAnswerInfoWithHttpInfo($body);
+        list($response) = $this->surveyAnswerInfoWithHttpInfo($survey_answer_info_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body24 $body  (required)
+     * @param \AnketologClient\Model\SurveyAnswerInfoBody $survey_answer_info_body  (required)
      * @return Array of \AnketologClient\Model\SurveyAnswer, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyAnswerInfoWithHttpInfo($body)
+    public function surveyAnswerInfoWithHttpInfo($survey_answer_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyAnswerInfo');
+        // verify the required parameter 'survey_answer_info_body' is set
+        if ($survey_answer_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_answer_info_body when calling surveyAnswerInfo');
         }
         // parse inputs
         $resourcePath = "/survey/answer/info";
@@ -149,8 +149,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_answer_info_body)) {
+            $_tempBody = $survey_answer_info_body;
         }
 
         // for model (json/xml)
@@ -194,13 +194,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body25 $body  (required)
+     * @param \AnketologClient\Model\SurveyAnswerListBody $survey_answer_list_body  (required)
      * @return \AnketologClient\Model\SurveyAnswer[]
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyAnswerList($body)
+    public function surveyAnswerList($survey_answer_list_body)
     {
-        list($response) = $this->surveyAnswerListWithHttpInfo($body);
+        list($response) = $this->surveyAnswerListWithHttpInfo($survey_answer_list_body);
         return $response;
     }
 
@@ -209,15 +209,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body25 $body  (required)
+     * @param \AnketologClient\Model\SurveyAnswerListBody $survey_answer_list_body  (required)
      * @return Array of \AnketologClient\Model\SurveyAnswer[], HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyAnswerListWithHttpInfo($body)
+    public function surveyAnswerListWithHttpInfo($survey_answer_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyAnswerList');
+        // verify the required parameter 'survey_answer_list_body' is set
+        if ($survey_answer_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_answer_list_body when calling surveyAnswerList');
         }
         // parse inputs
         $resourcePath = "/survey/answer/list";
@@ -236,8 +236,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_answer_list_body)) {
+            $_tempBody = $survey_answer_list_body;
         }
 
         // for model (json/xml)
@@ -281,13 +281,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body26 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorCreatealiasBody $survey_collector_createalias_body  (required)
      * @return \AnketologClient\Model\SurveyAliasCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorCreatealias($body)
+    public function surveyCollectorCreatealias($survey_collector_createalias_body)
     {
-        list($response) = $this->surveyCollectorCreatealiasWithHttpInfo($body);
+        list($response) = $this->surveyCollectorCreatealiasWithHttpInfo($survey_collector_createalias_body);
         return $response;
     }
 
@@ -296,15 +296,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body26 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorCreatealiasBody $survey_collector_createalias_body  (required)
      * @return Array of \AnketologClient\Model\SurveyAliasCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorCreatealiasWithHttpInfo($body)
+    public function surveyCollectorCreatealiasWithHttpInfo($survey_collector_createalias_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorCreatealias');
+        // verify the required parameter 'survey_collector_createalias_body' is set
+        if ($survey_collector_createalias_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_createalias_body when calling surveyCollectorCreatealias');
         }
         // parse inputs
         $resourcePath = "/survey/collector/createalias";
@@ -323,8 +323,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_createalias_body)) {
+            $_tempBody = $survey_collector_createalias_body;
         }
 
         // for model (json/xml)
@@ -368,13 +368,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body27 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorCreateextralinkBody $survey_collector_createextralink_body  (required)
      * @return \AnketologClient\Model\SurveyExtralinkCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorCreateextralink($body)
+    public function surveyCollectorCreateextralink($survey_collector_createextralink_body)
     {
-        list($response) = $this->surveyCollectorCreateextralinkWithHttpInfo($body);
+        list($response) = $this->surveyCollectorCreateextralinkWithHttpInfo($survey_collector_createextralink_body);
         return $response;
     }
 
@@ -383,15 +383,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body27 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorCreateextralinkBody $survey_collector_createextralink_body  (required)
      * @return Array of \AnketologClient\Model\SurveyExtralinkCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorCreateextralinkWithHttpInfo($body)
+    public function surveyCollectorCreateextralinkWithHttpInfo($survey_collector_createextralink_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorCreateextralink');
+        // verify the required parameter 'survey_collector_createextralink_body' is set
+        if ($survey_collector_createextralink_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_createextralink_body when calling surveyCollectorCreateextralink');
         }
         // parse inputs
         $resourcePath = "/survey/collector/createextralink";
@@ -410,8 +410,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_createextralink_body)) {
+            $_tempBody = $survey_collector_createextralink_body;
         }
 
         // for model (json/xml)
@@ -455,13 +455,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body28 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorCreatewidgetBody $survey_collector_createwidget_body  (required)
      * @return \AnketologClient\Model\SurveyWidgetCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorCreatewidget($body)
+    public function surveyCollectorCreatewidget($survey_collector_createwidget_body)
     {
-        list($response) = $this->surveyCollectorCreatewidgetWithHttpInfo($body);
+        list($response) = $this->surveyCollectorCreatewidgetWithHttpInfo($survey_collector_createwidget_body);
         return $response;
     }
 
@@ -470,15 +470,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body28 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorCreatewidgetBody $survey_collector_createwidget_body  (required)
      * @return Array of \AnketologClient\Model\SurveyWidgetCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorCreatewidgetWithHttpInfo($body)
+    public function surveyCollectorCreatewidgetWithHttpInfo($survey_collector_createwidget_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorCreatewidget');
+        // verify the required parameter 'survey_collector_createwidget_body' is set
+        if ($survey_collector_createwidget_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_createwidget_body when calling surveyCollectorCreatewidget');
         }
         // parse inputs
         $resourcePath = "/survey/collector/createwidget";
@@ -497,8 +497,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_createwidget_body)) {
+            $_tempBody = $survey_collector_createwidget_body;
         }
 
         // for model (json/xml)
@@ -542,13 +542,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body29 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorListBody $survey_collector_list_body  (required)
      * @return \AnketologClient\Model\SurveyCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorList($body)
+    public function surveyCollectorList($survey_collector_list_body)
     {
-        list($response) = $this->surveyCollectorListWithHttpInfo($body);
+        list($response) = $this->surveyCollectorListWithHttpInfo($survey_collector_list_body);
         return $response;
     }
 
@@ -557,15 +557,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body29 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorListBody $survey_collector_list_body  (required)
      * @return Array of \AnketologClient\Model\SurveyCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorListWithHttpInfo($body)
+    public function surveyCollectorListWithHttpInfo($survey_collector_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorList');
+        // verify the required parameter 'survey_collector_list_body' is set
+        if ($survey_collector_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_list_body when calling surveyCollectorList');
         }
         // parse inputs
         $resourcePath = "/survey/collector/list";
@@ -584,8 +584,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_list_body)) {
+            $_tempBody = $survey_collector_list_body;
         }
 
         // for model (json/xml)
@@ -629,13 +629,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body30 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorRemoveextralinkBody $survey_collector_removeextralink_body  (required)
      * @return string
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorRemoveextralink($body)
+    public function surveyCollectorRemoveextralink($survey_collector_removeextralink_body)
     {
-        list($response) = $this->surveyCollectorRemoveextralinkWithHttpInfo($body);
+        list($response) = $this->surveyCollectorRemoveextralinkWithHttpInfo($survey_collector_removeextralink_body);
         return $response;
     }
 
@@ -644,15 +644,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body30 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorRemoveextralinkBody $survey_collector_removeextralink_body  (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorRemoveextralinkWithHttpInfo($body)
+    public function surveyCollectorRemoveextralinkWithHttpInfo($survey_collector_removeextralink_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorRemoveextralink');
+        // verify the required parameter 'survey_collector_removeextralink_body' is set
+        if ($survey_collector_removeextralink_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_removeextralink_body when calling surveyCollectorRemoveextralink');
         }
         // parse inputs
         $resourcePath = "/survey/collector/removeextralink";
@@ -671,8 +671,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_removeextralink_body)) {
+            $_tempBody = $survey_collector_removeextralink_body;
         }
 
         // for model (json/xml)
@@ -716,13 +716,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body31 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorUpdatealiasBody $survey_collector_updatealias_body  (required)
      * @return \AnketologClient\Model\SurveyAliasCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorUpdatealias($body)
+    public function surveyCollectorUpdatealias($survey_collector_updatealias_body)
     {
-        list($response) = $this->surveyCollectorUpdatealiasWithHttpInfo($body);
+        list($response) = $this->surveyCollectorUpdatealiasWithHttpInfo($survey_collector_updatealias_body);
         return $response;
     }
 
@@ -731,15 +731,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body31 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorUpdatealiasBody $survey_collector_updatealias_body  (required)
      * @return Array of \AnketologClient\Model\SurveyAliasCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorUpdatealiasWithHttpInfo($body)
+    public function surveyCollectorUpdatealiasWithHttpInfo($survey_collector_updatealias_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorUpdatealias');
+        // verify the required parameter 'survey_collector_updatealias_body' is set
+        if ($survey_collector_updatealias_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_updatealias_body when calling surveyCollectorUpdatealias');
         }
         // parse inputs
         $resourcePath = "/survey/collector/updatealias";
@@ -758,8 +758,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_updatealias_body)) {
+            $_tempBody = $survey_collector_updatealias_body;
         }
 
         // for model (json/xml)
@@ -803,13 +803,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body32 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorUpdateextralinkBody $survey_collector_updateextralink_body  (required)
      * @return \AnketologClient\Model\SurveyExtralinkCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorUpdateextralink($body)
+    public function surveyCollectorUpdateextralink($survey_collector_updateextralink_body)
     {
-        list($response) = $this->surveyCollectorUpdateextralinkWithHttpInfo($body);
+        list($response) = $this->surveyCollectorUpdateextralinkWithHttpInfo($survey_collector_updateextralink_body);
         return $response;
     }
 
@@ -818,15 +818,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body32 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorUpdateextralinkBody $survey_collector_updateextralink_body  (required)
      * @return Array of \AnketologClient\Model\SurveyExtralinkCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorUpdateextralinkWithHttpInfo($body)
+    public function surveyCollectorUpdateextralinkWithHttpInfo($survey_collector_updateextralink_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorUpdateextralink');
+        // verify the required parameter 'survey_collector_updateextralink_body' is set
+        if ($survey_collector_updateextralink_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_updateextralink_body when calling surveyCollectorUpdateextralink');
         }
         // parse inputs
         $resourcePath = "/survey/collector/updateextralink";
@@ -845,8 +845,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_updateextralink_body)) {
+            $_tempBody = $survey_collector_updateextralink_body;
         }
 
         // for model (json/xml)
@@ -890,13 +890,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body33 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorUpdatewidgetBody $survey_collector_updatewidget_body  (required)
      * @return \AnketologClient\Model\SurveyWidgetCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorUpdatewidget($body)
+    public function surveyCollectorUpdatewidget($survey_collector_updatewidget_body)
     {
-        list($response) = $this->surveyCollectorUpdatewidgetWithHttpInfo($body);
+        list($response) = $this->surveyCollectorUpdatewidgetWithHttpInfo($survey_collector_updatewidget_body);
         return $response;
     }
 
@@ -905,15 +905,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body33 $body  (required)
+     * @param \AnketologClient\Model\SurveyCollectorUpdatewidgetBody $survey_collector_updatewidget_body  (required)
      * @return Array of \AnketologClient\Model\SurveyWidgetCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyCollectorUpdatewidgetWithHttpInfo($body)
+    public function surveyCollectorUpdatewidgetWithHttpInfo($survey_collector_updatewidget_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyCollectorUpdatewidget');
+        // verify the required parameter 'survey_collector_updatewidget_body' is set
+        if ($survey_collector_updatewidget_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_collector_updatewidget_body when calling surveyCollectorUpdatewidget');
         }
         // parse inputs
         $resourcePath = "/survey/collector/updatewidget";
@@ -932,8 +932,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_collector_updatewidget_body)) {
+            $_tempBody = $survey_collector_updatewidget_body;
         }
 
         // for model (json/xml)
@@ -977,13 +977,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body34 $body  (required)
+     * @param \AnketologClient\Model\SurveyFilterCreateBody $survey_filter_create_body  (required)
      * @return \AnketologClient\Model\SurveyFilter
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyFilterCreate($body)
+    public function surveyFilterCreate($survey_filter_create_body)
     {
-        list($response) = $this->surveyFilterCreateWithHttpInfo($body);
+        list($response) = $this->surveyFilterCreateWithHttpInfo($survey_filter_create_body);
         return $response;
     }
 
@@ -992,15 +992,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body34 $body  (required)
+     * @param \AnketologClient\Model\SurveyFilterCreateBody $survey_filter_create_body  (required)
      * @return Array of \AnketologClient\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyFilterCreateWithHttpInfo($body)
+    public function surveyFilterCreateWithHttpInfo($survey_filter_create_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyFilterCreate');
+        // verify the required parameter 'survey_filter_create_body' is set
+        if ($survey_filter_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_filter_create_body when calling surveyFilterCreate');
         }
         // parse inputs
         $resourcePath = "/survey/filter/create";
@@ -1019,8 +1019,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_filter_create_body)) {
+            $_tempBody = $survey_filter_create_body;
         }
 
         // for model (json/xml)
@@ -1064,13 +1064,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body35 $body  (required)
+     * @param \AnketologClient\Model\SurveyFilterInfoBody $survey_filter_info_body  (required)
      * @return \AnketologClient\Model\SurveyFilter
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyFilterInfo($body)
+    public function surveyFilterInfo($survey_filter_info_body)
     {
-        list($response) = $this->surveyFilterInfoWithHttpInfo($body);
+        list($response) = $this->surveyFilterInfoWithHttpInfo($survey_filter_info_body);
         return $response;
     }
 
@@ -1079,15 +1079,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body35 $body  (required)
+     * @param \AnketologClient\Model\SurveyFilterInfoBody $survey_filter_info_body  (required)
      * @return Array of \AnketologClient\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyFilterInfoWithHttpInfo($body)
+    public function surveyFilterInfoWithHttpInfo($survey_filter_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyFilterInfo');
+        // verify the required parameter 'survey_filter_info_body' is set
+        if ($survey_filter_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_filter_info_body when calling surveyFilterInfo');
         }
         // parse inputs
         $resourcePath = "/survey/filter/info";
@@ -1106,8 +1106,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_filter_info_body)) {
+            $_tempBody = $survey_filter_info_body;
         }
 
         // for model (json/xml)
@@ -1227,13 +1227,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body36 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageArchiveBody $survey_manage_archive_body  (required)
      * @return \AnketologClient\Model\SurveySurvey
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageArchive($body)
+    public function surveyManageArchive($survey_manage_archive_body)
     {
-        list($response) = $this->surveyManageArchiveWithHttpInfo($body);
+        list($response) = $this->surveyManageArchiveWithHttpInfo($survey_manage_archive_body);
         return $response;
     }
 
@@ -1242,15 +1242,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body36 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageArchiveBody $survey_manage_archive_body  (required)
      * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageArchiveWithHttpInfo($body)
+    public function surveyManageArchiveWithHttpInfo($survey_manage_archive_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageArchive');
+        // verify the required parameter 'survey_manage_archive_body' is set
+        if ($survey_manage_archive_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_archive_body when calling surveyManageArchive');
         }
         // parse inputs
         $resourcePath = "/survey/manage/archive";
@@ -1269,8 +1269,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_archive_body)) {
+            $_tempBody = $survey_manage_archive_body;
         }
 
         // for model (json/xml)
@@ -1314,13 +1314,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body37 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageCopyBody $survey_manage_copy_body  (required)
      * @return \AnketologClient\Model\SurveySurvey
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageCopy($body)
+    public function surveyManageCopy($survey_manage_copy_body)
     {
-        list($response) = $this->surveyManageCopyWithHttpInfo($body);
+        list($response) = $this->surveyManageCopyWithHttpInfo($survey_manage_copy_body);
         return $response;
     }
 
@@ -1329,15 +1329,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body37 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageCopyBody $survey_manage_copy_body  (required)
      * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageCopyWithHttpInfo($body)
+    public function surveyManageCopyWithHttpInfo($survey_manage_copy_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageCopy');
+        // verify the required parameter 'survey_manage_copy_body' is set
+        if ($survey_manage_copy_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_copy_body when calling surveyManageCopy');
         }
         // parse inputs
         $resourcePath = "/survey/manage/copy";
@@ -1356,8 +1356,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_copy_body)) {
+            $_tempBody = $survey_manage_copy_body;
         }
 
         // for model (json/xml)
@@ -1401,13 +1401,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body38 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageCreateBody $survey_manage_create_body  (required)
      * @return \AnketologClient\Model\SurveySurvey
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageCreate($body)
+    public function surveyManageCreate($survey_manage_create_body)
     {
-        list($response) = $this->surveyManageCreateWithHttpInfo($body);
+        list($response) = $this->surveyManageCreateWithHttpInfo($survey_manage_create_body);
         return $response;
     }
 
@@ -1416,15 +1416,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body38 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageCreateBody $survey_manage_create_body  (required)
      * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageCreateWithHttpInfo($body)
+    public function surveyManageCreateWithHttpInfo($survey_manage_create_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageCreate');
+        // verify the required parameter 'survey_manage_create_body' is set
+        if ($survey_manage_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_create_body when calling surveyManageCreate');
         }
         // parse inputs
         $resourcePath = "/survey/manage/create";
@@ -1443,8 +1443,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_create_body)) {
+            $_tempBody = $survey_manage_create_body;
         }
 
         // for model (json/xml)
@@ -1488,13 +1488,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body39 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageDeleteBody $survey_manage_delete_body  (required)
      * @return string
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageDelete($body)
+    public function surveyManageDelete($survey_manage_delete_body)
     {
-        list($response) = $this->surveyManageDeleteWithHttpInfo($body);
+        list($response) = $this->surveyManageDeleteWithHttpInfo($survey_manage_delete_body);
         return $response;
     }
 
@@ -1503,15 +1503,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body39 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageDeleteBody $survey_manage_delete_body  (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageDeleteWithHttpInfo($body)
+    public function surveyManageDeleteWithHttpInfo($survey_manage_delete_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageDelete');
+        // verify the required parameter 'survey_manage_delete_body' is set
+        if ($survey_manage_delete_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_delete_body when calling surveyManageDelete');
         }
         // parse inputs
         $resourcePath = "/survey/manage/delete";
@@ -1530,8 +1530,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_delete_body)) {
+            $_tempBody = $survey_manage_delete_body;
         }
 
         // for model (json/xml)
@@ -1575,13 +1575,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body40 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageInfoBody $survey_manage_info_body  (required)
      * @return \AnketologClient\Model\SurveySurvey
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageInfo($body)
+    public function surveyManageInfo($survey_manage_info_body)
     {
-        list($response) = $this->surveyManageInfoWithHttpInfo($body);
+        list($response) = $this->surveyManageInfoWithHttpInfo($survey_manage_info_body);
         return $response;
     }
 
@@ -1590,15 +1590,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body40 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageInfoBody $survey_manage_info_body  (required)
      * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageInfoWithHttpInfo($body)
+    public function surveyManageInfoWithHttpInfo($survey_manage_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageInfo');
+        // verify the required parameter 'survey_manage_info_body' is set
+        if ($survey_manage_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_info_body when calling surveyManageInfo');
         }
         // parse inputs
         $resourcePath = "/survey/manage/info";
@@ -1617,8 +1617,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_info_body)) {
+            $_tempBody = $survey_manage_info_body;
         }
 
         // for model (json/xml)
@@ -1738,13 +1738,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body41 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageRestoreBody $survey_manage_restore_body  (required)
      * @return \AnketologClient\Model\SurveySurvey
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageRestore($body)
+    public function surveyManageRestore($survey_manage_restore_body)
     {
-        list($response) = $this->surveyManageRestoreWithHttpInfo($body);
+        list($response) = $this->surveyManageRestoreWithHttpInfo($survey_manage_restore_body);
         return $response;
     }
 
@@ -1753,15 +1753,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body41 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageRestoreBody $survey_manage_restore_body  (required)
      * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageRestoreWithHttpInfo($body)
+    public function surveyManageRestoreWithHttpInfo($survey_manage_restore_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageRestore');
+        // verify the required parameter 'survey_manage_restore_body' is set
+        if ($survey_manage_restore_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_restore_body when calling surveyManageRestore');
         }
         // parse inputs
         $resourcePath = "/survey/manage/restore";
@@ -1780,8 +1780,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_restore_body)) {
+            $_tempBody = $survey_manage_restore_body;
         }
 
         // for model (json/xml)
@@ -1825,13 +1825,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body42 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageUpdateBody $survey_manage_update_body  (required)
      * @return \AnketologClient\Model\SurveySurvey
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageUpdate($body)
+    public function surveyManageUpdate($survey_manage_update_body)
     {
-        list($response) = $this->surveyManageUpdateWithHttpInfo($body);
+        list($response) = $this->surveyManageUpdateWithHttpInfo($survey_manage_update_body);
         return $response;
     }
 
@@ -1840,15 +1840,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body42 $body  (required)
+     * @param \AnketologClient\Model\SurveyManageUpdateBody $survey_manage_update_body  (required)
      * @return Array of \AnketologClient\Model\SurveySurvey, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyManageUpdateWithHttpInfo($body)
+    public function surveyManageUpdateWithHttpInfo($survey_manage_update_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyManageUpdate');
+        // verify the required parameter 'survey_manage_update_body' is set
+        if ($survey_manage_update_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_manage_update_body when calling surveyManageUpdate');
         }
         // parse inputs
         $resourcePath = "/survey/manage/update";
@@ -1867,8 +1867,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_manage_update_body)) {
+            $_tempBody = $survey_manage_update_body;
         }
 
         // for model (json/xml)
@@ -1912,13 +1912,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body43 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportAggregateBody $survey_report_aggregate_body  (required)
      * @return \AnketologClient\Model\SurveyReportAggregate
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportAggregate($body)
+    public function surveyReportAggregate($survey_report_aggregate_body)
     {
-        list($response) = $this->surveyReportAggregateWithHttpInfo($body);
+        list($response) = $this->surveyReportAggregateWithHttpInfo($survey_report_aggregate_body);
         return $response;
     }
 
@@ -1927,15 +1927,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body43 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportAggregateBody $survey_report_aggregate_body  (required)
      * @return Array of \AnketologClient\Model\SurveyReportAggregate, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportAggregateWithHttpInfo($body)
+    public function surveyReportAggregateWithHttpInfo($survey_report_aggregate_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyReportAggregate');
+        // verify the required parameter 'survey_report_aggregate_body' is set
+        if ($survey_report_aggregate_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_report_aggregate_body when calling surveyReportAggregate');
         }
         // parse inputs
         $resourcePath = "/survey/report/aggregate";
@@ -1954,8 +1954,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_report_aggregate_body)) {
+            $_tempBody = $survey_report_aggregate_body;
         }
 
         // for model (json/xml)
@@ -1999,13 +1999,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body44 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportCreateBody $survey_report_create_body  (required)
      * @return \AnketologClient\Model\SurveyReport
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportCreate($body)
+    public function surveyReportCreate($survey_report_create_body)
     {
-        list($response) = $this->surveyReportCreateWithHttpInfo($body);
+        list($response) = $this->surveyReportCreateWithHttpInfo($survey_report_create_body);
         return $response;
     }
 
@@ -2014,15 +2014,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body44 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportCreateBody $survey_report_create_body  (required)
      * @return Array of \AnketologClient\Model\SurveyReport, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportCreateWithHttpInfo($body)
+    public function surveyReportCreateWithHttpInfo($survey_report_create_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyReportCreate');
+        // verify the required parameter 'survey_report_create_body' is set
+        if ($survey_report_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_report_create_body when calling surveyReportCreate');
         }
         // parse inputs
         $resourcePath = "/survey/report/create";
@@ -2041,8 +2041,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_report_create_body)) {
+            $_tempBody = $survey_report_create_body;
         }
 
         // for model (json/xml)
@@ -2086,13 +2086,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body45 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportDetailBody $survey_report_detail_body  (required)
      * @return \AnketologClient\Model\SurveyReportDetail
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportDetail($body)
+    public function surveyReportDetail($survey_report_detail_body)
     {
-        list($response) = $this->surveyReportDetailWithHttpInfo($body);
+        list($response) = $this->surveyReportDetailWithHttpInfo($survey_report_detail_body);
         return $response;
     }
 
@@ -2101,15 +2101,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body45 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportDetailBody $survey_report_detail_body  (required)
      * @return Array of \AnketologClient\Model\SurveyReportDetail, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportDetailWithHttpInfo($body)
+    public function surveyReportDetailWithHttpInfo($survey_report_detail_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyReportDetail');
+        // verify the required parameter 'survey_report_detail_body' is set
+        if ($survey_report_detail_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_report_detail_body when calling surveyReportDetail');
         }
         // parse inputs
         $resourcePath = "/survey/report/detail";
@@ -2128,8 +2128,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_report_detail_body)) {
+            $_tempBody = $survey_report_detail_body;
         }
 
         // for model (json/xml)
@@ -2173,13 +2173,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body46 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportInfoBody $survey_report_info_body  (required)
      * @return \AnketologClient\Model\SurveyReport
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportInfo($body)
+    public function surveyReportInfo($survey_report_info_body)
     {
-        list($response) = $this->surveyReportInfoWithHttpInfo($body);
+        list($response) = $this->surveyReportInfoWithHttpInfo($survey_report_info_body);
         return $response;
     }
 
@@ -2188,15 +2188,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body46 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportInfoBody $survey_report_info_body  (required)
      * @return Array of \AnketologClient\Model\SurveyReport, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportInfoWithHttpInfo($body)
+    public function surveyReportInfoWithHttpInfo($survey_report_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyReportInfo');
+        // verify the required parameter 'survey_report_info_body' is set
+        if ($survey_report_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_report_info_body when calling surveyReportInfo');
         }
         // parse inputs
         $resourcePath = "/survey/report/info";
@@ -2215,8 +2215,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_report_info_body)) {
+            $_tempBody = $survey_report_info_body;
         }
 
         // for model (json/xml)
@@ -2260,13 +2260,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body47 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportListBody $survey_report_list_body  (required)
      * @return \AnketologClient\Model\SurveyReport[]
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportList($body)
+    public function surveyReportList($survey_report_list_body)
     {
-        list($response) = $this->surveyReportListWithHttpInfo($body);
+        list($response) = $this->surveyReportListWithHttpInfo($survey_report_list_body);
         return $response;
     }
 
@@ -2275,15 +2275,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body47 $body  (required)
+     * @param \AnketologClient\Model\SurveyReportListBody $survey_report_list_body  (required)
      * @return Array of \AnketologClient\Model\SurveyReport[], HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyReportListWithHttpInfo($body)
+    public function surveyReportListWithHttpInfo($survey_report_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyReportList');
+        // verify the required parameter 'survey_report_list_body' is set
+        if ($survey_report_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_report_list_body when calling surveyReportList');
         }
         // parse inputs
         $resourcePath = "/survey/report/list";
@@ -2302,8 +2302,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_report_list_body)) {
+            $_tempBody = $survey_report_list_body;
         }
 
         // for model (json/xml)
@@ -2347,13 +2347,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body48 $body  (required)
+     * @param \AnketologClient\Model\SurveyRevisionInfoBody $survey_revision_info_body  (required)
      * @return \AnketologClient\Model\SurveyRevision
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyRevisionInfo($body)
+    public function surveyRevisionInfo($survey_revision_info_body)
     {
-        list($response) = $this->surveyRevisionInfoWithHttpInfo($body);
+        list($response) = $this->surveyRevisionInfoWithHttpInfo($survey_revision_info_body);
         return $response;
     }
 
@@ -2362,15 +2362,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body48 $body  (required)
+     * @param \AnketologClient\Model\SurveyRevisionInfoBody $survey_revision_info_body  (required)
      * @return Array of \AnketologClient\Model\SurveyRevision, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyRevisionInfoWithHttpInfo($body)
+    public function surveyRevisionInfoWithHttpInfo($survey_revision_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyRevisionInfo');
+        // verify the required parameter 'survey_revision_info_body' is set
+        if ($survey_revision_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_revision_info_body when calling surveyRevisionInfo');
         }
         // parse inputs
         $resourcePath = "/survey/revision/info";
@@ -2389,8 +2389,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_revision_info_body)) {
+            $_tempBody = $survey_revision_info_body;
         }
 
         // for model (json/xml)
@@ -2434,13 +2434,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body49 $body  (required)
+     * @param \AnketologClient\Model\SurveyRevisionListBody $survey_revision_list_body  (required)
      * @return \AnketologClient\Model\SurveyRevision[]
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyRevisionList($body)
+    public function surveyRevisionList($survey_revision_list_body)
     {
-        list($response) = $this->surveyRevisionListWithHttpInfo($body);
+        list($response) = $this->surveyRevisionListWithHttpInfo($survey_revision_list_body);
         return $response;
     }
 
@@ -2449,15 +2449,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body49 $body  (required)
+     * @param \AnketologClient\Model\SurveyRevisionListBody $survey_revision_list_body  (required)
      * @return Array of \AnketologClient\Model\SurveyRevision[], HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveyRevisionListWithHttpInfo($body)
+    public function surveyRevisionListWithHttpInfo($survey_revision_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveyRevisionList');
+        // verify the required parameter 'survey_revision_list_body' is set
+        if ($survey_revision_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_revision_list_body when calling surveyRevisionList');
         }
         // parse inputs
         $resourcePath = "/survey/revision/list";
@@ -2476,8 +2476,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_revision_list_body)) {
+            $_tempBody = $survey_revision_list_body;
         }
 
         // for model (json/xml)
@@ -2521,13 +2521,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body50 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeCreateBody $survey_subscribe_create_body  (required)
      * @return \AnketologClient\Model\SurveySubscribe
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeCreate($body)
+    public function surveySubscribeCreate($survey_subscribe_create_body)
     {
-        list($response) = $this->surveySubscribeCreateWithHttpInfo($body);
+        list($response) = $this->surveySubscribeCreateWithHttpInfo($survey_subscribe_create_body);
         return $response;
     }
 
@@ -2536,15 +2536,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body50 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeCreateBody $survey_subscribe_create_body  (required)
      * @return Array of \AnketologClient\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeCreateWithHttpInfo($body)
+    public function surveySubscribeCreateWithHttpInfo($survey_subscribe_create_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveySubscribeCreate');
+        // verify the required parameter 'survey_subscribe_create_body' is set
+        if ($survey_subscribe_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_subscribe_create_body when calling surveySubscribeCreate');
         }
         // parse inputs
         $resourcePath = "/survey/subscribe/create";
@@ -2563,8 +2563,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_subscribe_create_body)) {
+            $_tempBody = $survey_subscribe_create_body;
         }
 
         // for model (json/xml)
@@ -2608,13 +2608,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body51 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeDeleteBody $survey_subscribe_delete_body  (required)
      * @return \AnketologClient\Model\CountryItem
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeDelete($body)
+    public function surveySubscribeDelete($survey_subscribe_delete_body)
     {
-        list($response) = $this->surveySubscribeDeleteWithHttpInfo($body);
+        list($response) = $this->surveySubscribeDeleteWithHttpInfo($survey_subscribe_delete_body);
         return $response;
     }
 
@@ -2623,15 +2623,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body51 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeDeleteBody $survey_subscribe_delete_body  (required)
      * @return Array of \AnketologClient\Model\CountryItem, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeDeleteWithHttpInfo($body)
+    public function surveySubscribeDeleteWithHttpInfo($survey_subscribe_delete_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveySubscribeDelete');
+        // verify the required parameter 'survey_subscribe_delete_body' is set
+        if ($survey_subscribe_delete_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_subscribe_delete_body when calling surveySubscribeDelete');
         }
         // parse inputs
         $resourcePath = "/survey/subscribe/delete";
@@ -2650,8 +2650,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_subscribe_delete_body)) {
+            $_tempBody = $survey_subscribe_delete_body;
         }
 
         // for model (json/xml)
@@ -2695,13 +2695,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body52 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeInfoBody $survey_subscribe_info_body  (required)
      * @return \AnketologClient\Model\SurveySubscribe
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeInfo($body)
+    public function surveySubscribeInfo($survey_subscribe_info_body)
     {
-        list($response) = $this->surveySubscribeInfoWithHttpInfo($body);
+        list($response) = $this->surveySubscribeInfoWithHttpInfo($survey_subscribe_info_body);
         return $response;
     }
 
@@ -2710,15 +2710,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body52 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeInfoBody $survey_subscribe_info_body  (required)
      * @return Array of \AnketologClient\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeInfoWithHttpInfo($body)
+    public function surveySubscribeInfoWithHttpInfo($survey_subscribe_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveySubscribeInfo');
+        // verify the required parameter 'survey_subscribe_info_body' is set
+        if ($survey_subscribe_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_subscribe_info_body when calling surveySubscribeInfo');
         }
         // parse inputs
         $resourcePath = "/survey/subscribe/info";
@@ -2737,8 +2737,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_subscribe_info_body)) {
+            $_tempBody = $survey_subscribe_info_body;
         }
 
         // for model (json/xml)
@@ -2782,13 +2782,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body53 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeListBody $survey_subscribe_list_body  (required)
      * @return \AnketologClient\Model\SurveySubscribe[]
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeList($body)
+    public function surveySubscribeList($survey_subscribe_list_body)
     {
-        list($response) = $this->surveySubscribeListWithHttpInfo($body);
+        list($response) = $this->surveySubscribeListWithHttpInfo($survey_subscribe_list_body);
         return $response;
     }
 
@@ -2797,15 +2797,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body53 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeListBody $survey_subscribe_list_body  (required)
      * @return Array of \AnketologClient\Model\SurveySubscribe[], HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeListWithHttpInfo($body)
+    public function surveySubscribeListWithHttpInfo($survey_subscribe_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveySubscribeList');
+        // verify the required parameter 'survey_subscribe_list_body' is set
+        if ($survey_subscribe_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_subscribe_list_body when calling surveySubscribeList');
         }
         // parse inputs
         $resourcePath = "/survey/subscribe/list";
@@ -2824,8 +2824,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_subscribe_list_body)) {
+            $_tempBody = $survey_subscribe_list_body;
         }
 
         // for model (json/xml)
@@ -2869,13 +2869,13 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body54 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeUpdateBody $survey_subscribe_update_body  (required)
      * @return \AnketologClient\Model\SurveySubscribe
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeUpdate($body)
+    public function surveySubscribeUpdate($survey_subscribe_update_body)
     {
-        list($response) = $this->surveySubscribeUpdateWithHttpInfo($body);
+        list($response) = $this->surveySubscribeUpdateWithHttpInfo($survey_subscribe_update_body);
         return $response;
     }
 
@@ -2884,15 +2884,15 @@ class SurveyApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body54 $body  (required)
+     * @param \AnketologClient\Model\SurveySubscribeUpdateBody $survey_subscribe_update_body  (required)
      * @return Array of \AnketologClient\Model\SurveySubscribe, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function surveySubscribeUpdateWithHttpInfo($body)
+    public function surveySubscribeUpdateWithHttpInfo($survey_subscribe_update_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling surveySubscribeUpdate');
+        // verify the required parameter 'survey_subscribe_update_body' is set
+        if ($survey_subscribe_update_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_subscribe_update_body when calling surveySubscribeUpdate');
         }
         // parse inputs
         $resourcePath = "/survey/subscribe/update";
@@ -2911,8 +2911,8 @@ class SurveyApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($survey_subscribe_update_body)) {
+            $_tempBody = $survey_subscribe_update_body;
         }
 
         // for model (json/xml)

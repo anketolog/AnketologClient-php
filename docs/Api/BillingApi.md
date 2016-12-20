@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **billingPaymentCreate**
-> \AnketologClient\Model\BillingPayment billingPaymentCreate($body)
+> \AnketologClient\Model\BillingPayment billingPaymentCreate($billing_payment_create_body)
 
 
 
@@ -29,10 +29,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\BillingApi();
-$body = new \AnketologClient\Model\Body(); // \AnketologClient\Model\Body | 
+$billing_payment_create_body = new \AnketologClient\Model\BillingPaymentCreateBody(); // \AnketologClient\Model\BillingPaymentCreateBody | 
 
 try {
-    $result = $api_instance->billingPaymentCreate($body);
+    $result = $api_instance->billingPaymentCreate($billing_payment_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingApi->billingPaymentCreate: ', $e->getMessage(), PHP_EOL;
@@ -44,7 +44,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body**](../Model/\AnketologClient\Model\Body.md)|  |
+ **billing_payment_create_body** | [**\AnketologClient\Model\BillingPaymentCreateBody**](../Model/\AnketologClient\Model\BillingPaymentCreateBody.md)|  |
 
 ### Return type
 
@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingPaymentInfo**
-> \AnketologClient\Model\BillingPayment billingPaymentInfo($body)
+> \AnketologClient\Model\BillingPayment billingPaymentInfo($billing_payment_info_body)
 
 
 
@@ -79,10 +79,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\BillingApi();
-$body = new \AnketologClient\Model\Body1(); // \AnketologClient\Model\Body1 | 
+$billing_payment_info_body = new \AnketologClient\Model\BillingPaymentInfoBody(); // \AnketologClient\Model\BillingPaymentInfoBody | 
 
 try {
-    $result = $api_instance->billingPaymentInfo($body);
+    $result = $api_instance->billingPaymentInfo($billing_payment_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingApi->billingPaymentInfo: ', $e->getMessage(), PHP_EOL;
@@ -94,7 +94,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body1**](../Model/\AnketologClient\Model\Body1.md)|  |
+ **billing_payment_info_body** | [**\AnketologClient\Model\BillingPaymentInfoBody**](../Model/\AnketologClient\Model\BillingPaymentInfoBody.md)|  |
 
 ### Return type
 
@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **billingTransferInfo**
-> \AnketologClient\Model\BillingTransfer billingTransferInfo($body)
+> \AnketologClient\Model\BillingTransfer billingTransferInfo($billing_transfer_info_body)
 
 
 
@@ -175,10 +175,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\BillingApi();
-$body = new \AnketologClient\Model\Body2(); // \AnketologClient\Model\Body2 | 
+$billing_transfer_info_body = new \AnketologClient\Model\BillingTransferInfoBody(); // \AnketologClient\Model\BillingTransferInfoBody | 
 
 try {
-    $result = $api_instance->billingTransferInfo($body);
+    $result = $api_instance->billingTransferInfo($billing_transfer_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingApi->billingTransferInfo: ', $e->getMessage(), PHP_EOL;
@@ -190,7 +190,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body2**](../Model/\AnketologClient\Model\Body2.md)|  |
+ **billing_transfer_info_body** | [**\AnketologClient\Model\BillingTransferInfoBody**](../Model/\AnketologClient\Model\BillingTransferInfoBody.md)|  |
 
 ### Return type
 

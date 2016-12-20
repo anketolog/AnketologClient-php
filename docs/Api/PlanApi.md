@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **planManageChange**
-> \AnketologClient\Model\PlanUserPlan planManageChange($body)
+> \AnketologClient\Model\PlanUserPlan planManageChange($plan_manage_change_body)
 
 
 
@@ -27,10 +27,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PlanApi();
-$body = new \AnketologClient\Model\Body23(); // \AnketologClient\Model\Body23 | 
+$plan_manage_change_body = new \AnketologClient\Model\PlanManageChangeBody(); // \AnketologClient\Model\PlanManageChangeBody | 
 
 try {
-    $result = $api_instance->planManageChange($body);
+    $result = $api_instance->planManageChange($plan_manage_change_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PlanApi->planManageChange: ', $e->getMessage(), PHP_EOL;
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body23**](../Model/\AnketologClient\Model\Body23.md)|  |
+ **plan_manage_change_body** | [**\AnketologClient\Model\PlanManageChangeBody**](../Model/\AnketologClient\Model\PlanManageChangeBody.md)|  |
 
 ### Return type
 

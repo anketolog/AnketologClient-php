@@ -107,13 +107,13 @@ class BillingApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body $body  (required)
+     * @param \AnketologClient\Model\BillingPaymentCreateBody $billing_payment_create_body  (required)
      * @return \AnketologClient\Model\BillingPayment
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function billingPaymentCreate($body)
+    public function billingPaymentCreate($billing_payment_create_body)
     {
-        list($response) = $this->billingPaymentCreateWithHttpInfo($body);
+        list($response) = $this->billingPaymentCreateWithHttpInfo($billing_payment_create_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class BillingApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body $body  (required)
+     * @param \AnketologClient\Model\BillingPaymentCreateBody $billing_payment_create_body  (required)
      * @return Array of \AnketologClient\Model\BillingPayment, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function billingPaymentCreateWithHttpInfo($body)
+    public function billingPaymentCreateWithHttpInfo($billing_payment_create_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling billingPaymentCreate');
+        // verify the required parameter 'billing_payment_create_body' is set
+        if ($billing_payment_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $billing_payment_create_body when calling billingPaymentCreate');
         }
         // parse inputs
         $resourcePath = "/billing/payment/create";
@@ -149,8 +149,8 @@ class BillingApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($billing_payment_create_body)) {
+            $_tempBody = $billing_payment_create_body;
         }
 
         // for model (json/xml)
@@ -194,13 +194,13 @@ class BillingApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body1 $body  (required)
+     * @param \AnketologClient\Model\BillingPaymentInfoBody $billing_payment_info_body  (required)
      * @return \AnketologClient\Model\BillingPayment
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function billingPaymentInfo($body)
+    public function billingPaymentInfo($billing_payment_info_body)
     {
-        list($response) = $this->billingPaymentInfoWithHttpInfo($body);
+        list($response) = $this->billingPaymentInfoWithHttpInfo($billing_payment_info_body);
         return $response;
     }
 
@@ -209,15 +209,15 @@ class BillingApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body1 $body  (required)
+     * @param \AnketologClient\Model\BillingPaymentInfoBody $billing_payment_info_body  (required)
      * @return Array of \AnketologClient\Model\BillingPayment, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function billingPaymentInfoWithHttpInfo($body)
+    public function billingPaymentInfoWithHttpInfo($billing_payment_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling billingPaymentInfo');
+        // verify the required parameter 'billing_payment_info_body' is set
+        if ($billing_payment_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $billing_payment_info_body when calling billingPaymentInfo');
         }
         // parse inputs
         $resourcePath = "/billing/payment/info";
@@ -236,8 +236,8 @@ class BillingApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($billing_payment_info_body)) {
+            $_tempBody = $billing_payment_info_body;
         }
 
         // for model (json/xml)
@@ -357,13 +357,13 @@ class BillingApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body2 $body  (required)
+     * @param \AnketologClient\Model\BillingTransferInfoBody $billing_transfer_info_body  (required)
      * @return \AnketologClient\Model\BillingTransfer
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function billingTransferInfo($body)
+    public function billingTransferInfo($billing_transfer_info_body)
     {
-        list($response) = $this->billingTransferInfoWithHttpInfo($body);
+        list($response) = $this->billingTransferInfoWithHttpInfo($billing_transfer_info_body);
         return $response;
     }
 
@@ -372,15 +372,15 @@ class BillingApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body2 $body  (required)
+     * @param \AnketologClient\Model\BillingTransferInfoBody $billing_transfer_info_body  (required)
      * @return Array of \AnketologClient\Model\BillingTransfer, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function billingTransferInfoWithHttpInfo($body)
+    public function billingTransferInfoWithHttpInfo($billing_transfer_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling billingTransferInfo');
+        // verify the required parameter 'billing_transfer_info_body' is set
+        if ($billing_transfer_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $billing_transfer_info_body when calling billingTransferInfo');
         }
         // parse inputs
         $resourcePath = "/billing/transfer/info";
@@ -399,8 +399,8 @@ class BillingApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($billing_transfer_info_body)) {
+            $_tempBody = $billing_transfer_info_body;
         }
 
         // for model (json/xml)

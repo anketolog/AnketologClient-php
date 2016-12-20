@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **listsCityList**
-> string listsCityList($body)
+> string listsCityList($lists_city_list_body)
 
 
 
@@ -27,10 +27,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\ListsApi();
-$body = new \AnketologClient\Model\Body12(); // \AnketologClient\Model\Body12 | 
+$lists_city_list_body = new \AnketologClient\Model\ListsCityListBody(); // \AnketologClient\Model\ListsCityListBody | 
 
 try {
-    $result = $api_instance->listsCityList($body);
+    $result = $api_instance->listsCityList($lists_city_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListsApi->listsCityList: ', $e->getMessage(), PHP_EOL;
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body12**](../Model/\AnketologClient\Model\Body12.md)|  |
+ **lists_city_list_body** | [**\AnketologClient\Model\ListsCityListBody**](../Model/\AnketologClient\Model\ListsCityListBody.md)|  |
 
 ### Return type
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsRegionList**
-> \AnketologClient\Model\CityItem listsRegionList($body)
+> \AnketologClient\Model\CityItem listsRegionList($lists_region_list_body)
 
 
 
@@ -123,10 +123,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\ListsApi();
-$body = new \AnketologClient\Model\Body13(); // \AnketologClient\Model\Body13 | 
+$lists_region_list_body = new \AnketologClient\Model\ListsRegionListBody(); // \AnketologClient\Model\ListsRegionListBody | 
 
 try {
-    $result = $api_instance->listsRegionList($body);
+    $result = $api_instance->listsRegionList($lists_region_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ListsApi->listsRegionList: ', $e->getMessage(), PHP_EOL;
@@ -138,7 +138,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body13**](../Model/\AnketologClient\Model\Body13.md)|  |
+ **lists_region_list_body** | [**\AnketologClient\Model\ListsRegionListBody**](../Model/\AnketologClient\Model\ListsRegionListBody.md)|  |
 
 ### Return type
 

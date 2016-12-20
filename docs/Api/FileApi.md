@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **fileManageInfo**
-> \AnketologClient\Model\FileFile fileManageInfo($body)
+> \AnketologClient\Model\FileFile fileManageInfo($file_manage_info_body)
 
 
 
@@ -27,10 +27,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\FileApi();
-$body = new \AnketologClient\Model\Body10(); // \AnketologClient\Model\Body10 | 
+$file_manage_info_body = new \AnketologClient\Model\FileManageInfoBody(); // \AnketologClient\Model\FileManageInfoBody | 
 
 try {
-    $result = $api_instance->fileManageInfo($body);
+    $result = $api_instance->fileManageInfo($file_manage_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->fileManageInfo: ', $e->getMessage(), PHP_EOL;
@@ -42,7 +42,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body10**](../Model/\AnketologClient\Model\Body10.md)|  |
+ **file_manage_info_body** | [**\AnketologClient\Model\FileManageInfoBody**](../Model/\AnketologClient\Model\FileManageInfoBody.md)|  |
 
 ### Return type
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **fileManageUpload**
-> \AnketologClient\Model\FileFile fileManageUpload($body)
+> \AnketologClient\Model\FileFile fileManageUpload($file_manage_upload_body)
 
 
 
@@ -123,10 +123,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\FileApi();
-$body = new \AnketologClient\Model\Body11(); // \AnketologClient\Model\Body11 | 
+$file_manage_upload_body = new \AnketologClient\Model\FileManageUploadBody(); // \AnketologClient\Model\FileManageUploadBody | 
 
 try {
-    $result = $api_instance->fileManageUpload($body);
+    $result = $api_instance->fileManageUpload($file_manage_upload_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling FileApi->fileManageUpload: ', $e->getMessage(), PHP_EOL;
@@ -138,7 +138,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body11**](../Model/\AnketologClient\Model\Body11.md)|  |
+ **file_manage_upload_body** | [**\AnketologClient\Model\FileManageUploadBody**](../Model/\AnketologClient\Model\FileManageUploadBody.md)|  |
 
 ### Return type
 

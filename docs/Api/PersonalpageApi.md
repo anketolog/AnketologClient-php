@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 
 # **listsManageArchive**
-> \AnketologClient\Model\PersonalPagePersonalPage listsManageArchive($body)
+> \AnketologClient\Model\PersonalPagePersonalPage listsManageArchive($personalpage_manage_archive_body)
 
 
 
@@ -35,10 +35,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body19(); // \AnketologClient\Model\Body19 | 
+$personalpage_manage_archive_body = new \AnketologClient\Model\PersonalpageManageArchiveBody(); // \AnketologClient\Model\PersonalpageManageArchiveBody | 
 
 try {
-    $result = $api_instance->listsManageArchive($body);
+    $result = $api_instance->listsManageArchive($personalpage_manage_archive_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->listsManageArchive: ', $e->getMessage(), PHP_EOL;
@@ -50,7 +50,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body19**](../Model/\AnketologClient\Model\Body19.md)|  |
+ **personalpage_manage_archive_body** | [**\AnketologClient\Model\PersonalpageManageArchiveBody**](../Model/\AnketologClient\Model\PersonalpageManageArchiveBody.md)|  |
 
 ### Return type
 
@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorCreatealias**
-> \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorCreatealias($body)
+> \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorCreatealias($personalpage_collector_createalias_body)
 
 
 
@@ -85,10 +85,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body14(); // \AnketologClient\Model\Body14 | 
+$personalpage_collector_createalias_body = new \AnketologClient\Model\PersonalpageCollectorCreatealiasBody(); // \AnketologClient\Model\PersonalpageCollectorCreatealiasBody | 
 
 try {
-    $result = $api_instance->personalpageCollectorCreatealias($body);
+    $result = $api_instance->personalpageCollectorCreatealias($personalpage_collector_createalias_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageCollectorCreatealias: ', $e->getMessage(), PHP_EOL;
@@ -100,7 +100,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body14**](../Model/\AnketologClient\Model\Body14.md)|  |
+ **personalpage_collector_createalias_body** | [**\AnketologClient\Model\PersonalpageCollectorCreatealiasBody**](../Model/\AnketologClient\Model\PersonalpageCollectorCreatealiasBody.md)|  |
 
 ### Return type
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorCreatewidget**
-> \AnketologClient\Model\PersonalPageWidgetCollector personalpageCollectorCreatewidget($body)
+> \AnketologClient\Model\PersonalPageWidgetCollector personalpageCollectorCreatewidget($personalpage_collector_createwidget_body)
 
 
 
@@ -135,10 +135,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body15(); // \AnketologClient\Model\Body15 | 
+$personalpage_collector_createwidget_body = new \AnketologClient\Model\PersonalpageCollectorCreatewidgetBody(); // \AnketologClient\Model\PersonalpageCollectorCreatewidgetBody | 
 
 try {
-    $result = $api_instance->personalpageCollectorCreatewidget($body);
+    $result = $api_instance->personalpageCollectorCreatewidget($personalpage_collector_createwidget_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageCollectorCreatewidget: ', $e->getMessage(), PHP_EOL;
@@ -150,7 +150,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body15**](../Model/\AnketologClient\Model\Body15.md)|  |
+ **personalpage_collector_createwidget_body** | [**\AnketologClient\Model\PersonalpageCollectorCreatewidgetBody**](../Model/\AnketologClient\Model\PersonalpageCollectorCreatewidgetBody.md)|  |
 
 ### Return type
 
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorList**
-> \AnketologClient\Model\PersonalPageCollector[] personalpageCollectorList($body)
+> \AnketologClient\Model\PersonalPageCollector[] personalpageCollectorList($personalpage_collector_list_body)
 
 
 
@@ -185,10 +185,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body16(); // \AnketologClient\Model\Body16 | 
+$personalpage_collector_list_body = new \AnketologClient\Model\PersonalpageCollectorListBody(); // \AnketologClient\Model\PersonalpageCollectorListBody | 
 
 try {
-    $result = $api_instance->personalpageCollectorList($body);
+    $result = $api_instance->personalpageCollectorList($personalpage_collector_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageCollectorList: ', $e->getMessage(), PHP_EOL;
@@ -200,7 +200,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body16**](../Model/\AnketologClient\Model\Body16.md)|  |
+ **personalpage_collector_list_body** | [**\AnketologClient\Model\PersonalpageCollectorListBody**](../Model/\AnketologClient\Model\PersonalpageCollectorListBody.md)|  |
 
 ### Return type
 
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorUpdatealias**
-> \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorUpdatealias($body)
+> \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorUpdatealias($personalpage_collector_updatealias_body)
 
 
 
@@ -235,10 +235,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body17(); // \AnketologClient\Model\Body17 | 
+$personalpage_collector_updatealias_body = new \AnketologClient\Model\PersonalpageCollectorUpdatealiasBody(); // \AnketologClient\Model\PersonalpageCollectorUpdatealiasBody | 
 
 try {
-    $result = $api_instance->personalpageCollectorUpdatealias($body);
+    $result = $api_instance->personalpageCollectorUpdatealias($personalpage_collector_updatealias_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageCollectorUpdatealias: ', $e->getMessage(), PHP_EOL;
@@ -250,7 +250,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body17**](../Model/\AnketologClient\Model\Body17.md)|  |
+ **personalpage_collector_updatealias_body** | [**\AnketologClient\Model\PersonalpageCollectorUpdatealiasBody**](../Model/\AnketologClient\Model\PersonalpageCollectorUpdatealiasBody.md)|  |
 
 ### Return type
 
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorUpdatewidget**
-> \AnketologClient\Model\PersonalPageWidgetCollector personalpageCollectorUpdatewidget($body)
+> \AnketologClient\Model\PersonalPageWidgetCollector personalpageCollectorUpdatewidget($personalpage_collector_updatewidget_body)
 
 
 
@@ -285,10 +285,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body18(); // \AnketologClient\Model\Body18 | 
+$personalpage_collector_updatewidget_body = new \AnketologClient\Model\PersonalpageCollectorUpdatewidgetBody(); // \AnketologClient\Model\PersonalpageCollectorUpdatewidgetBody | 
 
 try {
-    $result = $api_instance->personalpageCollectorUpdatewidget($body);
+    $result = $api_instance->personalpageCollectorUpdatewidget($personalpage_collector_updatewidget_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageCollectorUpdatewidget: ', $e->getMessage(), PHP_EOL;
@@ -300,7 +300,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body18**](../Model/\AnketologClient\Model\Body18.md)|  |
+ **personalpage_collector_updatewidget_body** | [**\AnketologClient\Model\PersonalpageCollectorUpdatewidgetBody**](../Model/\AnketologClient\Model\PersonalpageCollectorUpdatewidgetBody.md)|  |
 
 ### Return type
 
@@ -364,7 +364,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageInfo**
-> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageInfo($body)
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageInfo($personalpage_manage_info_body)
 
 
 
@@ -381,10 +381,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body20(); // \AnketologClient\Model\Body20 | 
+$personalpage_manage_info_body = new \AnketologClient\Model\PersonalpageManageInfoBody(); // \AnketologClient\Model\PersonalpageManageInfoBody | 
 
 try {
-    $result = $api_instance->personalpageManageInfo($body);
+    $result = $api_instance->personalpageManageInfo($personalpage_manage_info_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageManageInfo: ', $e->getMessage(), PHP_EOL;
@@ -396,7 +396,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body20**](../Model/\AnketologClient\Model\Body20.md)|  |
+ **personalpage_manage_info_body** | [**\AnketologClient\Model\PersonalpageManageInfoBody**](../Model/\AnketologClient\Model\PersonalpageManageInfoBody.md)|  |
 
 ### Return type
 
@@ -460,7 +460,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageRestore**
-> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageRestore($body)
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageRestore($personalpage_manage_restore_body)
 
 
 
@@ -477,10 +477,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body21(); // \AnketologClient\Model\Body21 | 
+$personalpage_manage_restore_body = new \AnketologClient\Model\PersonalpageManageRestoreBody(); // \AnketologClient\Model\PersonalpageManageRestoreBody | 
 
 try {
-    $result = $api_instance->personalpageManageRestore($body);
+    $result = $api_instance->personalpageManageRestore($personalpage_manage_restore_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageManageRestore: ', $e->getMessage(), PHP_EOL;
@@ -492,7 +492,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body21**](../Model/\AnketologClient\Model\Body21.md)|  |
+ **personalpage_manage_restore_body** | [**\AnketologClient\Model\PersonalpageManageRestoreBody**](../Model/\AnketologClient\Model\PersonalpageManageRestoreBody.md)|  |
 
 ### Return type
 
@@ -510,7 +510,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageManageUpdate**
-> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageUpdate($body)
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageUpdate($personalpage_manage_update_body)
 
 
 
@@ -527,10 +527,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
-$body = new \AnketologClient\Model\Body22(); // \AnketologClient\Model\Body22 | 
+$personalpage_manage_update_body = new \AnketologClient\Model\PersonalpageManageUpdateBody(); // \AnketologClient\Model\PersonalpageManageUpdateBody | 
 
 try {
-    $result = $api_instance->personalpageManageUpdate($body);
+    $result = $api_instance->personalpageManageUpdate($personalpage_manage_update_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageManageUpdate: ', $e->getMessage(), PHP_EOL;
@@ -542,7 +542,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\AnketologClient\Model\Body22**](../Model/\AnketologClient\Model\Body22.md)|  |
+ **personalpage_manage_update_body** | [**\AnketologClient\Model\PersonalpageManageUpdateBody**](../Model/\AnketologClient\Model\PersonalpageManageUpdateBody.md)|  |
 
 ### Return type
 

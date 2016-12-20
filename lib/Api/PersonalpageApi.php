@@ -107,13 +107,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body19 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageArchiveBody $personalpage_manage_archive_body  (required)
      * @return \AnketologClient\Model\PersonalPagePersonalPage
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function listsManageArchive($body)
+    public function listsManageArchive($personalpage_manage_archive_body)
     {
-        list($response) = $this->listsManageArchiveWithHttpInfo($body);
+        list($response) = $this->listsManageArchiveWithHttpInfo($personalpage_manage_archive_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body19 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageArchiveBody $personalpage_manage_archive_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function listsManageArchiveWithHttpInfo($body)
+    public function listsManageArchiveWithHttpInfo($personalpage_manage_archive_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling listsManageArchive');
+        // verify the required parameter 'personalpage_manage_archive_body' is set
+        if ($personalpage_manage_archive_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_archive_body when calling listsManageArchive');
         }
         // parse inputs
         $resourcePath = "/personalpage/manage/archive";
@@ -149,8 +149,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_manage_archive_body)) {
+            $_tempBody = $personalpage_manage_archive_body;
         }
 
         // for model (json/xml)
@@ -194,13 +194,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body14 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorCreatealiasBody $personalpage_collector_createalias_body  (required)
      * @return \AnketologClient\Model\PersonalPageAliasCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorCreatealias($body)
+    public function personalpageCollectorCreatealias($personalpage_collector_createalias_body)
     {
-        list($response) = $this->personalpageCollectorCreatealiasWithHttpInfo($body);
+        list($response) = $this->personalpageCollectorCreatealiasWithHttpInfo($personalpage_collector_createalias_body);
         return $response;
     }
 
@@ -209,15 +209,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body14 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorCreatealiasBody $personalpage_collector_createalias_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPageAliasCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorCreatealiasWithHttpInfo($body)
+    public function personalpageCollectorCreatealiasWithHttpInfo($personalpage_collector_createalias_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageCollectorCreatealias');
+        // verify the required parameter 'personalpage_collector_createalias_body' is set
+        if ($personalpage_collector_createalias_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_collector_createalias_body when calling personalpageCollectorCreatealias');
         }
         // parse inputs
         $resourcePath = "/personalpage/collector/createalias";
@@ -236,8 +236,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_collector_createalias_body)) {
+            $_tempBody = $personalpage_collector_createalias_body;
         }
 
         // for model (json/xml)
@@ -281,13 +281,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body15 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorCreatewidgetBody $personalpage_collector_createwidget_body  (required)
      * @return \AnketologClient\Model\PersonalPageWidgetCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorCreatewidget($body)
+    public function personalpageCollectorCreatewidget($personalpage_collector_createwidget_body)
     {
-        list($response) = $this->personalpageCollectorCreatewidgetWithHttpInfo($body);
+        list($response) = $this->personalpageCollectorCreatewidgetWithHttpInfo($personalpage_collector_createwidget_body);
         return $response;
     }
 
@@ -296,15 +296,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body15 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorCreatewidgetBody $personalpage_collector_createwidget_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPageWidgetCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorCreatewidgetWithHttpInfo($body)
+    public function personalpageCollectorCreatewidgetWithHttpInfo($personalpage_collector_createwidget_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageCollectorCreatewidget');
+        // verify the required parameter 'personalpage_collector_createwidget_body' is set
+        if ($personalpage_collector_createwidget_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_collector_createwidget_body when calling personalpageCollectorCreatewidget');
         }
         // parse inputs
         $resourcePath = "/personalpage/collector/createwidget";
@@ -323,8 +323,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_collector_createwidget_body)) {
+            $_tempBody = $personalpage_collector_createwidget_body;
         }
 
         // for model (json/xml)
@@ -368,13 +368,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body16 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorListBody $personalpage_collector_list_body  (required)
      * @return \AnketologClient\Model\PersonalPageCollector[]
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorList($body)
+    public function personalpageCollectorList($personalpage_collector_list_body)
     {
-        list($response) = $this->personalpageCollectorListWithHttpInfo($body);
+        list($response) = $this->personalpageCollectorListWithHttpInfo($personalpage_collector_list_body);
         return $response;
     }
 
@@ -383,15 +383,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body16 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorListBody $personalpage_collector_list_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPageCollector[], HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorListWithHttpInfo($body)
+    public function personalpageCollectorListWithHttpInfo($personalpage_collector_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageCollectorList');
+        // verify the required parameter 'personalpage_collector_list_body' is set
+        if ($personalpage_collector_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_collector_list_body when calling personalpageCollectorList');
         }
         // parse inputs
         $resourcePath = "/personalpage/collector/list";
@@ -410,8 +410,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_collector_list_body)) {
+            $_tempBody = $personalpage_collector_list_body;
         }
 
         // for model (json/xml)
@@ -455,13 +455,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body17 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorUpdatealiasBody $personalpage_collector_updatealias_body  (required)
      * @return \AnketologClient\Model\PersonalPageAliasCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorUpdatealias($body)
+    public function personalpageCollectorUpdatealias($personalpage_collector_updatealias_body)
     {
-        list($response) = $this->personalpageCollectorUpdatealiasWithHttpInfo($body);
+        list($response) = $this->personalpageCollectorUpdatealiasWithHttpInfo($personalpage_collector_updatealias_body);
         return $response;
     }
 
@@ -470,15 +470,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body17 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorUpdatealiasBody $personalpage_collector_updatealias_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPageAliasCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorUpdatealiasWithHttpInfo($body)
+    public function personalpageCollectorUpdatealiasWithHttpInfo($personalpage_collector_updatealias_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageCollectorUpdatealias');
+        // verify the required parameter 'personalpage_collector_updatealias_body' is set
+        if ($personalpage_collector_updatealias_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_collector_updatealias_body when calling personalpageCollectorUpdatealias');
         }
         // parse inputs
         $resourcePath = "/personalpage/collector/updatealias";
@@ -497,8 +497,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_collector_updatealias_body)) {
+            $_tempBody = $personalpage_collector_updatealias_body;
         }
 
         // for model (json/xml)
@@ -542,13 +542,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body18 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorUpdatewidgetBody $personalpage_collector_updatewidget_body  (required)
      * @return \AnketologClient\Model\PersonalPageWidgetCollector
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorUpdatewidget($body)
+    public function personalpageCollectorUpdatewidget($personalpage_collector_updatewidget_body)
     {
-        list($response) = $this->personalpageCollectorUpdatewidgetWithHttpInfo($body);
+        list($response) = $this->personalpageCollectorUpdatewidgetWithHttpInfo($personalpage_collector_updatewidget_body);
         return $response;
     }
 
@@ -557,15 +557,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body18 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageCollectorUpdatewidgetBody $personalpage_collector_updatewidget_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPageWidgetCollector, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageCollectorUpdatewidgetWithHttpInfo($body)
+    public function personalpageCollectorUpdatewidgetWithHttpInfo($personalpage_collector_updatewidget_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageCollectorUpdatewidget');
+        // verify the required parameter 'personalpage_collector_updatewidget_body' is set
+        if ($personalpage_collector_updatewidget_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_collector_updatewidget_body when calling personalpageCollectorUpdatewidget');
         }
         // parse inputs
         $resourcePath = "/personalpage/collector/updatewidget";
@@ -584,8 +584,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_collector_updatewidget_body)) {
+            $_tempBody = $personalpage_collector_updatewidget_body;
         }
 
         // for model (json/xml)
@@ -705,13 +705,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body20 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageInfoBody $personalpage_manage_info_body  (required)
      * @return \AnketologClient\Model\PersonalPagePersonalPage
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageInfo($body)
+    public function personalpageManageInfo($personalpage_manage_info_body)
     {
-        list($response) = $this->personalpageManageInfoWithHttpInfo($body);
+        list($response) = $this->personalpageManageInfoWithHttpInfo($personalpage_manage_info_body);
         return $response;
     }
 
@@ -720,15 +720,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body20 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageInfoBody $personalpage_manage_info_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageInfoWithHttpInfo($body)
+    public function personalpageManageInfoWithHttpInfo($personalpage_manage_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageManageInfo');
+        // verify the required parameter 'personalpage_manage_info_body' is set
+        if ($personalpage_manage_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_info_body when calling personalpageManageInfo');
         }
         // parse inputs
         $resourcePath = "/personalpage/manage/info";
@@ -747,8 +747,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_manage_info_body)) {
+            $_tempBody = $personalpage_manage_info_body;
         }
 
         // for model (json/xml)
@@ -868,13 +868,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body21 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageRestoreBody $personalpage_manage_restore_body  (required)
      * @return \AnketologClient\Model\PersonalPagePersonalPage
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageRestore($body)
+    public function personalpageManageRestore($personalpage_manage_restore_body)
     {
-        list($response) = $this->personalpageManageRestoreWithHttpInfo($body);
+        list($response) = $this->personalpageManageRestoreWithHttpInfo($personalpage_manage_restore_body);
         return $response;
     }
 
@@ -883,15 +883,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body21 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageRestoreBody $personalpage_manage_restore_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageRestoreWithHttpInfo($body)
+    public function personalpageManageRestoreWithHttpInfo($personalpage_manage_restore_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageManageRestore');
+        // verify the required parameter 'personalpage_manage_restore_body' is set
+        if ($personalpage_manage_restore_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_restore_body when calling personalpageManageRestore');
         }
         // parse inputs
         $resourcePath = "/personalpage/manage/restore";
@@ -910,8 +910,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_manage_restore_body)) {
+            $_tempBody = $personalpage_manage_restore_body;
         }
 
         // for model (json/xml)
@@ -955,13 +955,13 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body22 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageUpdateBody $personalpage_manage_update_body  (required)
      * @return \AnketologClient\Model\PersonalPagePersonalPage
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageUpdate($body)
+    public function personalpageManageUpdate($personalpage_manage_update_body)
     {
-        list($response) = $this->personalpageManageUpdateWithHttpInfo($body);
+        list($response) = $this->personalpageManageUpdateWithHttpInfo($personalpage_manage_update_body);
         return $response;
     }
 
@@ -970,15 +970,15 @@ class PersonalpageApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body22 $body  (required)
+     * @param \AnketologClient\Model\PersonalpageManageUpdateBody $personalpage_manage_update_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageUpdateWithHttpInfo($body)
+    public function personalpageManageUpdateWithHttpInfo($personalpage_manage_update_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling personalpageManageUpdate');
+        // verify the required parameter 'personalpage_manage_update_body' is set
+        if ($personalpage_manage_update_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_update_body when calling personalpageManageUpdate');
         }
         // parse inputs
         $resourcePath = "/personalpage/manage/update";
@@ -997,8 +997,8 @@ class PersonalpageApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($personalpage_manage_update_body)) {
+            $_tempBody = $personalpage_manage_update_body;
         }
 
         // for model (json/xml)

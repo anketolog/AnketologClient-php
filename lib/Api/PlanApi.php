@@ -107,13 +107,13 @@ class PlanApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body23 $body  (required)
+     * @param \AnketologClient\Model\PlanManageChangeBody $plan_manage_change_body  (required)
      * @return \AnketologClient\Model\PlanUserPlan
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function planManageChange($body)
+    public function planManageChange($plan_manage_change_body)
     {
-        list($response) = $this->planManageChangeWithHttpInfo($body);
+        list($response) = $this->planManageChangeWithHttpInfo($plan_manage_change_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class PlanApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body23 $body  (required)
+     * @param \AnketologClient\Model\PlanManageChangeBody $plan_manage_change_body  (required)
      * @return Array of \AnketologClient\Model\PlanUserPlan, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function planManageChangeWithHttpInfo($body)
+    public function planManageChangeWithHttpInfo($plan_manage_change_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling planManageChange');
+        // verify the required parameter 'plan_manage_change_body' is set
+        if ($plan_manage_change_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $plan_manage_change_body when calling planManageChange');
         }
         // parse inputs
         $resourcePath = "/plan/manage/change";
@@ -149,8 +149,8 @@ class PlanApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($plan_manage_change_body)) {
+            $_tempBody = $plan_manage_change_body;
         }
 
         // for model (json/xml)

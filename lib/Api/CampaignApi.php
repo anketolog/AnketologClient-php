@@ -107,13 +107,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body3 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageCalculateBody $campaign_manage_calculate_body  (required)
      * @return \AnketologClient\Model\CampaignCalculate
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageCalculate($body)
+    public function campaignManageCalculate($campaign_manage_calculate_body)
     {
-        list($response) = $this->campaignManageCalculateWithHttpInfo($body);
+        list($response) = $this->campaignManageCalculateWithHttpInfo($campaign_manage_calculate_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body3 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageCalculateBody $campaign_manage_calculate_body  (required)
      * @return Array of \AnketologClient\Model\CampaignCalculate, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageCalculateWithHttpInfo($body)
+    public function campaignManageCalculateWithHttpInfo($campaign_manage_calculate_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignManageCalculate');
+        // verify the required parameter 'campaign_manage_calculate_body' is set
+        if ($campaign_manage_calculate_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_manage_calculate_body when calling campaignManageCalculate');
         }
         // parse inputs
         $resourcePath = "/campaign/manage/calculate";
@@ -149,8 +149,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_manage_calculate_body)) {
+            $_tempBody = $campaign_manage_calculate_body;
         }
 
         // for model (json/xml)
@@ -194,13 +194,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body4 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageCreateBody $campaign_manage_create_body  (required)
      * @return \AnketologClient\Model\CampaignCampaign
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageCreate($body)
+    public function campaignManageCreate($campaign_manage_create_body)
     {
-        list($response) = $this->campaignManageCreateWithHttpInfo($body);
+        list($response) = $this->campaignManageCreateWithHttpInfo($campaign_manage_create_body);
         return $response;
     }
 
@@ -209,15 +209,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body4 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageCreateBody $campaign_manage_create_body  (required)
      * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageCreateWithHttpInfo($body)
+    public function campaignManageCreateWithHttpInfo($campaign_manage_create_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignManageCreate');
+        // verify the required parameter 'campaign_manage_create_body' is set
+        if ($campaign_manage_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_manage_create_body when calling campaignManageCreate');
         }
         // parse inputs
         $resourcePath = "/campaign/manage/create";
@@ -236,8 +236,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_manage_create_body)) {
+            $_tempBody = $campaign_manage_create_body;
         }
 
         // for model (json/xml)
@@ -281,13 +281,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body5 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageFinishBody $campaign_manage_finish_body  (required)
      * @return \AnketologClient\Model\CampaignCampaign
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageFinish($body)
+    public function campaignManageFinish($campaign_manage_finish_body)
     {
-        list($response) = $this->campaignManageFinishWithHttpInfo($body);
+        list($response) = $this->campaignManageFinishWithHttpInfo($campaign_manage_finish_body);
         return $response;
     }
 
@@ -296,15 +296,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body5 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageFinishBody $campaign_manage_finish_body  (required)
      * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageFinishWithHttpInfo($body)
+    public function campaignManageFinishWithHttpInfo($campaign_manage_finish_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignManageFinish');
+        // verify the required parameter 'campaign_manage_finish_body' is set
+        if ($campaign_manage_finish_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_manage_finish_body when calling campaignManageFinish');
         }
         // parse inputs
         $resourcePath = "/campaign/manage/finish";
@@ -323,8 +323,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_manage_finish_body)) {
+            $_tempBody = $campaign_manage_finish_body;
         }
 
         // for model (json/xml)
@@ -368,13 +368,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body6 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageInfoBody $campaign_manage_info_body  (required)
      * @return \AnketologClient\Model\CampaignCampaign
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageInfo($body)
+    public function campaignManageInfo($campaign_manage_info_body)
     {
-        list($response) = $this->campaignManageInfoWithHttpInfo($body);
+        list($response) = $this->campaignManageInfoWithHttpInfo($campaign_manage_info_body);
         return $response;
     }
 
@@ -383,15 +383,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body6 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageInfoBody $campaign_manage_info_body  (required)
      * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageInfoWithHttpInfo($body)
+    public function campaignManageInfoWithHttpInfo($campaign_manage_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignManageInfo');
+        // verify the required parameter 'campaign_manage_info_body' is set
+        if ($campaign_manage_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_manage_info_body when calling campaignManageInfo');
         }
         // parse inputs
         $resourcePath = "/campaign/manage/info";
@@ -410,8 +410,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_manage_info_body)) {
+            $_tempBody = $campaign_manage_info_body;
         }
 
         // for model (json/xml)
@@ -531,13 +531,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body7 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageStartBody $campaign_manage_start_body  (required)
      * @return \AnketologClient\Model\CampaignCampaign
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageStart($body)
+    public function campaignManageStart($campaign_manage_start_body)
     {
-        list($response) = $this->campaignManageStartWithHttpInfo($body);
+        list($response) = $this->campaignManageStartWithHttpInfo($campaign_manage_start_body);
         return $response;
     }
 
@@ -546,15 +546,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body7 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageStartBody $campaign_manage_start_body  (required)
      * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageStartWithHttpInfo($body)
+    public function campaignManageStartWithHttpInfo($campaign_manage_start_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignManageStart');
+        // verify the required parameter 'campaign_manage_start_body' is set
+        if ($campaign_manage_start_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_manage_start_body when calling campaignManageStart');
         }
         // parse inputs
         $resourcePath = "/campaign/manage/start";
@@ -573,8 +573,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_manage_start_body)) {
+            $_tempBody = $campaign_manage_start_body;
         }
 
         // for model (json/xml)
@@ -618,13 +618,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body8 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageUpdateBody $campaign_manage_update_body  (required)
      * @return \AnketologClient\Model\CampaignCampaign
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageUpdate($body)
+    public function campaignManageUpdate($campaign_manage_update_body)
     {
-        list($response) = $this->campaignManageUpdateWithHttpInfo($body);
+        list($response) = $this->campaignManageUpdateWithHttpInfo($campaign_manage_update_body);
         return $response;
     }
 
@@ -633,15 +633,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body8 $body  (required)
+     * @param \AnketologClient\Model\CampaignManageUpdateBody $campaign_manage_update_body  (required)
      * @return Array of \AnketologClient\Model\CampaignCampaign, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignManageUpdateWithHttpInfo($body)
+    public function campaignManageUpdateWithHttpInfo($campaign_manage_update_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignManageUpdate');
+        // verify the required parameter 'campaign_manage_update_body' is set
+        if ($campaign_manage_update_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_manage_update_body when calling campaignManageUpdate');
         }
         // parse inputs
         $resourcePath = "/campaign/manage/update";
@@ -660,8 +660,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_manage_update_body)) {
+            $_tempBody = $campaign_manage_update_body;
         }
 
         // for model (json/xml)
@@ -705,13 +705,13 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body9 $body  (required)
+     * @param \AnketologClient\Model\CampaignTransferInfoBody $campaign_transfer_info_body  (required)
      * @return \AnketologClient\Model\CampaignTransfer
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignTransferInfo($body)
+    public function campaignTransferInfo($campaign_transfer_info_body)
     {
-        list($response) = $this->campaignTransferInfoWithHttpInfo($body);
+        list($response) = $this->campaignTransferInfoWithHttpInfo($campaign_transfer_info_body);
         return $response;
     }
 
@@ -720,15 +720,15 @@ class CampaignApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body9 $body  (required)
+     * @param \AnketologClient\Model\CampaignTransferInfoBody $campaign_transfer_info_body  (required)
      * @return Array of \AnketologClient\Model\CampaignTransfer, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignTransferInfoWithHttpInfo($body)
+    public function campaignTransferInfoWithHttpInfo($campaign_transfer_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling campaignTransferInfo');
+        // verify the required parameter 'campaign_transfer_info_body' is set
+        if ($campaign_transfer_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_transfer_info_body when calling campaignTransferInfo');
         }
         // parse inputs
         $resourcePath = "/campaign/transfer/info";
@@ -747,8 +747,8 @@ class CampaignApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($campaign_transfer_info_body)) {
+            $_tempBody = $campaign_transfer_info_body;
         }
 
         // for model (json/xml)

@@ -107,13 +107,13 @@ class ListsApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body12 $body  (required)
+     * @param \AnketologClient\Model\ListsCityListBody $lists_city_list_body  (required)
      * @return string
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function listsCityList($body)
+    public function listsCityList($lists_city_list_body)
     {
-        list($response) = $this->listsCityListWithHttpInfo($body);
+        list($response) = $this->listsCityListWithHttpInfo($lists_city_list_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class ListsApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body12 $body  (required)
+     * @param \AnketologClient\Model\ListsCityListBody $lists_city_list_body  (required)
      * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function listsCityListWithHttpInfo($body)
+    public function listsCityListWithHttpInfo($lists_city_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling listsCityList');
+        // verify the required parameter 'lists_city_list_body' is set
+        if ($lists_city_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lists_city_list_body when calling listsCityList');
         }
         // parse inputs
         $resourcePath = "/lists/city/list";
@@ -149,8 +149,8 @@ class ListsApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($lists_city_list_body)) {
+            $_tempBody = $lists_city_list_body;
         }
 
         // for model (json/xml)
@@ -270,13 +270,13 @@ class ListsApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body13 $body  (required)
+     * @param \AnketologClient\Model\ListsRegionListBody $lists_region_list_body  (required)
      * @return \AnketologClient\Model\CityItem
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function listsRegionList($body)
+    public function listsRegionList($lists_region_list_body)
     {
-        list($response) = $this->listsRegionListWithHttpInfo($body);
+        list($response) = $this->listsRegionListWithHttpInfo($lists_region_list_body);
         return $response;
     }
 
@@ -285,15 +285,15 @@ class ListsApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body13 $body  (required)
+     * @param \AnketologClient\Model\ListsRegionListBody $lists_region_list_body  (required)
      * @return Array of \AnketologClient\Model\CityItem, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function listsRegionListWithHttpInfo($body)
+    public function listsRegionListWithHttpInfo($lists_region_list_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling listsRegionList');
+        // verify the required parameter 'lists_region_list_body' is set
+        if ($lists_region_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $lists_region_list_body when calling listsRegionList');
         }
         // parse inputs
         $resourcePath = "/lists/region/list";
@@ -312,8 +312,8 @@ class ListsApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($lists_region_list_body)) {
+            $_tempBody = $lists_region_list_body;
         }
 
         // for model (json/xml)

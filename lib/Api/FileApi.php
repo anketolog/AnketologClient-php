@@ -107,13 +107,13 @@ class FileApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body10 $body  (required)
+     * @param \AnketologClient\Model\FileManageInfoBody $file_manage_info_body  (required)
      * @return \AnketologClient\Model\FileFile
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function fileManageInfo($body)
+    public function fileManageInfo($file_manage_info_body)
     {
-        list($response) = $this->fileManageInfoWithHttpInfo($body);
+        list($response) = $this->fileManageInfoWithHttpInfo($file_manage_info_body);
         return $response;
     }
 
@@ -122,15 +122,15 @@ class FileApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body10 $body  (required)
+     * @param \AnketologClient\Model\FileManageInfoBody $file_manage_info_body  (required)
      * @return Array of \AnketologClient\Model\FileFile, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function fileManageInfoWithHttpInfo($body)
+    public function fileManageInfoWithHttpInfo($file_manage_info_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling fileManageInfo');
+        // verify the required parameter 'file_manage_info_body' is set
+        if ($file_manage_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $file_manage_info_body when calling fileManageInfo');
         }
         // parse inputs
         $resourcePath = "/file/manage/info";
@@ -149,8 +149,8 @@ class FileApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($file_manage_info_body)) {
+            $_tempBody = $file_manage_info_body;
         }
 
         // for model (json/xml)
@@ -270,13 +270,13 @@ class FileApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body11 $body  (required)
+     * @param \AnketologClient\Model\FileManageUploadBody $file_manage_upload_body  (required)
      * @return \AnketologClient\Model\FileFile
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function fileManageUpload($body)
+    public function fileManageUpload($file_manage_upload_body)
     {
-        list($response) = $this->fileManageUploadWithHttpInfo($body);
+        list($response) = $this->fileManageUploadWithHttpInfo($file_manage_upload_body);
         return $response;
     }
 
@@ -285,15 +285,15 @@ class FileApi
      *
      * 
      *
-     * @param \AnketologClient\Model\Body11 $body  (required)
+     * @param \AnketologClient\Model\FileManageUploadBody $file_manage_upload_body  (required)
      * @return Array of \AnketologClient\Model\FileFile, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function fileManageUploadWithHttpInfo($body)
+    public function fileManageUploadWithHttpInfo($file_manage_upload_body)
     {
-        // verify the required parameter 'body' is set
-        if ($body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $body when calling fileManageUpload');
+        // verify the required parameter 'file_manage_upload_body' is set
+        if ($file_manage_upload_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $file_manage_upload_body when calling fileManageUpload');
         }
         // parse inputs
         $resourcePath = "/file/manage/upload";
@@ -312,8 +312,8 @@ class FileApi
 
         // body params
         $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
+        if (isset($file_manage_upload_body)) {
+            $_tempBody = $file_manage_upload_body;
         }
 
         // for model (json/xml)
