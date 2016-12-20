@@ -65,14 +65,11 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
 AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\BillingApi();
-$body = new \AnketologClient\Model\Body(); // \AnketologClient\Model\Body | 
 
 try {
-    $result = $api_instance->billingPaymentCreate($body);
+    $result = $api_instance->billingPaymentList([]);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling BillingApi->billingPaymentCreate: ', $e->getMessage(), PHP_EOL;
