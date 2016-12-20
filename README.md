@@ -58,9 +58,9 @@ Please follow the [installation procedure](#installation--usage) and then run th
 require_once(__DIR__ . '/vendor/autoload.php');
 
 // Configure API key authorization: apiKey
-Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x_anketolog_apikey', 'YOUR_API_KEY');
+Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x_anketolog_apikey', 'Bearer');
+// Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new Swagger\Client\Api\BillingApi();
 $body = new \Swagger\Client\Model\Body(); // \Swagger\Client\Model\Body | 
@@ -81,7 +81,7 @@ try {
 ## apiKey
 
 - **Type**: API key
-- **API key parameter name**: x_anketolog_apikey
+- **API key parameter name**: x-anketolog-apikey
 - **Location**: HTTP header
 
 

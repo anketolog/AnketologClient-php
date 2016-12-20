@@ -160,9 +160,9 @@ class PlanApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('x_anketolog_apikey');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
         if (strlen($apiKey) !== 0) {
-            $headerParams['x_anketolog_apikey'] = $apiKey;
+            $headerParams['x-anketolog-apikey'] = $apiKey;
         }
         // make the API Call
         try {
@@ -236,9 +236,9 @@ class PlanApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('x_anketolog_apikey');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
         if (strlen($apiKey) !== 0) {
-            $headerParams['x_anketolog_apikey'] = $apiKey;
+            $headerParams['x-anketolog-apikey'] = $apiKey;
         }
         // make the API Call
         try {
@@ -312,9 +312,9 @@ class PlanApi
             $httpBody = $formParams; // for HTTP post (form)
         }
         // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('x_anketolog_apikey');
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
         if (strlen($apiKey) !== 0) {
-            $headerParams['x_anketolog_apikey'] = $apiKey;
+            $headerParams['x-anketolog-apikey'] = $apiKey;
         }
         // make the API Call
         try {
