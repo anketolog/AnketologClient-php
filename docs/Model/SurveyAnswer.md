@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **id** | **int** | ID | 
 **survey_id** | **int** | ID опроса | 
 **revision_id** | **int** | ID ревизии опроса | 
-**start_date** | **int** | Дана начала | 
-**finish_date** | **int** | Дата завершения | 
+**start_date** | **int** | Дата начала | 
+**finish_date** | **int** | Дата завершения | [optional] 
 **status** | **string** | Статус ответа | 
 **collector** | [**\AnketologClient\Model\SurveyCollector**](SurveyCollector.md) |  | 
 

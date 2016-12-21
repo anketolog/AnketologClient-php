@@ -71,7 +71,7 @@ class SurveyQuestionDropdown implements ArrayAccess
         'title' => 'string',
         'type' => 'string',
         'type_name' => 'string',
-        'false' => 'int',
+        'no' => 'int',
         'is_required' => 'bool',
         'has_comment' => 'bool',
         'comment' => 'string',
@@ -99,7 +99,7 @@ class SurveyQuestionDropdown implements ArrayAccess
         'title' => 'title',
         'type' => 'type',
         'type_name' => 'type_name',
-        'false' => 'false',
+        'no' => 'no',
         'is_required' => 'is_required',
         'has_comment' => 'has_comment',
         'comment' => 'comment',
@@ -127,7 +127,7 @@ class SurveyQuestionDropdown implements ArrayAccess
         'title' => 'setTitle',
         'type' => 'setType',
         'type_name' => 'setTypeName',
-        'false' => 'setFalse',
+        'no' => 'setNo',
         'is_required' => 'setIsRequired',
         'has_comment' => 'setHasComment',
         'comment' => 'setComment',
@@ -155,7 +155,7 @@ class SurveyQuestionDropdown implements ArrayAccess
         'title' => 'getTitle',
         'type' => 'getType',
         'type_name' => 'getTypeName',
-        'false' => 'getFalse',
+        'no' => 'getNo',
         'is_required' => 'getIsRequired',
         'has_comment' => 'getHasComment',
         'comment' => 'getComment',
@@ -194,7 +194,7 @@ class SurveyQuestionDropdown implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
-        $this->container['false'] = isset($data['false']) ? $data['false'] : null;
+        $this->container['no'] = isset($data['no']) ? $data['no'] : null;
         $this->container['is_required'] = isset($data['is_required']) ? $data['is_required'] : null;
         $this->container['has_comment'] = isset($data['has_comment']) ? $data['has_comment'] : null;
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
@@ -227,6 +227,9 @@ class SurveyQuestionDropdown implements ArrayAccess
         }
         if ($this->container['type_name'] === null) {
             $invalid_properties[] = "'type_name' can't be null";
+        }
+        if ($this->container['no'] === null) {
+            $invalid_properties[] = "'no' can't be null";
         }
         if ($this->container['is_required'] === null) {
             $invalid_properties[] = "'is_required' can't be null";
@@ -282,6 +285,9 @@ class SurveyQuestionDropdown implements ArrayAccess
             return false;
         }
         if ($this->container['type_name'] === null) {
+            return false;
+        }
+        if ($this->container['no'] === null) {
             return false;
         }
         if ($this->container['is_required'] === null) {
@@ -406,22 +412,22 @@ class SurveyQuestionDropdown implements ArrayAccess
     }
 
     /**
-     * Gets false
+     * Gets no
      * @return int
      */
-    public function getFalse()
+    public function getNo()
     {
-        return $this->container['false'];
+        return $this->container['no'];
     }
 
     /**
-     * Sets false
-     * @param int $false Порядковый номер
+     * Sets no
+     * @param int $no Порядковый номер
      * @return $this
      */
-    public function setFalse($false)
+    public function setNo($no)
     {
-        $this->container['false'] = $false;
+        $this->container['no'] = $no;
 
         return $this;
     }

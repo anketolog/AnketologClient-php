@@ -185,9 +185,6 @@ class BillingPayment implements ArrayAccess
         if ($this->container['create_date'] === null) {
             $invalid_properties[] = "'create_date' can't be null";
         }
-        if ($this->container['approve_date'] === null) {
-            $invalid_properties[] = "'approve_date' can't be null";
-        }
         if ($this->container['amount'] === null) {
             $invalid_properties[] = "'amount' can't be null";
         }
@@ -212,9 +209,6 @@ class BillingPayment implements ArrayAccess
             return false;
         }
         if ($this->container['create_date'] === null) {
-            return false;
-        }
-        if ($this->container['approve_date'] === null) {
             return false;
         }
         if ($this->container['amount'] === null) {

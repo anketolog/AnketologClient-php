@@ -232,21 +232,6 @@ class PersonalPagePersonalPage implements ArrayAccess
         if ($this->container['create_date'] === null) {
             $invalid_properties[] = "'create_date' can't be null";
         }
-        if ($this->container['update_date'] === null) {
-            $invalid_properties[] = "'update_date' can't be null";
-        }
-        if ($this->container['archive_date'] === null) {
-            $invalid_properties[] = "'archive_date' can't be null";
-        }
-        if ($this->container['lock_date'] === null) {
-            $invalid_properties[] = "'lock_date' can't be null";
-        }
-        if ($this->container['suspend_date'] === null) {
-            $invalid_properties[] = "'suspend_date' can't be null";
-        }
-        if ($this->container['logo'] === null) {
-            $invalid_properties[] = "'logo' can't be null";
-        }
         if ($this->container['disable_ad'] === null) {
             $invalid_properties[] = "'disable_ad' can't be null";
         }
@@ -286,21 +271,6 @@ class PersonalPagePersonalPage implements ArrayAccess
             return false;
         }
         if ($this->container['create_date'] === null) {
-            return false;
-        }
-        if ($this->container['update_date'] === null) {
-            return false;
-        }
-        if ($this->container['archive_date'] === null) {
-            return false;
-        }
-        if ($this->container['lock_date'] === null) {
-            return false;
-        }
-        if ($this->container['suspend_date'] === null) {
-            return false;
-        }
-        if ($this->container['logo'] === null) {
             return false;
         }
         if ($this->container['disable_ad'] === null) {

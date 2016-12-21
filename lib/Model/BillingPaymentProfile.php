@@ -178,9 +178,6 @@ class BillingPaymentProfile implements ArrayAccess
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['natural_name'] === null) {
-            $invalid_properties[] = "'natural_name' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -197,9 +194,6 @@ class BillingPaymentProfile implements ArrayAccess
         }
         $allowed_values = array("legal", "natural");
         if (!in_array($this->container['type'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['natural_name'] === null) {
             return false;
         }
         return true;

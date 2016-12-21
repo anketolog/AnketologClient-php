@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **title** | **string** | Название вопроса | 
 **type** | **string** | Тип вопроса | 
 **type_name** | **string** | Название типа | 
-**false** | **int** | Порядковый номер | [optional] 
+**no** | **int** | Порядковый номер | 
 **is_required** | **bool** | Вопрос обязательный | 
 **has_comment** | **bool** | Отображать комментарий | 
 **comment** | **string** | Текст комментария | 

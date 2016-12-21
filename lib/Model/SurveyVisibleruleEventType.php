@@ -234,27 +234,6 @@ class SurveyVisibleruleEventType implements ArrayAccess
             $invalid_properties[] = "invalid value for 'event_type', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['option_id'] === null) {
-            $invalid_properties[] = "'option_id' can't be null";
-        }
-        if ($this->container['row_id'] === null) {
-            $invalid_properties[] = "'row_id' can't be null";
-        }
-        if ($this->container['range_id'] === null) {
-            $invalid_properties[] = "'range_id' can't be null";
-        }
-        if ($this->container['option_value_id'] === null) {
-            $invalid_properties[] = "'option_value_id' can't be null";
-        }
-        if ($this->container['value'] === null) {
-            $invalid_properties[] = "'value' can't be null";
-        }
-        if ($this->container['order'] === null) {
-            $invalid_properties[] = "'order' can't be null";
-        }
-        if ($this->container['operator'] === null) {
-            $invalid_properties[] = "'operator' can't be null";
-        }
         $allowed_values = array("eq", "gt", "lt");
         if (!in_array($this->container['operator'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'operator', must be one of #{allowed_values}.";
@@ -279,27 +258,6 @@ class SurveyVisibleruleEventType implements ArrayAccess
         }
         $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
         if (!in_array($this->container['event_type'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['option_id'] === null) {
-            return false;
-        }
-        if ($this->container['row_id'] === null) {
-            return false;
-        }
-        if ($this->container['range_id'] === null) {
-            return false;
-        }
-        if ($this->container['option_value_id'] === null) {
-            return false;
-        }
-        if ($this->container['value'] === null) {
-            return false;
-        }
-        if ($this->container['order'] === null) {
-            return false;
-        }
-        if ($this->container['operator'] === null) {
             return false;
         }
         $allowed_values = array("eq", "gt", "lt");

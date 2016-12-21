@@ -187,11 +187,26 @@ class BillingTransfer implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
+        if ($this->container['type'] === null) {
+            $invalid_properties[] = "'type' can't be null";
+        }
         $allowed_values = array("ma", "mw", "mr", "sc", "ap", "ar", "cp", "cr");
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
 
+        if ($this->container['type_name'] === null) {
+            $invalid_properties[] = "'type_name' can't be null";
+        }
+        if ($this->container['transfer'] === null) {
+            $invalid_properties[] = "'transfer' can't be null";
+        }
+        if ($this->container['transfer_date'] === null) {
+            $invalid_properties[] = "'transfer_date' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -203,8 +218,23 @@ class BillingTransfer implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['id'] === null) {
+            return false;
+        }
+        if ($this->container['type'] === null) {
+            return false;
+        }
         $allowed_values = array("ma", "mw", "mr", "sc", "ap", "ar", "cp", "cr");
         if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['type_name'] === null) {
+            return false;
+        }
+        if ($this->container['transfer'] === null) {
+            return false;
+        }
+        if ($this->container['transfer_date'] === null) {
             return false;
         }
         return true;

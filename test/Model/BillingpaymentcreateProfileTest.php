@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyQuestionDateTest
+ * BillingpaymentcreateProfileTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyQuestionDateTest Class Doc Comment
+ * BillingpaymentcreateProfileTest Class Doc Comment
  *
  * @category    Class */
-// * @description Вопрос \&quot;дата\&quot;
+// * @description BillingpaymentcreateProfile
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyQuestionDateTest extends \PHPUnit_Framework_TestCase
+class BillingpaymentcreateProfileTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,9 @@ class SurveyQuestionDateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyQuestionDate"
+     * Test "BillingpaymentcreateProfile"
      */
-    public function testSurveyQuestionDate()
-    {
-
-    }
-
-    /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
+    public function testBillingpaymentcreateProfile()
     {
 
     }
@@ -120,65 +104,25 @@ class SurveyQuestionDateTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type_name"
+     * Test attribute "legal_name"
      */
-    public function testPropertyTypeName()
+    public function testPropertyLegalName()
     {
 
     }
 
     /**
-     * Test attribute "no"
+     * Test attribute "natural_name"
      */
-    public function testPropertyNo()
+    public function testPropertyNaturalName()
     {
 
     }
 
     /**
-     * Test attribute "is_required"
+     * Test attribute "natural_address"
      */
-    public function testPropertyIsRequired()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_comment"
-     */
-    public function testPropertyHasComment()
-    {
-
-    }
-
-    /**
-     * Test attribute "comment"
-     */
-    public function testPropertyComment()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_unable_answer"
-     */
-    public function testPropertyHasUnableAnswer()
-    {
-
-    }
-
-    /**
-     * Test attribute "branchrules"
-     */
-    public function testPropertyBranchrules()
-    {
-
-    }
-
-    /**
-     * Test attribute "visiblerules"
-     */
-    public function testPropertyVisiblerules()
+    public function testPropertyNaturalAddress()
     {
 
     }

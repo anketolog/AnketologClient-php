@@ -162,12 +162,6 @@ class SurveyOption implements ArrayAccess
         if ($this->container['title'] === null) {
             $invalid_properties[] = "'title' can't be null";
         }
-        if ($this->container['image'] === null) {
-            $invalid_properties[] = "'image' can't be null";
-        }
-        if ($this->container['values'] === null) {
-            $invalid_properties[] = "'values' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -183,12 +177,6 @@ class SurveyOption implements ArrayAccess
             return false;
         }
         if ($this->container['title'] === null) {
-            return false;
-        }
-        if ($this->container['image'] === null) {
-            return false;
-        }
-        if ($this->container['values'] === null) {
             return false;
         }
         return true;

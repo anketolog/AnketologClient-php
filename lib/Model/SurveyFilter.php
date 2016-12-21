@@ -205,9 +205,6 @@ class SurveyFilter implements ArrayAccess
         if ($this->container['create_date'] === null) {
             $invalid_properties[] = "'create_date' can't be null";
         }
-        if ($this->container['update_date'] === null) {
-            $invalid_properties[] = "'update_date' can't be null";
-        }
         if ($this->container['conditions'] === null) {
             $invalid_properties[] = "'conditions' can't be null";
         }
@@ -239,9 +236,6 @@ class SurveyFilter implements ArrayAccess
             return false;
         }
         if ($this->container['create_date'] === null) {
-            return false;
-        }
-        if ($this->container['update_date'] === null) {
             return false;
         }
         if ($this->container['conditions'] === null) {

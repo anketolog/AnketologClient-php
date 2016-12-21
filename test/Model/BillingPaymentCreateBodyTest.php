@@ -96,33 +96,17 @@ class BillingPaymentCreateBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "amount"
      */
-    public function testPropertyType()
+    public function testPropertyAmount()
     {
 
     }
 
     /**
-     * Test attribute "legal_name"
+     * Test attribute "profile"
      */
-    public function testPropertyLegalName()
-    {
-
-    }
-
-    /**
-     * Test attribute "natural_name"
-     */
-    public function testPropertyNaturalName()
-    {
-
-    }
-
-    /**
-     * Test attribute "natural_address"
-     */
-    public function testPropertyNaturalAddress()
+    public function testPropertyProfile()
     {
 
     }

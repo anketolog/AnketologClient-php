@@ -162,6 +162,12 @@ class CityItem implements ArrayAccess
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
+        if ($this->container['country_id'] === null) {
+            $invalid_properties[] = "'country_id' can't be null";
+        }
+        if ($this->container['region_id'] === null) {
+            $invalid_properties[] = "'region_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -177,6 +183,12 @@ class CityItem implements ArrayAccess
             return false;
         }
         if ($this->container['name'] === null) {
+            return false;
+        }
+        if ($this->container['country_id'] === null) {
+            return false;
+        }
+        if ($this->container['region_id'] === null) {
             return false;
         }
         return true;

@@ -146,12 +146,6 @@ class SurveyOptionLimit implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['min'] === null) {
-            $invalid_properties[] = "'min' can't be null";
-        }
-        if ($this->container['max'] === null) {
-            $invalid_properties[] = "'max' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -163,12 +157,6 @@ class SurveyOptionLimit implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['min'] === null) {
-            return false;
-        }
-        if ($this->container['max'] === null) {
-            return false;
-        }
         return true;
     }
 

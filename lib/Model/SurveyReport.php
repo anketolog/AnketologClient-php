@@ -212,9 +212,6 @@ class SurveyReport implements ArrayAccess
         if ($this->container['format'] === null) {
             $invalid_properties[] = "'format' can't be null";
         }
-        if ($this->container['url'] === null) {
-            $invalid_properties[] = "'url' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -246,9 +243,6 @@ class SurveyReport implements ArrayAccess
             return false;
         }
         if ($this->container['format'] === null) {
-            return false;
-        }
-        if ($this->container['url'] === null) {
             return false;
         }
         return true;

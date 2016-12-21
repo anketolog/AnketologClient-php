@@ -162,9 +162,6 @@ class PlanUserPlan implements ArrayAccess
         if ($this->container['since_date'] === null) {
             $invalid_properties[] = "'since_date' can't be null";
         }
-        if ($this->container['expire_date'] === null) {
-            $invalid_properties[] = "'expire_date' can't be null";
-        }
         if ($this->container['permission_scheme'] === null) {
             $invalid_properties[] = "'permission_scheme' can't be null";
         }
@@ -183,9 +180,6 @@ class PlanUserPlan implements ArrayAccess
             return false;
         }
         if ($this->container['since_date'] === null) {
-            return false;
-        }
-        if ($this->container['expire_date'] === null) {
             return false;
         }
         if ($this->container['permission_scheme'] === null) {

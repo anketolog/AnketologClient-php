@@ -159,15 +159,6 @@ class SurveyFilterCondition implements ArrayAccess
         if ($this->container['question_id'] === null) {
             $invalid_properties[] = "'question_id' can't be null";
         }
-        if ($this->container['option_id'] === null) {
-            $invalid_properties[] = "'option_id' can't be null";
-        }
-        if ($this->container['pos'] === null) {
-            $invalid_properties[] = "'pos' can't be null";
-        }
-        if ($this->container['text'] === null) {
-            $invalid_properties[] = "'text' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -180,15 +171,6 @@ class SurveyFilterCondition implements ArrayAccess
     public function valid()
     {
         if ($this->container['question_id'] === null) {
-            return false;
-        }
-        if ($this->container['option_id'] === null) {
-            return false;
-        }
-        if ($this->container['pos'] === null) {
-            return false;
-        }
-        if ($this->container['text'] === null) {
             return false;
         }
         return true;

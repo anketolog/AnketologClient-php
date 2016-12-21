@@ -169,9 +169,6 @@ class PlanPriceScheme implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['period'] === null) {
-            $invalid_properties[] = "'period' can't be null";
-        }
         $allowed_values = array("P1M", "P3M", "P6M", "P1Y");
         if (!in_array($this->container['period'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'period', must be one of #{allowed_values}.";
@@ -194,9 +191,6 @@ class PlanPriceScheme implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['period'] === null) {
-            return false;
-        }
         $allowed_values = array("P1M", "P3M", "P6M", "P1Y");
         if (!in_array($this->container['period'], $allowed_values)) {
             return false;

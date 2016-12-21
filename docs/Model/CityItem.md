@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | 
 **name** | **string** |  | 
-**country_id** | **int** |  | [optional] 
-**region_id** | **int** |  | [optional] 
+**country_id** | **int** |  | 
+**region_id** | **int** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

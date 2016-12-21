@@ -7,20 +7,20 @@ Name | Type | Description | Notes
 **theme** | **string** | Цветовая схема опроса | 
 **show_startpage** | **bool** | Отображать страницу приветствия | 
 **show_finishpage** | **bool** | Отображать страницу завершения | 
-**startpage_text** | **string** | Текст на странцие приветствия | 
-**finishpage_text** | **string** | Текст на странице завершения | 
-**disqualification_text** | **string** | Текст на странице дисквалификации | 
+**startpage_text** | **string** | Текст на странцие приветствия | [optional] 
+**finishpage_text** | **string** | Текст на странице завершения | [optional] 
+**disqualification_text** | **string** | Текст на странице дисквалификации | [optional] 
 **show_captcha** | **bool** | Отображать капчу перед завершения опроса | 
 **show_social** | **bool** | Кнопки \&quot;поделиться\&quot; на странице завершения | 
 **show_question_count** | **bool** | Отображать количество вопросов | 
 **show_survey_name** | **bool** | Отображать название опроса | 
 **show_previous_btn** | **bool** | Копка \&quot;назад\&quot; | 
 **finish_type** | **string** | Тип завершени анкеты | 
-**finish_redirect_url** | **string** | URL для редиректа [finish_type&#x3D;redirect] | 
-**finish_redirect_timeout** | **int** | Таймаут редиректа [finish_type&#x3D;redirect] | 
-**finish_custom_surveys** | **string[]** | Анкеты на странице завершения [finish_type&#x3D;custom-survey] | 
+**finish_redirect_url** | **string** | URL для редиректа [finish_type&#x3D;redirect] | [optional] 
+**finish_redirect_timeout** | **int** | Таймаут редиректа [finish_type&#x3D;redirect] | [optional] 
+**finish_custom_surveys** | **string[]** | Анкеты на странице завершения [finish_type&#x3D;custom-survey] | [optional] 
 **disable_ad** | **bool** | Отключить рекламу в опросе | 
-**custom_css** | **string** | Пользователькая css | 
+**custom_css** | **string** | Пользователькая css | [optional] 
 **credentials_enable** | **bool** | Заполнения опроса по логину и паролю | 
 **credentials** | [**\AnketologClient\Model\SurveyCredential[]**](SurveyCredential.md) |  | 
 

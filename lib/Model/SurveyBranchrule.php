@@ -213,9 +213,6 @@ class SurveyBranchrule implements ArrayAccess
         if ($this->container['events'] === null) {
             $invalid_properties[] = "'events' can't be null";
         }
-        if ($this->container['page_id'] === null) {
-            $invalid_properties[] = "'page_id' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -245,9 +242,6 @@ class SurveyBranchrule implements ArrayAccess
             return false;
         }
         if ($this->container['events'] === null) {
-            return false;
-        }
-        if ($this->container['page_id'] === null) {
             return false;
         }
         return true;

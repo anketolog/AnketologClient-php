@@ -91,3 +91,16 @@ try {
 IOM Anketolog 
 
 manager@anketolog.ru
+
+## Generate Command
+
+```bash
+java -jar /vagrant/swagger-codegen-cli.jar generate \
+    -i Anketolog.yaml \
+    -o AnketologClient-php \
+    -l php \
+    --invoker-package AnketologClient \
+    --model-package AnketologClient\\Model \
+    --api-package AnketologClient\\Api \
+    --additional-properties composerVendorName=anketolog,composerProjectName=AnketologClient-php
+```

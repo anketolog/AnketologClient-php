@@ -3,15 +3,15 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**max_surveys** | **int** | Максимум опросов | 
-**max_personalpages** | **int** | Максимум персональных страниц | 
-**max_questions** | **int** | Максимум вопросов в опросе | 
-**max_subscribes** | **int** | Максимум подписок на опрос | 
-**max_answers_total** | **int** | Максимум ответов на опрос | 
-**max_disk_quota** | **int** | Максимум доступного дискового пространства | 
-**max_survey_extralinks** | **int** | Максимум дополнительных ссылок на опрос | 
-**max_survey_credentials** | **int** | Максимум доступов по логину/паролю к опросу | 
-**max_personalpage_surveys** | **int** | Максимум анкет на персональной странице | 
+**max_surveys** | **int** | Максимум опросов | [optional] 
+**max_personalpages** | **int** | Максимум персональных страниц | [optional] 
+**max_questions** | **int** | Максимум вопросов в опросе | [optional] 
+**max_subscribes** | **int** | Максимум подписок на опрос | [optional] 
+**max_answers_total** | **int** | Максимум ответов на опрос | [optional] 
+**max_disk_quota** | **int** | Максимум доступного дискового пространства | [optional] 
+**max_survey_extralinks** | **int** | Максимум дополнительных ссылок на опрос | [optional] 
+**max_survey_credentials** | **int** | Максимум доступов по логину/паролю к опросу | [optional] 
+**max_personalpage_surveys** | **int** | Максимум анкет на персональной странице | [optional] 
 **allow_alias** | **bool** | Разрешено создвать именные ссылки | 
 **allow_theme** | **bool** | Разрешено менять цветовую схему у опросов | 
 **allow_survey_finish** | **bool** | Разрешено настраивать завершение анкеты | 

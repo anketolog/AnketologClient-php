@@ -10,11 +10,11 @@ Name | Type | Description | Notes
 **is_suspended** | **bool** | Приостановлена за неуплату | 
 **is_locked** | **bool** | Заблокирована модератором | 
 **create_date** | **int** | Дата создания | 
-**update_date** | **int** | Дата редактирования | 
-**archive_date** | **int** | Дата архивирования | 
-**lock_date** | **int** | Дата блокировки | 
-**suspend_date** | **int** | Дата приостановки | 
-**logo** | [**\AnketologClient\Model\FileFile**](FileFile.md) |  | 
+**update_date** | **int** | Дата редактирования | [optional] 
+**archive_date** | **int** | Дата архивирования | [optional] 
+**lock_date** | **int** | Дата блокировки | [optional] 
+**suspend_date** | **int** | Дата приостановки | [optional] 
+**logo** | [**\AnketologClient\Model\FileFile**](FileFile.md) |  | [optional] 
 **disable_ad** | **bool** | Реклама | 
 **background_color** | **string** | Цвет фона | 
 **background** | [**\AnketologClient\Model\FileFile**](FileFile.md) |  | 

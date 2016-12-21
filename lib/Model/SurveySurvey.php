@@ -207,18 +207,6 @@ class SurveySurvey implements ArrayAccess
         if ($this->container['create_date'] === null) {
             $invalid_properties[] = "'create_date' can't be null";
         }
-        if ($this->container['update_date'] === null) {
-            $invalid_properties[] = "'update_date' can't be null";
-        }
-        if ($this->container['lock_date'] === null) {
-            $invalid_properties[] = "'lock_date' can't be null";
-        }
-        if ($this->container['archive_date'] === null) {
-            $invalid_properties[] = "'archive_date' can't be null";
-        }
-        if ($this->container['suspend_date'] === null) {
-            $invalid_properties[] = "'suspend_date' can't be null";
-        }
         if ($this->container['is_suspended'] === null) {
             $invalid_properties[] = "'is_suspended' can't be null";
         }
@@ -230,9 +218,6 @@ class SurveySurvey implements ArrayAccess
         }
         if ($this->container['revision_id'] === null) {
             $invalid_properties[] = "'revision_id' can't be null";
-        }
-        if ($this->container['personalpage'] === null) {
-            $invalid_properties[] = "'personalpage' can't be null";
         }
         if ($this->container['meta'] === null) {
             $invalid_properties[] = "'meta' can't be null";
@@ -257,18 +242,6 @@ class SurveySurvey implements ArrayAccess
         if ($this->container['create_date'] === null) {
             return false;
         }
-        if ($this->container['update_date'] === null) {
-            return false;
-        }
-        if ($this->container['lock_date'] === null) {
-            return false;
-        }
-        if ($this->container['archive_date'] === null) {
-            return false;
-        }
-        if ($this->container['suspend_date'] === null) {
-            return false;
-        }
         if ($this->container['is_suspended'] === null) {
             return false;
         }
@@ -279,9 +252,6 @@ class SurveySurvey implements ArrayAccess
             return false;
         }
         if ($this->container['revision_id'] === null) {
-            return false;
-        }
-        if ($this->container['personalpage'] === null) {
             return false;
         }
         if ($this->container['meta'] === null) {

@@ -276,33 +276,6 @@ class PlanPermissionScheme implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['max_surveys'] === null) {
-            $invalid_properties[] = "'max_surveys' can't be null";
-        }
-        if ($this->container['max_personalpages'] === null) {
-            $invalid_properties[] = "'max_personalpages' can't be null";
-        }
-        if ($this->container['max_questions'] === null) {
-            $invalid_properties[] = "'max_questions' can't be null";
-        }
-        if ($this->container['max_subscribes'] === null) {
-            $invalid_properties[] = "'max_subscribes' can't be null";
-        }
-        if ($this->container['max_answers_total'] === null) {
-            $invalid_properties[] = "'max_answers_total' can't be null";
-        }
-        if ($this->container['max_disk_quota'] === null) {
-            $invalid_properties[] = "'max_disk_quota' can't be null";
-        }
-        if ($this->container['max_survey_extralinks'] === null) {
-            $invalid_properties[] = "'max_survey_extralinks' can't be null";
-        }
-        if ($this->container['max_survey_credentials'] === null) {
-            $invalid_properties[] = "'max_survey_credentials' can't be null";
-        }
-        if ($this->container['max_personalpage_surveys'] === null) {
-            $invalid_properties[] = "'max_personalpage_surveys' can't be null";
-        }
         if ($this->container['allow_alias'] === null) {
             $invalid_properties[] = "'allow_alias' can't be null";
         }
@@ -371,33 +344,6 @@ class PlanPermissionScheme implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['max_surveys'] === null) {
-            return false;
-        }
-        if ($this->container['max_personalpages'] === null) {
-            return false;
-        }
-        if ($this->container['max_questions'] === null) {
-            return false;
-        }
-        if ($this->container['max_subscribes'] === null) {
-            return false;
-        }
-        if ($this->container['max_answers_total'] === null) {
-            return false;
-        }
-        if ($this->container['max_disk_quota'] === null) {
-            return false;
-        }
-        if ($this->container['max_survey_extralinks'] === null) {
-            return false;
-        }
-        if ($this->container['max_survey_credentials'] === null) {
-            return false;
-        }
-        if ($this->container['max_personalpage_surveys'] === null) {
-            return false;
-        }
         if ($this->container['allow_alias'] === null) {
             return false;
         }

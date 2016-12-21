@@ -314,15 +314,6 @@ class SurveyAppearance implements ArrayAccess
         if ($this->container['show_finishpage'] === null) {
             $invalid_properties[] = "'show_finishpage' can't be null";
         }
-        if ($this->container['startpage_text'] === null) {
-            $invalid_properties[] = "'startpage_text' can't be null";
-        }
-        if ($this->container['finishpage_text'] === null) {
-            $invalid_properties[] = "'finishpage_text' can't be null";
-        }
-        if ($this->container['disqualification_text'] === null) {
-            $invalid_properties[] = "'disqualification_text' can't be null";
-        }
         if ($this->container['show_captcha'] === null) {
             $invalid_properties[] = "'show_captcha' can't be null";
         }
@@ -346,20 +337,8 @@ class SurveyAppearance implements ArrayAccess
             $invalid_properties[] = "invalid value for 'finish_type', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['finish_redirect_url'] === null) {
-            $invalid_properties[] = "'finish_redirect_url' can't be null";
-        }
-        if ($this->container['finish_redirect_timeout'] === null) {
-            $invalid_properties[] = "'finish_redirect_timeout' can't be null";
-        }
-        if ($this->container['finish_custom_surveys'] === null) {
-            $invalid_properties[] = "'finish_custom_surveys' can't be null";
-        }
         if ($this->container['disable_ad'] === null) {
             $invalid_properties[] = "'disable_ad' can't be null";
-        }
-        if ($this->container['custom_css'] === null) {
-            $invalid_properties[] = "'custom_css' can't be null";
         }
         if ($this->container['credentials_enable'] === null) {
             $invalid_properties[] = "'credentials_enable' can't be null";
@@ -398,15 +377,6 @@ class SurveyAppearance implements ArrayAccess
         if ($this->container['show_finishpage'] === null) {
             return false;
         }
-        if ($this->container['startpage_text'] === null) {
-            return false;
-        }
-        if ($this->container['finishpage_text'] === null) {
-            return false;
-        }
-        if ($this->container['disqualification_text'] === null) {
-            return false;
-        }
         if ($this->container['show_captcha'] === null) {
             return false;
         }
@@ -429,19 +399,7 @@ class SurveyAppearance implements ArrayAccess
         if (!in_array($this->container['finish_type'], $allowed_values)) {
             return false;
         }
-        if ($this->container['finish_redirect_url'] === null) {
-            return false;
-        }
-        if ($this->container['finish_redirect_timeout'] === null) {
-            return false;
-        }
-        if ($this->container['finish_custom_surveys'] === null) {
-            return false;
-        }
         if ($this->container['disable_ad'] === null) {
-            return false;
-        }
-        if ($this->container['custom_css'] === null) {
             return false;
         }
         if ($this->container['credentials_enable'] === null) {

@@ -165,9 +165,6 @@ class SurveySettings implements ArrayAccess
         if ($this->container['multiple_answers'] === null) {
             $invalid_properties[] = "'multiple_answers' can't be null";
         }
-        if ($this->container['logo'] === null) {
-            $invalid_properties[] = "'logo' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -186,9 +183,6 @@ class SurveySettings implements ArrayAccess
             return false;
         }
         if ($this->container['multiple_answers'] === null) {
-            return false;
-        }
-        if ($this->container['logo'] === null) {
             return false;
         }
         return true;

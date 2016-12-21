@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**period** | **string** | Период | 
+**period** | **string** | Период | [optional] 
 **period_name** | **string** | Название периода | 
 **price** | **int** | Стоимость | 
 

@@ -201,9 +201,6 @@ class SurveyAnswer implements ArrayAccess
         if ($this->container['start_date'] === null) {
             $invalid_properties[] = "'start_date' can't be null";
         }
-        if ($this->container['finish_date'] === null) {
-            $invalid_properties[] = "'finish_date' can't be null";
-        }
         if ($this->container['status'] === null) {
             $invalid_properties[] = "'status' can't be null";
         }
@@ -236,9 +233,6 @@ class SurveyAnswer implements ArrayAccess
             return false;
         }
         if ($this->container['start_date'] === null) {
-            return false;
-        }
-        if ($this->container['finish_date'] === null) {
             return false;
         }
         if ($this->container['status'] === null) {
@@ -329,7 +323,7 @@ class SurveyAnswer implements ArrayAccess
 
     /**
      * Sets start_date
-     * @param int $start_date Дана начала
+     * @param int $start_date Дата начала
      * @return $this
      */
     public function setStartDate($start_date)

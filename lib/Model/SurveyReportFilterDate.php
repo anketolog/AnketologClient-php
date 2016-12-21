@@ -146,12 +146,6 @@ class SurveyReportFilterDate implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['date_from'] === null) {
-            $invalid_properties[] = "'date_from' can't be null";
-        }
-        if ($this->container['date_to'] === null) {
-            $invalid_properties[] = "'date_to' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -163,12 +157,6 @@ class SurveyReportFilterDate implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['date_from'] === null) {
-            return false;
-        }
-        if ($this->container['date_to'] === null) {
-            return false;
-        }
         return true;
     }
 

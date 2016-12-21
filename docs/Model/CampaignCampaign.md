@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **id** | **int** | ID | 
 **name** | **string** | Название | 
 **create_date** | **int** | Дата создания | 
-**start_date** | **int** | Дата запуска | 
-**finish_date** | **int** | Дата завершения | 
+**start_date** | **int** | Дата запуска | [optional] 
+**finish_date** | **int** | Дата завершения | [optional] 
 **is_complete** | **bool** | Кампания завершена | 
 **status** | **string** | Статус кампании | [default to 'waiting']
 **moderation_status** | **string** | Статус модерации | [default to 'pending']

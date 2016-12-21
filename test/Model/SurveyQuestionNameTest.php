@@ -128,9 +128,9 @@ class SurveyQuestionNameTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "false"
+     * Test attribute "no"
      */
-    public function testPropertyFalse()
+    public function testPropertyNo()
     {
 
     }

@@ -249,12 +249,6 @@ class CampaignCampaign implements ArrayAccess
         if ($this->container['create_date'] === null) {
             $invalid_properties[] = "'create_date' can't be null";
         }
-        if ($this->container['start_date'] === null) {
-            $invalid_properties[] = "'start_date' can't be null";
-        }
-        if ($this->container['finish_date'] === null) {
-            $invalid_properties[] = "'finish_date' can't be null";
-        }
         if ($this->container['is_complete'] === null) {
             $invalid_properties[] = "'is_complete' can't be null";
         }
@@ -310,12 +304,6 @@ class CampaignCampaign implements ArrayAccess
             return false;
         }
         if ($this->container['create_date'] === null) {
-            return false;
-        }
-        if ($this->container['start_date'] === null) {
-            return false;
-        }
-        if ($this->container['finish_date'] === null) {
             return false;
         }
         if ($this->container['is_complete'] === null) {

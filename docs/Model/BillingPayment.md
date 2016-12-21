@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | ID | 
 **status** | **int** | Статус | 
 **create_date** | **int** | Дата создания | 
-**approve_date** | **int** | Дата подтверждения модератором | 
+**approve_date** | **int** | Дата подтверждения модератором | [optional] 
 **amount** | **int** | Сумма платежа | 
 **system** | [**\AnketologClient\Model\BillingPaymentSystem**](BillingPaymentSystem.md) |  | 
 **profile** | [**\AnketologClient\Model\BillingPaymentProfile**](BillingPaymentProfile.md) |  | [optional] 
