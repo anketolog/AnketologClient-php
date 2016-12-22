@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyQuestionMatrix3D implements ArrayAccess
+class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,10 +67,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
         'title' => 'string',
-        'type' => 'string',
-        'type_name' => 'string',
         'no' => 'int',
         'is_required' => 'bool',
         'has_comment' => 'bool',
@@ -87,7 +84,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -95,10 +92,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
         'title' => 'title',
-        'type' => 'type',
-        'type_name' => 'type_name',
         'no' => 'no',
         'is_required' => 'is_required',
         'has_comment' => 'has_comment',
@@ -115,7 +109,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -123,10 +117,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
         'title' => 'setTitle',
-        'type' => 'setType',
-        'type_name' => 'setTypeName',
         'no' => 'setNo',
         'is_required' => 'setIsRequired',
         'has_comment' => 'setHasComment',
@@ -143,7 +134,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -151,10 +142,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
         'title' => 'getTitle',
-        'type' => 'getType',
-        'type_name' => 'getTypeName',
         'no' => 'getNo',
         'is_required' => 'getIsRequired',
         'has_comment' => 'getHasComment',
@@ -171,7 +159,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -190,10 +178,9 @@ class SurveyQuestionMatrix3D implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        parent::__construct($data);
+
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
         $this->container['no'] = isset($data['no']) ? $data['no'] : null;
         $this->container['is_required'] = isset($data['is_required']) ? $data['is_required'] : null;
         $this->container['has_comment'] = isset($data['has_comment']) ? $data['has_comment'] : null;
@@ -216,17 +203,8 @@ class SurveyQuestionMatrix3D implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
         if ($this->container['title'] === null) {
             $invalid_properties[] = "'title' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalid_properties[] = "'type' can't be null";
-        }
-        if ($this->container['type_name'] === null) {
-            $invalid_properties[] = "'type_name' can't be null";
         }
         if ($this->container['no'] === null) {
             $invalid_properties[] = "'no' can't be null";
@@ -275,16 +253,7 @@ class SurveyQuestionMatrix3D implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id'] === null) {
-            return false;
-        }
         if ($this->container['title'] === null) {
-            return false;
-        }
-        if ($this->container['type'] === null) {
-            return false;
-        }
-        if ($this->container['type_name'] === null) {
             return false;
         }
         if ($this->container['no'] === null) {
@@ -328,27 +297,6 @@ class SurveyQuestionMatrix3D implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id ID вопроса
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
      * Gets title
      * @return string
      */
@@ -365,48 +313,6 @@ class SurveyQuestionMatrix3D implements ArrayAccess
     public function setTitle($title)
     {
         $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Тип вопроса
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets type_name
-     * @return string
-     */
-    public function getTypeName()
-    {
-        return $this->container['type_name'];
-    }
-
-    /**
-     * Sets type_name
-     * @param string $type_name Название типа
-     * @return $this
-     */
-    public function setTypeName($type_name)
-    {
-        $this->container['type_name'] = $type_name;
 
         return $this;
     }

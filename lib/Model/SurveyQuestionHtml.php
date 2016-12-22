@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyQuestionHtml implements ArrayAccess
+class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,16 +67,12 @@ class SurveyQuestionHtml implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
-        'title' => 'string',
-        'type' => 'string',
-        'type_name' => 'string',
         'html_code' => 'string'
     );
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -84,16 +80,12 @@ class SurveyQuestionHtml implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
-        'title' => 'title',
-        'type' => 'type',
-        'type_name' => 'type_name',
         'html_code' => 'html_code'
     );
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -101,16 +93,12 @@ class SurveyQuestionHtml implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
-        'title' => 'setTitle',
-        'type' => 'setType',
-        'type_name' => 'setTypeName',
         'html_code' => 'setHtmlCode'
     );
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -118,16 +106,12 @@ class SurveyQuestionHtml implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
-        'title' => 'getTitle',
-        'type' => 'getType',
-        'type_name' => 'getTypeName',
         'html_code' => 'getHtmlCode'
     );
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -146,10 +130,8 @@ class SurveyQuestionHtml implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['title'] = isset($data['title']) ? $data['title'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
+        parent::__construct($data);
+
         $this->container['html_code'] = isset($data['html_code']) ? $data['html_code'] : null;
     }
 
@@ -161,15 +143,6 @@ class SurveyQuestionHtml implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalid_properties[] = "'type' can't be null";
-        }
-        if ($this->container['type_name'] === null) {
-            $invalid_properties[] = "'type_name' can't be null";
-        }
         if ($this->container['html_code'] === null) {
             $invalid_properties[] = "'html_code' can't be null";
         }
@@ -184,105 +157,12 @@ class SurveyQuestionHtml implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id'] === null) {
-            return false;
-        }
-        if ($this->container['type'] === null) {
-            return false;
-        }
-        if ($this->container['type_name'] === null) {
-            return false;
-        }
         if ($this->container['html_code'] === null) {
             return false;
         }
         return true;
     }
 
-
-    /**
-     * Gets id
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     * @param int $id ID вопроса
-     * @return $this
-     */
-    public function setId($id)
-    {
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets title
-     * @return string
-     */
-    public function getTitle()
-    {
-        return $this->container['title'];
-    }
-
-    /**
-     * Sets title
-     * @param string $title Название вопроса
-     * @return $this
-     */
-    public function setTitle($title)
-    {
-        $this->container['title'] = $title;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Тип вопроса
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets type_name
-     * @return string
-     */
-    public function getTypeName()
-    {
-        return $this->container['type_name'];
-    }
-
-    /**
-     * Sets type_name
-     * @param string $type_name Название типа
-     * @return $this
-     */
-    public function setTypeName($type_name)
-    {
-        $this->container['type_name'] = $type_name;
-
-        return $this;
-    }
 
     /**
      * Gets html_code

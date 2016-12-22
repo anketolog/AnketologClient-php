@@ -96,22 +96,6 @@ class SurveyIframeCollectorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
      * Test attribute "iframe_code"
      */
     public function testPropertyIframeCode()

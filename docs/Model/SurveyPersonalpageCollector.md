@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** | Тип способа распространения | 
-**name** | **string** | Название способа распространения | 
 **personalpage_id** | **int** | ID персональной страницы | 
 **personalpage_url** | **string** | URL персональной страницы | 
 

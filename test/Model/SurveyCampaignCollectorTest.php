@@ -96,22 +96,6 @@ class SurveyCampaignCollectorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
      * Test attribute "campaign_id"
      */
     public function testPropertyCampaignId()

@@ -3,10 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | ID вопроса | 
 **title** | **string** | Название вопроса | 
-**type** | **string** | Тип вопроса | 
-**type_name** | **string** | Название типа | 
 **no** | **int** | Порядковый номер | 
 **is_required** | **bool** | Вопрос обязательный | 
 **has_comment** | **bool** | Отображать комментарий | 

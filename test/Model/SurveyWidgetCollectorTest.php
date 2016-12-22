@@ -96,22 +96,6 @@ class SurveyWidgetCollectorTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-
-    }
-
-    /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
      * Test attribute "widget_code"
      */
     public function testPropertyWidgetCode()

@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyDirectCollector implements ArrayAccess
+class SurveyDirectCollector extends SurveyCollector implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,14 +67,12 @@ class SurveyDirectCollector implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'type' => 'string',
-        'name' => 'string',
         'direct_url' => 'string'
     );
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -82,14 +80,12 @@ class SurveyDirectCollector implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'type' => 'type',
-        'name' => 'name',
         'direct_url' => 'direct_url'
     );
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -97,14 +93,12 @@ class SurveyDirectCollector implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'type' => 'setType',
-        'name' => 'setName',
         'direct_url' => 'setDirectUrl'
     );
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -112,14 +106,12 @@ class SurveyDirectCollector implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'type' => 'getType',
-        'name' => 'getName',
         'direct_url' => 'getDirectUrl'
     );
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -138,8 +130,8 @@ class SurveyDirectCollector implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        parent::__construct($data);
+
         $this->container['direct_url'] = isset($data['direct_url']) ? $data['direct_url'] : null;
     }
 
@@ -151,12 +143,6 @@ class SurveyDirectCollector implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['type'] === null) {
-            $invalid_properties[] = "'type' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalid_properties[] = "'name' can't be null";
-        }
         if ($this->container['direct_url'] === null) {
             $invalid_properties[] = "'direct_url' can't be null";
         }
@@ -171,60 +157,12 @@ class SurveyDirectCollector implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['type'] === null) {
-            return false;
-        }
-        if ($this->container['name'] === null) {
-            return false;
-        }
         if ($this->container['direct_url'] === null) {
             return false;
         }
         return true;
     }
 
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Тип способа распространения
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name Название способа распространения
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets direct_url
