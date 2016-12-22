@@ -238,9 +238,6 @@ class PersonalPagePersonalPage implements ArrayAccess
         if ($this->container['background_color'] === null) {
             $invalid_properties[] = "'background_color' can't be null";
         }
-        if ($this->container['background'] === null) {
-            $invalid_properties[] = "'background' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -277,9 +274,6 @@ class PersonalPagePersonalPage implements ArrayAccess
             return false;
         }
         if ($this->container['background_color'] === null) {
-            return false;
-        }
-        if ($this->container['background'] === null) {
             return false;
         }
         return true;
