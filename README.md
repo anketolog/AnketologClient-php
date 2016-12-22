@@ -96,7 +96,7 @@ manager@anketolog.ru
 
 ```bash
 java -jar /vagrant/swagger-codegen-cli.jar generate \
-    -i Anketolog.yaml \
+    -i anketolog.yaml \
     -o AnketologClient-php \
     -l php \
     --invoker-package AnketologClient \

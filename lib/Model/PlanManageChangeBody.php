@@ -14,7 +14,7 @@
 /**
  * Anketolog API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/Anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
  *
  * OpenAPI spec version: 2.0
  * 
@@ -117,12 +117,36 @@ class PlanManageChangeBody implements ArrayAccess
         return self::$getters;
     }
 
+    const PLAN_BASE = 'base';
+    const PLAN_PROFI = 'profi';
+    const PLAN_PROFI_PLUS_1 = 'profi-plus-1';
+    const PLAN_PROFI_PLUS_2 = 'profi-plus-2';
+    const PLAN_PROFI_PLUS_3 = 'profi-plus-3';
+    const PLAN_PROFI_PLUS_4 = 'profi-plus-4';
+    const PLAN_PROFI_PLUS_5 = 'profi-plus-5';
     const PERIOD_P1_M = 'P1M';
     const PERIOD_P3_M = 'P3M';
     const PERIOD_P6_M = 'P6M';
     const PERIOD_P1_Y = 'P1Y';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getPlanAllowableValues()
+    {
+        return [
+            self::PLAN_BASE,
+            self::PLAN_PROFI,
+            self::PLAN_PROFI_PLUS_1,
+            self::PLAN_PROFI_PLUS_2,
+            self::PLAN_PROFI_PLUS_3,
+            self::PLAN_PROFI_PLUS_4,
+            self::PLAN_PROFI_PLUS_5,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -163,6 +187,17 @@ class PlanManageChangeBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['plan'] === null) {
+            $invalid_properties[] = "'plan' can't be null";
+        }
+        $allowed_values = array("base", "profi", "profi-plus-1", "profi-plus-2", "profi-plus-3", "profi-plus-4", "profi-plus-5");
+        if (!in_array($this->container['plan'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'plan', must be one of #{allowed_values}.";
+        }
+
+        if ($this->container['period'] === null) {
+            $invalid_properties[] = "'period' can't be null";
+        }
         $allowed_values = array("P1M", "P3M", "P6M", "P1Y");
         if (!in_array($this->container['period'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'period', must be one of #{allowed_values}.";
@@ -179,6 +214,16 @@ class PlanManageChangeBody implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['plan'] === null) {
+            return false;
+        }
+        $allowed_values = array("base", "profi", "profi-plus-1", "profi-plus-2", "profi-plus-3", "profi-plus-4", "profi-plus-5");
+        if (!in_array($this->container['plan'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['period'] === null) {
+            return false;
+        }
         $allowed_values = array("P1M", "P3M", "P6M", "P1Y");
         if (!in_array($this->container['period'], $allowed_values)) {
             return false;
@@ -203,6 +248,10 @@ class PlanManageChangeBody implements ArrayAccess
      */
     public function setPlan($plan)
     {
+        $allowed_values = array('base', 'profi', 'profi-plus-1', 'profi-plus-2', 'profi-plus-3', 'profi-plus-4', 'profi-plus-5');
+        if (!in_array($plan, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'plan', must be one of 'base', 'profi', 'profi-plus-1', 'profi-plus-2', 'profi-plus-3', 'profi-plus-4', 'profi-plus-5'");
+        }
         $this->container['plan'] = $plan;
 
         return $this;

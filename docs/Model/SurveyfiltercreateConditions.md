@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**question_id** | **int** | ID вопроса | [optional] 
+**question_id** | **int** | ID вопроса | 
 **option_id** | **int** | ID варианта ответа | [optional] 
 **text** | **string** | Текст ответа | [optional] 
 **pos** | **int** | Позиция варианта | [optional] 
