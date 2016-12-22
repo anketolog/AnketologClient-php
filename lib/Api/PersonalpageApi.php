@@ -103,93 +103,6 @@ class PersonalpageApi
     }
 
     /**
-     * Operation listsManageArchive
-     *
-     * 
-     *
-     * @param \AnketologClient\Model\PersonalpageManageArchiveBody $personalpage_manage_archive_body  (required)
-     * @return \AnketologClient\Model\PersonalPagePersonalPage
-     * @throws \AnketologClient\ApiException on non-2xx response
-     */
-    public function listsManageArchive($personalpage_manage_archive_body)
-    {
-        list($response) = $this->listsManageArchiveWithHttpInfo($personalpage_manage_archive_body);
-        return $response;
-    }
-
-    /**
-     * Operation listsManageArchiveWithHttpInfo
-     *
-     * 
-     *
-     * @param \AnketologClient\Model\PersonalpageManageArchiveBody $personalpage_manage_archive_body  (required)
-     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
-     * @throws \AnketologClient\ApiException on non-2xx response
-     */
-    public function listsManageArchiveWithHttpInfo($personalpage_manage_archive_body)
-    {
-        // verify the required parameter 'personalpage_manage_archive_body' is set
-        if ($personalpage_manage_archive_body === null) {
-            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_archive_body when calling listsManageArchive');
-        }
-        // parse inputs
-        $resourcePath = "/personalpage/manage/archive";
-        $httpBody = '';
-        $queryParams = array();
-        $headerParams = array();
-        $formParams = array();
-        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
-        if (!is_null($_header_accept)) {
-            $headerParams['Accept'] = $_header_accept;
-        }
-        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
-
-        // default format to json
-        $resourcePath = str_replace("{format}", "json", $resourcePath);
-
-        // body params
-        $_tempBody = null;
-        if (isset($personalpage_manage_archive_body)) {
-            $_tempBody = $personalpage_manage_archive_body;
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
-        } elseif (count($formParams) > 0) {
-            $httpBody = $formParams; // for HTTP post (form)
-        }
-        // this endpoint requires API key authentication
-        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
-        if (strlen($apiKey) !== 0) {
-            $headerParams['x-anketolog-apikey'] = $apiKey;
-        }
-        // make the API Call
-        try {
-            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
-                $resourcePath,
-                'POST',
-                $queryParams,
-                $httpBody,
-                $headerParams,
-                '\AnketologClient\Model\PersonalPagePersonalPage',
-                '/personalpage/manage/archive'
-            );
-
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-            }
-
-            throw $e;
-        }
-    }
-
-    /**
      * Operation personalpageCollectorCreatealias
      *
      * 
@@ -625,16 +538,104 @@ class PersonalpageApi
     }
 
     /**
+     * Operation personalpageManageArchive
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\PersonalpageManageArchiveBody $personalpage_manage_archive_body  (required)
+     * @return \AnketologClient\Model\PersonalPagePersonalPage
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function personalpageManageArchive($personalpage_manage_archive_body)
+    {
+        list($response) = $this->personalpageManageArchiveWithHttpInfo($personalpage_manage_archive_body);
+        return $response;
+    }
+
+    /**
+     * Operation personalpageManageArchiveWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\PersonalpageManageArchiveBody $personalpage_manage_archive_body  (required)
+     * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function personalpageManageArchiveWithHttpInfo($personalpage_manage_archive_body)
+    {
+        // verify the required parameter 'personalpage_manage_archive_body' is set
+        if ($personalpage_manage_archive_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_archive_body when calling personalpageManageArchive');
+        }
+        // parse inputs
+        $resourcePath = "/personalpage/manage/archive";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($personalpage_manage_archive_body)) {
+            $_tempBody = $personalpage_manage_archive_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\PersonalPagePersonalPage',
+                '/personalpage/manage/archive'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPagePersonalPage', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\PersonalPagePersonalPage', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation personalpageManageCreate
      *
      * 
      *
+     * @param \AnketologClient\Model\PersonalpageManageCreateBody $personalpage_manage_create_body  (required)
      * @return \AnketologClient\Model\PersonalPagePersonalPage
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageCreate()
+    public function personalpageManageCreate($personalpage_manage_create_body)
     {
-        list($response) = $this->personalpageManageCreateWithHttpInfo();
+        list($response) = $this->personalpageManageCreateWithHttpInfo($personalpage_manage_create_body);
         return $response;
     }
 
@@ -643,11 +644,16 @@ class PersonalpageApi
      *
      * 
      *
+     * @param \AnketologClient\Model\PersonalpageManageCreateBody $personalpage_manage_create_body  (required)
      * @return Array of \AnketologClient\Model\PersonalPagePersonalPage, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function personalpageManageCreateWithHttpInfo()
+    public function personalpageManageCreateWithHttpInfo($personalpage_manage_create_body)
     {
+        // verify the required parameter 'personalpage_manage_create_body' is set
+        if ($personalpage_manage_create_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $personalpage_manage_create_body when calling personalpageManageCreate');
+        }
         // parse inputs
         $resourcePath = "/personalpage/manage/create";
         $httpBody = '';
@@ -663,7 +669,12 @@ class PersonalpageApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
+        // body params
+        $_tempBody = null;
+        if (isset($personalpage_manage_create_body)) {
+            $_tempBody = $personalpage_manage_create_body;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

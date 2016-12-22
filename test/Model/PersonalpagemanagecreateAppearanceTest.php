@@ -1,6 +1,6 @@
 <?php
 /**
- * PersonalpagemanageupdateOfficesTest
+ * PersonalpagemanagecreateAppearanceTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * PersonalpagemanageupdateOfficesTest Class Doc Comment
+ * PersonalpagemanagecreateAppearanceTest Class Doc Comment
  *
  * @category    Class */
-// * @description PersonalpagemanageupdateOffices
+// * @description Настройки персональной страницы
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PersonalpagemanageupdateOfficesTest extends \PHPUnit_Framework_TestCase
+class PersonalpagemanagecreateAppearanceTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,65 +88,41 @@ class PersonalpagemanageupdateOfficesTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PersonalpagemanageupdateOffices"
+     * Test "PersonalpagemanagecreateAppearance"
      */
-    public function testPersonalpagemanageupdateOffices()
+    public function testPersonalpagemanagecreateAppearance()
     {
 
     }
 
     /**
-     * Test attribute "address"
+     * Test attribute "logo_id"
      */
-    public function testPropertyAddress()
+    public function testPropertyLogoId()
     {
 
     }
 
     /**
-     * Test attribute "email"
+     * Test attribute "background_id"
      */
-    public function testPropertyEmail()
+    public function testPropertyBackgroundId()
     {
 
     }
 
     /**
-     * Test attribute "url"
+     * Test attribute "background_color"
      */
-    public function testPropertyUrl()
+    public function testPropertyBackgroundColor()
     {
 
     }
 
     /**
-     * Test attribute "phones"
+     * Test attribute "disable_ad"
      */
-    public function testPropertyPhones()
-    {
-
-    }
-
-    /**
-     * Test attribute "country_id"
-     */
-    public function testPropertyCountryId()
-    {
-
-    }
-
-    /**
-     * Test attribute "region_id"
-     */
-    public function testPropertyRegionId()
-    {
-
-    }
-
-    /**
-     * Test attribute "city_id"
-     */
-    public function testPropertyCityId()
+    public function testPropertyDisableAd()
     {
 
     }

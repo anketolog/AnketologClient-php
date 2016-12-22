@@ -1,6 +1,6 @@
 <?php
 /**
- * PersonalpagemanageupdateAppearanceTest
+ * PersonalpageManageCreateBodyTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * PersonalpagemanageupdateAppearanceTest Class Doc Comment
+ * PersonalpageManageCreateBodyTest Class Doc Comment
  *
  * @category    Class */
-// * @description Настройки персональной страницы
+// * @description PersonalpageManageCreateBody
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PersonalpagemanageupdateAppearanceTest extends \PHPUnit_Framework_TestCase
+class PersonalpageManageCreateBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,41 +88,57 @@ class PersonalpagemanageupdateAppearanceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PersonalpagemanageupdateAppearance"
+     * Test "PersonalpageManageCreateBody"
      */
-    public function testPersonalpagemanageupdateAppearance()
+    public function testPersonalpageManageCreateBody()
     {
 
     }
 
     /**
-     * Test attribute "logo_id"
+     * Test attribute "name"
      */
-    public function testPropertyLogoId()
+    public function testPropertyName()
     {
 
     }
 
     /**
-     * Test attribute "background_id"
+     * Test attribute "description"
      */
-    public function testPropertyBackgroundId()
+    public function testPropertyDescription()
     {
 
     }
 
     /**
-     * Test attribute "background_color"
+     * Test attribute "categories"
      */
-    public function testPropertyBackgroundColor()
+    public function testPropertyCategories()
     {
 
     }
 
     /**
-     * Test attribute "disable_ad"
+     * Test attribute "surveys"
      */
-    public function testPropertyDisableAd()
+    public function testPropertySurveys()
+    {
+
+    }
+
+    /**
+     * Test attribute "offices"
+     */
+    public function testPropertyOffices()
+    {
+
+    }
+
+    /**
+     * Test attribute "appearance"
+     */
+    public function testPropertyAppearance()
     {
 
     }

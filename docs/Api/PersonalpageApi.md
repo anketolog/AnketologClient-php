@@ -4,68 +4,18 @@ All URIs are relative to *https://apiv2.anketolog.loc/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listsManageArchive**](PersonalpageApi.md#listsManageArchive) | **POST** /personalpage/manage/archive | 
 [**personalpageCollectorCreatealias**](PersonalpageApi.md#personalpageCollectorCreatealias) | **POST** /personalpage/collector/createalias | 
 [**personalpageCollectorCreatewidget**](PersonalpageApi.md#personalpageCollectorCreatewidget) | **POST** /personalpage/collector/createwidget | 
 [**personalpageCollectorList**](PersonalpageApi.md#personalpageCollectorList) | **POST** /personalpage/collector/list | 
 [**personalpageCollectorUpdatealias**](PersonalpageApi.md#personalpageCollectorUpdatealias) | **POST** /personalpage/collector/updatealias | 
 [**personalpageCollectorUpdatewidget**](PersonalpageApi.md#personalpageCollectorUpdatewidget) | **POST** /personalpage/collector/updatewidget | 
+[**personalpageManageArchive**](PersonalpageApi.md#personalpageManageArchive) | **POST** /personalpage/manage/archive | 
 [**personalpageManageCreate**](PersonalpageApi.md#personalpageManageCreate) | **POST** /personalpage/manage/create | 
 [**personalpageManageInfo**](PersonalpageApi.md#personalpageManageInfo) | **POST** /personalpage/manage/info | 
 [**personalpageManageList**](PersonalpageApi.md#personalpageManageList) | **POST** /personalpage/manage/list | 
 [**personalpageManageRestore**](PersonalpageApi.md#personalpageManageRestore) | **POST** /personalpage/manage/restore | 
 [**personalpageManageUpdate**](PersonalpageApi.md#personalpageManageUpdate) | **POST** /personalpage/manage/update | 
 
-
-# **listsManageArchive**
-> \AnketologClient\Model\PersonalPagePersonalPage listsManageArchive($personalpage_manage_archive_body)
-
-
-
-Архивирование персональной страницы
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
-
-$api_instance = new AnketologClient\Api\PersonalpageApi();
-$personalpage_manage_archive_body = new \AnketologClient\Model\PersonalpageManageArchiveBody(); // \AnketologClient\Model\PersonalpageManageArchiveBody | 
-
-try {
-    $result = $api_instance->listsManageArchive($personalpage_manage_archive_body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PersonalpageApi->listsManageArchive: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **personalpage_manage_archive_body** | [**\AnketologClient\Model\PersonalpageManageArchiveBody**](../Model/\AnketologClient\Model\PersonalpageManageArchiveBody.md)|  |
-
-### Return type
-
-[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **personalpageCollectorCreatealias**
 > \AnketologClient\Model\PersonalPageAliasCollector personalpageCollectorCreatealias($personalpage_collector_createalias_body)
@@ -317,8 +267,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **personalpageManageArchive**
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageArchive($personalpage_manage_archive_body)
+
+
+
+Архивирование персональной страницы
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+
+$api_instance = new AnketologClient\Api\PersonalpageApi();
+$personalpage_manage_archive_body = new \AnketologClient\Model\PersonalpageManageArchiveBody(); // \AnketologClient\Model\PersonalpageManageArchiveBody | 
+
+try {
+    $result = $api_instance->personalpageManageArchive($personalpage_manage_archive_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PersonalpageApi->personalpageManageArchive: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **personalpage_manage_archive_body** | [**\AnketologClient\Model\PersonalpageManageArchiveBody**](../Model/\AnketologClient\Model\PersonalpageManageArchiveBody.md)|  |
+
+### Return type
+
+[**\AnketologClient\Model\PersonalPagePersonalPage**](../Model/PersonalPagePersonalPage.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **personalpageManageCreate**
-> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageCreate()
+> \AnketologClient\Model\PersonalPagePersonalPage personalpageManageCreate($personalpage_manage_create_body)
 
 
 
@@ -335,9 +335,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\PersonalpageApi();
+$personalpage_manage_create_body = new \AnketologClient\Model\PersonalpageManageCreateBody(); // \AnketologClient\Model\PersonalpageManageCreateBody | 
 
 try {
-    $result = $api_instance->personalpageManageCreate();
+    $result = $api_instance->personalpageManageCreate($personalpage_manage_create_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonalpageApi->personalpageManageCreate: ', $e->getMessage(), PHP_EOL;
@@ -346,7 +347,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **personalpage_manage_create_body** | [**\AnketologClient\Model\PersonalpageManageCreateBody**](../Model/\AnketologClient\Model\PersonalpageManageCreateBody.md)|  |
 
 ### Return type
 

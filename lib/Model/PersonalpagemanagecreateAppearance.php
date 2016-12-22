@@ -1,6 +1,6 @@
 <?php
 /**
- * PersonalpagemanageupdateAppearance
+ * PersonalpagemanagecreateAppearance
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * PersonalpagemanageupdateAppearance Class Doc Comment
+ * PersonalpagemanagecreateAppearance Class Doc Comment
  *
  * @category    Class */
  // @description Настройки персональной страницы
@@ -54,13 +54,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PersonalpagemanageupdateAppearance implements ArrayAccess
+class PersonalpagemanagecreateAppearance implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'personalpagemanageupdate_appearance';
+    protected static $swaggerModelName = 'personalpagemanagecreate_appearance';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

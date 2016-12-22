@@ -1,4 +1,4 @@
-# PersonalpageManageUpdateBody
+# PersonalpageManageCreateBody
 
 ## Properties
 Name | Type | Description | Notes

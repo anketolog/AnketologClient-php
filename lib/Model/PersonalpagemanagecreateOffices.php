@@ -1,6 +1,6 @@
 <?php
 /**
- * PersonalpagemanageupdateOffices
+ * PersonalpagemanagecreateOffices
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * PersonalpagemanageupdateOffices Class Doc Comment
+ * PersonalpagemanagecreateOffices Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PersonalpagemanageupdateOffices implements ArrayAccess
+class PersonalpagemanagecreateOffices implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'personalpagemanageupdate_offices';
+    protected static $swaggerModelName = 'personalpagemanagecreate_offices';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

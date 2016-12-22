@@ -1,4 +1,4 @@
-# PersonalpagemanageupdateAppearance
+# PersonalpagemanagecreateAppearance
 
 ## Properties
 Name | Type | Description | Notes
