@@ -792,12 +792,13 @@ class CampaignApi
      *
      * 
      *
+     * @param \AnketologClient\Model\CampaignTransferListBody $campaign_transfer_list_body  (required)
      * @return \AnketologClient\Model\CampaignTransfer[]
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignTransferList()
+    public function campaignTransferList($campaign_transfer_list_body)
     {
-        list($response) = $this->campaignTransferListWithHttpInfo();
+        list($response) = $this->campaignTransferListWithHttpInfo($campaign_transfer_list_body);
         return $response;
     }
 
@@ -806,11 +807,16 @@ class CampaignApi
      *
      * 
      *
+     * @param \AnketologClient\Model\CampaignTransferListBody $campaign_transfer_list_body  (required)
      * @return Array of \AnketologClient\Model\CampaignTransfer[], HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
-    public function campaignTransferListWithHttpInfo()
+    public function campaignTransferListWithHttpInfo($campaign_transfer_list_body)
     {
+        // verify the required parameter 'campaign_transfer_list_body' is set
+        if ($campaign_transfer_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $campaign_transfer_list_body when calling campaignTransferList');
+        }
         // parse inputs
         $resourcePath = "/campaign/transfer/list";
         $httpBody = '';
@@ -826,7 +832,12 @@ class CampaignApi
         // default format to json
         $resourcePath = str_replace("{format}", "json", $resourcePath);
 
-        
+        // body params
+        $_tempBody = null;
+        if (isset($campaign_transfer_list_body)) {
+            $_tempBody = $campaign_transfer_list_body;
+        }
+
         // for model (json/xml)
         if (isset($_tempBody)) {
             $httpBody = $_tempBody; // $_tempBody is the method argument, if present

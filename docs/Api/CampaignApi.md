@@ -412,7 +412,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **campaignTransferList**
-> \AnketologClient\Model\CampaignTransfer[] campaignTransferList()
+> \AnketologClient\Model\CampaignTransfer[] campaignTransferList($campaign_transfer_list_body)
 
 
 
@@ -429,9 +429,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\CampaignApi();
+$campaign_transfer_list_body = new \AnketologClient\Model\CampaignTransferListBody(); // \AnketologClient\Model\CampaignTransferListBody | 
 
 try {
-    $result = $api_instance->campaignTransferList();
+    $result = $api_instance->campaignTransferList($campaign_transfer_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling CampaignApi->campaignTransferList: ', $e->getMessage(), PHP_EOL;
@@ -440,7 +441,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **campaign_transfer_list_body** | [**\AnketologClient\Model\CampaignTransferListBody**](../Model/\AnketologClient\Model\CampaignTransferListBody.md)|  |
 
 ### Return type
 
