@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **is_complete** | **bool** | Кампания завершена | 
 **status** | **string** | Статус кампании | [default to 'waiting']
 **moderation_status** | **string** | Статус модерации | [default to 'pending']
-**moderation_reason** | **string** | Комментарий модератора | 
+**moderation_reason** | **string** | Комментарий модератора | [optional] 
 **unique_respondents** | **bool** | Исключить повторные ответы | 
 **answer_price** | **int** | Стоимость одного ответа | 
 **answer_count** | **int** | Количество ответов | 

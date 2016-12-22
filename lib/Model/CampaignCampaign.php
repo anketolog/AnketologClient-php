@@ -268,9 +268,6 @@ class CampaignCampaign implements ArrayAccess
             $invalid_properties[] = "invalid value for 'moderation_status', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['moderation_reason'] === null) {
-            $invalid_properties[] = "'moderation_reason' can't be null";
-        }
         if ($this->container['unique_respondents'] === null) {
             $invalid_properties[] = "'unique_respondents' can't be null";
         }
@@ -321,9 +318,6 @@ class CampaignCampaign implements ArrayAccess
         }
         $allowed_values = array("pending", "approved", "rejected");
         if (!in_array($this->container['moderation_status'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['moderation_reason'] === null) {
             return false;
         }
         if ($this->container['unique_respondents'] === null) {
