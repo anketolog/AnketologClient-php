@@ -68,7 +68,8 @@ class SurveyCollector implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'type' => 'string',
-        'name' => 'string'
+        'name' => 'string',
+        'swagger_type' => 'string'
     );
 
     public static function swaggerTypes()
@@ -82,7 +83,8 @@ class SurveyCollector implements ArrayAccess
      */
     protected static $attributeMap = array(
         'type' => 'type',
-        'name' => 'name'
+        'name' => 'name',
+        'swagger_type' => 'swagger_type'
     );
 
     public static function attributeMap()
@@ -96,7 +98,8 @@ class SurveyCollector implements ArrayAccess
      */
     protected static $setters = array(
         'type' => 'setType',
-        'name' => 'setName'
+        'name' => 'setName',
+        'swagger_type' => 'setSwaggerType'
     );
 
     public static function setters()
@@ -110,7 +113,8 @@ class SurveyCollector implements ArrayAccess
      */
     protected static $getters = array(
         'type' => 'getType',
-        'name' => 'getName'
+        'name' => 'getName',
+        'swagger_type' => 'getSwaggerType'
     );
 
     public static function getters()
@@ -136,9 +140,10 @@ class SurveyCollector implements ArrayAccess
     {
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['swagger_type'] = isset($data['swagger_type']) ? $data['swagger_type'] : null;
 
         // Initialize discriminator property with the model name.
-        $discrimintor = array_search('type', self::$attributeMap);
+        $discrimintor = array_search('swagger_type', self::$attributeMap);
         $this->container[$discrimintor] = static::$swaggerModelName;
     }
 
@@ -156,6 +161,9 @@ class SurveyCollector implements ArrayAccess
         if ($this->container['name'] === null) {
             $invalid_properties[] = "'name' can't be null";
         }
+        if ($this->container['swagger_type'] === null) {
+            $invalid_properties[] = "'swagger_type' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -171,6 +179,9 @@ class SurveyCollector implements ArrayAccess
             return false;
         }
         if ($this->container['name'] === null) {
+            return false;
+        }
+        if ($this->container['swagger_type'] === null) {
             return false;
         }
         return true;
@@ -215,6 +226,27 @@ class SurveyCollector implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets swagger_type
+     * @return string
+     */
+    public function getSwaggerType()
+    {
+        return $this->container['swagger_type'];
+    }
+
+    /**
+     * Sets swagger_type
+     * @param string $swagger_type
+     * @return $this
+     */
+    public function setSwaggerType($swagger_type)
+    {
+        $this->container['swagger_type'] = $swagger_type;
 
         return $this;
     }

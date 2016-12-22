@@ -96,33 +96,9 @@ class SurveyQuestionEmailTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "id"
-     */
-    public function testPropertyId()
-    {
-
-    }
-
-    /**
      * Test attribute "title"
      */
     public function testPropertyTitle()
-    {
-
-    }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-
-    }
-
-    /**
-     * Test attribute "type_name"
-     */
-    public function testPropertyTypeName()
     {
 
     }

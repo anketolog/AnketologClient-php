@@ -611,7 +611,7 @@ class SurveyApi
                 '/survey/collector/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyCollector', $httpHeader, 'type'), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyCollector', $httpHeader, 'swagger_type'), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:

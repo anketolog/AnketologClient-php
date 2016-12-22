@@ -437,7 +437,7 @@ class PersonalpageApi
                 '/personalpage/collector/list'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageCollector[]', $httpHeader, 'type'), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\PersonalPageCollector[]', $httpHeader, 'swagger_type'), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:

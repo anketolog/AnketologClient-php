@@ -68,7 +68,8 @@ class SurveyQuestion implements ArrayAccess
     protected static $swaggerTypes = array(
         'id' => 'int',
         'type' => 'string',
-        'type_name' => 'string'
+        'type_name' => 'string',
+        'swagger_type' => 'string'
     );
 
     public static function swaggerTypes()
@@ -83,7 +84,8 @@ class SurveyQuestion implements ArrayAccess
     protected static $attributeMap = array(
         'id' => 'id',
         'type' => 'type',
-        'type_name' => 'type_name'
+        'type_name' => 'type_name',
+        'swagger_type' => 'swagger_type'
     );
 
     public static function attributeMap()
@@ -98,7 +100,8 @@ class SurveyQuestion implements ArrayAccess
     protected static $setters = array(
         'id' => 'setId',
         'type' => 'setType',
-        'type_name' => 'setTypeName'
+        'type_name' => 'setTypeName',
+        'swagger_type' => 'setSwaggerType'
     );
 
     public static function setters()
@@ -113,7 +116,8 @@ class SurveyQuestion implements ArrayAccess
     protected static $getters = array(
         'id' => 'getId',
         'type' => 'getType',
-        'type_name' => 'getTypeName'
+        'type_name' => 'getTypeName',
+        'swagger_type' => 'getSwaggerType'
     );
 
     public static function getters()
@@ -140,9 +144,10 @@ class SurveyQuestion implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
+        $this->container['swagger_type'] = isset($data['swagger_type']) ? $data['swagger_type'] : null;
 
         // Initialize discriminator property with the model name.
-        $discrimintor = array_search('type', self::$attributeMap);
+        $discrimintor = array_search('swagger_type', self::$attributeMap);
         $this->container[$discrimintor] = static::$swaggerModelName;
     }
 
@@ -163,6 +168,9 @@ class SurveyQuestion implements ArrayAccess
         if ($this->container['type_name'] === null) {
             $invalid_properties[] = "'type_name' can't be null";
         }
+        if ($this->container['swagger_type'] === null) {
+            $invalid_properties[] = "'swagger_type' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -181,6 +189,9 @@ class SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['type_name'] === null) {
+            return false;
+        }
+        if ($this->container['swagger_type'] === null) {
             return false;
         }
         return true;
@@ -246,6 +257,27 @@ class SurveyQuestion implements ArrayAccess
     public function setTypeName($type_name)
     {
         $this->container['type_name'] = $type_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets swagger_type
+     * @return string
+     */
+    public function getSwaggerType()
+    {
+        return $this->container['swagger_type'];
+    }
+
+    /**
+     * Sets swagger_type
+     * @param string $swagger_type
+     * @return $this
+     */
+    public function setSwaggerType($swagger_type)
+    {
+        $this->container['swagger_type'] = $swagger_type;
 
         return $this;
     }
