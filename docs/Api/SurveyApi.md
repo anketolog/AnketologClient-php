@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyFilterList**
-> \AnketologClient\Model\SurveyFilter[] surveyFilterList()
+> \AnketologClient\Model\SurveyFilter[] surveyFilterList($survey_filter_list_body)
 
 
 
@@ -658,9 +658,10 @@ AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog
 // AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
 
 $api_instance = new AnketologClient\Api\SurveyApi();
+$survey_filter_list_body = new \AnketologClient\Model\SurveyFilterListBody(); // \AnketologClient\Model\SurveyFilterListBody | 
 
 try {
-    $result = $api_instance->surveyFilterList();
+    $result = $api_instance->surveyFilterList($survey_filter_list_body);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SurveyApi->surveyFilterList: ', $e->getMessage(), PHP_EOL;
@@ -669,7 +670,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **survey_filter_list_body** | [**\AnketologClient\Model\SurveyFilterListBody**](../Model/\AnketologClient\Model\SurveyFilterListBody.md)|  |
 
 ### Return type
 
