@@ -96,9 +96,9 @@ class PlanManageChangeBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "plan_id"
+     * Test attribute "plan"
      */
-    public function testPropertyPlanId()
+    public function testPropertyPlan()
     {
 
     }

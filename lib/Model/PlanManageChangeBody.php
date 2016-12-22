@@ -66,7 +66,7 @@ class PlanManageChangeBody implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'plan_id' => 'int',
+        'plan' => 'string',
         'period' => 'string'
     );
 
@@ -80,7 +80,7 @@ class PlanManageChangeBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'plan_id' => 'plan_id',
+        'plan' => 'plan',
         'period' => 'period'
     );
 
@@ -94,7 +94,7 @@ class PlanManageChangeBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'plan_id' => 'setPlanId',
+        'plan' => 'setPlan',
         'period' => 'setPeriod'
     );
 
@@ -108,7 +108,7 @@ class PlanManageChangeBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'plan_id' => 'getPlanId',
+        'plan' => 'getPlan',
         'period' => 'getPeriod'
     );
 
@@ -151,7 +151,7 @@ class PlanManageChangeBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['plan_id'] = isset($data['plan_id']) ? $data['plan_id'] : null;
+        $this->container['plan'] = isset($data['plan']) ? $data['plan'] : null;
         $this->container['period'] = isset($data['period']) ? $data['period'] : null;
     }
 
@@ -163,9 +163,6 @@ class PlanManageChangeBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['plan_id'] === null) {
-            $invalid_properties[] = "'plan_id' can't be null";
-        }
         $allowed_values = array("P1M", "P3M", "P6M", "P1Y");
         if (!in_array($this->container['period'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'period', must be one of #{allowed_values}.";
@@ -182,9 +179,6 @@ class PlanManageChangeBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['plan_id'] === null) {
-            return false;
-        }
         $allowed_values = array("P1M", "P3M", "P6M", "P1Y");
         if (!in_array($this->container['period'], $allowed_values)) {
             return false;
@@ -194,22 +188,22 @@ class PlanManageChangeBody implements ArrayAccess
 
 
     /**
-     * Gets plan_id
-     * @return int
+     * Gets plan
+     * @return string
      */
-    public function getPlanId()
+    public function getPlan()
     {
-        return $this->container['plan_id'];
+        return $this->container['plan'];
     }
 
     /**
-     * Sets plan_id
-     * @param int $plan_id ID тарифного плана
+     * Sets plan
+     * @param string $plan Тариф  * `base` - тариф \"базовый\" * `profi` - тариф \"профи\" * `profi-plus-1` - пакет \"профи плюс\" №1 * `profi-plus-2` - пакет \"профи плюс\" №2 * `profi-plus-3` - пакет \"профи плюс\" №3 * `profi-plus-4` - пакет \"профи плюс\" №4 * `profi-plus-5` - пакет \"профи плюс\" №5
      * @return $this
      */
-    public function setPlanId($plan_id)
+    public function setPlan($plan)
     {
-        $this->container['plan_id'] = $plan_id;
+        $this->container['plan'] = $plan;
 
         return $this;
     }
