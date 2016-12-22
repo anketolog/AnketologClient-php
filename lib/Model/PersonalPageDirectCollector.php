@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PersonalPageDirectCollector implements ArrayAccess
+class PersonalPageDirectCollector extends PersonalPageCollector implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -74,7 +74,7 @@ class PersonalPageDirectCollector implements ArrayAccess
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -89,7 +89,7 @@ class PersonalPageDirectCollector implements ArrayAccess
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -104,7 +104,7 @@ class PersonalPageDirectCollector implements ArrayAccess
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -119,7 +119,7 @@ class PersonalPageDirectCollector implements ArrayAccess
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -138,6 +138,8 @@ class PersonalPageDirectCollector implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        parent::__construct($data);
+
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['direct_url'] = isset($data['direct_url']) ? $data['direct_url'] : null;

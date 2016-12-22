@@ -45,7 +45,7 @@ namespace AnketologClient;
  * PersonalPageCollectorTest Class Doc Comment
  *
  * @category    Class */
-// * @description Способ распространения персональной страницы
+// * @description PersonalPageCollector
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen

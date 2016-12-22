@@ -3,8 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** | Тип способа распространения | 
-**name** | **string** | Название способа распространения | 
 **alias** | **string** | Именная ссылка | 
 **alias_url** | **string** | URL | 
 
