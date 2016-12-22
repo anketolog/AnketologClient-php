@@ -31,7 +31,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     }
   ],
   "require": {
-    "anketolog/AnketologClient-php": "1.0.*"
+    "anketolog/AnketologClient-php": "^1.0"
   }
 }
 ```
