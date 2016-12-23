@@ -67,7 +67,6 @@ class SurveyReportAggregate implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'question_id' => 'int',
         'answer_count' => 'int',
         'answers' => '\AnketologClient\Model\SurveyReportAggregateAnswer[]',
         'filters' => '\AnketologClient\Model\SurveyReportFilter[]'
@@ -83,7 +82,6 @@ class SurveyReportAggregate implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'question_id' => 'question_id',
         'answer_count' => 'answer_count',
         'answers' => 'answers',
         'filters' => 'filters'
@@ -99,7 +97,6 @@ class SurveyReportAggregate implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'question_id' => 'setQuestionId',
         'answer_count' => 'setAnswerCount',
         'answers' => 'setAnswers',
         'filters' => 'setFilters'
@@ -115,7 +112,6 @@ class SurveyReportAggregate implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'question_id' => 'getQuestionId',
         'answer_count' => 'getAnswerCount',
         'answers' => 'getAnswers',
         'filters' => 'getFilters'
@@ -142,7 +138,6 @@ class SurveyReportAggregate implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['question_id'] = isset($data['question_id']) ? $data['question_id'] : null;
         $this->container['answer_count'] = isset($data['answer_count']) ? $data['answer_count'] : null;
         $this->container['answers'] = isset($data['answers']) ? $data['answers'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
@@ -156,9 +151,6 @@ class SurveyReportAggregate implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['question_id'] === null) {
-            $invalid_properties[] = "'question_id' can't be null";
-        }
         if ($this->container['answer_count'] === null) {
             $invalid_properties[] = "'answer_count' can't be null";
         }
@@ -179,9 +171,6 @@ class SurveyReportAggregate implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['question_id'] === null) {
-            return false;
-        }
         if ($this->container['answer_count'] === null) {
             return false;
         }
@@ -194,27 +183,6 @@ class SurveyReportAggregate implements ArrayAccess
         return true;
     }
 
-
-    /**
-     * Gets question_id
-     * @return int
-     */
-    public function getQuestionId()
-    {
-        return $this->container['question_id'];
-    }
-
-    /**
-     * Sets question_id
-     * @param int $question_id ID вопроса
-     * @return $this
-     */
-    public function setQuestionId($question_id)
-    {
-        $this->container['question_id'] = $question_id;
-
-        return $this;
-    }
 
     /**
      * Gets answer_count

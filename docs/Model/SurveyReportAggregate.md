@@ -3,7 +3,6 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**question_id** | **int** | ID вопроса | 
 **answer_count** | **int** | Количество ответов | 
 **answers** | [**\AnketologClient\Model\SurveyReportAggregateAnswer[]**](SurveyReportAggregateAnswer.md) | Список ответов | 
 **filters** | [**\AnketologClient\Model\SurveyReportFilter[]**](SurveyReportFilter.md) |  | 
