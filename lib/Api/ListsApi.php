@@ -11,9 +11,9 @@
  */
 
 /**
- * Anketolog API v2.0
+ * Анкетолог API v2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))
+ * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))  ### Ключ для доступа к API  Ключ для доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/api)
  *
  * OpenAPI spec version: 2.0
  * 
@@ -133,7 +133,7 @@ class ListsApi
             throw new \InvalidArgumentException('Missing the required parameter $lists_city_list_body when calling listsCityList');
         }
         // parse inputs
-        $resourcePath = "/lists/city/list";
+        $resourcePath = "/lists/geo/city";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -173,7 +173,7 @@ class ListsApi
                 $httpBody,
                 $headerParams,
                 'string',
-                '/lists/city/list'
+                '/lists/geo/city'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
@@ -218,7 +218,7 @@ class ListsApi
     public function listsCountryListWithHttpInfo()
     {
         // parse inputs
-        $resourcePath = "/lists/country/list";
+        $resourcePath = "/lists/geo/country";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -253,7 +253,7 @@ class ListsApi
                 $httpBody,
                 $headerParams,
                 '\AnketologClient\Model\RegionItem',
-                '/lists/country/list'
+                '/lists/geo/country'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\RegionItem', $httpHeader), $statusCode, $httpHeader);
@@ -304,7 +304,7 @@ class ListsApi
             throw new \InvalidArgumentException('Missing the required parameter $lists_region_list_body when calling listsRegionList');
         }
         // parse inputs
-        $resourcePath = "/lists/region/list";
+        $resourcePath = "/lists/geo/region";
         $httpBody = '';
         $queryParams = array();
         $headerParams = array();
@@ -344,7 +344,7 @@ class ListsApi
                 $httpBody,
                 $headerParams,
                 '\AnketologClient\Model\CityItem',
-                '/lists/region/list'
+                '/lists/geo/region'
             );
 
             return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CityItem', $httpHeader), $statusCode, $httpHeader);

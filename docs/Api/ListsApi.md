@@ -4,9 +4,9 @@ All URIs are relative to *https://apiv2.anketolog.loc/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**listsCityList**](ListsApi.md#listsCityList) | **POST** /lists/city/list | 
-[**listsCountryList**](ListsApi.md#listsCountryList) | **POST** /lists/country/list | 
-[**listsRegionList**](ListsApi.md#listsRegionList) | **POST** /lists/region/list | 
+[**listsCityList**](ListsApi.md#listsCityList) | **POST** /lists/geo/city | 
+[**listsCountryList**](ListsApi.md#listsCountryList) | **POST** /lists/geo/country | 
+[**listsRegionList**](ListsApi.md#listsRegionList) | **POST** /lists/geo/region | 
 
 
 # **listsCityList**
