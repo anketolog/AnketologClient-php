@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyReportFilterDate implements ArrayAccess
+class SurveyReportFilterDate extends SurveyReportFilter implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -73,7 +73,7 @@ class SurveyReportFilterDate implements ArrayAccess
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -87,7 +87,7 @@ class SurveyReportFilterDate implements ArrayAccess
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -101,7 +101,7 @@ class SurveyReportFilterDate implements ArrayAccess
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -115,7 +115,7 @@ class SurveyReportFilterDate implements ArrayAccess
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -134,6 +134,8 @@ class SurveyReportFilterDate implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        parent::__construct($data);
+
         $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
         $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
     }

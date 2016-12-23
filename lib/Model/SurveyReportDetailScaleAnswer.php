@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyReportDetailScaleAnswer implements ArrayAccess
+class SurveyReportDetailScaleAnswer extends SurveyReportDetailAnswer implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,12 +67,12 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'ranges' => '\AnketologClient\Model\SurveyReportDetailScaleAnswerRanges[]'
+        'answer' => 'object'
     );
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -80,12 +80,12 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'ranges' => 'ranges'
+        'answer' => 'answer'
     );
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -93,12 +93,12 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'ranges' => 'setRanges'
+        'answer' => 'setAnswer'
     );
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -106,12 +106,12 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'ranges' => 'getRanges'
+        'answer' => 'getAnswer'
     );
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -130,7 +130,9 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['ranges'] = isset($data['ranges']) ? $data['ranges'] : null;
+        parent::__construct($data);
+
+        $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
     }
 
     /**
@@ -141,8 +143,8 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['ranges'] === null) {
-            $invalid_properties[] = "'ranges' can't be null";
+        if ($this->container['answer'] === null) {
+            $invalid_properties[] = "'answer' can't be null";
         }
         return $invalid_properties;
     }
@@ -155,7 +157,7 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['ranges'] === null) {
+        if ($this->container['answer'] === null) {
             return false;
         }
         return true;
@@ -163,22 +165,22 @@ class SurveyReportDetailScaleAnswer implements ArrayAccess
 
 
     /**
-     * Gets ranges
-     * @return \AnketologClient\Model\SurveyReportDetailScaleAnswerRanges[]
+     * Gets answer
+     * @return object
      */
-    public function getRanges()
+    public function getAnswer()
     {
-        return $this->container['ranges'];
+        return $this->container['answer'];
     }
 
     /**
-     * Sets ranges
-     * @param \AnketologClient\Model\SurveyReportDetailScaleAnswerRanges[] $ranges
+     * Sets answer
+     * @param object $answer
      * @return $this
      */
-    public function setRanges($ranges)
+    public function setAnswer($answer)
     {
-        $this->container['ranges'] = $ranges;
+        $this->container['answer'] = $answer;
 
         return $this;
     }

@@ -66,7 +66,7 @@ class SurveyReportFilter implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        
+        'swagger_type' => 'string'
     );
 
     public static function swaggerTypes()
@@ -79,7 +79,7 @@ class SurveyReportFilter implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        
+        'swagger_type' => 'swagger_type'
     );
 
     public static function attributeMap()
@@ -92,7 +92,7 @@ class SurveyReportFilter implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        
+        'swagger_type' => 'setSwaggerType'
     );
 
     public static function setters()
@@ -105,7 +105,7 @@ class SurveyReportFilter implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        
+        'swagger_type' => 'getSwaggerType'
     );
 
     public static function getters()
@@ -129,6 +129,11 @@ class SurveyReportFilter implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['swagger_type'] = isset($data['swagger_type']) ? $data['swagger_type'] : null;
+
+        // Initialize discriminator property with the model name.
+        $discrimintor = array_search('swagger_type', self::$attributeMap);
+        $this->container[$discrimintor] = static::$swaggerModelName;
     }
 
     /**
@@ -139,6 +144,9 @@ class SurveyReportFilter implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['swagger_type'] === null) {
+            $invalid_properties[] = "'swagger_type' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -150,9 +158,33 @@ class SurveyReportFilter implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['swagger_type'] === null) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets swagger_type
+     * @return string
+     */
+    public function getSwaggerType()
+    {
+        return $this->container['swagger_type'];
+    }
+
+    /**
+     * Sets swagger_type
+     * @param string $swagger_type
+     * @return $this
+     */
+    public function setSwaggerType($swagger_type)
+    {
+        $this->container['swagger_type'] = $swagger_type;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

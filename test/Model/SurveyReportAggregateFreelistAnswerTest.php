@@ -95,4 +95,12 @@ class SurveyReportAggregateFreelistAnswerTest extends \PHPUnit_Framework_TestCas
 
     }
 
+    /**
+     * Test attribute "answer"
+     */
+    public function testPropertyAnswer()
+    {
+
+    }
+
 }

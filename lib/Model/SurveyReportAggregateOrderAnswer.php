@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyReportAggregateOrderAnswer implements ArrayAccess
+class SurveyReportAggregateOrderAnswer extends SurveyReportAggregateAnswer implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,12 +67,12 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'options' => '\AnketologClient\Model\SurveyReportAggregateOrderAnswerOptions[]'
+        'answer' => 'object'
     );
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -80,12 +80,12 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'options' => 'options'
+        'answer' => 'answer'
     );
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -93,12 +93,12 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'options' => 'setOptions'
+        'answer' => 'setAnswer'
     );
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -106,12 +106,12 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'options' => 'getOptions'
+        'answer' => 'getAnswer'
     );
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -130,7 +130,9 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
+        parent::__construct($data);
+
+        $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
     }
 
     /**
@@ -141,8 +143,8 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['options'] === null) {
-            $invalid_properties[] = "'options' can't be null";
+        if ($this->container['answer'] === null) {
+            $invalid_properties[] = "'answer' can't be null";
         }
         return $invalid_properties;
     }
@@ -155,7 +157,7 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['options'] === null) {
+        if ($this->container['answer'] === null) {
             return false;
         }
         return true;
@@ -163,22 +165,22 @@ class SurveyReportAggregateOrderAnswer implements ArrayAccess
 
 
     /**
-     * Gets options
-     * @return \AnketologClient\Model\SurveyReportAggregateOrderAnswerOptions[]
+     * Gets answer
+     * @return object
      */
-    public function getOptions()
+    public function getAnswer()
     {
-        return $this->container['options'];
+        return $this->container['answer'];
     }
 
     /**
-     * Sets options
-     * @param \AnketologClient\Model\SurveyReportAggregateOrderAnswerOptions[] $options
+     * Sets answer
+     * @param object $answer
      * @return $this
      */
-    public function setOptions($options)
+    public function setAnswer($answer)
     {
-        $this->container['options'] = $options;
+        $this->container['answer'] = $answer;
 
         return $this;
     }

@@ -96,9 +96,9 @@ class SurveyReportAggregateMultiselectAnswerTest extends \PHPUnit_Framework_Test
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "answer"
      */
-    public function testPropertyOptions()
+    public function testPropertyAnswer()
     {
 
     }

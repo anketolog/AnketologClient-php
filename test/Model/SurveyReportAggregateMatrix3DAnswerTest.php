@@ -96,9 +96,9 @@ class SurveyReportAggregateMatrix3DAnswerTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test attribute "rows"
+     * Test attribute "answer"
      */
-    public function testPropertyRows()
+    public function testPropertyAnswer()
     {
 
     }

@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
+class SurveyReportAggregateRatingscaleAnswer extends SurveyReportAggregateAnswer implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,12 +67,12 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        
+        'answer' => 'object[]'
     );
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -80,12 +80,12 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        
+        'answer' => 'answer'
     );
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -93,12 +93,12 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        
+        'answer' => 'setAnswer'
     );
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -106,12 +106,12 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        
+        'answer' => 'getAnswer'
     );
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -130,6 +130,9 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        parent::__construct($data);
+
+        $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
     }
 
     /**
@@ -140,6 +143,9 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['answer'] === null) {
+            $invalid_properties[] = "'answer' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -151,9 +157,33 @@ class SurveyReportAggregateRatingscaleAnswer implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['answer'] === null) {
+            return false;
+        }
         return true;
     }
 
+
+    /**
+     * Gets answer
+     * @return object[]
+     */
+    public function getAnswer()
+    {
+        return $this->container['answer'];
+    }
+
+    /**
+     * Sets answer
+     * @param object[] $answer
+     * @return $this
+     */
+    public function setAnswer($answer)
+    {
+        $this->container['answer'] = $answer;
+
+        return $this;
+    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset

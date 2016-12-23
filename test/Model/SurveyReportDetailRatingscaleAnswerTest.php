@@ -96,17 +96,9 @@ class SurveyReportDetailRatingscaleAnswerTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test attribute "options"
+     * Test attribute "answer"
      */
-    public function testPropertyOptions()
-    {
-
-    }
-
-    /**
-     * Test attribute "total"
-     */
-    public function testPropertyTotal()
+    public function testPropertyAnswer()
     {
 
     }

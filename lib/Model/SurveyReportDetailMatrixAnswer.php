@@ -54,7 +54,7 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyReportDetailMatrixAnswer implements ArrayAccess
+class SurveyReportDetailMatrixAnswer extends SurveyReportDetailAnswer implements ArrayAccess
 {
     /**
       * The original name of the model.
@@ -67,12 +67,12 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'rows' => '\AnketologClient\Model\SurveyReportDetailMatrixAnswerRows[]'
+        'answer' => 'object'
     );
 
     public static function swaggerTypes()
     {
-        return self::$swaggerTypes;
+        return self::$swaggerTypes + parent::swaggerTypes();
     }
 
     /**
@@ -80,12 +80,12 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'rows' => 'rows'
+        'answer' => 'answer'
     );
 
     public static function attributeMap()
     {
-        return self::$attributeMap;
+        return parent::attributeMap() + self::$attributeMap;
     }
 
     /**
@@ -93,12 +93,12 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'rows' => 'setRows'
+        'answer' => 'setAnswer'
     );
 
     public static function setters()
     {
-        return self::$setters;
+        return parent::setters() + self::$setters;
     }
 
     /**
@@ -106,12 +106,12 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'rows' => 'getRows'
+        'answer' => 'getAnswer'
     );
 
     public static function getters()
     {
-        return self::$getters;
+        return parent::getters() + self::$getters;
     }
 
     
@@ -130,7 +130,9 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
+        parent::__construct($data);
+
+        $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
     }
 
     /**
@@ -141,8 +143,8 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['rows'] === null) {
-            $invalid_properties[] = "'rows' can't be null";
+        if ($this->container['answer'] === null) {
+            $invalid_properties[] = "'answer' can't be null";
         }
         return $invalid_properties;
     }
@@ -155,7 +157,7 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['rows'] === null) {
+        if ($this->container['answer'] === null) {
             return false;
         }
         return true;
@@ -163,22 +165,22 @@ class SurveyReportDetailMatrixAnswer implements ArrayAccess
 
 
     /**
-     * Gets rows
-     * @return \AnketologClient\Model\SurveyReportDetailMatrixAnswerRows[]
+     * Gets answer
+     * @return object
      */
-    public function getRows()
+    public function getAnswer()
     {
-        return $this->container['rows'];
+        return $this->container['answer'];
     }
 
     /**
-     * Sets rows
-     * @param \AnketologClient\Model\SurveyReportDetailMatrixAnswerRows[] $rows
+     * Sets answer
+     * @param object $answer
      * @return $this
      */
-    public function setRows($rows)
+    public function setAnswer($answer)
     {
-        $this->container['rows'] = $rows;
+        $this->container['answer'] = $answer;
 
         return $this;
     }

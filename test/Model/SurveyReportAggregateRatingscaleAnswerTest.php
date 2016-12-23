@@ -95,4 +95,12 @@ class SurveyReportAggregateRatingscaleAnswerTest extends \PHPUnit_Framework_Test
 
     }
 
+    /**
+     * Test attribute "answer"
+     */
+    public function testPropertyAnswer()
+    {
+
+    }
+
 }

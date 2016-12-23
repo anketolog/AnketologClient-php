@@ -96,9 +96,9 @@ class SurveyReportDetailMatrixAnswerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "rows"
+     * Test attribute "answer"
      */
-    public function testPropertyRows()
+    public function testPropertyAnswer()
     {
 
     }

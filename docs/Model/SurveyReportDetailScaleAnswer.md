@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ranges** | [**\AnketologClient\Model\SurveyReportDetailScaleAnswerRanges[]**](SurveyReportDetailScaleAnswerRanges.md) |  | 
+**answer** | **object** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

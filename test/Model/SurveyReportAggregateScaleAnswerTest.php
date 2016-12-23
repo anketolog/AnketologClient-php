@@ -96,9 +96,9 @@ class SurveyReportAggregateScaleAnswerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "ranges"
+     * Test attribute "answer"
      */
-    public function testPropertyRanges()
+    public function testPropertyAnswer()
     {
 
     }

@@ -95,4 +95,12 @@ class SurveyReportDetailAnswerTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "swagger_type"
+     */
+    public function testPropertySwaggerType()
+    {
+
+    }
+
 }

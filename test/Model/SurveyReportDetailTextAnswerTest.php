@@ -96,9 +96,9 @@ class SurveyReportDetailTextAnswerTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "answer_text"
+     * Test attribute "answer"
      */
-    public function testPropertyAnswerText()
+    public function testPropertyAnswer()
     {
 
     }
