@@ -12,9 +12,9 @@
  */
 
 /**
- * Анкетолог API v2.0
+ * Документация к Анкетолог API версии 2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))  ### Ключ для доступа к API  Ключ для доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/api)
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/docs/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": 0000000 } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": 0000000}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -76,10 +76,10 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
         'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
         'is_multiline' => 'bool',
-        'datatype' => '\AnketologClient\Model\SurveyDatatype',
+        'datatype' => 'string',
         'has_other_answer' => 'bool',
         'options' => '\AnketologClient\Model\SurveyOption[]',
-        'options_sort' => '\AnketologClient\Model\SurveySort'
+        'options_sort' => 'string'
     );
 
     public static function swaggerTypes()
@@ -162,8 +162,40 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
         return parent::getters() + self::$getters;
     }
 
+    const DATATYPE_DEFAULT = 'default';
+    const DATATYPE_INTEGER = 'integer';
+    const DATATYPE_FLOAT = 'float';
+    const OPTIONS_SORT_DEFAULT = 'default';
+    const OPTIONS_SORT_ALPHABET = 'alphabet';
+    const OPTIONS_SORT_RANDOM = 'random';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getDatatypeAllowableValues()
+    {
+        return [
+            self::DATATYPE_DEFAULT,
+            self::DATATYPE_INTEGER,
+            self::DATATYPE_FLOAT,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getOptionsSortAllowableValues()
+    {
+        return [
+            self::OPTIONS_SORT_DEFAULT,
+            self::OPTIONS_SORT_ALPHABET,
+            self::OPTIONS_SORT_RANDOM,
+        ];
+    }
     
 
     /**
@@ -233,6 +265,11 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
         if ($this->container['datatype'] === null) {
             $invalid_properties[] = "'datatype' can't be null";
         }
+        $allowed_values = array("default", "integer", "float");
+        if (!in_array($this->container['datatype'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'datatype', must be one of #{allowed_values}.";
+        }
+
         if ($this->container['has_other_answer'] === null) {
             $invalid_properties[] = "'has_other_answer' can't be null";
         }
@@ -242,6 +279,11 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
         if ($this->container['options_sort'] === null) {
             $invalid_properties[] = "'options_sort' can't be null";
         }
+        $allowed_values = array("default", "alphabet", "random");
+        if (!in_array($this->container['options_sort'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'options_sort', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -283,6 +325,10 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
         if ($this->container['datatype'] === null) {
             return false;
         }
+        $allowed_values = array("default", "integer", "float");
+        if (!in_array($this->container['datatype'], $allowed_values)) {
+            return false;
+        }
         if ($this->container['has_other_answer'] === null) {
             return false;
         }
@@ -290,6 +336,10 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['options_sort'] === null) {
+            return false;
+        }
+        $allowed_values = array("default", "alphabet", "random");
+        if (!in_array($this->container['options_sort'], $allowed_values)) {
             return false;
         }
         return true;
@@ -487,7 +537,7 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
 
     /**
      * Gets datatype
-     * @return \AnketologClient\Model\SurveyDatatype
+     * @return string
      */
     public function getDatatype()
     {
@@ -496,11 +546,15 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
 
     /**
      * Sets datatype
-     * @param \AnketologClient\Model\SurveyDatatype $datatype
+     * @param string $datatype Тип вводимых данных  * `default` - текст * `integer` - целове чилсо * `float` - дробное число
      * @return $this
      */
     public function setDatatype($datatype)
     {
+        $allowed_values = array('default', 'integer', 'float');
+        if (!in_array($datatype, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'datatype', must be one of 'default', 'integer', 'float'");
+        }
         $this->container['datatype'] = $datatype;
 
         return $this;
@@ -550,7 +604,7 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
 
     /**
      * Gets options_sort
-     * @return \AnketologClient\Model\SurveySort
+     * @return string
      */
     public function getOptionsSort()
     {
@@ -559,11 +613,15 @@ class SurveyQuestionFreelist extends SurveyQuestion implements ArrayAccess
 
     /**
      * Sets options_sort
-     * @param \AnketologClient\Model\SurveySort $options_sort
+     * @param string $options_sort Сортировка  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке
      * @return $this
      */
     public function setOptionsSort($options_sort)
     {
+        $allowed_values = array('default', 'alphabet', 'random');
+        if (!in_array($options_sort, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'options_sort', must be one of 'default', 'alphabet', 'random'");
+        }
         $this->container['options_sort'] = $options_sort;
 
         return $this;

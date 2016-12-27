@@ -12,9 +12,9 @@
  */
 
 /**
- * Анкетолог API v2.0
+ * Документация к Анкетолог API версии 2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))  ### Ключ для доступа к API  Ключ для доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/api)
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/docs/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": 0000000 } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": 0000000}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -72,7 +72,7 @@ class SurveyReport implements ArrayAccess
         'create_date' => 'int',
         'expire_date' => 'int',
         'status' => 'string',
-        'format' => '\AnketologClient\Model\SurveyReportFormat',
+        'format' => 'string',
         'url' => 'string'
     );
 
@@ -142,6 +142,12 @@ class SurveyReport implements ArrayAccess
     const STATUS_PROCESS = 'process';
     const STATUS_COMPLETE = 'complete';
     const STATUS_FAIL = 'fail';
+    const FORMAT_EXCEL = 'excel';
+    const FORMAT_SPSS = 'spss';
+    const FORMAT_PDF = 'pdf';
+    const FORMAT_WORD = 'word';
+    const FORMAT_FPDF = 'fpdf';
+    const FORMAT_FWORD = 'fword';
     
 
     
@@ -156,6 +162,22 @@ class SurveyReport implements ArrayAccess
             self::STATUS_PROCESS,
             self::STATUS_COMPLETE,
             self::STATUS_FAIL,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getFormatAllowableValues()
+    {
+        return [
+            self::FORMAT_EXCEL,
+            self::FORMAT_SPSS,
+            self::FORMAT_PDF,
+            self::FORMAT_WORD,
+            self::FORMAT_FPDF,
+            self::FORMAT_FWORD,
         ];
     }
     
@@ -212,6 +234,11 @@ class SurveyReport implements ArrayAccess
         if ($this->container['format'] === null) {
             $invalid_properties[] = "'format' can't be null";
         }
+        $allowed_values = array("excel", "spss", "pdf", "word", "fpdf", "fword");
+        if (!in_array($this->container['format'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'format', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -243,6 +270,10 @@ class SurveyReport implements ArrayAccess
             return false;
         }
         if ($this->container['format'] === null) {
+            return false;
+        }
+        $allowed_values = array("excel", "spss", "pdf", "word", "fpdf", "fword");
+        if (!in_array($this->container['format'], $allowed_values)) {
             return false;
         }
         return true;
@@ -360,7 +391,7 @@ class SurveyReport implements ArrayAccess
 
     /**
      * Gets format
-     * @return \AnketologClient\Model\SurveyReportFormat
+     * @return string
      */
     public function getFormat()
     {
@@ -369,11 +400,15 @@ class SurveyReport implements ArrayAccess
 
     /**
      * Sets format
-     * @param \AnketologClient\Model\SurveyReportFormat $format
+     * @param string $format Формат отчета  * `excel` - Детальная статистика в формате EXCEL * `spss` - Детальная статистика в формате SPSS * `fpdf` - Детальная статистика в формате PDF * `fword` - Детальная статистика в формате WORD  * `pdf` - Сгрупированная статистика в формате PDF * `word` - Сгрупированная статистика в формате WORD
      * @return $this
      */
     public function setFormat($format)
     {
+        $allowed_values = array('excel', 'spss', 'pdf', 'word', 'fpdf', 'fword');
+        if (!in_array($format, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'format', must be one of 'excel', 'spss', 'pdf', 'word', 'fpdf', 'fword'");
+        }
         $this->container['format'] = $format;
 
         return $this;

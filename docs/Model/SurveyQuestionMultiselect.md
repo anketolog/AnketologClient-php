@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **is_limited** | **bool** | Ограничение кол-ва выбранных вариантов | 
 **limit** | [**\AnketologClient\Model\SurveyOptionLimit**](SurveyOptionLimit.md) |  | 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
-**options_sort** | [**\AnketologClient\Model\SurveySort**](SurveySort.md) |  | 
+**options_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

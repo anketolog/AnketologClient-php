@@ -96,8 +96,8 @@ manager@anketolog.ru
 
 ```bash
 java -jar /vagrant/swagger-codegen-cli.jar generate \
-    -i anketolog.yaml \
-    -o AnketologClient-php \
+    -i /vagrant/anketolog.ru/www/protected/modules/api/external/v2/docs/anketolog.yaml \
+    -o /vagrant/anketolog.ru/www/protected/modules/api/external/v2/AnketologClient-php \
     -l php \
     --invoker-package AnketologClient \
     --model-package AnketologClient\\Model \

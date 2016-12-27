@@ -12,9 +12,9 @@
  */
 
 /**
- * Анкетолог API v2.0
+ * Документация к Анкетолог API версии 2.0
  *
- * ### Клиенты:  * [**PHP**](https://github.com/anketolog/AnketologClient-php)  ### Клиенты на других языках:  * Скачайте конфигурационный [swagger-файл](https://anketolog.ru/api/external/v2/docs/anketolog.yaml) * Воспользуйтесь официальным [генератором](http://swagger.io/swagger-codegen/)   ([список поддерживаемых языков](https://github.com/swagger-api/swagger-codegen#api-clients))  ### Ключ для доступа к API  Ключ для доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/api)
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/docs/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": 0000000 } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": 0000000}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -70,8 +70,8 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
         'label_text' => 'string',
         'text_color' => 'string',
         'background_color' => 'string',
-        'orientation' => '\AnketologClient\Model\WidgetOrientation',
-        'align' => '\AnketologClient\Model\WidgetAlign'
+        'orientation' => 'string',
+        'align' => 'string'
     );
 
     public static function swaggerTypes()
@@ -133,8 +133,48 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
         return self::$getters;
     }
 
+    const ORIENTATION_VERTICAL = 'vertical';
+    const ORIENTATION_HORIZONTAL = 'horizontal';
+    const ALIGN_LEFT_MIDDLE = 'left-middle';
+    const ALIGN_LEFT_TOP = 'left-top';
+    const ALIGN_LEFT_BOTTOM = 'left-bottom';
+    const ALIGN_RIGHT_MIDDLE = 'right-middle';
+    const ALIGN_RIGHT_TOP = 'right-top';
+    const ALIGN_RIGHT_BOTTOM = 'right-bottom';
+    const ALIGN_TOP_CENTER = 'top-center';
+    const ALIGN_BOTTOM_CENTER = 'bottom-center';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getOrientationAllowableValues()
+    {
+        return [
+            self::ORIENTATION_VERTICAL,
+            self::ORIENTATION_HORIZONTAL,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getAlignAllowableValues()
+    {
+        return [
+            self::ALIGN_LEFT_MIDDLE,
+            self::ALIGN_LEFT_TOP,
+            self::ALIGN_LEFT_BOTTOM,
+            self::ALIGN_RIGHT_MIDDLE,
+            self::ALIGN_RIGHT_TOP,
+            self::ALIGN_RIGHT_BOTTOM,
+            self::ALIGN_TOP_CENTER,
+            self::ALIGN_BOTTOM_CENTER,
+        ];
+    }
     
 
     /**
@@ -180,9 +220,19 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
         if ($this->container['orientation'] === null) {
             $invalid_properties[] = "'orientation' can't be null";
         }
+        $allowed_values = array("vertical", "horizontal");
+        if (!in_array($this->container['orientation'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'orientation', must be one of #{allowed_values}.";
+        }
+
         if ($this->container['align'] === null) {
             $invalid_properties[] = "'align' can't be null";
         }
+        $allowed_values = array("left-middle", "left-top", "left-bottom", "right-middle", "right-top", "right-bottom", "top-center", "bottom-center");
+        if (!in_array($this->container['align'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'align', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -209,7 +259,15 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
         if ($this->container['orientation'] === null) {
             return false;
         }
+        $allowed_values = array("vertical", "horizontal");
+        if (!in_array($this->container['orientation'], $allowed_values)) {
+            return false;
+        }
         if ($this->container['align'] === null) {
+            return false;
+        }
+        $allowed_values = array("left-middle", "left-top", "left-bottom", "right-middle", "right-top", "right-bottom", "top-center", "bottom-center");
+        if (!in_array($this->container['align'], $allowed_values)) {
             return false;
         }
         return true;
@@ -302,7 +360,7 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
 
     /**
      * Gets orientation
-     * @return \AnketologClient\Model\WidgetOrientation
+     * @return string
      */
     public function getOrientation()
     {
@@ -311,11 +369,15 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
 
     /**
      * Sets orientation
-     * @param \AnketologClient\Model\WidgetOrientation $orientation
+     * @param string $orientation Положение виджета  * `vertical` - вертикальное * `horizontal` - горизонтальное
      * @return $this
      */
     public function setOrientation($orientation)
     {
+        $allowed_values = array('vertical', 'horizontal');
+        if (!in_array($orientation, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'orientation', must be one of 'vertical', 'horizontal'");
+        }
         $this->container['orientation'] = $orientation;
 
         return $this;
@@ -323,7 +385,7 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
 
     /**
      * Gets align
-     * @return \AnketologClient\Model\WidgetAlign
+     * @return string
      */
     public function getAlign()
     {
@@ -332,11 +394,15 @@ class PersonalpageCollectorUpdatewidgetBody implements ArrayAccess
 
     /**
      * Sets align
-     * @param \AnketologClient\Model\WidgetAlign $align
+     * @param string $align Выравнивание виджета  * `left-middle` - слева в центре * `left-top` - слева вверху * `left-bottom` - слева внизу * `right-middle` - справа в центре * `right-top` - справа вверху * `right-bottom` - справа внизу * `top-center` - сверху в центре * `bottom-center` - снизу в центре
      * @return $this
      */
     public function setAlign($align)
     {
+        $allowed_values = array('left-middle', 'left-top', 'left-bottom', 'right-middle', 'right-top', 'right-bottom', 'top-center', 'bottom-center');
+        if (!in_array($align, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'align', must be one of 'left-middle', 'left-top', 'left-bottom', 'right-middle', 'right-top', 'right-bottom', 'top-center', 'bottom-center'");
+        }
         $this->container['align'] = $align;
 
         return $this;
