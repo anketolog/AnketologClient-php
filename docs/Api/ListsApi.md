@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **listsCityList**
-> string listsCityList($lists_city_list_body)
+> \AnketologClient\Model\CityItem listsCityList($lists_city_list_body)
 
 
 
@@ -46,7 +46,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\CityItem**](../Model/CityItem.md)
 
 ### Authorization
 
@@ -60,7 +60,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsCountryList**
-> \AnketologClient\Model\RegionItem listsCountryList()
+> \AnketologClient\Model\CountryItem listsCountryList()
 
 
 
@@ -92,7 +92,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\AnketologClient\Model\RegionItem**](../Model/RegionItem.md)
+[**\AnketologClient\Model\CountryItem**](../Model/CountryItem.md)
 
 ### Authorization
 
@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **listsRegionList**
-> \AnketologClient\Model\CityItem listsRegionList($lists_region_list_body)
+> \AnketologClient\Model\RegionItem listsRegionList($lists_region_list_body)
 
 
 
@@ -142,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\AnketologClient\Model\CityItem**](../Model/CityItem.md)
+[**\AnketologClient\Model\RegionItem**](../Model/RegionItem.md)
 
 ### Authorization
 

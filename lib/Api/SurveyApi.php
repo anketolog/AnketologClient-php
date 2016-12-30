@@ -2736,7 +2736,7 @@ class SurveyApi
      * 
      *
      * @param \AnketologClient\Model\SurveySubscribeDeleteBody $survey_subscribe_delete_body  (required)
-     * @return \AnketologClient\Model\CountryItem
+     * @return string
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeDelete($survey_subscribe_delete_body)
@@ -2751,7 +2751,7 @@ class SurveyApi
      * 
      *
      * @param \AnketologClient\Model\SurveySubscribeDeleteBody $survey_subscribe_delete_body  (required)
-     * @return Array of \AnketologClient\Model\CountryItem, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveySubscribeDeleteWithHttpInfo($survey_subscribe_delete_body)
@@ -2800,15 +2800,15 @@ class SurveyApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\AnketologClient\Model\CountryItem',
+                'string',
                 '/survey/subscribe/delete'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CountryItem', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CountryItem', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:

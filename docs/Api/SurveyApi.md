@@ -1487,7 +1487,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeDelete**
-> \AnketologClient\Model\CountryItem surveySubscribeDelete($survey_subscribe_delete_body)
+> string surveySubscribeDelete($survey_subscribe_delete_body)
 
 
 
@@ -1523,7 +1523,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\AnketologClient\Model\CountryItem**](../Model/CountryItem.md)
+**string**
 
 ### Authorization
 

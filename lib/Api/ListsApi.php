@@ -108,7 +108,7 @@ class ListsApi
      * 
      *
      * @param \AnketologClient\Model\ListsCityListBody $lists_city_list_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\CityItem
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsCityList($lists_city_list_body)
@@ -123,7 +123,7 @@ class ListsApi
      * 
      *
      * @param \AnketologClient\Model\ListsCityListBody $lists_city_list_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\CityItem, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsCityListWithHttpInfo($lists_city_list_body)
@@ -172,15 +172,15 @@ class ListsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\CityItem',
                 '/lists/geo/city'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CityItem', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CityItem', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -198,7 +198,7 @@ class ListsApi
      *
      * 
      *
-     * @return \AnketologClient\Model\RegionItem
+     * @return \AnketologClient\Model\CountryItem
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsCountryList()
@@ -212,7 +212,7 @@ class ListsApi
      *
      * 
      *
-     * @return Array of \AnketologClient\Model\RegionItem, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\CountryItem, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsCountryListWithHttpInfo()
@@ -252,15 +252,15 @@ class ListsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\AnketologClient\Model\RegionItem',
+                '\AnketologClient\Model\CountryItem',
                 '/lists/geo/country'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\RegionItem', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CountryItem', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\RegionItem', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CountryItem', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -279,7 +279,7 @@ class ListsApi
      * 
      *
      * @param \AnketologClient\Model\ListsRegionListBody $lists_region_list_body  (required)
-     * @return \AnketologClient\Model\CityItem
+     * @return \AnketologClient\Model\RegionItem
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsRegionList($lists_region_list_body)
@@ -294,7 +294,7 @@ class ListsApi
      * 
      *
      * @param \AnketologClient\Model\ListsRegionListBody $lists_region_list_body  (required)
-     * @return Array of \AnketologClient\Model\CityItem, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\RegionItem, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function listsRegionListWithHttpInfo($lists_region_list_body)
@@ -343,15 +343,15 @@ class ListsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\AnketologClient\Model\CityItem',
+                '\AnketologClient\Model\RegionItem',
                 '/lists/geo/region'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\CityItem', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\RegionItem', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\CityItem', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\RegionItem', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
