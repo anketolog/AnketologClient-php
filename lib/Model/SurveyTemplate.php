@@ -66,7 +66,10 @@ class SurveyTemplate implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int'
+        'id' => 'int',
+        'name' => 'string',
+        'description' => 'string',
+        'is_available' => 'int'
     );
 
     public static function swaggerTypes()
@@ -79,7 +82,10 @@ class SurveyTemplate implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id'
+        'id' => 'id',
+        'name' => 'name',
+        'description' => 'description',
+        'is_available' => 'is_available'
     );
 
     public static function attributeMap()
@@ -92,7 +98,10 @@ class SurveyTemplate implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId'
+        'id' => 'setId',
+        'name' => 'setName',
+        'description' => 'setDescription',
+        'is_available' => 'setIsAvailable'
     );
 
     public static function setters()
@@ -105,7 +114,10 @@ class SurveyTemplate implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId'
+        'id' => 'getId',
+        'name' => 'getName',
+        'description' => 'getDescription',
+        'is_available' => 'getIsAvailable'
     );
 
     public static function getters()
@@ -130,6 +142,9 @@ class SurveyTemplate implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
+        $this->container['is_available'] = isset($data['is_available']) ? $data['is_available'] : null;
     }
 
     /**
@@ -172,6 +187,69 @@ class SurveyTemplate implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     * @param string $description
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_available
+     * @return int
+     */
+    public function getIsAvailable()
+    {
+        return $this->container['is_available'];
+    }
+
+    /**
+     * Sets is_available
+     * @param int $is_available
+     * @return $this
+     */
+    public function setIsAvailable($is_available)
+    {
+        $this->container['is_available'] = $is_available;
 
         return $this;
     }

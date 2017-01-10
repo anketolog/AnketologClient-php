@@ -103,4 +103,28 @@ class SurveyTemplateTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "description"
+     */
+    public function testPropertyDescription()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_available"
+     */
+    public function testPropertyIsAvailable()
+    {
+
+    }
+
 }
