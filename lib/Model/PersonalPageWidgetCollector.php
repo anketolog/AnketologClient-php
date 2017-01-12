@@ -12,9 +12,9 @@
  */
 
 /**
- * Документация к Анкетолог API версии 2.0
+ * Документация к Анкетолог API
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/docs/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": 0000000 } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": 0000000}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://${app.service.domain}/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://${app.apiv2.domain}/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://${app.service.domain}/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://${app.apiv2.domain}/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -67,9 +67,12 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'type' => 'string',
-        'name' => 'string',
-        'widget_code' => 'string'
+        'widget_code' => 'string',
+        'label_text' => 'string',
+        'text_color' => 'string',
+        'background_color' => 'string',
+        'orientation' => 'string',
+        'align' => 'string'
     );
 
     public static function swaggerTypes()
@@ -82,9 +85,12 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
      * @var string[]
      */
     protected static $attributeMap = array(
-        'type' => 'type',
-        'name' => 'name',
-        'widget_code' => 'widget_code'
+        'widget_code' => 'widget_code',
+        'label_text' => 'label_text',
+        'text_color' => 'text_color',
+        'background_color' => 'background_color',
+        'orientation' => 'orientation',
+        'align' => 'align'
     );
 
     public static function attributeMap()
@@ -97,9 +103,12 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
      * @var string[]
      */
     protected static $setters = array(
-        'type' => 'setType',
-        'name' => 'setName',
-        'widget_code' => 'setWidgetCode'
+        'widget_code' => 'setWidgetCode',
+        'label_text' => 'setLabelText',
+        'text_color' => 'setTextColor',
+        'background_color' => 'setBackgroundColor',
+        'orientation' => 'setOrientation',
+        'align' => 'setAlign'
     );
 
     public static function setters()
@@ -112,9 +121,12 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
      * @var string[]
      */
     protected static $getters = array(
-        'type' => 'getType',
-        'name' => 'getName',
-        'widget_code' => 'getWidgetCode'
+        'widget_code' => 'getWidgetCode',
+        'label_text' => 'getLabelText',
+        'text_color' => 'getTextColor',
+        'background_color' => 'getBackgroundColor',
+        'orientation' => 'getOrientation',
+        'align' => 'getAlign'
     );
 
     public static function getters()
@@ -122,8 +134,48 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
         return parent::getters() + self::$getters;
     }
 
+    const ORIENTATION_VERTICAL = 'vertical';
+    const ORIENTATION_HORIZONTAL = 'horizontal';
+    const ALIGN_LEFT_MIDDLE = 'left-middle';
+    const ALIGN_LEFT_TOP = 'left-top';
+    const ALIGN_LEFT_BOTTOM = 'left-bottom';
+    const ALIGN_RIGHT_MIDDLE = 'right-middle';
+    const ALIGN_RIGHT_TOP = 'right-top';
+    const ALIGN_RIGHT_BOTTOM = 'right-bottom';
+    const ALIGN_TOP_CENTER = 'top-center';
+    const ALIGN_BOTTOM_CENTER = 'bottom-center';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getOrientationAllowableValues()
+    {
+        return [
+            self::ORIENTATION_VERTICAL,
+            self::ORIENTATION_HORIZONTAL,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getAlignAllowableValues()
+    {
+        return [
+            self::ALIGN_LEFT_MIDDLE,
+            self::ALIGN_LEFT_TOP,
+            self::ALIGN_LEFT_BOTTOM,
+            self::ALIGN_RIGHT_MIDDLE,
+            self::ALIGN_RIGHT_TOP,
+            self::ALIGN_RIGHT_BOTTOM,
+            self::ALIGN_TOP_CENTER,
+            self::ALIGN_BOTTOM_CENTER,
+        ];
+    }
     
 
     /**
@@ -140,9 +192,12 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
     {
         parent::__construct($data);
 
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['widget_code'] = isset($data['widget_code']) ? $data['widget_code'] : null;
+        $this->container['label_text'] = isset($data['label_text']) ? $data['label_text'] : null;
+        $this->container['text_color'] = isset($data['text_color']) ? $data['text_color'] : null;
+        $this->container['background_color'] = isset($data['background_color']) ? $data['background_color'] : null;
+        $this->container['orientation'] = isset($data['orientation']) ? $data['orientation'] : null;
+        $this->container['align'] = isset($data['align']) ? $data['align'] : null;
     }
 
     /**
@@ -153,15 +208,34 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['type'] === null) {
-            $invalid_properties[] = "'type' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalid_properties[] = "'name' can't be null";
-        }
         if ($this->container['widget_code'] === null) {
             $invalid_properties[] = "'widget_code' can't be null";
         }
+        if ($this->container['label_text'] === null) {
+            $invalid_properties[] = "'label_text' can't be null";
+        }
+        if ($this->container['text_color'] === null) {
+            $invalid_properties[] = "'text_color' can't be null";
+        }
+        if ($this->container['background_color'] === null) {
+            $invalid_properties[] = "'background_color' can't be null";
+        }
+        if ($this->container['orientation'] === null) {
+            $invalid_properties[] = "'orientation' can't be null";
+        }
+        $allowed_values = array("vertical", "horizontal");
+        if (!in_array($this->container['orientation'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'orientation', must be one of #{allowed_values}.";
+        }
+
+        if ($this->container['align'] === null) {
+            $invalid_properties[] = "'align' can't be null";
+        }
+        $allowed_values = array("left-middle", "left-top", "left-bottom", "right-middle", "right-top", "right-bottom", "top-center", "bottom-center");
+        if (!in_array($this->container['align'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'align', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -173,60 +247,35 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
      */
     public function valid()
     {
-        if ($this->container['type'] === null) {
-            return false;
-        }
-        if ($this->container['name'] === null) {
-            return false;
-        }
         if ($this->container['widget_code'] === null) {
+            return false;
+        }
+        if ($this->container['label_text'] === null) {
+            return false;
+        }
+        if ($this->container['text_color'] === null) {
+            return false;
+        }
+        if ($this->container['background_color'] === null) {
+            return false;
+        }
+        if ($this->container['orientation'] === null) {
+            return false;
+        }
+        $allowed_values = array("vertical", "horizontal");
+        if (!in_array($this->container['orientation'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['align'] === null) {
+            return false;
+        }
+        $allowed_values = array("left-middle", "left-top", "left-bottom", "right-middle", "right-top", "right-bottom", "top-center", "bottom-center");
+        if (!in_array($this->container['align'], $allowed_values)) {
             return false;
         }
         return true;
     }
 
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Тип способа распространения
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name Название способа распространен
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets widget_code
@@ -245,6 +294,119 @@ class PersonalPageWidgetCollector extends PersonalPageCollector implements Array
     public function setWidgetCode($widget_code)
     {
         $this->container['widget_code'] = $widget_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets label_text
+     * @return string
+     */
+    public function getLabelText()
+    {
+        return $this->container['label_text'];
+    }
+
+    /**
+     * Sets label_text
+     * @param string $label_text Текст кнопки
+     * @return $this
+     */
+    public function setLabelText($label_text)
+    {
+        $this->container['label_text'] = $label_text;
+
+        return $this;
+    }
+
+    /**
+     * Gets text_color
+     * @return string
+     */
+    public function getTextColor()
+    {
+        return $this->container['text_color'];
+    }
+
+    /**
+     * Sets text_color
+     * @param string $text_color Цвет текста кнопки
+     * @return $this
+     */
+    public function setTextColor($text_color)
+    {
+        $this->container['text_color'] = $text_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets background_color
+     * @return string
+     */
+    public function getBackgroundColor()
+    {
+        return $this->container['background_color'];
+    }
+
+    /**
+     * Sets background_color
+     * @param string $background_color Цвет фона кнопки
+     * @return $this
+     */
+    public function setBackgroundColor($background_color)
+    {
+        $this->container['background_color'] = $background_color;
+
+        return $this;
+    }
+
+    /**
+     * Gets orientation
+     * @return string
+     */
+    public function getOrientation()
+    {
+        return $this->container['orientation'];
+    }
+
+    /**
+     * Sets orientation
+     * @param string $orientation Положение виджета  * `vertical` - вертикальное * `horizontal` - горизонтальное
+     * @return $this
+     */
+    public function setOrientation($orientation)
+    {
+        $allowed_values = array('vertical', 'horizontal');
+        if (!in_array($orientation, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'orientation', must be one of 'vertical', 'horizontal'");
+        }
+        $this->container['orientation'] = $orientation;
+
+        return $this;
+    }
+
+    /**
+     * Gets align
+     * @return string
+     */
+    public function getAlign()
+    {
+        return $this->container['align'];
+    }
+
+    /**
+     * Sets align
+     * @param string $align Выравнивание виджета  * `left-middle` - слева в центре * `left-top` - слева вверху * `left-bottom` - слева внизу * `right-middle` - справа в центре * `right-top` - справа вверху * `right-bottom` - справа внизу * `top-center` - сверху в центре * `bottom-center` - снизу в центре
+     * @return $this
+     */
+    public function setAlign($align)
+    {
+        $allowed_values = array('left-middle', 'left-top', 'left-bottom', 'right-middle', 'right-top', 'right-bottom', 'top-center', 'bottom-center');
+        if (!in_array($align, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'align', must be one of 'left-middle', 'left-top', 'left-bottom', 'right-middle', 'right-top', 'right-bottom', 'top-center', 'bottom-center'");
+        }
+        $this->container['align'] = $align;
 
         return $this;
     }

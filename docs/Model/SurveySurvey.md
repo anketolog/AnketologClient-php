@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **int** | ID | 
 **create_date** | **int** | Дата создания | 
 **update_date** | **int** | Дата редактирования | [optional] 
-**lock_date** | **int** | Дата блокоровки модератором | [optional] 
+**lock_date** | **int** | Дата блокировки модератором | [optional] 
 **archive_date** | **int** | Дата архивирования | [optional] 
 **suspend_date** | **int** | Дата блокирования по тарифу | [optional] 
 **is_suspended** | **int** | Заблокирована по тарифу | 

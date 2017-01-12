@@ -12,9 +12,9 @@
  */
 
 /**
- * Документация к Анкетолог API версии 2.0
+ * Документация к Анкетолог API
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/docs/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": 0000000 } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": 0000000}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://${app.service.domain}/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://${app.apiv2.domain}/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://${app.service.domain}/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://${app.apiv2.domain}/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -81,7 +81,9 @@ class PersonalPagePersonalPage implements ArrayAccess
         'logo' => '\AnketologClient\Model\FileFile',
         'disable_ad' => 'bool',
         'background_color' => 'string',
-        'background' => '\AnketologClient\Model\FileFile'
+        'background' => '\AnketologClient\Model\FileFile',
+        'categories' => 'string[]',
+        'surveys' => 'int[]'
     );
 
     public static function swaggerTypes()
@@ -108,7 +110,9 @@ class PersonalPagePersonalPage implements ArrayAccess
         'logo' => 'logo',
         'disable_ad' => 'disable_ad',
         'background_color' => 'background_color',
-        'background' => 'background'
+        'background' => 'background',
+        'categories' => 'categories',
+        'surveys' => 'surveys'
     );
 
     public static function attributeMap()
@@ -135,7 +139,9 @@ class PersonalPagePersonalPage implements ArrayAccess
         'logo' => 'setLogo',
         'disable_ad' => 'setDisableAd',
         'background_color' => 'setBackgroundColor',
-        'background' => 'setBackground'
+        'background' => 'setBackground',
+        'categories' => 'setCategories',
+        'surveys' => 'setSurveys'
     );
 
     public static function setters()
@@ -162,7 +168,9 @@ class PersonalPagePersonalPage implements ArrayAccess
         'logo' => 'getLogo',
         'disable_ad' => 'getDisableAd',
         'background_color' => 'getBackgroundColor',
-        'background' => 'getBackground'
+        'background' => 'getBackground',
+        'categories' => 'getCategories',
+        'surveys' => 'getSurveys'
     );
 
     public static function getters()
@@ -201,6 +209,8 @@ class PersonalPagePersonalPage implements ArrayAccess
         $this->container['disable_ad'] = isset($data['disable_ad']) ? $data['disable_ad'] : null;
         $this->container['background_color'] = isset($data['background_color']) ? $data['background_color'] : null;
         $this->container['background'] = isset($data['background']) ? $data['background'] : null;
+        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['surveys'] = isset($data['surveys']) ? $data['surveys'] : null;
     }
 
     /**
@@ -238,6 +248,12 @@ class PersonalPagePersonalPage implements ArrayAccess
         if ($this->container['background_color'] === null) {
             $invalid_properties[] = "'background_color' can't be null";
         }
+        if ($this->container['categories'] === null) {
+            $invalid_properties[] = "'categories' can't be null";
+        }
+        if ($this->container['surveys'] === null) {
+            $invalid_properties[] = "'surveys' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -274,6 +290,12 @@ class PersonalPagePersonalPage implements ArrayAccess
             return false;
         }
         if ($this->container['background_color'] === null) {
+            return false;
+        }
+        if ($this->container['categories'] === null) {
+            return false;
+        }
+        if ($this->container['surveys'] === null) {
             return false;
         }
         return true;
@@ -591,6 +613,48 @@ class PersonalPagePersonalPage implements ArrayAccess
     public function setBackground($background)
     {
         $this->container['background'] = $background;
+
+        return $this;
+    }
+
+    /**
+     * Gets categories
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->container['categories'];
+    }
+
+    /**
+     * Sets categories
+     * @param string[] $categories Категории
+     * @return $this
+     */
+    public function setCategories($categories)
+    {
+        $this->container['categories'] = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Gets surveys
+     * @return int[]
+     */
+    public function getSurveys()
+    {
+        return $this->container['surveys'];
+    }
+
+    /**
+     * Sets surveys
+     * @param int[] $surveys ID опросов
+     * @return $this
+     */
+    public function setSurveys($surveys)
+    {
+        $this->container['surveys'] = $surveys;
 
         return $this;
     }

@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **targeting** | [**\AnketologClient\Model\CampaignTargeting**](CampaignTargeting.md) |  | 
 **unique_respondents** | **bool** | Исключить повторные ответы | 
 **answer_count** | **int** | Количество ответов | 
-**answer_price** | **int** | Стоимсоть ответа | 
+**answer_price** | **int** | Стоимость ответа | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

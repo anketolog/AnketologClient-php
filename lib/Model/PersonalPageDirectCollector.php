@@ -12,9 +12,9 @@
  */
 
 /**
- * Документация к Анкетолог API версии 2.0
+ * Документация к Анкетолог API
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/docs/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": 0000000 } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": 0000000}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://${app.service.domain}/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://${app.apiv2.domain}/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://${app.service.domain}/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://${app.apiv2.domain}/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -67,8 +67,6 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'type' => 'string',
-        'name' => 'string',
         'direct_url' => 'string'
     );
 
@@ -82,8 +80,6 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
      * @var string[]
      */
     protected static $attributeMap = array(
-        'type' => 'type',
-        'name' => 'name',
         'direct_url' => 'direct_url'
     );
 
@@ -97,8 +93,6 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
      * @var string[]
      */
     protected static $setters = array(
-        'type' => 'setType',
-        'name' => 'setName',
         'direct_url' => 'setDirectUrl'
     );
 
@@ -112,8 +106,6 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
      * @var string[]
      */
     protected static $getters = array(
-        'type' => 'getType',
-        'name' => 'getName',
         'direct_url' => 'getDirectUrl'
     );
 
@@ -140,8 +132,6 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
     {
         parent::__construct($data);
 
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['direct_url'] = isset($data['direct_url']) ? $data['direct_url'] : null;
     }
 
@@ -153,12 +143,6 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['type'] === null) {
-            $invalid_properties[] = "'type' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalid_properties[] = "'name' can't be null";
-        }
         if ($this->container['direct_url'] === null) {
             $invalid_properties[] = "'direct_url' can't be null";
         }
@@ -173,60 +157,12 @@ class PersonalPageDirectCollector extends PersonalPageCollector implements Array
      */
     public function valid()
     {
-        if ($this->container['type'] === null) {
-            return false;
-        }
-        if ($this->container['name'] === null) {
-            return false;
-        }
         if ($this->container['direct_url'] === null) {
             return false;
         }
         return true;
     }
 
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Тип способа распространения
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name Название способа распространения
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
 
     /**
      * Gets direct_url

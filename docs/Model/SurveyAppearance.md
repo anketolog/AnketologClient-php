@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **theme** | **string** | Цветовая схема опроса | 
 **show_startpage** | **bool** | Отображать страницу приветствия | 
 **show_finishpage** | **bool** | Отображать страницу завершения | 
-**startpage_text** | **string** | Текст на странцие приветствия | [optional] 
+**startpage_text** | **string** | Текст на странице приветствия | [optional] 
 **finishpage_text** | **string** | Текст на странице завершения | [optional] 
 **disqualification_text** | **string** | Текст на странице дисквалификации | [optional] 
 **show_captcha** | **bool** | Отображать капчу перед завершения опроса | 
@@ -15,12 +15,12 @@ Name | Type | Description | Notes
 **show_question_count** | **bool** | Отображать количество вопросов | 
 **show_survey_name** | **bool** | Отображать название опроса | 
 **show_previous_btn** | **bool** | Копка \&quot;назад\&quot; | 
-**finish_type** | **string** | Тип завершени анкеты | 
+**finish_type** | **string** | Тип завершения анкеты | 
 **finish_redirect_url** | **string** | URL для редиректа [finish_type&#x3D;redirect] | [optional] 
 **finish_redirect_timeout** | **int** | Таймаут редиректа [finish_type&#x3D;redirect] | [optional] 
 **finish_custom_surveys** | **string[]** | Анкеты на странице завершения [finish_type&#x3D;custom-survey] | [optional] 
 **disable_ad** | **bool** | Отключить рекламу в опросе | 
-**custom_css** | **string** | Пользователькая css | [optional] 
+**custom_css** | **string** | Пользовательская CSS | [optional] 
 **credentials_enable** | **bool** | Заполнения опроса по логину и паролю | 
 **credentials** | [**\AnketologClient\Model\SurveyCredential[]**](SurveyCredential.md) |  | 
 

@@ -18,6 +18,8 @@ Name | Type | Description | Notes
 **disable_ad** | **bool** | Реклама | 
 **background_color** | **string** | Цвет фона | 
 **background** | [**\AnketologClient\Model\FileFile**](FileFile.md) |  | [optional] 
+**categories** | **string[]** | Категории | 
+**surveys** | **int[]** | ID опросов | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

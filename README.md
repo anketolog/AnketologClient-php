@@ -66,14 +66,14 @@ require_once(__DIR__ . '/vendor/autoload.php');
 // Configure API key authorization: apiKey
 AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
 
-$api_instance = new AnketologClient\Api\BillingApi();
+$api_instance = new AnketologClient\Api\BillingPaymentApi();
 $billing_payment_create_body = new \AnketologClient\Model\BillingPaymentCreateBody([
   "amount" => 100.00,
   "profile" => [
     "type" => "legal",
     "legal_name" => "IOM Anketolog",
   ]
-]); // \AnketologClient\Model\BillingPaymentCreateBody | 
+]);
 
 try {
     $result = $api_instance->billingPaymentCreate($billing_payment_create_body);

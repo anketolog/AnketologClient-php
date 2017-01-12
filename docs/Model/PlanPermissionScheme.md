@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **max_survey_extralinks** | **int** | Максимум дополнительных ссылок на опрос | [optional] 
 **max_survey_credentials** | **int** | Максимум доступов по логину/паролю к опросу | [optional] 
 **max_personalpage_surveys** | **int** | Максимум анкет на персональной странице | [optional] 
-**allow_alias** | **bool** | Разрешено создвать именные ссылки | 
+**allow_alias** | **bool** | Разрешено создавать именные ссылки | 
 **allow_theme** | **bool** | Разрешено менять цветовую схему у опросов | 
 **allow_survey_finish** | **bool** | Разрешено настраивать завершение анкеты | 
 **allow_disable_ad** | **bool** | Разрешено отключать рекламу anketolog.ru | 
