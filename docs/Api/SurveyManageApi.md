@@ -1,6 +1,6 @@
 # AnketologClient\SurveyManageApi
 
-All URIs are relative to *https://${app.apiv2.domain}/*
+All URIs are relative to *https://apiv2.anketolog.loc/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
