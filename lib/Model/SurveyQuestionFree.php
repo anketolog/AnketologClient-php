@@ -244,9 +244,6 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
             $invalid_properties[] = "invalid value for 'datatype', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['placeholder'] === null) {
-            $invalid_properties[] = "'placeholder' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -290,9 +287,6 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         }
         $allowed_values = array("default", "integer", "float");
         if (!in_array($this->container['datatype'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['placeholder'] === null) {
             return false;
         }
         return true;

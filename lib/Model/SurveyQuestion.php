@@ -69,7 +69,8 @@ class SurveyQuestion implements ArrayAccess
         'id' => 'int',
         'type' => 'string',
         'type_name' => 'string',
-        'swagger_type' => 'string'
+        'swagger_type' => 'string',
+        'is_enable' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -85,7 +86,8 @@ class SurveyQuestion implements ArrayAccess
         'id' => 'id',
         'type' => 'type',
         'type_name' => 'type_name',
-        'swagger_type' => 'swagger_type'
+        'swagger_type' => 'swagger_type',
+        'is_enable' => 'is_enable'
     );
 
     public static function attributeMap()
@@ -101,7 +103,8 @@ class SurveyQuestion implements ArrayAccess
         'id' => 'setId',
         'type' => 'setType',
         'type_name' => 'setTypeName',
-        'swagger_type' => 'setSwaggerType'
+        'swagger_type' => 'setSwaggerType',
+        'is_enable' => 'setIsEnable'
     );
 
     public static function setters()
@@ -117,7 +120,8 @@ class SurveyQuestion implements ArrayAccess
         'id' => 'getId',
         'type' => 'getType',
         'type_name' => 'getTypeName',
-        'swagger_type' => 'getSwaggerType'
+        'swagger_type' => 'getSwaggerType',
+        'is_enable' => 'getIsEnable'
     );
 
     public static function getters()
@@ -145,6 +149,7 @@ class SurveyQuestion implements ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['type_name'] = isset($data['type_name']) ? $data['type_name'] : null;
         $this->container['swagger_type'] = isset($data['swagger_type']) ? $data['swagger_type'] : null;
+        $this->container['is_enable'] = isset($data['is_enable']) ? $data['is_enable'] : null;
 
         // Initialize discriminator property with the model name.
         $discrimintor = array_search('swagger_type', self::$attributeMap);
@@ -171,6 +176,9 @@ class SurveyQuestion implements ArrayAccess
         if ($this->container['swagger_type'] === null) {
             $invalid_properties[] = "'swagger_type' can't be null";
         }
+        if ($this->container['is_enable'] === null) {
+            $invalid_properties[] = "'is_enable' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -192,6 +200,9 @@ class SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['swagger_type'] === null) {
+            return false;
+        }
+        if ($this->container['is_enable'] === null) {
             return false;
         }
         return true;
@@ -278,6 +289,27 @@ class SurveyQuestion implements ArrayAccess
     public function setSwaggerType($swagger_type)
     {
         $this->container['swagger_type'] = $swagger_type;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_enable
+     * @return bool
+     */
+    public function getIsEnable()
+    {
+        return $this->container['is_enable'];
+    }
+
+    /**
+     * Sets is_enable
+     * @param bool $is_enable Вопрос виден респонденту
+     * @return $this
+     */
+    public function setIsEnable($is_enable)
+    {
+        $this->container['is_enable'] = $is_enable;
 
         return $this;
     }

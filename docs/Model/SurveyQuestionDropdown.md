@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
 **has_other_answer** | **bool** | Вариант \&quot;другое\&quot; | 
 **has_nothing_answer** | **bool** | Вариант \&quot;ничего из вышеперечисленного\&quot; | 
-**placeholder** | **string** | Текст-подсказка в поле ввода | 
+**placeholder** | **string** | Текст-подсказка в поле ввода | [optional] 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
 **options_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | 
 

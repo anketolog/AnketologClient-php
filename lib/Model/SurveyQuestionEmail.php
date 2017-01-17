@@ -207,9 +207,6 @@ class SurveyQuestionEmail extends SurveyQuestion implements ArrayAccess
         if ($this->container['visiblerules'] === null) {
             $invalid_properties[] = "'visiblerules' can't be null";
         }
-        if ($this->container['placeholder'] === null) {
-            $invalid_properties[] = "'placeholder' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -243,9 +240,6 @@ class SurveyQuestionEmail extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['visiblerules'] === null) {
-            return false;
-        }
-        if ($this->container['placeholder'] === null) {
             return false;
         }
         return true;

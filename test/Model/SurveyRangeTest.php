@@ -103,4 +103,20 @@ class SurveyRangeTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "min_title"
+     */
+    public function testPropertyMinTitle()
+    {
+
+    }
+
+    /**
+     * Test attribute "max_title"
+     */
+    public function testPropertyMaxTitle()
+    {
+
+    }
+
 }

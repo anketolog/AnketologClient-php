@@ -127,4 +127,12 @@ class SurveyQuestionTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "is_enable"
+     */
+    public function testPropertyIsEnable()
+    {
+
+    }
+
 }

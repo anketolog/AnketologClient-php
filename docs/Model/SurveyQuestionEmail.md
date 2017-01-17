@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **has_unable_answer** | **bool** | Вариант \&quot;затрудняюсь ответить\&quot; | 
 **branchrules** | [**\AnketologClient\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
 **visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
-**placeholder** | **string** | Текст-подсказка в поле ввода | 
+**placeholder** | **string** | Текст-подсказка в поле ввода | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

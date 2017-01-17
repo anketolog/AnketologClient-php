@@ -67,7 +67,9 @@ class SurveyRange implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'string'
+        'id' => 'string',
+        'min_title' => 'string',
+        'max_title' => 'string'
     );
 
     public static function swaggerTypes()
@@ -80,7 +82,9 @@ class SurveyRange implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id'
+        'id' => 'id',
+        'min_title' => 'min_title',
+        'max_title' => 'max_title'
     );
 
     public static function attributeMap()
@@ -93,7 +97,9 @@ class SurveyRange implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId'
+        'id' => 'setId',
+        'min_title' => 'setMinTitle',
+        'max_title' => 'setMaxTitle'
     );
 
     public static function setters()
@@ -106,7 +112,9 @@ class SurveyRange implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId'
+        'id' => 'getId',
+        'min_title' => 'getMinTitle',
+        'max_title' => 'getMaxTitle'
     );
 
     public static function getters()
@@ -131,6 +139,8 @@ class SurveyRange implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['min_title'] = isset($data['min_title']) ? $data['min_title'] : null;
+        $this->container['max_title'] = isset($data['max_title']) ? $data['max_title'] : null;
     }
 
     /**
@@ -141,6 +151,15 @@ class SurveyRange implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
+        if ($this->container['min_title'] === null) {
+            $invalid_properties[] = "'min_title' can't be null";
+        }
+        if ($this->container['max_title'] === null) {
+            $invalid_properties[] = "'max_title' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -152,6 +171,15 @@ class SurveyRange implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['id'] === null) {
+            return false;
+        }
+        if ($this->container['min_title'] === null) {
+            return false;
+        }
+        if ($this->container['max_title'] === null) {
+            return false;
+        }
         return true;
     }
 
@@ -173,6 +201,48 @@ class SurveyRange implements ArrayAccess
     public function setId($id)
     {
         $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets min_title
+     * @return string
+     */
+    public function getMinTitle()
+    {
+        return $this->container['min_title'];
+    }
+
+    /**
+     * Sets min_title
+     * @param string $min_title
+     * @return $this
+     */
+    public function setMinTitle($min_title)
+    {
+        $this->container['min_title'] = $min_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets max_title
+     * @return string
+     */
+    public function getMaxTitle()
+    {
+        return $this->container['max_title'];
+    }
+
+    /**
+     * Sets max_title
+     * @param string $max_title
+     * @return $this
+     */
+    public function setMaxTitle($max_title)
+    {
+        $this->container['max_title'] = $max_title;
 
         return $this;
     }

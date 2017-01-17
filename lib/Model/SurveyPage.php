@@ -68,7 +68,7 @@ class SurveyPage implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'false' => 'int',
+        'no' => 'int',
         'questions' => '\AnketologClient\Model\SurveyQuestion[]'
     );
 
@@ -83,7 +83,7 @@ class SurveyPage implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'false' => 'false',
+        'no' => 'no',
         'questions' => 'questions'
     );
 
@@ -98,7 +98,7 @@ class SurveyPage implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'false' => 'setFalse',
+        'no' => 'setNo',
         'questions' => 'setQuestions'
     );
 
@@ -113,7 +113,7 @@ class SurveyPage implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'false' => 'getFalse',
+        'no' => 'getNo',
         'questions' => 'getQuestions'
     );
 
@@ -139,7 +139,7 @@ class SurveyPage implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['false'] = isset($data['false']) ? $data['false'] : null;
+        $this->container['no'] = isset($data['no']) ? $data['no'] : null;
         $this->container['questions'] = isset($data['questions']) ? $data['questions'] : null;
     }
 
@@ -151,6 +151,9 @@ class SurveyPage implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
+        if ($this->container['id'] === null) {
+            $invalid_properties[] = "'id' can't be null";
+        }
         if ($this->container['questions'] === null) {
             $invalid_properties[] = "'questions' can't be null";
         }
@@ -165,6 +168,9 @@ class SurveyPage implements ArrayAccess
      */
     public function valid()
     {
+        if ($this->container['id'] === null) {
+            return false;
+        }
         if ($this->container['questions'] === null) {
             return false;
         }
@@ -194,22 +200,22 @@ class SurveyPage implements ArrayAccess
     }
 
     /**
-     * Gets false
+     * Gets no
      * @return int
      */
-    public function getFalse()
+    public function getNo()
     {
-        return $this->container['false'];
+        return $this->container['no'];
     }
 
     /**
-     * Sets false
-     * @param int $false Номер страницы
+     * Sets no
+     * @param int $no Номер страницы
      * @return $this
      */
-    public function setFalse($false)
+    public function setNo($no)
     {
-        $this->container['false'] = $false;
+        $this->container['no'] = $no;
 
         return $this;
     }

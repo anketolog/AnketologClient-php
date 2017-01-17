@@ -249,9 +249,6 @@ class SurveyQuestionDropdown extends SurveyQuestion implements ArrayAccess
         if ($this->container['has_nothing_answer'] === null) {
             $invalid_properties[] = "'has_nothing_answer' can't be null";
         }
-        if ($this->container['placeholder'] === null) {
-            $invalid_properties[] = "'placeholder' can't be null";
-        }
         if ($this->container['options'] === null) {
             $invalid_properties[] = "'options' can't be null";
         }
@@ -302,9 +299,6 @@ class SurveyQuestionDropdown extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['has_nothing_answer'] === null) {
-            return false;
-        }
-        if ($this->container['placeholder'] === null) {
             return false;
         }
         if ($this->container['options'] === null) {
