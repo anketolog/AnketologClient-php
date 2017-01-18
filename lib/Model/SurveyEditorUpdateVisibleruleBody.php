@@ -68,7 +68,7 @@ class SurveyEditorUpdateVisibleruleBody implements ArrayAccess
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
         'rule_id' => 'int',
-        'config' => '\AnketologClient\Model\SurveyeditoraddVisibleruleConfig'
+        'config' => '\AnketologClient\Model\SurveyeditorupdateVisibleruleConfig'
     );
 
     public static function swaggerTypes()
@@ -221,7 +221,7 @@ class SurveyEditorUpdateVisibleruleBody implements ArrayAccess
 
     /**
      * Gets config
-     * @return \AnketologClient\Model\SurveyeditoraddVisibleruleConfig
+     * @return \AnketologClient\Model\SurveyeditorupdateVisibleruleConfig
      */
     public function getConfig()
     {
@@ -230,7 +230,7 @@ class SurveyEditorUpdateVisibleruleBody implements ArrayAccess
 
     /**
      * Sets config
-     * @param \AnketologClient\Model\SurveyeditoraddVisibleruleConfig $config
+     * @param \AnketologClient\Model\SurveyeditorupdateVisibleruleConfig $config
      * @return $this
      */
     public function setConfig($config)

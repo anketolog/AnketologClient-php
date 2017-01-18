@@ -12,12 +12,14 @@ Method | HTTP request | Description
 [**surveyEditorAddRange**](SurveyEditorApi.md#surveyEditorAddRange) | **POST** /survey/editor/addRange | 
 [**surveyEditorAddRow**](SurveyEditorApi.md#surveyEditorAddRow) | **POST** /survey/editor/addRow | 
 [**surveyEditorAddVisiblerule**](SurveyEditorApi.md#surveyEditorAddVisiblerule) | **POST** /survey/editor/addVisiblerule | 
+[**surveyEditorMoveBranchrule**](SurveyEditorApi.md#surveyEditorMoveBranchrule) | **POST** /survey/editor/moveBranchrule | 
 [**surveyEditorMoveOption**](SurveyEditorApi.md#surveyEditorMoveOption) | **POST** /survey/editor/moveOption | 
 [**surveyEditorMoveOptionValue**](SurveyEditorApi.md#surveyEditorMoveOptionValue) | **POST** /survey/editor/moveOptionValue | 
 [**surveyEditorMovePage**](SurveyEditorApi.md#surveyEditorMovePage) | **POST** /survey/editor/movePage | 
 [**surveyEditorMoveQuestion**](SurveyEditorApi.md#surveyEditorMoveQuestion) | **POST** /survey/editor/moveQuestion | 
 [**surveyEditorMoveRange**](SurveyEditorApi.md#surveyEditorMoveRange) | **POST** /survey/editor/moveRange | 
 [**surveyEditorMoveRow**](SurveyEditorApi.md#surveyEditorMoveRow) | **POST** /survey/editor/moveRow | 
+[**surveyEditorMoveVisiblerule**](SurveyEditorApi.md#surveyEditorMoveVisiblerule) | **POST** /survey/editor/moveVisiblerule | 
 [**surveyEditorRemoveBranchrule**](SurveyEditorApi.md#surveyEditorRemoveBranchrule) | **POST** /survey/editor/removeBranchrule | 
 [**surveyEditorRemoveOption**](SurveyEditorApi.md#surveyEditorRemoveOption) | **POST** /survey/editor/removeOption | 
 [**surveyEditorRemoveOptionValue**](SurveyEditorApi.md#surveyEditorRemoveOptionValue) | **POST** /survey/editor/removeOptionValue | 
@@ -435,6 +437,56 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **surveyEditorMoveBranchrule**
+> \AnketologClient\Model\SurveyBranchrule surveyEditorMoveBranchrule($survey_editor_move_branchrule_body)
+
+
+
+Перемещение
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+
+$api_instance = new AnketologClient\Api\SurveyEditorApi();
+$survey_editor_move_branchrule_body = new \AnketologClient\Model\SurveyEditorMoveBranchruleBody(); // \AnketologClient\Model\SurveyEditorMoveBranchruleBody | 
+
+try {
+    $result = $api_instance->surveyEditorMoveBranchrule($survey_editor_move_branchrule_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SurveyEditorApi->surveyEditorMoveBranchrule: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **survey_editor_move_branchrule_body** | [**\AnketologClient\Model\SurveyEditorMoveBranchruleBody**](../Model/\AnketologClient\Model\SurveyEditorMoveBranchruleBody.md)|  |
+
+### Return type
+
+[**\AnketologClient\Model\SurveyBranchrule**](../Model/SurveyBranchrule.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **surveyEditorMoveOption**
 > \AnketologClient\Model\SurveyOption surveyEditorMoveOption($survey_editor_move_option_body)
 
@@ -735,8 +787,58 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
+# **surveyEditorMoveVisiblerule**
+> \AnketologClient\Model\SurveyVisiblerule surveyEditorMoveVisiblerule($survey_editor_move_visiblerule_body)
+
+
+
+Перемещение
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+
+$api_instance = new AnketologClient\Api\SurveyEditorApi();
+$survey_editor_move_visiblerule_body = new \AnketologClient\Model\SurveyEditorMoveVisibleruleBody(); // \AnketologClient\Model\SurveyEditorMoveVisibleruleBody | 
+
+try {
+    $result = $api_instance->surveyEditorMoveVisiblerule($survey_editor_move_visiblerule_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SurveyEditorApi->surveyEditorMoveVisiblerule: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **survey_editor_move_visiblerule_body** | [**\AnketologClient\Model\SurveyEditorMoveVisibleruleBody**](../Model/\AnketologClient\Model\SurveyEditorMoveVisibleruleBody.md)|  |
+
+### Return type
+
+[**\AnketologClient\Model\SurveyVisiblerule**](../Model/SurveyVisiblerule.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
 # **surveyEditorRemoveBranchrule**
-> string surveyEditorRemoveBranchrule($survey_editor_remove_branchrule_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveBranchrule($survey_editor_remove_branchrule_body)
 
 
 
@@ -772,7 +874,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -786,7 +888,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemoveOption**
-> string surveyEditorRemoveOption($survey_editor_remove_option_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveOption($survey_editor_remove_option_body)
 
 
 
@@ -822,7 +924,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -836,7 +938,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemoveOptionValue**
-> string surveyEditorRemoveOptionValue($survey_editor_remove_option_value_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveOptionValue($survey_editor_remove_option_value_body)
 
 
 
@@ -872,7 +974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -886,7 +988,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemovePage**
-> string surveyEditorRemovePage($survey_editor_remove_page_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemovePage($survey_editor_remove_page_body)
 
 
 
@@ -922,7 +1024,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -936,7 +1038,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemoveQuestion**
-> string surveyEditorRemoveQuestion($survey_editor_remove_question_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveQuestion($survey_editor_remove_question_body)
 
 
 
@@ -972,7 +1074,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -986,7 +1088,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemoveRange**
-> string surveyEditorRemoveRange($survey_editor_remove_range_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveRange($survey_editor_remove_range_body)
 
 
 
@@ -1022,7 +1124,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -1036,7 +1138,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemoveRow**
-> string surveyEditorRemoveRow($survey_editor_remove_row_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveRow($survey_editor_remove_row_body)
 
 
 
@@ -1072,7 +1174,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
@@ -1086,7 +1188,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyEditorRemoveVisiblerule**
-> string surveyEditorRemoveVisiblerule($survey_editor_remove_visiblerule_body)
+> \AnketologClient\Model\InlineResponse200 surveyEditorRemoveVisiblerule($survey_editor_remove_visiblerule_body)
 
 
 
@@ -1122,7 +1224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

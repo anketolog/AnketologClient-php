@@ -77,7 +77,7 @@ class SurveySurvey implements ArrayAccess
         'is_locked' => 'int',
         'is_archive' => 'int',
         'revision_id' => 'int',
-        'personalpage' => '\AnketologClient\Model\SurveyPersonalpage',
+        'personalpage' => '\AnketologClient\Model\SurveyPersonalPage',
         'meta' => '\AnketologClient\Model\SurveyMeta',
         'settings' => '\AnketologClient\Model\SurveySettings'
     );
@@ -476,7 +476,7 @@ class SurveySurvey implements ArrayAccess
 
     /**
      * Gets personalpage
-     * @return \AnketologClient\Model\SurveyPersonalpage
+     * @return \AnketologClient\Model\SurveyPersonalPage
      */
     public function getPersonalpage()
     {
@@ -485,7 +485,7 @@ class SurveySurvey implements ArrayAccess
 
     /**
      * Sets personalpage
-     * @param \AnketologClient\Model\SurveyPersonalpage $personalpage
+     * @param \AnketologClient\Model\SurveyPersonalPage $personalpage
      * @return $this
      */
     public function setPersonalpage($personalpage)

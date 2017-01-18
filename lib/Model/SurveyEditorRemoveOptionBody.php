@@ -66,7 +66,8 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int'
+        'survey_id' => 'int',
+        'option_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id'
+        'survey_id' => 'survey_id',
+        'option_id' => 'option_id'
     );
 
     public static function attributeMap()
@@ -92,7 +94,8 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId'
+        'survey_id' => 'setSurveyId',
+        'option_id' => 'setOptionId'
     );
 
     public static function setters()
@@ -105,7 +108,8 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId'
+        'survey_id' => 'getSurveyId',
+        'option_id' => 'getOptionId'
     );
 
     public static function getters()
@@ -130,6 +134,7 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
+        $this->container['option_id'] = isset($data['option_id']) ? $data['option_id'] : null;
     }
 
     /**
@@ -143,6 +148,9 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
+        if ($this->container['option_id'] === null) {
+            $invalid_properties[] = "'option_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -155,6 +163,9 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
     public function valid()
     {
         if ($this->container['survey_id'] === null) {
+            return false;
+        }
+        if ($this->container['option_id'] === null) {
             return false;
         }
         return true;
@@ -178,6 +189,27 @@ class SurveyEditorRemoveOptionBody implements ArrayAccess
     public function setSurveyId($survey_id)
     {
         $this->container['survey_id'] = $survey_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets option_id
+     * @return int
+     */
+    public function getOptionId()
+    {
+        return $this->container['option_id'];
+    }
+
+    /**
+     * Sets option_id
+     * @param int $option_id ID
+     * @return $this
+     */
+    public function setOptionId($option_id)
+    {
+        $this->container['option_id'] = $option_id;
 
         return $this;
     }

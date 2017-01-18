@@ -141,10 +141,37 @@ class SurveyeditoraddBranchruleConfigEvents implements ArrayAccess
         return self::$getters;
     }
 
-    const OPERATOR_AND = 'and';
-    const OPERATOR_OR = 'or';
+    const TYPE_HAS_ANSWER = 'has-answer';
+    const TYPE_MISSING_ANSWER = 'missing-answer';
+    const TYPE_SELECT_OPTION = 'select-option';
+    const TYPE_NOT_SELECT_OPTION = 'not-select-option';
+    const TYPE_SELECT_ANY_OPTION = 'select-any-option';
+    const TYPE_UNABLE_ANSWER = 'unable-answer';
+    const TYPE_SET_ORDER = 'set-order';
+    const TYPE_SET_VALUE = 'set-value';
+    const OPERATOR_EQ = 'eq';
+    const OPERATOR_GT = 'gt';
+    const OPERATOR_LT = 'lt';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_HAS_ANSWER,
+            self::TYPE_MISSING_ANSWER,
+            self::TYPE_SELECT_OPTION,
+            self::TYPE_NOT_SELECT_OPTION,
+            self::TYPE_SELECT_ANY_OPTION,
+            self::TYPE_UNABLE_ANSWER,
+            self::TYPE_SET_ORDER,
+            self::TYPE_SET_VALUE,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -153,8 +180,9 @@ class SurveyeditoraddBranchruleConfigEvents implements ArrayAccess
     public function getOperatorAllowableValues()
     {
         return [
-            self::OPERATOR_AND,
-            self::OPERATOR_OR,
+            self::OPERATOR_EQ,
+            self::OPERATOR_GT,
+            self::OPERATOR_LT,
         ];
     }
     
@@ -192,10 +220,15 @@ class SurveyeditoraddBranchruleConfigEvents implements ArrayAccess
         if ($this->container['type'] === null) {
             $invalid_properties[] = "'type' can't be null";
         }
+        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
         if ($this->container['operator'] === null) {
             $invalid_properties[] = "'operator' can't be null";
         }
-        $allowed_values = array("and", "or");
+        $allowed_values = array("eq", "gt", "lt");
         if (!in_array($this->container['operator'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'operator', must be one of #{allowed_values}.";
         }
@@ -214,10 +247,14 @@ class SurveyeditoraddBranchruleConfigEvents implements ArrayAccess
         if ($this->container['type'] === null) {
             return false;
         }
+        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
         if ($this->container['operator'] === null) {
             return false;
         }
-        $allowed_values = array("and", "or");
+        $allowed_values = array("eq", "gt", "lt");
         if (!in_array($this->container['operator'], $allowed_values)) {
             return false;
         }
@@ -241,6 +278,10 @@ class SurveyeditoraddBranchruleConfigEvents implements ArrayAccess
      */
     public function setType($type)
     {
+        $allowed_values = array('has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'set-order', 'set-value');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'set-order', 'set-value'");
+        }
         $this->container['type'] = $type;
 
         return $this;
@@ -383,14 +424,14 @@ class SurveyeditoraddBranchruleConfigEvents implements ArrayAccess
 
     /**
      * Sets operator
-     * @param string $operator Логический оператор  * `and` - логическое \"и\" * `or` - логическое \"или\"
+     * @param string $operator Оператор сравнения  * `eq` - равен * `gt` - больше * `lt` - меньше
      * @return $this
      */
     public function setOperator($operator)
     {
-        $allowed_values = array('and', 'or');
+        $allowed_values = array('eq', 'gt', 'lt');
         if (!in_array($operator, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'operator', must be one of 'and', 'or'");
+            throw new \InvalidArgumentException("Invalid value for 'operator', must be one of 'eq', 'gt', 'lt'");
         }
         $this->container['operator'] = $operator;
 

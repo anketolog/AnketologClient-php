@@ -68,7 +68,7 @@ class SurveyEditorUpdateBranchruleBody implements ArrayAccess
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
         'rule_id' => 'int',
-        'config' => '\AnketologClient\Model\SurveyeditoraddBranchruleConfig'
+        'config' => '\AnketologClient\Model\SurveyeditorupdateBranchruleConfig'
     );
 
     public static function swaggerTypes()
@@ -221,7 +221,7 @@ class SurveyEditorUpdateBranchruleBody implements ArrayAccess
 
     /**
      * Gets config
-     * @return \AnketologClient\Model\SurveyeditoraddBranchruleConfig
+     * @return \AnketologClient\Model\SurveyeditorupdateBranchruleConfig
      */
     public function getConfig()
     {
@@ -230,7 +230,7 @@ class SurveyEditorUpdateBranchruleBody implements ArrayAccess
 
     /**
      * Sets config
-     * @param \AnketologClient\Model\SurveyeditoraddBranchruleConfig $config
+     * @param \AnketologClient\Model\SurveyeditorupdateBranchruleConfig $config
      * @return $this
      */
     public function setConfig($config)

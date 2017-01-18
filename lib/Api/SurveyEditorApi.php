@@ -831,6 +831,97 @@ class SurveyEditorApi
     }
 
     /**
+     * Operation surveyEditorMoveBranchrule
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyEditorMoveBranchruleBody $survey_editor_move_branchrule_body  (required)
+     * @return \AnketologClient\Model\SurveyBranchrule
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyEditorMoveBranchrule($survey_editor_move_branchrule_body)
+    {
+        list($response) = $this->surveyEditorMoveBranchruleWithHttpInfo($survey_editor_move_branchrule_body);
+        return $response;
+    }
+
+    /**
+     * Operation surveyEditorMoveBranchruleWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyEditorMoveBranchruleBody $survey_editor_move_branchrule_body  (required)
+     * @return Array of \AnketologClient\Model\SurveyBranchrule, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyEditorMoveBranchruleWithHttpInfo($survey_editor_move_branchrule_body)
+    {
+        // verify the required parameter 'survey_editor_move_branchrule_body' is set
+        if ($survey_editor_move_branchrule_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_editor_move_branchrule_body when calling surveyEditorMoveBranchrule');
+        }
+        // parse inputs
+        $resourcePath = "/survey/editor/moveBranchrule";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($survey_editor_move_branchrule_body)) {
+            $_tempBody = $survey_editor_move_branchrule_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\SurveyBranchrule',
+                '/survey/editor/moveBranchrule'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyBranchrule', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyBranchrule', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation surveyEditorMoveOption
      *
      * 
@@ -1377,12 +1468,103 @@ class SurveyEditorApi
     }
 
     /**
+     * Operation surveyEditorMoveVisiblerule
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyEditorMoveVisibleruleBody $survey_editor_move_visiblerule_body  (required)
+     * @return \AnketologClient\Model\SurveyVisiblerule
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyEditorMoveVisiblerule($survey_editor_move_visiblerule_body)
+    {
+        list($response) = $this->surveyEditorMoveVisibleruleWithHttpInfo($survey_editor_move_visiblerule_body);
+        return $response;
+    }
+
+    /**
+     * Operation surveyEditorMoveVisibleruleWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyEditorMoveVisibleruleBody $survey_editor_move_visiblerule_body  (required)
+     * @return Array of \AnketologClient\Model\SurveyVisiblerule, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyEditorMoveVisibleruleWithHttpInfo($survey_editor_move_visiblerule_body)
+    {
+        // verify the required parameter 'survey_editor_move_visiblerule_body' is set
+        if ($survey_editor_move_visiblerule_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_editor_move_visiblerule_body when calling surveyEditorMoveVisiblerule');
+        }
+        // parse inputs
+        $resourcePath = "/survey/editor/moveVisiblerule";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($survey_editor_move_visiblerule_body)) {
+            $_tempBody = $survey_editor_move_visiblerule_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\SurveyVisiblerule',
+                '/survey/editor/moveVisiblerule'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyVisiblerule', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyVisiblerule', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation surveyEditorRemoveBranchrule
      *
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveBranchruleBody $survey_editor_remove_branchrule_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveBranchrule($survey_editor_remove_branchrule_body)
@@ -1397,7 +1579,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveBranchruleBody $survey_editor_remove_branchrule_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveBranchruleWithHttpInfo($survey_editor_remove_branchrule_body)
@@ -1446,15 +1628,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeBranchrule'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -1473,7 +1655,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveOptionBody $survey_editor_remove_option_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveOption($survey_editor_remove_option_body)
@@ -1488,7 +1670,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveOptionBody $survey_editor_remove_option_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveOptionWithHttpInfo($survey_editor_remove_option_body)
@@ -1537,15 +1719,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeOption'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -1564,7 +1746,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveOptionValueBody $survey_editor_remove_option_value_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveOptionValue($survey_editor_remove_option_value_body)
@@ -1579,7 +1761,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveOptionValueBody $survey_editor_remove_option_value_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveOptionValueWithHttpInfo($survey_editor_remove_option_value_body)
@@ -1628,15 +1810,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeOptionValue'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -1655,7 +1837,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemovePageBody $survey_editor_remove_page_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemovePage($survey_editor_remove_page_body)
@@ -1670,7 +1852,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemovePageBody $survey_editor_remove_page_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemovePageWithHttpInfo($survey_editor_remove_page_body)
@@ -1719,15 +1901,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removePage'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -1746,7 +1928,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveQuestionBody $survey_editor_remove_question_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveQuestion($survey_editor_remove_question_body)
@@ -1761,7 +1943,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveQuestionBody $survey_editor_remove_question_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveQuestionWithHttpInfo($survey_editor_remove_question_body)
@@ -1810,15 +1992,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeQuestion'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -1837,7 +2019,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveRangeBody $survey_editor_remove_range_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveRange($survey_editor_remove_range_body)
@@ -1852,7 +2034,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveRangeBody $survey_editor_remove_range_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveRangeWithHttpInfo($survey_editor_remove_range_body)
@@ -1901,15 +2083,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeRange'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -1928,7 +2110,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveRowBody $survey_editor_remove_row_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveRow($survey_editor_remove_row_body)
@@ -1943,7 +2125,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveRowBody $survey_editor_remove_row_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveRowWithHttpInfo($survey_editor_remove_row_body)
@@ -1992,15 +2174,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeRow'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
@@ -2019,7 +2201,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveVisibleruleBody $survey_editor_remove_visiblerule_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveVisiblerule($survey_editor_remove_visiblerule_body)
@@ -2034,7 +2216,7 @@ class SurveyEditorApi
      * 
      *
      * @param \AnketologClient\Model\SurveyEditorRemoveVisibleruleBody $survey_editor_remove_visiblerule_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyEditorRemoveVisibleruleWithHttpInfo($survey_editor_remove_visiblerule_body)
@@ -2083,15 +2265,15 @@ class SurveyEditorApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/editor/removeVisiblerule'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:

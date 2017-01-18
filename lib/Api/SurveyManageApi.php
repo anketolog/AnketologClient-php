@@ -381,7 +381,7 @@ class SurveyManageApi
      * 
      *
      * @param \AnketologClient\Model\SurveyManageDeleteBody $survey_manage_delete_body  (required)
-     * @return string
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageDelete($survey_manage_delete_body)
@@ -396,7 +396,7 @@ class SurveyManageApi
      * 
      *
      * @param \AnketologClient\Model\SurveyManageDeleteBody $survey_manage_delete_body  (required)
-     * @return Array of string, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function surveyManageDeleteWithHttpInfo($survey_manage_delete_body)
@@ -445,15 +445,15 @@ class SurveyManageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                'string',
+                '\AnketologClient\Model\InlineResponse200',
                 '/survey/manage/delete'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, 'string', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), 'string', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:

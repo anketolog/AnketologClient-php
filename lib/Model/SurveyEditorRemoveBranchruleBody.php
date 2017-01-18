@@ -66,7 +66,8 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int'
+        'survey_id' => 'int',
+        'rule_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id'
+        'survey_id' => 'survey_id',
+        'rule_id' => 'rule_id'
     );
 
     public static function attributeMap()
@@ -92,7 +94,8 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId'
+        'survey_id' => 'setSurveyId',
+        'rule_id' => 'setRuleId'
     );
 
     public static function setters()
@@ -105,7 +108,8 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId'
+        'survey_id' => 'getSurveyId',
+        'rule_id' => 'getRuleId'
     );
 
     public static function getters()
@@ -130,6 +134,7 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
+        $this->container['rule_id'] = isset($data['rule_id']) ? $data['rule_id'] : null;
     }
 
     /**
@@ -143,6 +148,9 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
+        if ($this->container['rule_id'] === null) {
+            $invalid_properties[] = "'rule_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -155,6 +163,9 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
     public function valid()
     {
         if ($this->container['survey_id'] === null) {
+            return false;
+        }
+        if ($this->container['rule_id'] === null) {
             return false;
         }
         return true;
@@ -178,6 +189,27 @@ class SurveyEditorRemoveBranchruleBody implements ArrayAccess
     public function setSurveyId($survey_id)
     {
         $this->container['survey_id'] = $survey_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets rule_id
+     * @return int
+     */
+    public function getRuleId()
+    {
+        return $this->container['rule_id'];
+    }
+
+    /**
+     * Sets rule_id
+     * @param int $rule_id ID
+     * @return $this
+     */
+    public function setRuleId($rule_id)
+    {
+        $this->container['rule_id'] = $rule_id;
 
         return $this;
     }

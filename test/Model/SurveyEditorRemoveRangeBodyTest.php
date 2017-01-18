@@ -103,4 +103,12 @@ class SurveyEditorRemoveRangeBodyTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "range_id"
+     */
+    public function testPropertyRangeId()
+    {
+
+    }
+
 }

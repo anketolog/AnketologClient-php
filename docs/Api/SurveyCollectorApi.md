@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveyCollectorRemoveextralink**
-> string surveyCollectorRemoveextralink($survey_collector_removeextralink_body)
+> \AnketologClient\Model\InlineResponse200 surveyCollectorRemoveextralink($survey_collector_removeextralink_body)
 
 
 
@@ -251,7 +251,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

@@ -103,4 +103,12 @@ class SurveyEditorRemoveOptionBodyTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "option_id"
+     */
+    public function testPropertyOptionId()
+    {
+
+    }
+
 }

@@ -66,7 +66,8 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int'
+        'survey_id' => 'int',
+        'row_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id'
+        'survey_id' => 'survey_id',
+        'row_id' => 'row_id'
     );
 
     public static function attributeMap()
@@ -92,7 +94,8 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId'
+        'survey_id' => 'setSurveyId',
+        'row_id' => 'setRowId'
     );
 
     public static function setters()
@@ -105,7 +108,8 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId'
+        'survey_id' => 'getSurveyId',
+        'row_id' => 'getRowId'
     );
 
     public static function getters()
@@ -130,6 +134,7 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
+        $this->container['row_id'] = isset($data['row_id']) ? $data['row_id'] : null;
     }
 
     /**
@@ -143,6 +148,9 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
+        if ($this->container['row_id'] === null) {
+            $invalid_properties[] = "'row_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -155,6 +163,9 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
     public function valid()
     {
         if ($this->container['survey_id'] === null) {
+            return false;
+        }
+        if ($this->container['row_id'] === null) {
             return false;
         }
         return true;
@@ -178,6 +189,27 @@ class SurveyEditorRemoveRowBody implements ArrayAccess
     public function setSurveyId($survey_id)
     {
         $this->container['survey_id'] = $survey_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets row_id
+     * @return int
+     */
+    public function getRowId()
+    {
+        return $this->container['row_id'];
+    }
+
+    /**
+     * Sets row_id
+     * @param int $row_id ID
+     * @return $this
+     */
+    public function setRowId($row_id)
+    {
+        $this->container['row_id'] = $row_id;
 
         return $this;
     }

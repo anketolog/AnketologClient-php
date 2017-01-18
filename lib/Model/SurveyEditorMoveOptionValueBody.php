@@ -161,6 +161,9 @@ class SurveyEditorMoveOptionValueBody implements ArrayAccess
         if ($this->container['question_id'] === null) {
             $invalid_properties[] = "'question_id' can't be null";
         }
+        if ($this->container['to'] === null) {
+            $invalid_properties[] = "'to' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -176,6 +179,9 @@ class SurveyEditorMoveOptionValueBody implements ArrayAccess
             return false;
         }
         if ($this->container['question_id'] === null) {
+            return false;
+        }
+        if ($this->container['to'] === null) {
             return false;
         }
         return true;

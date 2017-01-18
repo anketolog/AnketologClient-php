@@ -148,6 +148,9 @@ class SurveyEditorRemoveQuestionBody implements ArrayAccess
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
+        if ($this->container['question_id'] === null) {
+            $invalid_properties[] = "'question_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -160,6 +163,9 @@ class SurveyEditorRemoveQuestionBody implements ArrayAccess
     public function valid()
     {
         if ($this->container['survey_id'] === null) {
+            return false;
+        }
+        if ($this->container['question_id'] === null) {
             return false;
         }
         return true;

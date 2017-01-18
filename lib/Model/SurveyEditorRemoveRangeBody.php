@@ -66,7 +66,8 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int'
+        'survey_id' => 'int',
+        'range_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -79,7 +80,8 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id'
+        'survey_id' => 'survey_id',
+        'range_id' => 'range_id'
     );
 
     public static function attributeMap()
@@ -92,7 +94,8 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId'
+        'survey_id' => 'setSurveyId',
+        'range_id' => 'setRangeId'
     );
 
     public static function setters()
@@ -105,7 +108,8 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId'
+        'survey_id' => 'getSurveyId',
+        'range_id' => 'getRangeId'
     );
 
     public static function getters()
@@ -130,6 +134,7 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
+        $this->container['range_id'] = isset($data['range_id']) ? $data['range_id'] : null;
     }
 
     /**
@@ -143,6 +148,9 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
+        if ($this->container['range_id'] === null) {
+            $invalid_properties[] = "'range_id' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -155,6 +163,9 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
     public function valid()
     {
         if ($this->container['survey_id'] === null) {
+            return false;
+        }
+        if ($this->container['range_id'] === null) {
             return false;
         }
         return true;
@@ -178,6 +189,27 @@ class SurveyEditorRemoveRangeBody implements ArrayAccess
     public function setSurveyId($survey_id)
     {
         $this->container['survey_id'] = $survey_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets range_id
+     * @return int
+     */
+    public function getRangeId()
+    {
+        return $this->container['range_id'];
+    }
+
+    /**
+     * Sets range_id
+     * @param int $range_id ID
+     * @return $this
+     */
+    public function setRangeId($range_id)
+    {
+        $this->container['range_id'] = $range_id;
 
         return $this;
     }

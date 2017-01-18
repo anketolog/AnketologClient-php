@@ -103,4 +103,12 @@ class SurveyEditorRemoveRowBodyTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "row_id"
+     */
+    public function testPropertyRowId()
+    {
+
+    }
+
 }

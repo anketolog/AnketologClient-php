@@ -178,6 +178,17 @@ class SurveyEditorApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for surveyEditorMoveBranchrule
+     *
+     * .
+     *
+     */
+    public function testSurveyEditorMoveBranchrule()
+    {
+
+    }
+
+    /**
      * Test case for surveyEditorMoveOption
      *
      * .
@@ -239,6 +250,17 @@ class SurveyEditorApiTest extends \PHPUnit_Framework_TestCase
      *
      */
     public function testSurveyEditorMoveRow()
+    {
+
+    }
+
+    /**
+     * Test case for surveyEditorMoveVisiblerule
+     *
+     * .
+     *
+     */
+    public function testSurveyEditorMoveVisiblerule()
     {
 
     }

@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **is_locked** | **int** | Заблокирована модератором | 
 **is_archive** | **int** | В архиве | 
 **revision_id** | **int** | ID ревизии | 
-**personalpage** | [**\AnketologClient\Model\SurveyPersonalpage**](SurveyPersonalpage.md) |  | [optional] 
+**personalpage** | [**\AnketologClient\Model\SurveyPersonalPage**](SurveyPersonalPage.md) |  | [optional] 
 **meta** | [**\AnketologClient\Model\SurveyMeta**](SurveyMeta.md) |  | 
 **settings** | [**\AnketologClient\Model\SurveySettings**](SurveySettings.md) |  | 
 

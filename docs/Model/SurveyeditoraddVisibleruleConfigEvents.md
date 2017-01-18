@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **option_value_id** | **int** | ID варианта колонки  Для question.type:  * &#x60;matrix3d&#x60; | [optional] 
 **value** | **int** | Значение  Для question.type:  * &#x60;ratingscale&#x60; | [optional] 
 **order** | **int** | Место  Для question.type:  * &#x60;order&#x60; | [optional] 
-**operator** | **string** | Логический оператор  * &#x60;and&#x60; - логическое \&quot;и\&quot; * &#x60;or&#x60; - логическое \&quot;или\&quot; | 
+**operator** | **string** | Оператор сравнения  * &#x60;eq&#x60; - равен * &#x60;gt&#x60; - больше * &#x60;lt&#x60; - меньше | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

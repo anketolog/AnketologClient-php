@@ -68,13 +68,13 @@ class SurveySubscribe implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'email' => 'int',
+        'email' => 'string',
         'survey_id' => 'int',
-        'receive_every' => 'int',
-        'receive_hourly' => 'int',
-        'receive_daily' => 'int',
+        'receive_every' => 'bool',
+        'receive_hourly' => 'bool',
+        'receive_daily' => 'bool',
         'create_date' => 'int',
-        'status' => 'int'
+        'status' => 'string'
     );
 
     public static function swaggerTypes()
@@ -142,8 +142,24 @@ class SurveySubscribe implements ArrayAccess
         return self::$getters;
     }
 
+    const STATUS_ACTIVE = 'active';
+    const STATUS_EXPIRED = 'expired';
+    const STATUS_WAITING = 'waiting';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getStatusAllowableValues()
+    {
+        return [
+            self::STATUS_ACTIVE,
+            self::STATUS_EXPIRED,
+            self::STATUS_WAITING,
+        ];
+    }
     
 
     /**
@@ -200,6 +216,11 @@ class SurveySubscribe implements ArrayAccess
         if ($this->container['status'] === null) {
             $invalid_properties[] = "'status' can't be null";
         }
+        $allowed_values = array("active", "expired", "waiting");
+        if (!in_array($this->container['status'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'status', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -235,6 +256,10 @@ class SurveySubscribe implements ArrayAccess
         if ($this->container['status'] === null) {
             return false;
         }
+        $allowed_values = array("active", "expired", "waiting");
+        if (!in_array($this->container['status'], $allowed_values)) {
+            return false;
+        }
         return true;
     }
 
@@ -262,7 +287,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Gets email
-     * @return int
+     * @return string
      */
     public function getEmail()
     {
@@ -271,7 +296,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Sets email
-     * @param int $email E-Mail
+     * @param string $email E-Mail
      * @return $this
      */
     public function setEmail($email)
@@ -304,7 +329,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Gets receive_every
-     * @return int
+     * @return bool
      */
     public function getReceiveEvery()
     {
@@ -313,7 +338,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Sets receive_every
-     * @param int $receive_every Получать каждый ответ
+     * @param bool $receive_every Получать каждый ответ
      * @return $this
      */
     public function setReceiveEvery($receive_every)
@@ -325,7 +350,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Gets receive_hourly
-     * @return int
+     * @return bool
      */
     public function getReceiveHourly()
     {
@@ -334,7 +359,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Sets receive_hourly
-     * @param int $receive_hourly Получать отчеты ежечасно
+     * @param bool $receive_hourly Получать отчеты ежечасно
      * @return $this
      */
     public function setReceiveHourly($receive_hourly)
@@ -346,7 +371,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Gets receive_daily
-     * @return int
+     * @return bool
      */
     public function getReceiveDaily()
     {
@@ -355,7 +380,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Sets receive_daily
-     * @param int $receive_daily Получать отчеты ежедневно
+     * @param bool $receive_daily Получать отчеты ежедневно
      * @return $this
      */
     public function setReceiveDaily($receive_daily)
@@ -388,7 +413,7 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Gets status
-     * @return int
+     * @return string
      */
     public function getStatus()
     {
@@ -397,11 +422,15 @@ class SurveySubscribe implements ArrayAccess
 
     /**
      * Sets status
-     * @param int $status Статус  * `active` - активна * `expired` - просрочена * `waiting` - ожидает подтверждения
+     * @param string $status Статус  * `active` - активна * `expired` - просрочена * `waiting` - ожидает подтверждения
      * @return $this
      */
     public function setStatus($status)
     {
+        $allowed_values = array('active', 'expired', 'waiting');
+        if (!in_array($status, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'status', must be one of 'active', 'expired', 'waiting'");
+        }
         $this->container['status'] = $status;
 
         return $this;

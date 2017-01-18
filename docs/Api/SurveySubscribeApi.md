@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **surveySubscribeDelete**
-> string surveySubscribeDelete($survey_subscribe_delete_body)
+> \AnketologClient\Model\InlineResponse200 surveySubscribeDelete($survey_subscribe_delete_body)
 
 
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 
