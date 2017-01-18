@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveySettingsTest
+ * SurveyEditorUpdateSettingsBodyTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveySettingsTest Class Doc Comment
+ * SurveyEditorUpdateSettingsBodyTest Class Doc Comment
  *
  * @category    Class */
-// * @description Настройки опроса
+// * @description SurveyEditorUpdateSettingsBody
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveySettingsTest extends \PHPUnit_Framework_TestCase
+class SurveyEditorUpdateSettingsBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,201 +88,25 @@ class SurveySettingsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveySettings"
+     * Test "SurveyEditorUpdateSettingsBody"
      */
-    public function testSurveySettings()
+    public function testSurveyEditorUpdateSettingsBody()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "survey_id"
      */
-    public function testPropertyName()
+    public function testPropertySurveyId()
     {
 
     }
 
     /**
-     * Test attribute "public_result"
+     * Test attribute "config"
      */
-    public function testPropertyPublicResult()
-    {
-
-    }
-
-    /**
-     * Test attribute "multiple_answers"
-     */
-    public function testPropertyMultipleAnswers()
-    {
-
-    }
-
-    /**
-     * Test attribute "logo_id"
-     */
-    public function testPropertyLogoId()
-    {
-
-    }
-
-    /**
-     * Test attribute "language"
-     */
-    public function testPropertyLanguage()
-    {
-
-    }
-
-    /**
-     * Test attribute "theme"
-     */
-    public function testPropertyTheme()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_startpage"
-     */
-    public function testPropertyShowStartpage()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_finishpage"
-     */
-    public function testPropertyShowFinishpage()
-    {
-
-    }
-
-    /**
-     * Test attribute "startpage_text"
-     */
-    public function testPropertyStartpageText()
-    {
-
-    }
-
-    /**
-     * Test attribute "finishpage_text"
-     */
-    public function testPropertyFinishpageText()
-    {
-
-    }
-
-    /**
-     * Test attribute "disqualification_text"
-     */
-    public function testPropertyDisqualificationText()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_captcha"
-     */
-    public function testPropertyShowCaptcha()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_social"
-     */
-    public function testPropertyShowSocial()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_question_count"
-     */
-    public function testPropertyShowQuestionCount()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_survey_name"
-     */
-    public function testPropertyShowSurveyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "show_previous_btn"
-     */
-    public function testPropertyShowPreviousBtn()
-    {
-
-    }
-
-    /**
-     * Test attribute "finish_type"
-     */
-    public function testPropertyFinishType()
-    {
-
-    }
-
-    /**
-     * Test attribute "finish_redirect_url"
-     */
-    public function testPropertyFinishRedirectUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "finish_redirect_timeout"
-     */
-    public function testPropertyFinishRedirectTimeout()
-    {
-
-    }
-
-    /**
-     * Test attribute "finish_custom_surveys"
-     */
-    public function testPropertyFinishCustomSurveys()
-    {
-
-    }
-
-    /**
-     * Test attribute "disable_ad"
-     */
-    public function testPropertyDisableAd()
-    {
-
-    }
-
-    /**
-     * Test attribute "custom_css"
-     */
-    public function testPropertyCustomCss()
-    {
-
-    }
-
-    /**
-     * Test attribute "credentials_enable"
-     */
-    public function testPropertyCredentialsEnable()
-    {
-
-    }
-
-    /**
-     * Test attribute "credentials"
-     */
-    public function testPropertyCredentials()
+    public function testPropertyConfig()
     {
 
     }

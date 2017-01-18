@@ -34,6 +34,7 @@ Method | HTTP request | Description
 [**surveyEditorUpdateQuestion**](SurveyEditorApi.md#surveyEditorUpdateQuestion) | **POST** /survey/editor/updateQuestion | 
 [**surveyEditorUpdateRange**](SurveyEditorApi.md#surveyEditorUpdateRange) | **POST** /survey/editor/updateRange | 
 [**surveyEditorUpdateRow**](SurveyEditorApi.md#surveyEditorUpdateRow) | **POST** /survey/editor/updateRow | 
+[**surveyEditorUpdateSettings**](SurveyEditorApi.md#surveyEditorUpdateSettings) | **POST** /survey/editor/updateSettings | 
 [**surveyEditorUpdateVisiblerule**](SurveyEditorApi.md#surveyEditorUpdateVisiblerule) | **POST** /survey/editor/updateVisiblerule | 
 
 
@@ -1525,6 +1526,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\AnketologClient\Model\SurveyRow**](../Model/SurveyRow.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **surveyEditorUpdateSettings**
+> \AnketologClient\Model\SurveySettings surveyEditorUpdateSettings($survey_editor_update_settings_body)
+
+
+
+Редактирование настроек опроса
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+
+$api_instance = new AnketologClient\Api\SurveyEditorApi();
+$survey_editor_update_settings_body = new \AnketologClient\Model\SurveyEditorUpdateSettingsBody(); // \AnketologClient\Model\SurveyEditorUpdateSettingsBody | 
+
+try {
+    $result = $api_instance->surveyEditorUpdateSettings($survey_editor_update_settings_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SurveyEditorApi->surveyEditorUpdateSettings: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **survey_editor_update_settings_body** | [**\AnketologClient\Model\SurveyEditorUpdateSettingsBody**](../Model/\AnketologClient\Model\SurveyEditorUpdateSettingsBody.md)|  |
+
+### Return type
+
+[**\AnketologClient\Model\SurveySettings**](../Model/SurveySettings.md)
 
 ### Authorization
 

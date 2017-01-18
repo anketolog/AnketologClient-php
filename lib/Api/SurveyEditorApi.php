@@ -2833,6 +2833,97 @@ class SurveyEditorApi
     }
 
     /**
+     * Operation surveyEditorUpdateSettings
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyEditorUpdateSettingsBody $survey_editor_update_settings_body  (required)
+     * @return \AnketologClient\Model\SurveySettings
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyEditorUpdateSettings($survey_editor_update_settings_body)
+    {
+        list($response) = $this->surveyEditorUpdateSettingsWithHttpInfo($survey_editor_update_settings_body);
+        return $response;
+    }
+
+    /**
+     * Operation surveyEditorUpdateSettingsWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyEditorUpdateSettingsBody $survey_editor_update_settings_body  (required)
+     * @return Array of \AnketologClient\Model\SurveySettings, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyEditorUpdateSettingsWithHttpInfo($survey_editor_update_settings_body)
+    {
+        // verify the required parameter 'survey_editor_update_settings_body' is set
+        if ($survey_editor_update_settings_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_editor_update_settings_body when calling surveyEditorUpdateSettings');
+        }
+        // parse inputs
+        $resourcePath = "/survey/editor/updateSettings";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($survey_editor_update_settings_body)) {
+            $_tempBody = $survey_editor_update_settings_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\SurveySettings',
+                '/survey/editor/updateSettings'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveySettings', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveySettings', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
      * Operation surveyEditorUpdateVisiblerule
      *
      * 

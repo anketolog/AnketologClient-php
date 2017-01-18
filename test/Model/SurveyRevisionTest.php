@@ -111,12 +111,4 @@ class SurveyRevisionTest extends \PHPUnit_Framework_TestCase
 
     }
 
-    /**
-     * Test attribute "appearance"
-     */
-    public function testPropertyAppearance()
-    {
-
-    }
-
 }

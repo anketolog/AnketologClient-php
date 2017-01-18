@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyAppearance
+ * SurveyeditorupdateSettingsConfig
  *
  * PHP version 5
  *
@@ -44,29 +44,32 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyAppearance Class Doc Comment
+ * SurveyeditorupdateSettingsConfig Class Doc Comment
  *
  * @category    Class */
- // @description Настройки опроса
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyAppearance implements ArrayAccess
+class SurveyeditorupdateSettingsConfig implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyAppearance';
+    protected static $swaggerModelName = 'surveyeditorupdateSettings_config';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
+        'name' => 'string',
+        'public_result' => 'bool',
+        'multiple_answers' => 'bool',
+        'logo_id' => 'int',
         'language' => 'string',
         'theme' => 'string',
         'show_startpage' => 'bool',
@@ -86,7 +89,7 @@ class SurveyAppearance implements ArrayAccess
         'disable_ad' => 'bool',
         'custom_css' => 'string',
         'credentials_enable' => 'bool',
-        'credentials' => '\AnketologClient\Model\SurveyCredential[]'
+        'credentials' => '\AnketologClient\Model\SurveyeditorupdateSettingsConfigCredentials[]'
     );
 
     public static function swaggerTypes()
@@ -99,6 +102,10 @@ class SurveyAppearance implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
+        'name' => 'name',
+        'public_result' => 'public_result',
+        'multiple_answers' => 'multiple_answers',
+        'logo_id' => 'logo_id',
         'language' => 'language',
         'theme' => 'theme',
         'show_startpage' => 'show_startpage',
@@ -131,6 +138,10 @@ class SurveyAppearance implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
+        'name' => 'setName',
+        'public_result' => 'setPublicResult',
+        'multiple_answers' => 'setMultipleAnswers',
+        'logo_id' => 'setLogoId',
         'language' => 'setLanguage',
         'theme' => 'setTheme',
         'show_startpage' => 'setShowStartpage',
@@ -163,6 +174,10 @@ class SurveyAppearance implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
+        'name' => 'getName',
+        'public_result' => 'getPublicResult',
+        'multiple_answers' => 'getMultipleAnswers',
+        'logo_id' => 'getLogoId',
         'language' => 'getLanguage',
         'theme' => 'getTheme',
         'show_startpage' => 'getShowStartpage',
@@ -262,6 +277,10 @@ class SurveyAppearance implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['public_result'] = isset($data['public_result']) ? $data['public_result'] : null;
+        $this->container['multiple_answers'] = isset($data['multiple_answers']) ? $data['multiple_answers'] : null;
+        $this->container['logo_id'] = isset($data['logo_id']) ? $data['logo_id'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['theme'] = isset($data['theme']) ? $data['theme'] : null;
         $this->container['show_startpage'] = isset($data['show_startpage']) ? $data['show_startpage'] : null;
@@ -292,60 +311,21 @@ class SurveyAppearance implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['language'] === null) {
-            $invalid_properties[] = "'language' can't be null";
-        }
         $allowed_values = array("ru", "en");
         if (!in_array($this->container['language'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'language', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['theme'] === null) {
-            $invalid_properties[] = "'theme' can't be null";
-        }
         $allowed_values = array("default", "blue-green", "brown", "crimson", "gray", "green", "purple", "vinous");
         if (!in_array($this->container['theme'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'theme', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['show_startpage'] === null) {
-            $invalid_properties[] = "'show_startpage' can't be null";
-        }
-        if ($this->container['show_finishpage'] === null) {
-            $invalid_properties[] = "'show_finishpage' can't be null";
-        }
-        if ($this->container['show_captcha'] === null) {
-            $invalid_properties[] = "'show_captcha' can't be null";
-        }
-        if ($this->container['show_social'] === null) {
-            $invalid_properties[] = "'show_social' can't be null";
-        }
-        if ($this->container['show_question_count'] === null) {
-            $invalid_properties[] = "'show_question_count' can't be null";
-        }
-        if ($this->container['show_survey_name'] === null) {
-            $invalid_properties[] = "'show_survey_name' can't be null";
-        }
-        if ($this->container['show_previous_btn'] === null) {
-            $invalid_properties[] = "'show_previous_btn' can't be null";
-        }
-        if ($this->container['finish_type'] === null) {
-            $invalid_properties[] = "'finish_type' can't be null";
-        }
         $allowed_values = array("our-survey", "custom-survey", "redirect");
         if (!in_array($this->container['finish_type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'finish_type', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['disable_ad'] === null) {
-            $invalid_properties[] = "'disable_ad' can't be null";
-        }
-        if ($this->container['credentials_enable'] === null) {
-            $invalid_properties[] = "'credentials_enable' can't be null";
-        }
-        if ($this->container['credentials'] === null) {
-            $invalid_properties[] = "'credentials' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -357,60 +337,105 @@ class SurveyAppearance implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['language'] === null) {
-            return false;
-        }
         $allowed_values = array("ru", "en");
         if (!in_array($this->container['language'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['theme'] === null) {
             return false;
         }
         $allowed_values = array("default", "blue-green", "brown", "crimson", "gray", "green", "purple", "vinous");
         if (!in_array($this->container['theme'], $allowed_values)) {
             return false;
         }
-        if ($this->container['show_startpage'] === null) {
-            return false;
-        }
-        if ($this->container['show_finishpage'] === null) {
-            return false;
-        }
-        if ($this->container['show_captcha'] === null) {
-            return false;
-        }
-        if ($this->container['show_social'] === null) {
-            return false;
-        }
-        if ($this->container['show_question_count'] === null) {
-            return false;
-        }
-        if ($this->container['show_survey_name'] === null) {
-            return false;
-        }
-        if ($this->container['show_previous_btn'] === null) {
-            return false;
-        }
-        if ($this->container['finish_type'] === null) {
-            return false;
-        }
         $allowed_values = array("our-survey", "custom-survey", "redirect");
         if (!in_array($this->container['finish_type'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['disable_ad'] === null) {
-            return false;
-        }
-        if ($this->container['credentials_enable'] === null) {
-            return false;
-        }
-        if ($this->container['credentials'] === null) {
             return false;
         }
         return true;
     }
 
+
+    /**
+     * Gets name
+     * @return string
+     */
+    public function getName()
+    {
+        return $this->container['name'];
+    }
+
+    /**
+     * Sets name
+     * @param string $name Название опроса
+     * @return $this
+     */
+    public function setName($name)
+    {
+        $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_result
+     * @return bool
+     */
+    public function getPublicResult()
+    {
+        return $this->container['public_result'];
+    }
+
+    /**
+     * Sets public_result
+     * @param bool $public_result Публичные результаты опроса
+     * @return $this
+     */
+    public function setPublicResult($public_result)
+    {
+        $this->container['public_result'] = $public_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets multiple_answers
+     * @return bool
+     */
+    public function getMultipleAnswers()
+    {
+        return $this->container['multiple_answers'];
+    }
+
+    /**
+     * Sets multiple_answers
+     * @param bool $multiple_answers Респондент может несколько раз заполнять опрос с одного IP
+     * @return $this
+     */
+    public function setMultipleAnswers($multiple_answers)
+    {
+        $this->container['multiple_answers'] = $multiple_answers;
+
+        return $this;
+    }
+
+    /**
+     * Gets logo_id
+     * @return int
+     */
+    public function getLogoId()
+    {
+        return $this->container['logo_id'];
+    }
+
+    /**
+     * Sets logo_id
+     * @param int $logo_id
+     * @return $this
+     */
+    public function setLogoId($logo_id)
+    {
+        $this->container['logo_id'] = $logo_id;
+
+        return $this;
+    }
 
     /**
      * Gets language
@@ -683,7 +708,7 @@ class SurveyAppearance implements ArrayAccess
 
     /**
      * Sets finish_type
-     * @param string $finish_type Тип завершения анкеты
+     * @param string $finish_type Тип завершения анкеты  * `our-survey` - опросы от anketolog.ru (по умолчанию) * `custom-survey` - собственные опросы * `redirect` - перенаправление на другой URL
      * @return $this
      */
     public function setFinishType($finish_type)
@@ -825,7 +850,7 @@ class SurveyAppearance implements ArrayAccess
 
     /**
      * Gets credentials
-     * @return \AnketologClient\Model\SurveyCredential[]
+     * @return \AnketologClient\Model\SurveyeditorupdateSettingsConfigCredentials[]
      */
     public function getCredentials()
     {
@@ -834,7 +859,7 @@ class SurveyAppearance implements ArrayAccess
 
     /**
      * Sets credentials
-     * @param \AnketologClient\Model\SurveyCredential[] $credentials
+     * @param \AnketologClient\Model\SurveyeditorupdateSettingsConfigCredentials[] $credentials
      * @return $this
      */
     public function setCredentials($credentials)

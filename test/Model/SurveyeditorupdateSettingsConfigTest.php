@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyAppearanceTest
+ * SurveyeditorupdateSettingsConfigTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyAppearanceTest Class Doc Comment
+ * SurveyeditorupdateSettingsConfigTest Class Doc Comment
  *
  * @category    Class */
-// * @description Настройки опроса
+// * @description SurveyeditorupdateSettingsConfig
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyAppearanceTest extends \PHPUnit_Framework_TestCase
+class SurveyeditorupdateSettingsConfigTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,41 @@ class SurveyAppearanceTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyAppearance"
+     * Test "SurveyeditorupdateSettingsConfig"
      */
-    public function testSurveyAppearance()
+    public function testSurveyeditorupdateSettingsConfig()
+    {
+
+    }
+
+    /**
+     * Test attribute "name"
+     */
+    public function testPropertyName()
+    {
+
+    }
+
+    /**
+     * Test attribute "public_result"
+     */
+    public function testPropertyPublicResult()
+    {
+
+    }
+
+    /**
+     * Test attribute "multiple_answers"
+     */
+    public function testPropertyMultipleAnswers()
+    {
+
+    }
+
+    /**
+     * Test attribute "logo_id"
+     */
+    public function testPropertyLogoId()
     {
 
     }

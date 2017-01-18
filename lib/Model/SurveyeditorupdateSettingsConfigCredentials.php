@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyRevision
+ * SurveyeditorupdateSettingsConfigCredentials
  *
  * PHP version 5
  *
@@ -44,31 +44,30 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyRevision Class Doc Comment
+ * SurveyeditorupdateSettingsConfigCredentials Class Doc Comment
  *
  * @category    Class */
- // @description Ревизия опроса
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyRevision implements ArrayAccess
+class SurveyeditorupdateSettingsConfigCredentials implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyRevision';
+    protected static $swaggerModelName = 'surveyeditorupdateSettings_config_credentials';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
-        'struct' => '\AnketologClient\Model\SurveyStruct'
+        'username' => 'string',
+        'password' => 'string'
     );
 
     public static function swaggerTypes()
@@ -81,8 +80,8 @@ class SurveyRevision implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
-        'struct' => 'struct'
+        'username' => 'username',
+        'password' => 'password'
     );
 
     public static function attributeMap()
@@ -95,8 +94,8 @@ class SurveyRevision implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
-        'struct' => 'setStruct'
+        'username' => 'setUsername',
+        'password' => 'setPassword'
     );
 
     public static function setters()
@@ -109,8 +108,8 @@ class SurveyRevision implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
-        'struct' => 'getStruct'
+        'username' => 'getUsername',
+        'password' => 'getPassword'
     );
 
     public static function getters()
@@ -134,8 +133,8 @@ class SurveyRevision implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['struct'] = isset($data['struct']) ? $data['struct'] : null;
+        $this->container['username'] = isset($data['username']) ? $data['username'] : null;
+        $this->container['password'] = isset($data['password']) ? $data['password'] : null;
     }
 
     /**
@@ -146,11 +145,11 @@ class SurveyRevision implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
+        if ($this->container['username'] === null) {
+            $invalid_properties[] = "'username' can't be null";
         }
-        if ($this->container['struct'] === null) {
-            $invalid_properties[] = "'struct' can't be null";
+        if ($this->container['password'] === null) {
+            $invalid_properties[] = "'password' can't be null";
         }
         return $invalid_properties;
     }
@@ -163,10 +162,10 @@ class SurveyRevision implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id'] === null) {
+        if ($this->container['username'] === null) {
             return false;
         }
-        if ($this->container['struct'] === null) {
+        if ($this->container['password'] === null) {
             return false;
         }
         return true;
@@ -174,43 +173,43 @@ class SurveyRevision implements ArrayAccess
 
 
     /**
-     * Gets id
-     * @return int
+     * Gets username
+     * @return string
      */
-    public function getId()
+    public function getUsername()
     {
-        return $this->container['id'];
+        return $this->container['username'];
     }
 
     /**
-     * Sets id
-     * @param int $id ID
+     * Sets username
+     * @param string $username
      * @return $this
      */
-    public function setId($id)
+    public function setUsername($username)
     {
-        $this->container['id'] = $id;
+        $this->container['username'] = $username;
 
         return $this;
     }
 
     /**
-     * Gets struct
-     * @return \AnketologClient\Model\SurveyStruct
+     * Gets password
+     * @return string
      */
-    public function getStruct()
+    public function getPassword()
     {
-        return $this->container['struct'];
+        return $this->container['password'];
     }
 
     /**
-     * Sets struct
-     * @param \AnketologClient\Model\SurveyStruct $struct
+     * Sets password
+     * @param string $password
      * @return $this
      */
-    public function setStruct($struct)
+    public function setPassword($password)
     {
-        $this->container['struct'] = $struct;
+        $this->container['password'] = $password;
 
         return $this;
     }

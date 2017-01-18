@@ -11,7 +11,6 @@ Method | HTTP request | Description
 [**surveyManageInfo**](SurveyManageApi.md#surveyManageInfo) | **POST** /survey/manage/info | 
 [**surveyManageList**](SurveyManageApi.md#surveyManageList) | **POST** /survey/manage/list | 
 [**surveyManageRestore**](SurveyManageApi.md#surveyManageRestore) | **POST** /survey/manage/restore | 
-[**surveyManageUpdate**](SurveyManageApi.md#surveyManageUpdate) | **POST** /survey/manage/update | 
 
 
 # **surveyManageArchive**
@@ -344,56 +343,6 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **survey_manage_restore_body** | [**\AnketologClient\Model\SurveyManageRestoreBody**](../Model/\AnketologClient\Model\SurveyManageRestoreBody.md)|  |
-
-### Return type
-
-[**\AnketologClient\Model\SurveySurvey**](../Model/SurveySurvey.md)
-
-### Authorization
-
-[apiKey](../../README.md#apiKey)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **surveyManageUpdate**
-> \AnketologClient\Model\SurveySurvey surveyManageUpdate($survey_manage_update_body)
-
-
-
-Редактирование опроса
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-// Configure API key authorization: apiKey
-AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
-
-$api_instance = new AnketologClient\Api\SurveyManageApi();
-$survey_manage_update_body = new \AnketologClient\Model\SurveyManageUpdateBody(); // \AnketologClient\Model\SurveyManageUpdateBody | 
-
-try {
-    $result = $api_instance->surveyManageUpdate($survey_manage_update_body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SurveyManageApi->surveyManageUpdate: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **survey_manage_update_body** | [**\AnketologClient\Model\SurveyManageUpdateBody**](../Model/\AnketologClient\Model\SurveyManageUpdateBody.md)|  |
 
 ### Return type
 

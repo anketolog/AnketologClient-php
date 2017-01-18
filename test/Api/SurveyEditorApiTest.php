@@ -420,6 +420,17 @@ class SurveyEditorApiTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test case for surveyEditorUpdateSettings
+     *
+     * .
+     *
+     */
+    public function testSurveyEditorUpdateSettings()
+    {
+
+    }
+
+    /**
      * Test case for surveyEditorUpdateVisiblerule
      *
      * .

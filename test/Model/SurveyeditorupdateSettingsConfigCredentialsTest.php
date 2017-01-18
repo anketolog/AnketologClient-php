@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyManageUpdateBodyTest
+ * SurveyeditorupdateSettingsConfigCredentialsTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyManageUpdateBodyTest Class Doc Comment
+ * SurveyeditorupdateSettingsConfigCredentialsTest Class Doc Comment
  *
  * @category    Class */
-// * @description SurveyManageUpdateBody
+// * @description SurveyeditorupdateSettingsConfigCredentials
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyManageUpdateBodyTest extends \PHPUnit_Framework_TestCase
+class SurveyeditorupdateSettingsConfigCredentialsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,41 +88,25 @@ class SurveyManageUpdateBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyManageUpdateBody"
+     * Test "SurveyeditorupdateSettingsConfigCredentials"
      */
-    public function testSurveyManageUpdateBody()
+    public function testSurveyeditorupdateSettingsConfigCredentials()
     {
 
     }
 
     /**
-     * Test attribute "survey_id"
+     * Test attribute "username"
      */
-    public function testPropertySurveyId()
+    public function testPropertyUsername()
     {
 
     }
 
     /**
-     * Test attribute "settings"
+     * Test attribute "password"
      */
-    public function testPropertySettings()
-    {
-
-    }
-
-    /**
-     * Test attribute "appearance"
-     */
-    public function testPropertyAppearance()
-    {
-
-    }
-
-    /**
-     * Test attribute "struct"
-     */
-    public function testPropertyStruct()
+    public function testPropertyPassword()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyManageUpdateBody
+ * SurveyEditorUpdateSettingsBody
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyManageUpdateBody Class Doc Comment
+ * SurveyEditorUpdateSettingsBody Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyManageUpdateBody implements ArrayAccess
+class SurveyEditorUpdateSettingsBody implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyManageUpdateBody';
+    protected static $swaggerModelName = 'SurveyEditorUpdateSettingsBody';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -67,9 +67,7 @@ class SurveyManageUpdateBody implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
-        'settings' => '\AnketologClient\Model\SurveySettings',
-        'appearance' => '\AnketologClient\Model\SurveyAppearance',
-        'struct' => '\AnketologClient\Model\SurveyStruct'
+        'config' => '\AnketologClient\Model\SurveyeditorupdateSettingsConfig'
     );
 
     public static function swaggerTypes()
@@ -83,9 +81,7 @@ class SurveyManageUpdateBody implements ArrayAccess
      */
     protected static $attributeMap = array(
         'survey_id' => 'survey_id',
-        'settings' => 'settings',
-        'appearance' => 'appearance',
-        'struct' => 'struct'
+        'config' => 'config'
     );
 
     public static function attributeMap()
@@ -99,9 +95,7 @@ class SurveyManageUpdateBody implements ArrayAccess
      */
     protected static $setters = array(
         'survey_id' => 'setSurveyId',
-        'settings' => 'setSettings',
-        'appearance' => 'setAppearance',
-        'struct' => 'setStruct'
+        'config' => 'setConfig'
     );
 
     public static function setters()
@@ -115,9 +109,7 @@ class SurveyManageUpdateBody implements ArrayAccess
      */
     protected static $getters = array(
         'survey_id' => 'getSurveyId',
-        'settings' => 'getSettings',
-        'appearance' => 'getAppearance',
-        'struct' => 'getStruct'
+        'config' => 'getConfig'
     );
 
     public static function getters()
@@ -142,9 +134,7 @@ class SurveyManageUpdateBody implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
-        $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
-        $this->container['appearance'] = isset($data['appearance']) ? $data['appearance'] : null;
-        $this->container['struct'] = isset($data['struct']) ? $data['struct'] : null;
+        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
     }
 
     /**
@@ -158,15 +148,6 @@ class SurveyManageUpdateBody implements ArrayAccess
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
-        if ($this->container['settings'] === null) {
-            $invalid_properties[] = "'settings' can't be null";
-        }
-        if ($this->container['appearance'] === null) {
-            $invalid_properties[] = "'appearance' can't be null";
-        }
-        if ($this->container['struct'] === null) {
-            $invalid_properties[] = "'struct' can't be null";
-        }
         return $invalid_properties;
     }
 
@@ -179,15 +160,6 @@ class SurveyManageUpdateBody implements ArrayAccess
     public function valid()
     {
         if ($this->container['survey_id'] === null) {
-            return false;
-        }
-        if ($this->container['settings'] === null) {
-            return false;
-        }
-        if ($this->container['appearance'] === null) {
-            return false;
-        }
-        if ($this->container['struct'] === null) {
             return false;
         }
         return true;
@@ -216,64 +188,22 @@ class SurveyManageUpdateBody implements ArrayAccess
     }
 
     /**
-     * Gets settings
-     * @return \AnketologClient\Model\SurveySettings
+     * Gets config
+     * @return \AnketologClient\Model\SurveyeditorupdateSettingsConfig
      */
-    public function getSettings()
+    public function getConfig()
     {
-        return $this->container['settings'];
+        return $this->container['config'];
     }
 
     /**
-     * Sets settings
-     * @param \AnketologClient\Model\SurveySettings $settings
+     * Sets config
+     * @param \AnketologClient\Model\SurveyeditorupdateSettingsConfig $config
      * @return $this
      */
-    public function setSettings($settings)
+    public function setConfig($config)
     {
-        $this->container['settings'] = $settings;
-
-        return $this;
-    }
-
-    /**
-     * Gets appearance
-     * @return \AnketologClient\Model\SurveyAppearance
-     */
-    public function getAppearance()
-    {
-        return $this->container['appearance'];
-    }
-
-    /**
-     * Sets appearance
-     * @param \AnketologClient\Model\SurveyAppearance $appearance
-     * @return $this
-     */
-    public function setAppearance($appearance)
-    {
-        $this->container['appearance'] = $appearance;
-
-        return $this;
-    }
-
-    /**
-     * Gets struct
-     * @return \AnketologClient\Model\SurveyStruct
-     */
-    public function getStruct()
-    {
-        return $this->container['struct'];
-    }
-
-    /**
-     * Sets struct
-     * @param \AnketologClient\Model\SurveyStruct $struct
-     * @return $this
-     */
-    public function setStruct($struct)
-    {
-        $this->container['struct'] = $struct;
+        $this->container['config'] = $config;
 
         return $this;
     }
