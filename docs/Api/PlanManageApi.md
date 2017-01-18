@@ -1,6 +1,6 @@
 # AnketologClient\PlanManageApi
 
-All URIs are relative to *https://${app.apiv2.domain}/*
+All URIs are relative to *https://apiv2.anketolog.ru/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
