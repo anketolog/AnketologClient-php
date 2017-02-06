@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 
 
-Счет на оплату
+Информация о счете
 
 ### Example
 ```php
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 
 
-Счета на оплату
+Список счетов на оплату
 
 ### Example
 ```php

@@ -1,11 +1,9 @@
-# SurveyPage
+# SurveyFilterRemoveBody
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **int** | ID страницы | 
-**no** | **int** | Номер страницы | 
-**questions** | [**\AnketologClient\Model\SurveyQuestion[]**](SurveyQuestion.md) |  | 
+**filter_id** | **int** | ID фильтра | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

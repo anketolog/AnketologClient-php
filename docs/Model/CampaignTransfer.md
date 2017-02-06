@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | ID | 
-**campaign_id** | **int** | ID кампании | 
+**campaign_id** | **int** | ID кампании по онлайн-панели | 
 **type** | **string** | Тип перевода | 
 **type_name** | **string** | Название типа | 
 **create_date** | **int** | Дата перевода | 

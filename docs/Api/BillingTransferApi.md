@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 
 
-Внутренний перевод
+Информация об операции по счету
 
 ### Example
 ```php
@@ -63,7 +63,7 @@ Name | Type | Description  | Notes
 
 
 
-Внутренние переводы
+Список операция по счету
 
 ### Example
 ```php

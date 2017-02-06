@@ -64,7 +64,7 @@ Name | Type | Description  | Notes
 
 
 
-Список файлов
+Список файлов пользователя
 
 ### Example
 ```php

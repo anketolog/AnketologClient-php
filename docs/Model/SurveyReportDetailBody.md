@@ -5,8 +5,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **survey_id** | **int** | ID опроса | 
 **offset** | **int** | Offset | [optional] 
-**date_from** | **string** | Дата \&quot;с\&quot; | [optional] 
-**date_to** | **string** | Дата \&quot;до\&quot; | [optional] 
+**date_from** | [**\DateTime**](Date.md) | Дата \&quot;с\&quot; | [optional] 
+**date_to** | [**\DateTime**](Date.md) | Дата \&quot;до\&quot; | [optional] 
 **filters** | **int[]** | Фильтры | [optional] 
 **sources** | **string[]** | Источники | [optional] 
 

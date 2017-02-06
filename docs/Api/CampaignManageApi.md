@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 
 
 
-Создание кампании
+Создание кампании по онлайн-панели
 
 ### Example
 ```php
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 
 
-Завершение кампании
+Завершение кампании по онлайн-панели
 
 ### Example
 ```php
@@ -168,7 +168,7 @@ Name | Type | Description  | Notes
 
 
 
-Информация о кампании
+Информация о кампании по онлайн-панели
 
 ### Example
 ```php
@@ -218,7 +218,7 @@ Name | Type | Description  | Notes
 
 
 
-Список кампаний
+Список кампаний по онлайн-панели
 
 ### Example
 ```php
@@ -264,7 +264,7 @@ This endpoint does not need any parameter.
 
 
 
-Запуск кампании
+Запуск кампании по онлайн-панели
 
 ### Example
 ```php
@@ -314,7 +314,7 @@ Name | Type | Description  | Notes
 
 
 
-Редактирование кампании
+Редактирование кампании по онлайн-панели
 
 ### Example
 ```php
