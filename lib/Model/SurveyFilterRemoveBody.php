@@ -1,6 +1,6 @@
 <?php
 /**
- * FileManageInfoBody
+ * SurveyFilterRemoveBody
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * FileManageInfoBody Class Doc Comment
+ * SurveyFilterRemoveBody Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,20 +53,20 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class FileManageInfoBody implements ArrayAccess
+class SurveyFilterRemoveBody implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'FileManageInfoBody';
+    protected static $swaggerModelName = 'SurveyFilterRemoveBody';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'file_id' => 'int'
+        'filter_id' => 'int'
     );
 
     public static function swaggerTypes()
@@ -79,7 +79,7 @@ class FileManageInfoBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'file_id' => 'file_id'
+        'filter_id' => 'filter_id'
     );
 
     public static function attributeMap()
@@ -92,7 +92,7 @@ class FileManageInfoBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'file_id' => 'setFileId'
+        'filter_id' => 'setFilterId'
     );
 
     public static function setters()
@@ -105,7 +105,7 @@ class FileManageInfoBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'file_id' => 'getFileId'
+        'filter_id' => 'getFilterId'
     );
 
     public static function getters()
@@ -129,7 +129,7 @@ class FileManageInfoBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['file_id'] = isset($data['file_id']) ? $data['file_id'] : null;
+        $this->container['filter_id'] = isset($data['filter_id']) ? $data['filter_id'] : null;
     }
 
     /**
@@ -140,8 +140,8 @@ class FileManageInfoBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['file_id'] === null) {
-            $invalid_properties[] = "'file_id' can't be null";
+        if ($this->container['filter_id'] === null) {
+            $invalid_properties[] = "'filter_id' can't be null";
         }
         return $invalid_properties;
     }
@@ -154,7 +154,7 @@ class FileManageInfoBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['file_id'] === null) {
+        if ($this->container['filter_id'] === null) {
             return false;
         }
         return true;
@@ -162,22 +162,22 @@ class FileManageInfoBody implements ArrayAccess
 
 
     /**
-     * Gets file_id
+     * Gets filter_id
      * @return int
      */
-    public function getFileId()
+    public function getFilterId()
     {
-        return $this->container['file_id'];
+        return $this->container['filter_id'];
     }
 
     /**
-     * Sets file_id
-     * @param int $file_id ID файла
+     * Sets filter_id
+     * @param int $filter_id ID фильтра
      * @return $this
      */
-    public function setFileId($file_id)
+    public function setFilterId($filter_id)
     {
-        $this->container['file_id'] = $file_id;
+        $this->container['filter_id'] = $filter_id;
 
         return $this;
     }

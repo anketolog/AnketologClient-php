@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveySubscribeInfoBodyTest
+ * SurveyFilterRemoveBodyTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveySubscribeInfoBodyTest Class Doc Comment
+ * SurveyFilterRemoveBodyTest Class Doc Comment
  *
  * @category    Class */
-// * @description SurveySubscribeInfoBody
+// * @description SurveyFilterRemoveBody
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveySubscribeInfoBodyTest extends \PHPUnit_Framework_TestCase
+class SurveyFilterRemoveBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,17 @@ class SurveySubscribeInfoBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveySubscribeInfoBody"
+     * Test "SurveyFilterRemoveBody"
      */
-    public function testSurveySubscribeInfoBody()
+    public function testSurveyFilterRemoveBody()
     {
 
     }
 
     /**
-     * Test attribute "subscribe_id"
+     * Test attribute "filter_id"
      */
-    public function testPropertySubscribeId()
+    public function testPropertyFilterId()
     {
 
     }

@@ -12,9 +12,9 @@
  */
 
 /**
- * Документация к Анкетолог API
+ * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -67,7 +67,11 @@ class SurveyReportCreateBody implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
-        'format' => 'string'
+        'format' => 'string',
+        'date_from' => '\DateTime',
+        'date_to' => '\DateTime',
+        'filters' => 'int[]',
+        'sources' => 'string[]'
     );
 
     public static function swaggerTypes()
@@ -81,7 +85,11 @@ class SurveyReportCreateBody implements ArrayAccess
      */
     protected static $attributeMap = array(
         'survey_id' => 'survey_id',
-        'format' => 'format'
+        'format' => 'format',
+        'date_from' => 'date_from',
+        'date_to' => 'date_to',
+        'filters' => 'filters',
+        'sources' => 'sources'
     );
 
     public static function attributeMap()
@@ -95,7 +103,11 @@ class SurveyReportCreateBody implements ArrayAccess
      */
     protected static $setters = array(
         'survey_id' => 'setSurveyId',
-        'format' => 'setFormat'
+        'format' => 'setFormat',
+        'date_from' => 'setDateFrom',
+        'date_to' => 'setDateTo',
+        'filters' => 'setFilters',
+        'sources' => 'setSources'
     );
 
     public static function setters()
@@ -109,7 +121,11 @@ class SurveyReportCreateBody implements ArrayAccess
      */
     protected static $getters = array(
         'survey_id' => 'getSurveyId',
-        'format' => 'getFormat'
+        'format' => 'getFormat',
+        'date_from' => 'getDateFrom',
+        'date_to' => 'getDateTo',
+        'filters' => 'getFilters',
+        'sources' => 'getSources'
     );
 
     public static function getters()
@@ -157,6 +173,10 @@ class SurveyReportCreateBody implements ArrayAccess
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
         $this->container['format'] = isset($data['format']) ? $data['format'] : null;
+        $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
+        $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
     }
 
     /**
@@ -245,6 +265,90 @@ class SurveyReportCreateBody implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'format', must be one of 'excel', 'spss', 'pdf', 'word', 'fpdf', 'fword'");
         }
         $this->container['format'] = $format;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_from
+     * @return \DateTime
+     */
+    public function getDateFrom()
+    {
+        return $this->container['date_from'];
+    }
+
+    /**
+     * Sets date_from
+     * @param \DateTime $date_from Дата \"с\"
+     * @return $this
+     */
+    public function setDateFrom($date_from)
+    {
+        $this->container['date_from'] = $date_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_to
+     * @return \DateTime
+     */
+    public function getDateTo()
+    {
+        return $this->container['date_to'];
+    }
+
+    /**
+     * Sets date_to
+     * @param \DateTime $date_to Дата \"до\"
+     * @return $this
+     */
+    public function setDateTo($date_to)
+    {
+        $this->container['date_to'] = $date_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets filters
+     * @return int[]
+     */
+    public function getFilters()
+    {
+        return $this->container['filters'];
+    }
+
+    /**
+     * Sets filters
+     * @param int[] $filters Фильтры
+     * @return $this
+     */
+    public function setFilters($filters)
+    {
+        $this->container['filters'] = $filters;
+
+        return $this;
+    }
+
+    /**
+     * Gets sources
+     * @return string[]
+     */
+    public function getSources()
+    {
+        return $this->container['sources'];
+    }
+
+    /**
+     * Sets sources
+     * @param string[] $sources Источники
+     * @return $this
+     */
+    public function setSources($sources)
+    {
+        $this->container['sources'] = $sources;
 
         return $this;
     }

@@ -12,9 +12,9 @@
  */
 
 /**
- * Документация к Анкетолог API
+ * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -68,9 +68,15 @@ class SurveyFilterCondition implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'question_id' => 'int',
+        'type' => 'string',
         'option_id' => 'int',
-        'pos' => 'int',
-        'text' => 'string'
+        'row_id' => 'int',
+        'range_id' => 'int',
+        'option_value_id' => 'int',
+        'operator' => 'string',
+        'text' => 'string',
+        'value' => 'int',
+        'pos' => 'int'
     );
 
     public static function swaggerTypes()
@@ -84,9 +90,15 @@ class SurveyFilterCondition implements ArrayAccess
      */
     protected static $attributeMap = array(
         'question_id' => 'question_id',
+        'type' => 'type',
         'option_id' => 'option_id',
-        'pos' => 'pos',
-        'text' => 'text'
+        'row_id' => 'row_id',
+        'range_id' => 'range_id',
+        'option_value_id' => 'option_value_id',
+        'operator' => 'operator',
+        'text' => 'text',
+        'value' => 'value',
+        'pos' => 'pos'
     );
 
     public static function attributeMap()
@@ -100,9 +112,15 @@ class SurveyFilterCondition implements ArrayAccess
      */
     protected static $setters = array(
         'question_id' => 'setQuestionId',
+        'type' => 'setType',
         'option_id' => 'setOptionId',
-        'pos' => 'setPos',
-        'text' => 'setText'
+        'row_id' => 'setRowId',
+        'range_id' => 'setRangeId',
+        'option_value_id' => 'setOptionValueId',
+        'operator' => 'setOperator',
+        'text' => 'setText',
+        'value' => 'setValue',
+        'pos' => 'setPos'
     );
 
     public static function setters()
@@ -116,9 +134,15 @@ class SurveyFilterCondition implements ArrayAccess
      */
     protected static $getters = array(
         'question_id' => 'getQuestionId',
+        'type' => 'getType',
         'option_id' => 'getOptionId',
-        'pos' => 'getPos',
-        'text' => 'getText'
+        'row_id' => 'getRowId',
+        'range_id' => 'getRangeId',
+        'option_value_id' => 'getOptionValueId',
+        'operator' => 'getOperator',
+        'text' => 'getText',
+        'value' => 'getValue',
+        'pos' => 'getPos'
     );
 
     public static function getters()
@@ -126,8 +150,44 @@ class SurveyFilterCondition implements ArrayAccess
         return self::$getters;
     }
 
+    const TYPE_HAS_ANSWER = 'has-answer';
+    const TYPE_UNABLE_ANSWER = 'unable-answer';
+    const OPERATOR_GT = 'gt';
+    const OPERATOR_GTE = 'gte';
+    const OPERATOR_EQ = 'eq';
+    const OPERATOR_NEQ = 'neq';
+    const OPERATOR_LT = 'lt';
+    const OPERATOR_LTE = 'lte';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getTypeAllowableValues()
+    {
+        return [
+            self::TYPE_HAS_ANSWER,
+            self::TYPE_UNABLE_ANSWER,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getOperatorAllowableValues()
+    {
+        return [
+            self::OPERATOR_GT,
+            self::OPERATOR_GTE,
+            self::OPERATOR_EQ,
+            self::OPERATOR_NEQ,
+            self::OPERATOR_LT,
+            self::OPERATOR_LTE,
+        ];
+    }
     
 
     /**
@@ -143,9 +203,15 @@ class SurveyFilterCondition implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['question_id'] = isset($data['question_id']) ? $data['question_id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['option_id'] = isset($data['option_id']) ? $data['option_id'] : null;
-        $this->container['pos'] = isset($data['pos']) ? $data['pos'] : null;
+        $this->container['row_id'] = isset($data['row_id']) ? $data['row_id'] : null;
+        $this->container['range_id'] = isset($data['range_id']) ? $data['range_id'] : null;
+        $this->container['option_value_id'] = isset($data['option_value_id']) ? $data['option_value_id'] : null;
+        $this->container['operator'] = isset($data['operator']) ? $data['operator'] : null;
         $this->container['text'] = isset($data['text']) ? $data['text'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
+        $this->container['pos'] = isset($data['pos']) ? $data['pos'] : null;
     }
 
     /**
@@ -159,6 +225,19 @@ class SurveyFilterCondition implements ArrayAccess
         if ($this->container['question_id'] === null) {
             $invalid_properties[] = "'question_id' can't be null";
         }
+        if ($this->container['type'] === null) {
+            $invalid_properties[] = "'type' can't be null";
+        }
+        $allowed_values = array("has-answer", "unable-answer");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
+        }
+
+        $allowed_values = array("gt", "gte", "eq", "neq", "lt", "lte");
+        if (!in_array($this->container['operator'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'operator', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -171,6 +250,17 @@ class SurveyFilterCondition implements ArrayAccess
     public function valid()
     {
         if ($this->container['question_id'] === null) {
+            return false;
+        }
+        if ($this->container['type'] === null) {
+            return false;
+        }
+        $allowed_values = array("has-answer", "unable-answer");
+        if (!in_array($this->container['type'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = array("gt", "gte", "eq", "neq", "lt", "lte");
+        if (!in_array($this->container['operator'], $allowed_values)) {
             return false;
         }
         return true;
@@ -199,6 +289,31 @@ class SurveyFilterCondition implements ArrayAccess
     }
 
     /**
+     * Gets type
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     * @param string $type Тип условия  * `has-answer` - респондент ответил на вопрос * `unable-answer` - респондент затруднился ответить
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $allowed_values = array('has-answer', 'unable-answer');
+        if (!in_array($type, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'has-answer', 'unable-answer'");
+        }
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
      * Gets option_id
      * @return int
      */
@@ -209,7 +324,7 @@ class SurveyFilterCondition implements ArrayAccess
 
     /**
      * Sets option_id
-     * @param int $option_id ID варианта ответа
+     * @param int $option_id ID варианта ответа/колонки (question.type IN [matrix, matrix3d, select, multiseelct, dropdown, order, ratingscale])
      * @return $this
      */
     public function setOptionId($option_id)
@@ -220,22 +335,89 @@ class SurveyFilterCondition implements ArrayAccess
     }
 
     /**
-     * Gets pos
+     * Gets row_id
      * @return int
      */
-    public function getPos()
+    public function getRowId()
     {
-        return $this->container['pos'];
+        return $this->container['row_id'];
     }
 
     /**
-     * Sets pos
-     * @param int $pos Позиция ответа
+     * Sets row_id
+     * @param int $row_id ID строки (question.type = matrix)
      * @return $this
      */
-    public function setPos($pos)
+    public function setRowId($row_id)
     {
-        $this->container['pos'] = $pos;
+        $this->container['row_id'] = $row_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets range_id
+     * @return int
+     */
+    public function getRangeId()
+    {
+        return $this->container['range_id'];
+    }
+
+    /**
+     * Sets range_id
+     * @param int $range_id ID диапазона (question.type = scale)
+     * @return $this
+     */
+    public function setRangeId($range_id)
+    {
+        $this->container['range_id'] = $range_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets option_value_id
+     * @return int
+     */
+    public function getOptionValueId()
+    {
+        return $this->container['option_value_id'];
+    }
+
+    /**
+     * Sets option_value_id
+     * @param int $option_value_id ID варианта ответа (question.type = matrix3d)
+     * @return $this
+     */
+    public function setOptionValueId($option_value_id)
+    {
+        $this->container['option_value_id'] = $option_value_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets operator
+     * @return string
+     */
+    public function getOperator()
+    {
+        return $this->container['operator'];
+    }
+
+    /**
+     * Sets operator
+     * @param string $operator Оператор сравнения (question.type IN [order, ratingscale])  * `gt` - Больше * `gte` - Больше или равно * `eq` - Равно * `neq` - Не равно * `lt` - Меньше * `lte` - Меньше или равно
+     * @return $this
+     */
+    public function setOperator($operator)
+    {
+        $allowed_values = array('gt', 'gte', 'eq', 'neq', 'lt', 'lte');
+        if (!in_array($operator, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'operator', must be one of 'gt', 'gte', 'eq', 'neq', 'lt', 'lte'");
+        }
+        $this->container['operator'] = $operator;
 
         return $this;
     }
@@ -251,12 +433,54 @@ class SurveyFilterCondition implements ArrayAccess
 
     /**
      * Sets text
-     * @param string $text Текст ответа
+     * @param string $text Текст ответа (question.type IN [free, email, name, freelist])
      * @return $this
      */
     public function setText($text)
     {
         $this->container['text'] = $text;
+
+        return $this;
+    }
+
+    /**
+     * Gets value
+     * @return int
+     */
+    public function getValue()
+    {
+        return $this->container['value'];
+    }
+
+    /**
+     * Sets value
+     * @param int $value Значение ответа (question.type = ratingscale)
+     * @return $this
+     */
+    public function setValue($value)
+    {
+        $this->container['value'] = $value;
+
+        return $this;
+    }
+
+    /**
+     * Gets pos
+     * @return int
+     */
+    public function getPos()
+    {
+        return $this->container['pos'];
+    }
+
+    /**
+     * Sets pos
+     * @param int $pos Позиция варианта (question.type = order)
+     * @return $this
+     */
+    public function setPos($pos)
+    {
+        $this->container['pos'] = $pos;
 
         return $this;
     }

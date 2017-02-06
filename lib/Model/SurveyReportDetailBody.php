@@ -12,9 +12,9 @@
  */
 
 /**
- * Документация к Анкетолог API
+ * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [swagger-codegen](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey)   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -68,8 +68,8 @@ class SurveyReportDetailBody implements ArrayAccess
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
         'offset' => 'int',
-        'date_from' => 'string',
-        'date_to' => 'string',
+        'date_from' => '\DateTime',
+        'date_to' => '\DateTime',
         'filters' => 'int[]',
         'sources' => 'string[]'
     );
@@ -230,7 +230,7 @@ class SurveyReportDetailBody implements ArrayAccess
 
     /**
      * Gets date_from
-     * @return string
+     * @return \DateTime
      */
     public function getDateFrom()
     {
@@ -239,7 +239,7 @@ class SurveyReportDetailBody implements ArrayAccess
 
     /**
      * Sets date_from
-     * @param string $date_from Дата \"с\"
+     * @param \DateTime $date_from Дата \"с\"
      * @return $this
      */
     public function setDateFrom($date_from)
@@ -251,7 +251,7 @@ class SurveyReportDetailBody implements ArrayAccess
 
     /**
      * Gets date_to
-     * @return string
+     * @return \DateTime
      */
     public function getDateTo()
     {
@@ -260,7 +260,7 @@ class SurveyReportDetailBody implements ArrayAccess
 
     /**
      * Sets date_to
-     * @param string $date_to Дата \"до\"
+     * @param \DateTime $date_to Дата \"до\"
      * @return $this
      */
     public function setDateTo($date_to)
