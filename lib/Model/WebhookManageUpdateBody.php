@@ -67,7 +67,7 @@ class WebhookManageUpdateBody implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'webhook_id' => 'int',
-        'config' => 'string'
+        'config' => 'string[]'
     );
 
     public static function swaggerTypes()
@@ -195,7 +195,7 @@ class WebhookManageUpdateBody implements ArrayAccess
 
     /**
      * Gets config
-     * @return string
+     * @return string[]
      */
     public function getConfig()
     {
@@ -204,7 +204,7 @@ class WebhookManageUpdateBody implements ArrayAccess
 
     /**
      * Sets config
-     * @param string $config Дополнительные параметры
+     * @param string[] $config Дополнительные параметры
      * @return $this
      */
     public function setConfig($config)
