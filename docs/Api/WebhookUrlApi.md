@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **webhookUrlAdd**
-> \AnketologClient\Model\WebhookUrl webhookUrlAdd($webhook_url_add_body)
+> \AnketologClient\Model\WebhookUrl[] webhookUrlAdd($webhook_url_add_body)
 
 
 
@@ -48,7 +48,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\AnketologClient\Model\WebhookUrl**](../Model/WebhookUrl.md)
+[**\AnketologClient\Model\WebhookUrl[]**](../Model/WebhookUrl.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webhookUrlRemove**
-> \AnketologClient\Model\WebhookUrl webhookUrlRemove($webhook_url_remove_body)
+> \AnketologClient\Model\InlineResponse200 webhookUrlRemove($webhook_url_remove_body)
 
 
 
@@ -198,7 +198,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\AnketologClient\Model\WebhookUrl**](../Model/WebhookUrl.md)
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

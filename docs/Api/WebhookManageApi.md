@@ -158,7 +158,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **webhookManageRemove**
-> \AnketologClient\Model\Webhook webhookManageRemove($webhook_manage_remove_body)
+> \AnketologClient\Model\InlineResponse200 webhookManageRemove($webhook_manage_remove_body)
 
 
 
@@ -194,7 +194,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\AnketologClient\Model\Webhook**](../Model/Webhook.md)
+[**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
 
 ### Authorization
 

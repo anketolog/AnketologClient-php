@@ -370,7 +370,7 @@ class WebhookManageApi
      * 
      *
      * @param \AnketologClient\Model\WebhookManageRemoveBody $webhook_manage_remove_body  (required)
-     * @return \AnketologClient\Model\Webhook
+     * @return \AnketologClient\Model\InlineResponse200
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function webhookManageRemove($webhook_manage_remove_body)
@@ -385,7 +385,7 @@ class WebhookManageApi
      * 
      *
      * @param \AnketologClient\Model\WebhookManageRemoveBody $webhook_manage_remove_body  (required)
-     * @return Array of \AnketologClient\Model\Webhook, HTTP status code, HTTP response headers (array of strings)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      * @throws \AnketologClient\ApiException on non-2xx response
      */
     public function webhookManageRemoveWithHttpInfo($webhook_manage_remove_body)
@@ -434,15 +434,15 @@ class WebhookManageApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\AnketologClient\Model\Webhook',
+                '\AnketologClient\Model\InlineResponse200',
                 '/webhook/manage/remove'
             );
 
-            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\Webhook', $httpHeader), $statusCode, $httpHeader);
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\Webhook', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 default:
