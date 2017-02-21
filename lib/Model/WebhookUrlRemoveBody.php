@@ -172,7 +172,7 @@ class WebhookUrlRemoveBody implements ArrayAccess
 
     /**
      * Sets webhook_url_id
-     * @param int $webhook_url_id ID Url
+     * @param int $webhook_url_id ID URL для уведомления о событие
      * @return $this
      */
     public function setWebhookUrlId($webhook_url_id)

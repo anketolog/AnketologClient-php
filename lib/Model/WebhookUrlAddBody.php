@@ -183,7 +183,7 @@ class WebhookUrlAddBody implements ArrayAccess
 
     /**
      * Sets webhook_id
-     * @param int $webhook_id ID webhook
+     * @param int $webhook_id Webhook ID
      * @return $this
      */
     public function setWebhookId($webhook_id)
@@ -204,7 +204,7 @@ class WebhookUrlAddBody implements ArrayAccess
 
     /**
      * Sets urls
-     * @param string[] $urls Urls
+     * @param string[] $urls Список URL для уведомления о событие
      * @return $this
      */
     public function setUrls($urls)

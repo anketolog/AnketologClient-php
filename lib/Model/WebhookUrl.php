@@ -216,7 +216,7 @@ class WebhookUrl implements ArrayAccess
 
     /**
      * Sets webhook_id
-     * @param int $webhook_id webhook ID
+     * @param int $webhook_id Webhook ID
      * @return $this
      */
     public function setWebhookId($webhook_id)
@@ -237,7 +237,7 @@ class WebhookUrl implements ArrayAccess
 
     /**
      * Sets url
-     * @param string $url Url
+     * @param string $url URL для уведомления о событие
      * @return $this
      */
     public function setUrl($url)

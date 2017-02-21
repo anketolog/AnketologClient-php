@@ -70,7 +70,7 @@ class Webhook implements ArrayAccess
         'id' => 'int',
         'user_id' => 'int',
         'event' => 'string',
-        'config' => 'string'
+        'config' => 'string[]'
     );
 
     public static function swaggerTypes()
@@ -254,7 +254,7 @@ class Webhook implements ArrayAccess
 
     /**
      * Gets config
-     * @return string
+     * @return string[]
      */
     public function getConfig()
     {
@@ -263,7 +263,7 @@ class Webhook implements ArrayAccess
 
     /**
      * Sets config
-     * @param string $config Дополнительные параметры
+     * @param string[] $config Дополнительные параметры
      * @return $this
      */
     public function setConfig($config)

@@ -209,7 +209,7 @@ class WebhookManageCreateBody implements ArrayAccess
 
     /**
      * Sets urls
-     * @param string[] $urls Urls
+     * @param string[] $urls Список URL Куда будут отправляться напоминания о событие
      * @return $this
      */
     public function setUrls($urls)

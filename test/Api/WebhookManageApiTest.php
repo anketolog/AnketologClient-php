@@ -144,4 +144,59 @@ class WebhookManageApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for webhookUrlAdd
+     *
+     * .
+     *
+     */
+    public function testWebhookUrlAdd()
+    {
+
+    }
+
+    /**
+     * Test case for webhookUrlInfo
+     *
+     * .
+     *
+     */
+    public function testWebhookUrlInfo()
+    {
+
+    }
+
+    /**
+     * Test case for webhookUrlList
+     *
+     * .
+     *
+     */
+    public function testWebhookUrlList()
+    {
+
+    }
+
+    /**
+     * Test case for webhookUrlRemove
+     *
+     * .
+     *
+     */
+    public function testWebhookUrlRemove()
+    {
+
+    }
+
+    /**
+     * Test case for webhookUrlUpdate
+     *
+     * .
+     *
+     */
+    public function testWebhookUrlUpdate()
+    {
+
+    }
+
 }

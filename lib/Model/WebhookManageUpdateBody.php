@@ -183,7 +183,7 @@ class WebhookManageUpdateBody implements ArrayAccess
 
     /**
      * Sets webhook_id
-     * @param int $webhook_id ID webhook
+     * @param int $webhook_id Webhook ID
      * @return $this
      */
     public function setWebhookId($webhook_id)

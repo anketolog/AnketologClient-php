@@ -546,4 +546,459 @@ class WebhookManageApi
         }
     }
 
+    /**
+     * Operation webhookUrlAdd
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlAddBody $webhook_url_add_body  (required)
+     * @return \AnketologClient\Model\WebhookUrl[]
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlAdd($webhook_url_add_body)
+    {
+        list($response) = $this->webhookUrlAddWithHttpInfo($webhook_url_add_body);
+        return $response;
+    }
+
+    /**
+     * Operation webhookUrlAddWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlAddBody $webhook_url_add_body  (required)
+     * @return Array of \AnketologClient\Model\WebhookUrl[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlAddWithHttpInfo($webhook_url_add_body)
+    {
+        // verify the required parameter 'webhook_url_add_body' is set
+        if ($webhook_url_add_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $webhook_url_add_body when calling webhookUrlAdd');
+        }
+        // parse inputs
+        $resourcePath = "/webhook/url/add";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($webhook_url_add_body)) {
+            $_tempBody = $webhook_url_add_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\WebhookUrl[]',
+                '/webhook/url/add'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\WebhookUrl[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\WebhookUrl[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation webhookUrlInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlInfoBody $webhook_url_info_body  (required)
+     * @return \AnketologClient\Model\WebhookUrl
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlInfo($webhook_url_info_body)
+    {
+        list($response) = $this->webhookUrlInfoWithHttpInfo($webhook_url_info_body);
+        return $response;
+    }
+
+    /**
+     * Operation webhookUrlInfoWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlInfoBody $webhook_url_info_body  (required)
+     * @return Array of \AnketologClient\Model\WebhookUrl, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlInfoWithHttpInfo($webhook_url_info_body)
+    {
+        // verify the required parameter 'webhook_url_info_body' is set
+        if ($webhook_url_info_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $webhook_url_info_body when calling webhookUrlInfo');
+        }
+        // parse inputs
+        $resourcePath = "/webhook/url/info";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($webhook_url_info_body)) {
+            $_tempBody = $webhook_url_info_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\WebhookUrl',
+                '/webhook/url/info'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\WebhookUrl', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\WebhookUrl', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation webhookUrlList
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlListBody $webhook_url_list_body  (required)
+     * @return \AnketologClient\Model\WebhookUrl[]
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlList($webhook_url_list_body)
+    {
+        list($response) = $this->webhookUrlListWithHttpInfo($webhook_url_list_body);
+        return $response;
+    }
+
+    /**
+     * Operation webhookUrlListWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlListBody $webhook_url_list_body  (required)
+     * @return Array of \AnketologClient\Model\WebhookUrl[], HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlListWithHttpInfo($webhook_url_list_body)
+    {
+        // verify the required parameter 'webhook_url_list_body' is set
+        if ($webhook_url_list_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $webhook_url_list_body when calling webhookUrlList');
+        }
+        // parse inputs
+        $resourcePath = "/webhook/url/list";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($webhook_url_list_body)) {
+            $_tempBody = $webhook_url_list_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\WebhookUrl[]',
+                '/webhook/url/list'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\WebhookUrl[]', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\WebhookUrl[]', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation webhookUrlRemove
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlRemoveBody $webhook_url_remove_body  (required)
+     * @return \AnketologClient\Model\InlineResponse200
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlRemove($webhook_url_remove_body)
+    {
+        list($response) = $this->webhookUrlRemoveWithHttpInfo($webhook_url_remove_body);
+        return $response;
+    }
+
+    /**
+     * Operation webhookUrlRemoveWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlRemoveBody $webhook_url_remove_body  (required)
+     * @return Array of \AnketologClient\Model\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlRemoveWithHttpInfo($webhook_url_remove_body)
+    {
+        // verify the required parameter 'webhook_url_remove_body' is set
+        if ($webhook_url_remove_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $webhook_url_remove_body when calling webhookUrlRemove');
+        }
+        // parse inputs
+        $resourcePath = "/webhook/url/remove";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($webhook_url_remove_body)) {
+            $_tempBody = $webhook_url_remove_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\InlineResponse200',
+                '/webhook/url/remove'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\InlineResponse200', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\InlineResponse200', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation webhookUrlUpdate
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlUpdateBody $webhook_url_update_body  (required)
+     * @return \AnketologClient\Model\WebhookUrl
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlUpdate($webhook_url_update_body)
+    {
+        list($response) = $this->webhookUrlUpdateWithHttpInfo($webhook_url_update_body);
+        return $response;
+    }
+
+    /**
+     * Operation webhookUrlUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\WebhookUrlUpdateBody $webhook_url_update_body  (required)
+     * @return Array of \AnketologClient\Model\WebhookUrl, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function webhookUrlUpdateWithHttpInfo($webhook_url_update_body)
+    {
+        // verify the required parameter 'webhook_url_update_body' is set
+        if ($webhook_url_update_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $webhook_url_update_body when calling webhookUrlUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/webhook/url/update";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($webhook_url_update_body)) {
+            $_tempBody = $webhook_url_update_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\WebhookUrl',
+                '/webhook/url/update'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\WebhookUrl', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\WebhookUrl', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
 }
