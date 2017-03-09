@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookManageInfoBodyTest
+ * CampaignReportAggregateBodyTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * WebhookManageInfoBodyTest Class Doc Comment
+ * CampaignReportAggregateBodyTest Class Doc Comment
  *
  * @category    Class */
-// * @description WebhookManageInfoBody
+// * @description CampaignReportAggregateBody
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class WebhookManageInfoBodyTest extends \PHPUnit_Framework_TestCase
+class CampaignReportAggregateBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,57 @@ class WebhookManageInfoBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "WebhookManageInfoBody"
+     * Test "CampaignReportAggregateBody"
      */
-    public function testWebhookManageInfoBody()
+    public function testCampaignReportAggregateBody()
     {
 
     }
 
     /**
-     * Test attribute "webhook_id"
+     * Test attribute "campaign_id"
      */
-    public function testPropertyWebhookId()
+    public function testPropertyCampaignId()
+    {
+
+    }
+
+    /**
+     * Test attribute "offset"
+     */
+    public function testPropertyOffset()
+    {
+
+    }
+
+    /**
+     * Test attribute "date_from"
+     */
+    public function testPropertyDateFrom()
+    {
+
+    }
+
+    /**
+     * Test attribute "date_to"
+     */
+    public function testPropertyDateTo()
+    {
+
+    }
+
+    /**
+     * Test attribute "filters"
+     */
+    public function testPropertyFilters()
+    {
+
+    }
+
+    /**
+     * Test attribute "sources"
+     */
+    public function testPropertySources()
     {
 
     }

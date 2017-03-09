@@ -1,6 +1,6 @@
 <?php
 /**
- * Webhook
+ * CampaignReportDetailBody
  *
  * PHP version 5
  *
@@ -44,33 +44,34 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * Webhook Class Doc Comment
+ * CampaignReportDetailBody Class Doc Comment
  *
  * @category    Class */
- // @description Webhook
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class Webhook implements ArrayAccess
+class CampaignReportDetailBody implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'Webhook';
+    protected static $swaggerModelName = 'CampaignReportDetailBody';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'id' => 'int',
-        'user_id' => 'int',
-        'event' => 'string',
-        'config' => 'string[]'
+        'campaign_id' => 'int',
+        'offset' => 'int',
+        'date_from' => '\DateTime',
+        'date_to' => '\DateTime',
+        'filters' => 'int[]',
+        'sources' => 'string[]'
     );
 
     public static function swaggerTypes()
@@ -83,10 +84,12 @@ class Webhook implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'id' => 'id',
-        'user_id' => 'user_id',
-        'event' => 'event',
-        'config' => 'config'
+        'campaign_id' => 'campaign_id',
+        'offset' => 'offset',
+        'date_from' => 'date_from',
+        'date_to' => 'date_to',
+        'filters' => 'filters',
+        'sources' => 'sources'
     );
 
     public static function attributeMap()
@@ -99,10 +102,12 @@ class Webhook implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'id' => 'setId',
-        'user_id' => 'setUserId',
-        'event' => 'setEvent',
-        'config' => 'setConfig'
+        'campaign_id' => 'setCampaignId',
+        'offset' => 'setOffset',
+        'date_from' => 'setDateFrom',
+        'date_to' => 'setDateTo',
+        'filters' => 'setFilters',
+        'sources' => 'setSources'
     );
 
     public static function setters()
@@ -115,10 +120,12 @@ class Webhook implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'id' => 'getId',
-        'user_id' => 'getUserId',
-        'event' => 'getEvent',
-        'config' => 'getConfig'
+        'campaign_id' => 'getCampaignId',
+        'offset' => 'getOffset',
+        'date_from' => 'getDateFrom',
+        'date_to' => 'getDateTo',
+        'filters' => 'getFilters',
+        'sources' => 'getSources'
     );
 
     public static function getters()
@@ -142,10 +149,12 @@ class Webhook implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['user_id'] = isset($data['user_id']) ? $data['user_id'] : null;
-        $this->container['event'] = isset($data['event']) ? $data['event'] : null;
-        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
+        $this->container['campaign_id'] = isset($data['campaign_id']) ? $data['campaign_id'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
+        $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
     }
 
     /**
@@ -156,14 +165,8 @@ class Webhook implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['id'] === null) {
-            $invalid_properties[] = "'id' can't be null";
-        }
-        if ($this->container['user_id'] === null) {
-            $invalid_properties[] = "'user_id' can't be null";
-        }
-        if ($this->container['event'] === null) {
-            $invalid_properties[] = "'event' can't be null";
+        if ($this->container['campaign_id'] === null) {
+            $invalid_properties[] = "'campaign_id' can't be null";
         }
         return $invalid_properties;
     }
@@ -176,13 +179,7 @@ class Webhook implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['id'] === null) {
-            return false;
-        }
-        if ($this->container['user_id'] === null) {
-            return false;
-        }
-        if ($this->container['event'] === null) {
+        if ($this->container['campaign_id'] === null) {
             return false;
         }
         return true;
@@ -190,85 +187,127 @@ class Webhook implements ArrayAccess
 
 
     /**
-     * Gets id
+     * Gets campaign_id
      * @return int
      */
-    public function getId()
+    public function getCampaignId()
     {
-        return $this->container['id'];
+        return $this->container['campaign_id'];
     }
 
     /**
-     * Sets id
-     * @param int $id ID
+     * Sets campaign_id
+     * @param int $campaign_id ID кампании
      * @return $this
      */
-    public function setId($id)
+    public function setCampaignId($campaign_id)
     {
-        $this->container['id'] = $id;
+        $this->container['campaign_id'] = $campaign_id;
 
         return $this;
     }
 
     /**
-     * Gets user_id
+     * Gets offset
      * @return int
      */
-    public function getUserId()
+    public function getOffset()
     {
-        return $this->container['user_id'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets user_id
-     * @param int $user_id ID пользователя
+     * Sets offset
+     * @param int $offset Offset
      * @return $this
      */
-    public function setUserId($user_id)
+    public function setOffset($offset)
     {
-        $this->container['user_id'] = $user_id;
+        $this->container['offset'] = $offset;
 
         return $this;
     }
 
     /**
-     * Gets event
-     * @return string
+     * Gets date_from
+     * @return \DateTime
      */
-    public function getEvent()
+    public function getDateFrom()
     {
-        return $this->container['event'];
+        return $this->container['date_from'];
     }
 
     /**
-     * Sets event
-     * @param string $event Событие
+     * Sets date_from
+     * @param \DateTime $date_from Дата \"с\"
      * @return $this
      */
-    public function setEvent($event)
+    public function setDateFrom($date_from)
     {
-        $this->container['event'] = $event;
+        $this->container['date_from'] = $date_from;
 
         return $this;
     }
 
     /**
-     * Gets config
+     * Gets date_to
+     * @return \DateTime
+     */
+    public function getDateTo()
+    {
+        return $this->container['date_to'];
+    }
+
+    /**
+     * Sets date_to
+     * @param \DateTime $date_to Дата \"до\"
+     * @return $this
+     */
+    public function setDateTo($date_to)
+    {
+        $this->container['date_to'] = $date_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets filters
+     * @return int[]
+     */
+    public function getFilters()
+    {
+        return $this->container['filters'];
+    }
+
+    /**
+     * Sets filters
+     * @param int[] $filters Фильтры
+     * @return $this
+     */
+    public function setFilters($filters)
+    {
+        $this->container['filters'] = $filters;
+
+        return $this;
+    }
+
+    /**
+     * Gets sources
      * @return string[]
      */
-    public function getConfig()
+    public function getSources()
     {
-        return $this->container['config'];
+        return $this->container['sources'];
     }
 
     /**
-     * Sets config
-     * @param string[] $config Дополнительные параметры
+     * Sets sources
+     * @param string[] $sources Источники
      * @return $this
      */
-    public function setConfig($config)
+    public function setSources($sources)
     {
-        $this->container['config'] = $config;
+        $this->container['sources'] = $sources;
 
         return $this;
     }

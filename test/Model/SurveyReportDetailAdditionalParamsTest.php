@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookUrlAddBodyTest
+ * SurveyReportDetailAdditionalParamsTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * WebhookUrlAddBodyTest Class Doc Comment
+ * SurveyReportDetailAdditionalParamsTest Class Doc Comment
  *
  * @category    Class */
-// * @description WebhookUrlAddBody
+// * @description SurveyReportDetailAdditionalParams
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class WebhookUrlAddBodyTest extends \PHPUnit_Framework_TestCase
+class SurveyReportDetailAdditionalParamsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,25 @@ class WebhookUrlAddBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "WebhookUrlAddBody"
+     * Test "SurveyReportDetailAdditionalParams"
      */
-    public function testWebhookUrlAddBody()
+    public function testSurveyReportDetailAdditionalParams()
     {
 
     }
 
     /**
-     * Test attribute "webhook_id"
+     * Test attribute "name"
      */
-    public function testPropertyWebhookId()
+    public function testPropertyName()
     {
 
     }
 
     /**
-     * Test attribute "urls"
+     * Test attribute "value"
      */
-    public function testPropertyUrls()
+    public function testPropertyValue()
     {
 
     }

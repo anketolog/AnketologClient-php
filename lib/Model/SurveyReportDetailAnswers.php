@@ -71,7 +71,8 @@ class SurveyReportDetailAnswers implements ArrayAccess
         'revision_id' => 'int',
         'start_date' => 'int',
         'finish_date' => 'int',
-        'questions_answers' => '\AnketologClient\Model\SurveyReportDetailQuestionsAnswers[]'
+        'questions_answers' => '\AnketologClient\Model\SurveyReportDetailQuestionsAnswers[]',
+        'additional_params' => '\AnketologClient\Model\SurveyReportDetailAdditionalParams[]'
     );
 
     public static function swaggerTypes()
@@ -89,7 +90,8 @@ class SurveyReportDetailAnswers implements ArrayAccess
         'revision_id' => 'revision_id',
         'start_date' => 'start_date',
         'finish_date' => 'finish_date',
-        'questions_answers' => 'questions_answers'
+        'questions_answers' => 'questions_answers',
+        'additional_params' => 'additional_params'
     );
 
     public static function attributeMap()
@@ -107,7 +109,8 @@ class SurveyReportDetailAnswers implements ArrayAccess
         'revision_id' => 'setRevisionId',
         'start_date' => 'setStartDate',
         'finish_date' => 'setFinishDate',
-        'questions_answers' => 'setQuestionsAnswers'
+        'questions_answers' => 'setQuestionsAnswers',
+        'additional_params' => 'setAdditionalParams'
     );
 
     public static function setters()
@@ -125,7 +128,8 @@ class SurveyReportDetailAnswers implements ArrayAccess
         'revision_id' => 'getRevisionId',
         'start_date' => 'getStartDate',
         'finish_date' => 'getFinishDate',
-        'questions_answers' => 'getQuestionsAnswers'
+        'questions_answers' => 'getQuestionsAnswers',
+        'additional_params' => 'getAdditionalParams'
     );
 
     public static function getters()
@@ -155,6 +159,7 @@ class SurveyReportDetailAnswers implements ArrayAccess
         $this->container['start_date'] = isset($data['start_date']) ? $data['start_date'] : null;
         $this->container['finish_date'] = isset($data['finish_date']) ? $data['finish_date'] : null;
         $this->container['questions_answers'] = isset($data['questions_answers']) ? $data['questions_answers'] : null;
+        $this->container['additional_params'] = isset($data['additional_params']) ? $data['additional_params'] : null;
     }
 
     /**
@@ -183,6 +188,9 @@ class SurveyReportDetailAnswers implements ArrayAccess
         if ($this->container['questions_answers'] === null) {
             $invalid_properties[] = "'questions_answers' can't be null";
         }
+        if ($this->container['additional_params'] === null) {
+            $invalid_properties[] = "'additional_params' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -210,6 +218,9 @@ class SurveyReportDetailAnswers implements ArrayAccess
             return false;
         }
         if ($this->container['questions_answers'] === null) {
+            return false;
+        }
+        if ($this->container['additional_params'] === null) {
             return false;
         }
         return true;
@@ -338,6 +349,27 @@ class SurveyReportDetailAnswers implements ArrayAccess
     public function setQuestionsAnswers($questions_answers)
     {
         $this->container['questions_answers'] = $questions_answers;
+
+        return $this;
+    }
+
+    /**
+     * Gets additional_params
+     * @return \AnketologClient\Model\SurveyReportDetailAdditionalParams[]
+     */
+    public function getAdditionalParams()
+    {
+        return $this->container['additional_params'];
+    }
+
+    /**
+     * Sets additional_params
+     * @param \AnketologClient\Model\SurveyReportDetailAdditionalParams[] $additional_params
+     * @return $this
+     */
+    public function setAdditionalParams($additional_params)
+    {
+        $this->container['additional_params'] = $additional_params;
 
         return $this;
     }

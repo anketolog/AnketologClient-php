@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookManageCreateBody
+ * SurveyReportDetailAdditionalParams
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * WebhookManageCreateBody Class Doc Comment
+ * SurveyReportDetailAdditionalParams Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,22 +53,21 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class WebhookManageCreateBody implements ArrayAccess
+class SurveyReportDetailAdditionalParams implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'WebhookManageCreateBody';
+    protected static $swaggerModelName = 'SurveyReportDetail_additional_params';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'event' => 'string',
-        'urls' => 'string[]',
-        'config' => 'string[]'
+        'name' => 'string',
+        'value' => 'string'
     );
 
     public static function swaggerTypes()
@@ -81,9 +80,8 @@ class WebhookManageCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'event' => 'event',
-        'urls' => 'urls',
-        'config' => 'config'
+        'name' => 'name',
+        'value' => 'value'
     );
 
     public static function attributeMap()
@@ -96,9 +94,8 @@ class WebhookManageCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'event' => 'setEvent',
-        'urls' => 'setUrls',
-        'config' => 'setConfig'
+        'name' => 'setName',
+        'value' => 'setValue'
     );
 
     public static function setters()
@@ -111,9 +108,8 @@ class WebhookManageCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'event' => 'getEvent',
-        'urls' => 'getUrls',
-        'config' => 'getConfig'
+        'name' => 'getName',
+        'value' => 'getValue'
     );
 
     public static function getters()
@@ -137,9 +133,8 @@ class WebhookManageCreateBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['event'] = isset($data['event']) ? $data['event'] : null;
-        $this->container['urls'] = isset($data['urls']) ? $data['urls'] : null;
-        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['value'] = isset($data['value']) ? $data['value'] : null;
     }
 
     /**
@@ -150,11 +145,11 @@ class WebhookManageCreateBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['event'] === null) {
-            $invalid_properties[] = "'event' can't be null";
+        if ($this->container['name'] === null) {
+            $invalid_properties[] = "'name' can't be null";
         }
-        if ($this->container['urls'] === null) {
-            $invalid_properties[] = "'urls' can't be null";
+        if ($this->container['value'] === null) {
+            $invalid_properties[] = "'value' can't be null";
         }
         return $invalid_properties;
     }
@@ -167,10 +162,10 @@ class WebhookManageCreateBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['event'] === null) {
+        if ($this->container['name'] === null) {
             return false;
         }
-        if ($this->container['urls'] === null) {
+        if ($this->container['value'] === null) {
             return false;
         }
         return true;
@@ -178,64 +173,43 @@ class WebhookManageCreateBody implements ArrayAccess
 
 
     /**
-     * Gets event
+     * Gets name
      * @return string
      */
-    public function getEvent()
+    public function getName()
     {
-        return $this->container['event'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets event
-     * @param string $event Событие
+     * Sets name
+     * @param string $name
      * @return $this
      */
-    public function setEvent($event)
+    public function setName($name)
     {
-        $this->container['event'] = $event;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets urls
-     * @return string[]
+     * Gets value
+     * @return string
      */
-    public function getUrls()
+    public function getValue()
     {
-        return $this->container['urls'];
+        return $this->container['value'];
     }
 
     /**
-     * Sets urls
-     * @param string[] $urls Список URL Куда будут отправляться напоминания о событие
+     * Sets value
+     * @param string $value
      * @return $this
      */
-    public function setUrls($urls)
+    public function setValue($value)
     {
-        $this->container['urls'] = $urls;
-
-        return $this;
-    }
-
-    /**
-     * Gets config
-     * @return string[]
-     */
-    public function getConfig()
-    {
-        return $this->container['config'];
-    }
-
-    /**
-     * Sets config
-     * @param string[] $config Дополнительные параметры
-     * @return $this
-     */
-    public function setConfig($config)
-    {
-        $this->container['config'] = $config;
+        $this->container['value'] = $value;
 
         return $this;
     }

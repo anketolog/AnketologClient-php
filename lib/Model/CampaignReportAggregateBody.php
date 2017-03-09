@@ -1,6 +1,6 @@
 <?php
 /**
- * WebhookUrlUpdateBody
+ * CampaignReportAggregateBody
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * WebhookUrlUpdateBody Class Doc Comment
+ * CampaignReportAggregateBody Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,21 +53,25 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class WebhookUrlUpdateBody implements ArrayAccess
+class CampaignReportAggregateBody implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'WebhookUrlUpdateBody';
+    protected static $swaggerModelName = 'CampaignReportAggregateBody';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'webhook_url_id' => 'int',
-        'url' => 'string'
+        'campaign_id' => 'int',
+        'offset' => 'int',
+        'date_from' => '\DateTime',
+        'date_to' => '\DateTime',
+        'filters' => 'int[]',
+        'sources' => 'string[]'
     );
 
     public static function swaggerTypes()
@@ -80,8 +84,12 @@ class WebhookUrlUpdateBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'webhook_url_id' => 'webhook_url_id',
-        'url' => 'url'
+        'campaign_id' => 'campaign_id',
+        'offset' => 'offset',
+        'date_from' => 'date_from',
+        'date_to' => 'date_to',
+        'filters' => 'filters',
+        'sources' => 'sources'
     );
 
     public static function attributeMap()
@@ -94,8 +102,12 @@ class WebhookUrlUpdateBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'webhook_url_id' => 'setWebhookUrlId',
-        'url' => 'setUrl'
+        'campaign_id' => 'setCampaignId',
+        'offset' => 'setOffset',
+        'date_from' => 'setDateFrom',
+        'date_to' => 'setDateTo',
+        'filters' => 'setFilters',
+        'sources' => 'setSources'
     );
 
     public static function setters()
@@ -108,8 +120,12 @@ class WebhookUrlUpdateBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'webhook_url_id' => 'getWebhookUrlId',
-        'url' => 'getUrl'
+        'campaign_id' => 'getCampaignId',
+        'offset' => 'getOffset',
+        'date_from' => 'getDateFrom',
+        'date_to' => 'getDateTo',
+        'filters' => 'getFilters',
+        'sources' => 'getSources'
     );
 
     public static function getters()
@@ -133,8 +149,12 @@ class WebhookUrlUpdateBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['webhook_url_id'] = isset($data['webhook_url_id']) ? $data['webhook_url_id'] : null;
-        $this->container['url'] = isset($data['url']) ? $data['url'] : null;
+        $this->container['campaign_id'] = isset($data['campaign_id']) ? $data['campaign_id'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
+        $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
     }
 
     /**
@@ -145,11 +165,8 @@ class WebhookUrlUpdateBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['webhook_url_id'] === null) {
-            $invalid_properties[] = "'webhook_url_id' can't be null";
-        }
-        if ($this->container['url'] === null) {
-            $invalid_properties[] = "'url' can't be null";
+        if ($this->container['campaign_id'] === null) {
+            $invalid_properties[] = "'campaign_id' can't be null";
         }
         return $invalid_properties;
     }
@@ -162,10 +179,7 @@ class WebhookUrlUpdateBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['webhook_url_id'] === null) {
-            return false;
-        }
-        if ($this->container['url'] === null) {
+        if ($this->container['campaign_id'] === null) {
             return false;
         }
         return true;
@@ -173,43 +187,127 @@ class WebhookUrlUpdateBody implements ArrayAccess
 
 
     /**
-     * Gets webhook_url_id
+     * Gets campaign_id
      * @return int
      */
-    public function getWebhookUrlId()
+    public function getCampaignId()
     {
-        return $this->container['webhook_url_id'];
+        return $this->container['campaign_id'];
     }
 
     /**
-     * Sets webhook_url_id
-     * @param int $webhook_url_id ID URL для уведомления о событие
+     * Sets campaign_id
+     * @param int $campaign_id ID кампании
      * @return $this
      */
-    public function setWebhookUrlId($webhook_url_id)
+    public function setCampaignId($campaign_id)
     {
-        $this->container['webhook_url_id'] = $webhook_url_id;
+        $this->container['campaign_id'] = $campaign_id;
 
         return $this;
     }
 
     /**
-     * Gets url
-     * @return string
+     * Gets offset
+     * @return int
      */
-    public function getUrl()
+    public function getOffset()
     {
-        return $this->container['url'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets url
-     * @param string $url URL на который будут отправляться уведомления о событие
+     * Sets offset
+     * @param int $offset Offset
      * @return $this
      */
-    public function setUrl($url)
+    public function setOffset($offset)
     {
-        $this->container['url'] = $url;
+        $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_from
+     * @return \DateTime
+     */
+    public function getDateFrom()
+    {
+        return $this->container['date_from'];
+    }
+
+    /**
+     * Sets date_from
+     * @param \DateTime $date_from Дата \"с\"
+     * @return $this
+     */
+    public function setDateFrom($date_from)
+    {
+        $this->container['date_from'] = $date_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_to
+     * @return \DateTime
+     */
+    public function getDateTo()
+    {
+        return $this->container['date_to'];
+    }
+
+    /**
+     * Sets date_to
+     * @param \DateTime $date_to Дата \"до\"
+     * @return $this
+     */
+    public function setDateTo($date_to)
+    {
+        $this->container['date_to'] = $date_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets filters
+     * @return int[]
+     */
+    public function getFilters()
+    {
+        return $this->container['filters'];
+    }
+
+    /**
+     * Sets filters
+     * @param int[] $filters Фильтры
+     * @return $this
+     */
+    public function setFilters($filters)
+    {
+        $this->container['filters'] = $filters;
+
+        return $this;
+    }
+
+    /**
+     * Gets sources
+     * @return string[]
+     */
+    public function getSources()
+    {
+        return $this->container['sources'];
+    }
+
+    /**
+     * Sets sources
+     * @param string[] $sources Источники
+     * @return $this
+     */
+    public function setSources($sources)
+    {
+        $this->container['sources'] = $sources;
 
         return $this;
     }

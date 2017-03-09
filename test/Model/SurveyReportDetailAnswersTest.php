@@ -143,4 +143,12 @@ class SurveyReportDetailAnswersTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "additional_params"
+     */
+    public function testPropertyAdditionalParams()
+    {
+
+    }
+
 }
