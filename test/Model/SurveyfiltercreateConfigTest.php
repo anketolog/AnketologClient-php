@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyFilterCreateBodyTest
+ * SurveyfiltercreateConfigTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyFilterCreateBodyTest Class Doc Comment
+ * SurveyfiltercreateConfigTest Class Doc Comment
  *
  * @category    Class */
-// * @description SurveyFilterCreateBody
+// * @description SurveyfiltercreateConfig
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyFilterCreateBodyTest extends \PHPUnit_Framework_TestCase
+class SurveyfiltercreateConfigTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,25 +88,33 @@ class SurveyFilterCreateBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyFilterCreateBody"
+     * Test "SurveyfiltercreateConfig"
      */
-    public function testSurveyFilterCreateBody()
+    public function testSurveyfiltercreateConfig()
     {
 
     }
 
     /**
-     * Test attribute "survey_id"
+     * Test attribute "name"
      */
-    public function testPropertySurveyId()
+    public function testPropertyName()
     {
 
     }
 
     /**
-     * Test attribute "config"
+     * Test attribute "join"
      */
-    public function testPropertyConfig()
+    public function testPropertyJoin()
+    {
+
+    }
+
+    /**
+     * Test attribute "conditions"
+     */
+    public function testPropertyConditions()
     {
 
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyFilterCreateBodyTest
+ * SurveyFilterUpdateBodyTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyFilterCreateBodyTest Class Doc Comment
+ * SurveyFilterUpdateBodyTest Class Doc Comment
  *
  * @category    Class */
-// * @description SurveyFilterCreateBody
+// * @description SurveyFilterUpdateBody
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyFilterCreateBodyTest extends \PHPUnit_Framework_TestCase
+class SurveyFilterUpdateBodyTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,17 +88,17 @@ class SurveyFilterCreateBodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyFilterCreateBody"
+     * Test "SurveyFilterUpdateBody"
      */
-    public function testSurveyFilterCreateBody()
+    public function testSurveyFilterUpdateBody()
     {
 
     }
 
     /**
-     * Test attribute "survey_id"
+     * Test attribute "filter_id"
      */
-    public function testPropertySurveyId()
+    public function testPropertyFilterId()
     {
 
     }

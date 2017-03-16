@@ -466,4 +466,95 @@ class SurveyFilterApi
         }
     }
 
+    /**
+     * Operation surveyFilterUpdate
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyFilterUpdateBody $survey_filter_update_body  (required)
+     * @return \AnketologClient\Model\SurveyFilter
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyFilterUpdate($survey_filter_update_body)
+    {
+        list($response) = $this->surveyFilterUpdateWithHttpInfo($survey_filter_update_body);
+        return $response;
+    }
+
+    /**
+     * Operation surveyFilterUpdateWithHttpInfo
+     *
+     * 
+     *
+     * @param \AnketologClient\Model\SurveyFilterUpdateBody $survey_filter_update_body  (required)
+     * @return Array of \AnketologClient\Model\SurveyFilter, HTTP status code, HTTP response headers (array of strings)
+     * @throws \AnketologClient\ApiException on non-2xx response
+     */
+    public function surveyFilterUpdateWithHttpInfo($survey_filter_update_body)
+    {
+        // verify the required parameter 'survey_filter_update_body' is set
+        if ($survey_filter_update_body === null) {
+            throw new \InvalidArgumentException('Missing the required parameter $survey_filter_update_body when calling surveyFilterUpdate');
+        }
+        // parse inputs
+        $resourcePath = "/survey/filter/update";
+        $httpBody = '';
+        $queryParams = array();
+        $headerParams = array();
+        $formParams = array();
+        $_header_accept = $this->apiClient->selectHeaderAccept(array('application/json'));
+        if (!is_null($_header_accept)) {
+            $headerParams['Accept'] = $_header_accept;
+        }
+        $headerParams['Content-Type'] = $this->apiClient->selectHeaderContentType(array('application/json'));
+
+        // default format to json
+        $resourcePath = str_replace("{format}", "json", $resourcePath);
+
+        // body params
+        $_tempBody = null;
+        if (isset($survey_filter_update_body)) {
+            $_tempBody = $survey_filter_update_body;
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            $httpBody = $_tempBody; // $_tempBody is the method argument, if present
+        } elseif (count($formParams) > 0) {
+            $httpBody = $formParams; // for HTTP post (form)
+        }
+        // this endpoint requires API key authentication
+        $apiKey = $this->apiClient->getApiKeyWithPrefix('x-anketolog-apikey');
+        if (strlen($apiKey) !== 0) {
+            $headerParams['x-anketolog-apikey'] = $apiKey;
+        }
+        // make the API Call
+        try {
+            list($response, $statusCode, $httpHeader) = $this->apiClient->callApi(
+                $resourcePath,
+                'POST',
+                $queryParams,
+                $httpBody,
+                $headerParams,
+                '\AnketologClient\Model\SurveyFilter',
+                '/survey/filter/update'
+            );
+
+            return array($this->apiClient->getSerializer()->deserialize($response, '\AnketologClient\Model\SurveyFilter', $httpHeader), $statusCode, $httpHeader);
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\SurveyFilter', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\AnketologClient\Model\ResponseError', $e->getResponseHeaders());
+                    $e->setResponseObject($data);
+                    break;
+            }
+
+            throw $e;
+        }
+    }
+
 }

@@ -133,4 +133,15 @@ class SurveyFilterApiTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test case for surveyFilterUpdate
+     *
+     * .
+     *
+     */
+    public function testSurveyFilterUpdate()
+    {
+
+    }
+
 }

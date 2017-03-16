@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyFilterCreateBody
+ * SurveyfiltercreateConfig
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyFilterCreateBody Class Doc Comment
+ * SurveyfiltercreateConfig Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,21 +53,22 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyFilterCreateBody implements ArrayAccess
+class SurveyfiltercreateConfig implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyFilterCreateBody';
+    protected static $swaggerModelName = 'surveyfiltercreate_config';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int',
-        'config' => '\AnketologClient\Model\SurveyfiltercreateConfig'
+        'name' => 'string',
+        'join' => 'string',
+        'conditions' => '\AnketologClient\Model\SurveyfiltercreateConfigConditions[]'
     );
 
     public static function swaggerTypes()
@@ -80,8 +81,9 @@ class SurveyFilterCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id',
-        'config' => 'config'
+        'name' => 'name',
+        'join' => 'join',
+        'conditions' => 'conditions'
     );
 
     public static function attributeMap()
@@ -94,8 +96,9 @@ class SurveyFilterCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId',
-        'config' => 'setConfig'
+        'name' => 'setName',
+        'join' => 'setJoin',
+        'conditions' => 'setConditions'
     );
 
     public static function setters()
@@ -108,8 +111,9 @@ class SurveyFilterCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId',
-        'config' => 'getConfig'
+        'name' => 'getName',
+        'join' => 'getJoin',
+        'conditions' => 'getConditions'
     );
 
     public static function getters()
@@ -117,8 +121,22 @@ class SurveyFilterCreateBody implements ArrayAccess
         return self::$getters;
     }
 
+    const JOIN_AND = 'and';
+    const JOIN_OR = 'or';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getJoinAllowableValues()
+    {
+        return [
+            self::JOIN_AND,
+            self::JOIN_OR,
+        ];
+    }
     
 
     /**
@@ -133,8 +151,9 @@ class SurveyFilterCreateBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
-        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['join'] = isset($data['join']) ? $data['join'] : null;
+        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
     }
 
     /**
@@ -145,9 +164,11 @@ class SurveyFilterCreateBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['survey_id'] === null) {
-            $invalid_properties[] = "'survey_id' can't be null";
+        $allowed_values = array("and", "or");
+        if (!in_array($this->container['join'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'join', must be one of #{allowed_values}.";
         }
+
         return $invalid_properties;
     }
 
@@ -159,7 +180,8 @@ class SurveyFilterCreateBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['survey_id'] === null) {
+        $allowed_values = array("and", "or");
+        if (!in_array($this->container['join'], $allowed_values)) {
             return false;
         }
         return true;
@@ -167,43 +189,68 @@ class SurveyFilterCreateBody implements ArrayAccess
 
 
     /**
-     * Gets survey_id
-     * @return int
+     * Gets name
+     * @return string
      */
-    public function getSurveyId()
+    public function getName()
     {
-        return $this->container['survey_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets survey_id
-     * @param int $survey_id ID опроса
+     * Sets name
+     * @param string $name Название фильтра
      * @return $this
      */
-    public function setSurveyId($survey_id)
+    public function setName($name)
     {
-        $this->container['survey_id'] = $survey_id;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets config
-     * @return \AnketologClient\Model\SurveyfiltercreateConfig
+     * Gets join
+     * @return string
      */
-    public function getConfig()
+    public function getJoin()
     {
-        return $this->container['config'];
+        return $this->container['join'];
     }
 
     /**
-     * Sets config
-     * @param \AnketologClient\Model\SurveyfiltercreateConfig $config
+     * Sets join
+     * @param string $join Логический оператор  * `and` - логическое \"и\" * `or` - логическое \"или\"
      * @return $this
      */
-    public function setConfig($config)
+    public function setJoin($join)
     {
-        $this->container['config'] = $config;
+        $allowed_values = array('and', 'or');
+        if (!in_array($join, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'join', must be one of 'and', 'or'");
+        }
+        $this->container['join'] = $join;
+
+        return $this;
+    }
+
+    /**
+     * Gets conditions
+     * @return \AnketologClient\Model\SurveyfiltercreateConfigConditions[]
+     */
+    public function getConditions()
+    {
+        return $this->container['conditions'];
+    }
+
+    /**
+     * Sets conditions
+     * @param \AnketologClient\Model\SurveyfiltercreateConfigConditions[] $conditions
+     * @return $this
+     */
+    public function setConditions($conditions)
+    {
+        $this->container['conditions'] = $conditions;
 
         return $this;
     }

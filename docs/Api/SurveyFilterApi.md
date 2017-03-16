@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**surveyFilterInfo**](SurveyFilterApi.md#surveyFilterInfo) | **POST** /survey/filter/info | 
 [**surveyFilterList**](SurveyFilterApi.md#surveyFilterList) | **POST** /survey/filter/list | 
 [**surveyFilterRemove**](SurveyFilterApi.md#surveyFilterRemove) | **POST** /survey/filter/remove | 
+[**surveyFilterUpdate**](SurveyFilterApi.md#surveyFilterUpdate) | **POST** /survey/filter/update | 
 
 
 # **surveyFilterCreate**
@@ -198,6 +199,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\AnketologClient\Model\InlineResponse200**](../Model/InlineResponse200.md)
+
+### Authorization
+
+[apiKey](../../README.md#apiKey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **surveyFilterUpdate**
+> \AnketologClient\Model\SurveyFilter surveyFilterUpdate($survey_filter_update_body)
+
+
+
+Редактирование фильтра ответов
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure API key authorization: apiKey
+AnketologClient\Configuration::getDefaultConfiguration()->setApiKey('x-anketolog-apikey', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// AnketologClient\Configuration::getDefaultConfiguration()->setApiKeyPrefix('x-anketolog-apikey', 'Bearer');
+
+$api_instance = new AnketologClient\Api\SurveyFilterApi();
+$survey_filter_update_body = new \AnketologClient\Model\SurveyFilterUpdateBody(); // \AnketologClient\Model\SurveyFilterUpdateBody | 
+
+try {
+    $result = $api_instance->surveyFilterUpdate($survey_filter_update_body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SurveyFilterApi->surveyFilterUpdate: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **survey_filter_update_body** | [**\AnketologClient\Model\SurveyFilterUpdateBody**](../Model/\AnketologClient\Model\SurveyFilterUpdateBody.md)|  |
+
+### Return type
+
+[**\AnketologClient\Model\SurveyFilter**](../Model/SurveyFilter.md)
 
 ### Authorization
 

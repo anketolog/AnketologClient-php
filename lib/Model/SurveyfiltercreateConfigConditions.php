@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyfiltercreateConditions
+ * SurveyfiltercreateConfigConditions
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyfiltercreateConditions Class Doc Comment
+ * SurveyfiltercreateConfigConditions Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,13 +53,13 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyfiltercreateConditions implements ArrayAccess
+class SurveyfiltercreateConfigConditions implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'surveyfiltercreate_conditions';
+    protected static $swaggerModelName = 'surveyfiltercreate_config_conditions';
 
     /**
       * Array of property to type mappings. Used for (de)serialization

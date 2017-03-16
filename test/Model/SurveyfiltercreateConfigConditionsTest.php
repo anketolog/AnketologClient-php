@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyfiltercreateConditionsTest
+ * SurveyfiltercreateConfigConditionsTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyfiltercreateConditionsTest Class Doc Comment
+ * SurveyfiltercreateConfigConditionsTest Class Doc Comment
  *
  * @category    Class */
-// * @description SurveyfiltercreateConditions
+// * @description SurveyfiltercreateConfigConditions
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyfiltercreateConditionsTest extends \PHPUnit_Framework_TestCase
+class SurveyfiltercreateConfigConditionsTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,9 +88,9 @@ class SurveyfiltercreateConditionsTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyfiltercreateConditions"
+     * Test "SurveyfiltercreateConfigConditions"
      */
-    public function testSurveyfiltercreateConditions()
+    public function testSurveyfiltercreateConfigConditions()
     {
 
     }

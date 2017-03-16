@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyFilterCreateBody
+ * SurveyFilterUpdateBody
  *
  * PHP version 5
  *
@@ -44,7 +44,7 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyFilterCreateBody Class Doc Comment
+ * SurveyFilterUpdateBody Class Doc Comment
  *
  * @category    Class */
 /** 
@@ -53,20 +53,20 @@ use \ArrayAccess;
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyFilterCreateBody implements ArrayAccess
+class SurveyFilterUpdateBody implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyFilterCreateBody';
+    protected static $swaggerModelName = 'SurveyFilterUpdateBody';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int',
+        'filter_id' => 'int',
         'config' => '\AnketologClient\Model\SurveyfiltercreateConfig'
     );
 
@@ -80,7 +80,7 @@ class SurveyFilterCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id',
+        'filter_id' => 'filter_id',
         'config' => 'config'
     );
 
@@ -94,7 +94,7 @@ class SurveyFilterCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId',
+        'filter_id' => 'setFilterId',
         'config' => 'setConfig'
     );
 
@@ -108,7 +108,7 @@ class SurveyFilterCreateBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId',
+        'filter_id' => 'getFilterId',
         'config' => 'getConfig'
     );
 
@@ -133,7 +133,7 @@ class SurveyFilterCreateBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
+        $this->container['filter_id'] = isset($data['filter_id']) ? $data['filter_id'] : null;
         $this->container['config'] = isset($data['config']) ? $data['config'] : null;
     }
 
@@ -145,8 +145,8 @@ class SurveyFilterCreateBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['survey_id'] === null) {
-            $invalid_properties[] = "'survey_id' can't be null";
+        if ($this->container['filter_id'] === null) {
+            $invalid_properties[] = "'filter_id' can't be null";
         }
         return $invalid_properties;
     }
@@ -159,7 +159,7 @@ class SurveyFilterCreateBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['survey_id'] === null) {
+        if ($this->container['filter_id'] === null) {
             return false;
         }
         return true;
@@ -167,22 +167,22 @@ class SurveyFilterCreateBody implements ArrayAccess
 
 
     /**
-     * Gets survey_id
+     * Gets filter_id
      * @return int
      */
-    public function getSurveyId()
+    public function getFilterId()
     {
-        return $this->container['survey_id'];
+        return $this->container['filter_id'];
     }
 
     /**
-     * Sets survey_id
-     * @param int $survey_id ID опроса
+     * Sets filter_id
+     * @param int $filter_id ID фильтра
      * @return $this
      */
-    public function setSurveyId($survey_id)
+    public function setFilterId($filter_id)
     {
-        $this->container['survey_id'] = $survey_id;
+        $this->container['filter_id'] = $filter_id;
 
         return $this;
     }

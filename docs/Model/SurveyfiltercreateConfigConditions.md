@@ -1,4 +1,4 @@
-# SurveyfiltercreateConditions
+# SurveyfiltercreateConfigConditions
 
 ## Properties
 Name | Type | Description | Notes
