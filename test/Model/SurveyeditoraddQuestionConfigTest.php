@@ -184,6 +184,14 @@ class SurveyeditoraddQuestionConfigTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "has_middle_name"
+     */
+    public function testPropertyHasMiddleName()
+    {
+
+    }
+
+    /**
      * Test attribute "has_nothing_answer"
      */
     public function testPropertyHasNothingAnswer()

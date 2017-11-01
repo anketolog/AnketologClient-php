@@ -144,6 +144,14 @@ class SurveyQuestionNameTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "has_middle_name"
+     */
+    public function testPropertyHasMiddleName()
+    {
+
+    }
+
+    /**
      * Test attribute "branchrules"
      */
     public function testPropertyBranchrules()

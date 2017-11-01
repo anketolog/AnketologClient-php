@@ -73,6 +73,7 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'bool',
         'comment' => 'string',
         'has_unable_answer' => 'bool',
+        'has_middle_name' => 'bool',
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
         'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]'
     );
@@ -93,6 +94,7 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'has_comment',
         'comment' => 'comment',
         'has_unable_answer' => 'has_unable_answer',
+        'has_middle_name' => 'has_middle_name',
         'branchrules' => 'branchrules',
         'visiblerules' => 'visiblerules'
     );
@@ -113,6 +115,7 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'setHasComment',
         'comment' => 'setComment',
         'has_unable_answer' => 'setHasUnableAnswer',
+        'has_middle_name' => 'setHasMiddleName',
         'branchrules' => 'setBranchrules',
         'visiblerules' => 'setVisiblerules'
     );
@@ -133,6 +136,7 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'getHasComment',
         'comment' => 'getComment',
         'has_unable_answer' => 'getHasUnableAnswer',
+        'has_middle_name' => 'getHasMiddleName',
         'branchrules' => 'getBranchrules',
         'visiblerules' => 'getVisiblerules'
     );
@@ -166,6 +170,7 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
         $this->container['has_comment'] = isset($data['has_comment']) ? $data['has_comment'] : null;
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
         $this->container['has_unable_answer'] = isset($data['has_unable_answer']) ? $data['has_unable_answer'] : null;
+        $this->container['has_middle_name'] = isset($data['has_middle_name']) ? $data['has_middle_name'] : null;
         $this->container['branchrules'] = isset($data['branchrules']) ? $data['branchrules'] : null;
         $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
     }
@@ -195,6 +200,9 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
         }
         if ($this->container['has_unable_answer'] === null) {
             $invalid_properties[] = "'has_unable_answer' can't be null";
+        }
+        if ($this->container['has_middle_name'] === null) {
+            $invalid_properties[] = "'has_middle_name' can't be null";
         }
         if ($this->container['branchrules'] === null) {
             $invalid_properties[] = "'branchrules' can't be null";
@@ -229,6 +237,9 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['has_unable_answer'] === null) {
+            return false;
+        }
+        if ($this->container['has_middle_name'] === null) {
             return false;
         }
         if ($this->container['branchrules'] === null) {
@@ -363,6 +374,27 @@ class SurveyQuestionName extends SurveyQuestion implements ArrayAccess
     public function setHasUnableAnswer($has_unable_answer)
     {
         $this->container['has_unable_answer'] = $has_unable_answer;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_middle_name
+     * @return bool
+     */
+    public function getHasMiddleName()
+    {
+        return $this->container['has_middle_name'];
+    }
+
+    /**
+     * Sets has_middle_name
+     * @param bool $has_middle_name Добавлять поле \"Отчество\"
+     * @return $this
+     */
+    public function setHasMiddleName($has_middle_name)
+    {
+        $this->container['has_middle_name'] = $has_middle_name;
 
         return $this;
     }

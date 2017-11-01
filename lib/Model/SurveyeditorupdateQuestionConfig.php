@@ -79,6 +79,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'placeholder' => 'string',
         'has_other_answer' => 'bool',
         'has_nothing_answer' => 'bool',
+        'has_middle_name' => 'bool',
         'options_sort' => 'string',
         'rows_sort' => 'string',
         'max_value' => 'int',
@@ -110,6 +111,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'placeholder' => 'placeholder',
         'has_other_answer' => 'has_other_answer',
         'has_nothing_answer' => 'has_nothing_answer',
+        'has_middle_name' => 'has_middle_name',
         'options_sort' => 'options_sort',
         'rows_sort' => 'rows_sort',
         'max_value' => 'max_value',
@@ -141,6 +143,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'placeholder' => 'setPlaceholder',
         'has_other_answer' => 'setHasOtherAnswer',
         'has_nothing_answer' => 'setHasNothingAnswer',
+        'has_middle_name' => 'setHasMiddleName',
         'options_sort' => 'setOptionsSort',
         'rows_sort' => 'setRowsSort',
         'max_value' => 'setMaxValue',
@@ -172,6 +175,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'placeholder' => 'getPlaceholder',
         'has_other_answer' => 'getHasOtherAnswer',
         'has_nothing_answer' => 'getHasNothingAnswer',
+        'has_middle_name' => 'getHasMiddleName',
         'options_sort' => 'getOptionsSort',
         'rows_sort' => 'getRowsSort',
         'max_value' => 'getMaxValue',
@@ -246,6 +250,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         $this->container['placeholder'] = isset($data['placeholder']) ? $data['placeholder'] : null;
         $this->container['has_other_answer'] = isset($data['has_other_answer']) ? $data['has_other_answer'] : null;
         $this->container['has_nothing_answer'] = isset($data['has_nothing_answer']) ? $data['has_nothing_answer'] : null;
+        $this->container['has_middle_name'] = isset($data['has_middle_name']) ? $data['has_middle_name'] : null;
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
         $this->container['rows_sort'] = isset($data['rows_sort']) ? $data['rows_sort'] : null;
         $this->container['max_value'] = isset($data['max_value']) ? $data['max_value'] : null;
@@ -544,6 +549,27 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
     public function setHasNothingAnswer($has_nothing_answer)
     {
         $this->container['has_nothing_answer'] = $has_nothing_answer;
+
+        return $this;
+    }
+
+    /**
+     * Gets has_middle_name
+     * @return bool
+     */
+    public function getHasMiddleName()
+    {
+        return $this->container['has_middle_name'];
+    }
+
+    /**
+     * Sets has_middle_name
+     * @param bool $has_middle_name Добавлять поле \"Отчество\"  Для вопросов:  * `free`
+     * @return $this
+     */
+    public function setHasMiddleName($has_middle_name)
+    {
+        $this->container['has_middle_name'] = $has_middle_name;
 
         return $this;
     }

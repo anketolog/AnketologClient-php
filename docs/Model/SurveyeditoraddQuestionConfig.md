@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **datatype** | **string** | Тип данных в поле ввода  Для вопросов:  * &#x60;free&#x60; * &#x60;freelist&#x60; | [optional] 
 **placeholder** | **string** | Текст-подсказка  Для вопросов:  * &#x60;free&#x60; * &#x60;dropdown&#x60; * &#x60;matrix3d&#x60; * &#x60;email&#x60; | [optional] 
 **has_other_answer** | **bool** | Вариант \&quot;другое\&quot;  Для вопросов:  * &#x60;freelist&#x60; * &#x60;select&#x60; * &#x60;multiselect&#x60; * &#x60;dropdown&#x60; | [optional] 
+**has_middle_name** | **bool** | Добавлять поле \&quot;Отчество\&quot;  Для вопросов:  * &#x60;free&#x60; | [optional] 
 **has_nothing_answer** | **bool** | Вариант \&quot;ничего из вышеперечисленного\&quot;  Для вопросов:  * &#x60;select&#x60; * &#x60;multiselect&#x60; * &#x60;dropdown&#x60; | [optional] 
 **options_sort** | **string** | Сортировка вариантов  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке  Для вопросов:  * &#x60;freelist&#x60; * &#x60;select&#x60; * &#x60;multiselect&#x60; * &#x60;dropdown&#x60; * &#x60;matrix&#x60; * &#x60;matrix3d&#x60; * &#x60;order&#x60; * &#x60;ratingscale&#x60; | [optional] 
 **rows_sort** | **string** | Сортировка строк  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке  Для вопросов:  * &#x60;matrix&#x60; * &#x60;matrix3d&#x60; | [optional] 

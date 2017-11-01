@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **has_comment** | **bool** | Отображать комментарий | 
 **comment** | **string** | Текст комментария | 
 **has_unable_answer** | **bool** | Вариант \&quot;затрудняюсь ответить\&quot; | 
+**has_middle_name** | **bool** | Добавлять поле \&quot;Отчество\&quot; | 
 **branchrules** | [**\AnketologClient\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
 **visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
 
