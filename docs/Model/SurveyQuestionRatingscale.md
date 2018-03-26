@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **max_value** | **int** | Максимальное значение | 
 **max_value_title** | **string** | Единицы измерения | [default to 'баллов']
 **is_show_residue** | **bool** | Отображение остатка | 
+**is_unlimit** | **bool** | Распределать отстаток на каждый вариант | 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
 **options_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | 
 

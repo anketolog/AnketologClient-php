@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
  *
  * OpenAPI spec version: 2.0
  * 
@@ -94,7 +94,11 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_personalpage_bgcolor' => 'bool',
         'allow_custom_css' => 'bool',
         'allow_survey_branchrules' => 'bool',
-        'allow_survey_visiblerules' => 'bool'
+        'allow_survey_visiblerules' => 'bool',
+        'allow_randomization' => 'bool',
+        'allow_related' => 'bool',
+        'allow_calculate_nps' => 'bool',
+        'allow_insert_params' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -134,7 +138,11 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_personalpage_bgcolor' => 'allow_personalpage_bgcolor',
         'allow_custom_css' => 'allow_custom_css',
         'allow_survey_branchrules' => 'allow_survey_branchrules',
-        'allow_survey_visiblerules' => 'allow_survey_visiblerules'
+        'allow_survey_visiblerules' => 'allow_survey_visiblerules',
+        'allow_randomization' => 'allow_randomization',
+        'allow_related' => 'allow_related',
+        'allow_calculate_nps' => 'allow_calculate_nps',
+        'allow_insert_params' => 'allow_insert_params'
     );
 
     public static function attributeMap()
@@ -174,7 +182,11 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_personalpage_bgcolor' => 'setAllowPersonalpageBgcolor',
         'allow_custom_css' => 'setAllowCustomCss',
         'allow_survey_branchrules' => 'setAllowSurveyBranchrules',
-        'allow_survey_visiblerules' => 'setAllowSurveyVisiblerules'
+        'allow_survey_visiblerules' => 'setAllowSurveyVisiblerules',
+        'allow_randomization' => 'setAllowRandomization',
+        'allow_related' => 'setAllowRelated',
+        'allow_calculate_nps' => 'setAllowCalculateNps',
+        'allow_insert_params' => 'setAllowInsertParams'
     );
 
     public static function setters()
@@ -214,7 +226,11 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_personalpage_bgcolor' => 'getAllowPersonalpageBgcolor',
         'allow_custom_css' => 'getAllowCustomCss',
         'allow_survey_branchrules' => 'getAllowSurveyBranchrules',
-        'allow_survey_visiblerules' => 'getAllowSurveyVisiblerules'
+        'allow_survey_visiblerules' => 'getAllowSurveyVisiblerules',
+        'allow_randomization' => 'getAllowRandomization',
+        'allow_related' => 'getAllowRelated',
+        'allow_calculate_nps' => 'getAllowCalculateNps',
+        'allow_insert_params' => 'getAllowInsertParams'
     );
 
     public static function getters()
@@ -266,6 +282,10 @@ class PlanPermissionScheme implements ArrayAccess
         $this->container['allow_custom_css'] = isset($data['allow_custom_css']) ? $data['allow_custom_css'] : null;
         $this->container['allow_survey_branchrules'] = isset($data['allow_survey_branchrules']) ? $data['allow_survey_branchrules'] : null;
         $this->container['allow_survey_visiblerules'] = isset($data['allow_survey_visiblerules']) ? $data['allow_survey_visiblerules'] : null;
+        $this->container['allow_randomization'] = isset($data['allow_randomization']) ? $data['allow_randomization'] : null;
+        $this->container['allow_related'] = isset($data['allow_related']) ? $data['allow_related'] : null;
+        $this->container['allow_calculate_nps'] = isset($data['allow_calculate_nps']) ? $data['allow_calculate_nps'] : null;
+        $this->container['allow_insert_params'] = isset($data['allow_insert_params']) ? $data['allow_insert_params'] : null;
     }
 
     /**
@@ -333,6 +353,18 @@ class PlanPermissionScheme implements ArrayAccess
         if ($this->container['allow_survey_visiblerules'] === null) {
             $invalid_properties[] = "'allow_survey_visiblerules' can't be null";
         }
+        if ($this->container['allow_randomization'] === null) {
+            $invalid_properties[] = "'allow_randomization' can't be null";
+        }
+        if ($this->container['allow_related'] === null) {
+            $invalid_properties[] = "'allow_related' can't be null";
+        }
+        if ($this->container['allow_calculate_nps'] === null) {
+            $invalid_properties[] = "'allow_calculate_nps' can't be null";
+        }
+        if ($this->container['allow_insert_params'] === null) {
+            $invalid_properties[] = "'allow_insert_params' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -399,6 +431,18 @@ class PlanPermissionScheme implements ArrayAccess
             return false;
         }
         if ($this->container['allow_survey_visiblerules'] === null) {
+            return false;
+        }
+        if ($this->container['allow_randomization'] === null) {
+            return false;
+        }
+        if ($this->container['allow_related'] === null) {
+            return false;
+        }
+        if ($this->container['allow_calculate_nps'] === null) {
+            return false;
+        }
+        if ($this->container['allow_insert_params'] === null) {
             return false;
         }
         return true;
@@ -989,6 +1033,90 @@ class PlanPermissionScheme implements ArrayAccess
     public function setAllowSurveyVisiblerules($allow_survey_visiblerules)
     {
         $this->container['allow_survey_visiblerules'] = $allow_survey_visiblerules;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_randomization
+     * @return bool
+     */
+    public function getAllowRandomization()
+    {
+        return $this->container['allow_randomization'];
+    }
+
+    /**
+     * Sets allow_randomization
+     * @param bool $allow_randomization Разрешено настраивать рандомизацию вопросов/страниц
+     * @return $this
+     */
+    public function setAllowRandomization($allow_randomization)
+    {
+        $this->container['allow_randomization'] = $allow_randomization;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_related
+     * @return bool
+     */
+    public function getAllowRelated()
+    {
+        return $this->container['allow_related'];
+    }
+
+    /**
+     * Sets allow_related
+     * @param bool $allow_related Разрешено настраивать подстановку вариантов
+     * @return $this
+     */
+    public function setAllowRelated($allow_related)
+    {
+        $this->container['allow_related'] = $allow_related;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_calculate_nps
+     * @return bool
+     */
+    public function getAllowCalculateNps()
+    {
+        return $this->container['allow_calculate_nps'];
+    }
+
+    /**
+     * Sets allow_calculate_nps
+     * @param bool $allow_calculate_nps Разрешен автоматический расчет простого индекса NPS
+     * @return $this
+     */
+    public function setAllowCalculateNps($allow_calculate_nps)
+    {
+        $this->container['allow_calculate_nps'] = $allow_calculate_nps;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_insert_params
+     * @return bool
+     */
+    public function getAllowInsertParams()
+    {
+        return $this->container['allow_insert_params'];
+    }
+
+    /**
+     * Sets allow_insert_params
+     * @param bool $allow_insert_params Разрешена вставка данных в анкету из параметров URL
+     * @return $this
+     */
+    public function setAllowInsertParams($allow_insert_params)
+    {
+        $this->container['allow_insert_params'] = $allow_insert_params;
 
         return $this;
     }

@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
  *
  * OpenAPI spec version: 2.0
  * 
@@ -134,6 +134,7 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
     const TYPE_MATRIX3D = 'matrix3d';
     const TYPE_NAME = 'name';
     const TYPE_EMAIL = 'email';
+    const TYPE_PHONE = 'phone';
     const TYPE_DATE = 'date';
     const TYPE_HTML = 'html';
     const TYPE_SCALE = 'scale';
@@ -158,6 +159,7 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
             self::TYPE_MATRIX3D,
             self::TYPE_NAME,
             self::TYPE_EMAIL,
+            self::TYPE_PHONE,
             self::TYPE_DATE,
             self::TYPE_HTML,
             self::TYPE_SCALE,
@@ -199,7 +201,7 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
         if ($this->container['type'] === null) {
             $invalid_properties[] = "'type' can't be null";
         }
-        $allowed_values = array("free", "freelist", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "date", "html", "scale", "order", "ratingscale");
+        $allowed_values = array("free", "freelist", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "date", "html", "scale", "order", "ratingscale");
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
@@ -221,7 +223,7 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
         if ($this->container['type'] === null) {
             return false;
         }
-        $allowed_values = array("free", "freelist", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "date", "html", "scale", "order", "ratingscale");
+        $allowed_values = array("free", "freelist", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "date", "html", "scale", "order", "ratingscale");
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -282,14 +284,14 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type Тип вопроса  * `free` - свободный ответ * `freelist` - таблица свободных ответов * `select` - одиночный выбор * `multiselect` - множественный выбор * `dropdown` - выпадающий список * `matrix` - матрица * `matrix3d` - матрица 3D * `name` - имя * `email` - e-mail * `date` - дата * `html` - HTML-вставка * `scale` - шкала * `order` - ранжирование * `ratingscale` - распределительная шкала
+     * @param string $type Тип вопроса  * `free` - свободный ответ * `freelist` - таблица свободных ответов * `select` - одиночный выбор * `multiselect` - множественный выбор * `dropdown` - выпадающий список * `matrix` - матрица * `matrix3d` - матрица 3D * `name` - имя * `email` - e-mail * `phone` - номер телефона * `date` - дата * `html` - HTML-вставка * `scale` - шкала * `order` - ранжирование * `ratingscale` - распределительная шкала
      * @return $this
      */
     public function setType($type)
     {
-        $allowed_values = array('free', 'freelist', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'date', 'html', 'scale', 'order', 'ratingscale');
+        $allowed_values = array('free', 'freelist', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'date', 'html', 'scale', 'order', 'ratingscale');
         if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'free', 'freelist', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'date', 'html', 'scale', 'order', 'ratingscale'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'free', 'freelist', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'date', 'html', 'scale', 'order', 'ratingscale'");
         }
         $this->container['type'] = $type;
 

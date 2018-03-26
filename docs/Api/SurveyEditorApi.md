@@ -43,7 +43,7 @@ Method | HTTP request | Description
 
 
 
-Добавление правила ветвления  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+Добавление правила ветвления  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
 
 ### Example
 ```php
@@ -1243,7 +1243,7 @@ Name | Type | Description  | Notes
 
 
 
-Редактирование правила ветвления  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+Редактирование правила ветвления  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
 
 ### Example
 ```php

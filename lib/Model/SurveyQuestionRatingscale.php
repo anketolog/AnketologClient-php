@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
  *
  * OpenAPI spec version: 2.0
  * 
@@ -78,6 +78,7 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
         'max_value' => 'int',
         'max_value_title' => 'string',
         'is_show_residue' => 'bool',
+        'is_unlimit' => 'bool',
         'options' => '\AnketologClient\Model\SurveyOption[]',
         'options_sort' => 'string'
     );
@@ -103,6 +104,7 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
         'max_value' => 'max_value',
         'max_value_title' => 'max_value_title',
         'is_show_residue' => 'is_show_residue',
+        'is_unlimit' => 'is_unlimit',
         'options' => 'options',
         'options_sort' => 'options_sort'
     );
@@ -128,6 +130,7 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
         'max_value' => 'setMaxValue',
         'max_value_title' => 'setMaxValueTitle',
         'is_show_residue' => 'setIsShowResidue',
+        'is_unlimit' => 'setIsUnlimit',
         'options' => 'setOptions',
         'options_sort' => 'setOptionsSort'
     );
@@ -153,6 +156,7 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
         'max_value' => 'getMaxValue',
         'max_value_title' => 'getMaxValueTitle',
         'is_show_residue' => 'getIsShowResidue',
+        'is_unlimit' => 'getIsUnlimit',
         'options' => 'getOptions',
         'options_sort' => 'getOptionsSort'
     );
@@ -207,6 +211,7 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
         $this->container['max_value'] = isset($data['max_value']) ? $data['max_value'] : null;
         $this->container['max_value_title'] = isset($data['max_value_title']) ? $data['max_value_title'] : 'баллов';
         $this->container['is_show_residue'] = isset($data['is_show_residue']) ? $data['is_show_residue'] : null;
+        $this->container['is_unlimit'] = isset($data['is_unlimit']) ? $data['is_unlimit'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
     }
@@ -251,6 +256,9 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
         }
         if ($this->container['is_show_residue'] === null) {
             $invalid_properties[] = "'is_show_residue' can't be null";
+        }
+        if ($this->container['is_unlimit'] === null) {
+            $invalid_properties[] = "'is_unlimit' can't be null";
         }
         if ($this->container['options'] === null) {
             $invalid_properties[] = "'options' can't be null";
@@ -305,6 +313,9 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['is_show_residue'] === null) {
+            return false;
+        }
+        if ($this->container['is_unlimit'] === null) {
             return false;
         }
         if ($this->container['options'] === null) {
@@ -548,6 +559,27 @@ class SurveyQuestionRatingscale extends SurveyQuestion implements ArrayAccess
     public function setIsShowResidue($is_show_residue)
     {
         $this->container['is_show_residue'] = $is_show_residue;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_unlimit
+     * @return bool
+     */
+    public function getIsUnlimit()
+    {
+        return $this->container['is_unlimit'];
+    }
+
+    /**
+     * Sets is_unlimit
+     * @param bool $is_unlimit Распределать отстаток на каждый вариант
+     * @return $this
+     */
+    public function setIsUnlimit($is_unlimit)
+    {
+        $this->container['is_unlimit'] = $is_unlimit;
 
         return $this;
     }

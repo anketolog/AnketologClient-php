@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
  *
  * OpenAPI spec version: 2.0
  * 
@@ -74,7 +74,8 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         'comment' => 'string',
         'has_unable_answer' => 'bool',
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
-        'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]'
+        'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
+        'date_period' => 'string'
     );
 
     public static function swaggerTypes()
@@ -94,7 +95,8 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         'comment' => 'comment',
         'has_unable_answer' => 'has_unable_answer',
         'branchrules' => 'branchrules',
-        'visiblerules' => 'visiblerules'
+        'visiblerules' => 'visiblerules',
+        'date_period' => 'date_period'
     );
 
     public static function attributeMap()
@@ -114,7 +116,8 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         'comment' => 'setComment',
         'has_unable_answer' => 'setHasUnableAnswer',
         'branchrules' => 'setBranchrules',
-        'visiblerules' => 'setVisiblerules'
+        'visiblerules' => 'setVisiblerules',
+        'date_period' => 'setDatePeriod'
     );
 
     public static function setters()
@@ -134,7 +137,8 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         'comment' => 'getComment',
         'has_unable_answer' => 'getHasUnableAnswer',
         'branchrules' => 'getBranchrules',
-        'visiblerules' => 'getVisiblerules'
+        'visiblerules' => 'getVisiblerules',
+        'date_period' => 'getDatePeriod'
     );
 
     public static function getters()
@@ -142,8 +146,28 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         return parent::getters() + self::$getters;
     }
 
+    const DATE_PERIOD_DEFAULT = 'default';
+    const DATE_PERIOD_PAST_DATE = 'past_date';
+    const DATE_PERIOD_PAST_DATE_WITH_TODAY = 'past_date_with_today';
+    const DATE_PERIOD_FUTURE_DATE = 'future_date';
+    const DATE_PERIOD_FUTURE_DATE_WITH_TODAY = 'future_date_with_today';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getDatePeriodAllowableValues()
+    {
+        return [
+            self::DATE_PERIOD_DEFAULT,
+            self::DATE_PERIOD_PAST_DATE,
+            self::DATE_PERIOD_PAST_DATE_WITH_TODAY,
+            self::DATE_PERIOD_FUTURE_DATE,
+            self::DATE_PERIOD_FUTURE_DATE_WITH_TODAY,
+        ];
+    }
     
 
     /**
@@ -168,6 +192,7 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         $this->container['has_unable_answer'] = isset($data['has_unable_answer']) ? $data['has_unable_answer'] : null;
         $this->container['branchrules'] = isset($data['branchrules']) ? $data['branchrules'] : null;
         $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
+        $this->container['date_period'] = isset($data['date_period']) ? $data['date_period'] : null;
     }
 
     /**
@@ -202,6 +227,14 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
         if ($this->container['visiblerules'] === null) {
             $invalid_properties[] = "'visiblerules' can't be null";
         }
+        if ($this->container['date_period'] === null) {
+            $invalid_properties[] = "'date_period' can't be null";
+        }
+        $allowed_values = array("default", "past_date", "past_date_with_today", "future_date", "future_date_with_today");
+        if (!in_array($this->container['date_period'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'date_period', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -235,6 +268,13 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['visiblerules'] === null) {
+            return false;
+        }
+        if ($this->container['date_period'] === null) {
+            return false;
+        }
+        $allowed_values = array("default", "past_date", "past_date_with_today", "future_date", "future_date_with_today");
+        if (!in_array($this->container['date_period'], $allowed_values)) {
             return false;
         }
         return true;
@@ -405,6 +445,31 @@ class SurveyQuestionDate extends SurveyQuestion implements ArrayAccess
     public function setVisiblerules($visiblerules)
     {
         $this->container['visiblerules'] = $visiblerules;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_period
+     * @return string
+     */
+    public function getDatePeriod()
+    {
+        return $this->container['date_period'];
+    }
+
+    /**
+     * Sets date_period
+     * @param string $date_period Период даты  * `default` - Любой * `past_date` - Прошедшая дата * `past_date_with_today` - Прошедшая дата включая текущий день * `future_date` - Будущая дата * `future_date_with_today` - Будущая дата включая текущий день
+     * @return $this
+     */
+    public function setDatePeriod($date_period)
+    {
+        $allowed_values = array('default', 'past_date', 'past_date_with_today', 'future_date', 'future_date_with_today');
+        if (!in_array($date_period, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'date_period', must be one of 'default', 'past_date', 'past_date_with_today', 'future_date', 'future_date_with_today'");
+        }
+        $this->container['date_period'] = $date_period;
 
         return $this;
     }

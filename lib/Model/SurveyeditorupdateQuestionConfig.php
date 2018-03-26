@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
  *
  * OpenAPI spec version: 2.0
  * 
@@ -85,6 +85,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'max_value' => 'int',
         'max_value_title' => 'string',
         'is_show_residue' => 'bool',
+        'is_unlimit' => 'bool',
         'is_limited' => 'bool',
         'limit' => '\AnketologClient\Model\SurveyeditoraddQuestionConfigLimit'
     );
@@ -117,6 +118,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'max_value' => 'max_value',
         'max_value_title' => 'max_value_title',
         'is_show_residue' => 'is_show_residue',
+        'is_unlimit' => 'is_unlimit',
         'is_limited' => 'is_limited',
         'limit' => 'limit'
     );
@@ -149,6 +151,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'max_value' => 'setMaxValue',
         'max_value_title' => 'setMaxValueTitle',
         'is_show_residue' => 'setIsShowResidue',
+        'is_unlimit' => 'setIsUnlimit',
         'is_limited' => 'setIsLimited',
         'limit' => 'setLimit'
     );
@@ -181,6 +184,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'max_value' => 'getMaxValue',
         'max_value_title' => 'getMaxValueTitle',
         'is_show_residue' => 'getIsShowResidue',
+        'is_unlimit' => 'getIsUnlimit',
         'is_limited' => 'getIsLimited',
         'limit' => 'getLimit'
     );
@@ -256,6 +260,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         $this->container['max_value'] = isset($data['max_value']) ? $data['max_value'] : null;
         $this->container['max_value_title'] = isset($data['max_value_title']) ? $data['max_value_title'] : null;
         $this->container['is_show_residue'] = isset($data['is_show_residue']) ? $data['is_show_residue'] : null;
+        $this->container['is_unlimit'] = isset($data['is_unlimit']) ? $data['is_unlimit'] : null;
         $this->container['is_limited'] = isset($data['is_limited']) ? $data['is_limited'] : null;
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
     }
@@ -354,7 +359,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets comment
-     * @param string $comment Комментарий к вопросу (HTML)  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+     * @param string $comment Комментарий к вопросу (HTML)  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setComment($comment)
@@ -375,7 +380,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_comment
-     * @param bool $has_comment Отображать комментарий к вопросу  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $has_comment Отображать комментарий к вопросу  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setHasComment($has_comment)
@@ -396,7 +401,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_required
-     * @param bool $is_required Вопрос обазательный  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $is_required Вопрос обазательный  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setIsRequired($is_required)
@@ -417,7 +422,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_enable
-     * @param bool $is_enable Вопрос виден респонденту  Для вопросов:  * `html` * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $is_enable Вопрос виден респонденту  Для вопросов:  * `html` * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setIsEnable($is_enable)
@@ -438,7 +443,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_unable_answer
-     * @param bool $has_unable_answer Вариант \"затрудняюсь ответить\"  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $has_unable_answer Вариант \"затрудняюсь ответить\"  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setHasUnableAnswer($has_unable_answer)
@@ -501,7 +506,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets placeholder
-     * @param string $placeholder Текст-подсказка  Для вопросов:  * `free` * `dropdown` * `matrix3d` * `email`
+     * @param string $placeholder Текст-подсказка  Для вопросов:  * `free` * `dropdown` * `matrix3d` * `email` * `phone`
      * @return $this
      */
     public function setPlaceholder($placeholder)
@@ -683,6 +688,27 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
     public function setIsShowResidue($is_show_residue)
     {
         $this->container['is_show_residue'] = $is_show_residue;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_unlimit
+     * @return bool
+     */
+    public function getIsUnlimit()
+    {
+        return $this->container['is_unlimit'];
+    }
+
+    /**
+     * Sets is_unlimit
+     * @param bool $is_unlimit Распределать отстаток на каждый вариант  Для вопросов:  * `ratingscale`
+     * @return $this
+     */
+    public function setIsUnlimit($is_unlimit)
+    {
+        $this->container['is_unlimit'] = $is_unlimit;
 
         return $this;
     }

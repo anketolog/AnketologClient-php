@@ -31,6 +31,10 @@ Name | Type | Description | Notes
 **allow_custom_css** | **bool** | Разрешено использовать настройку пользовательского CSS в опросе | 
 **allow_survey_branchrules** | **bool** | Разрешено настраивать логические правила у опроса | 
 **allow_survey_visiblerules** | **bool** | Разрешено настраивать правила отображения вопросов | 
+**allow_randomization** | **bool** | Разрешено настраивать рандомизацию вопросов/страниц | 
+**allow_related** | **bool** | Разрешено настраивать подстановку вариантов | 
+**allow_calculate_nps** | **bool** | Разрешен автоматический расчет простого индекса NPS | 
+**allow_insert_params** | **bool** | Разрешена вставка данных в анкету из параметров URL | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
