@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyQuestionMatrix3D
+ * SurveyQuestionFile
  *
  * PHP version 5
  *
@@ -44,23 +44,23 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyQuestionMatrix3D Class Doc Comment
+ * SurveyQuestionFile Class Doc Comment
  *
  * @category    Class */
- // @description Вопрос \&quot;матрица 3D\&quot;
+ // @description Вопрос \&quot;Загрузка файла\&quot;
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
+class SurveyQuestionFile extends SurveyQuestion implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyQuestionMatrix3D';
+    protected static $swaggerModelName = 'SurveyQuestionFile';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -75,11 +75,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'bool',
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
         'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
-        'is_multiselect' => 'bool',
-        'options' => '\AnketologClient\Model\SurveyOption[]',
-        'options_sort' => 'string',
-        'rows' => '\AnketologClient\Model\SurveyRow[]',
-        'rows_sort' => 'string'
+        'is_multiple' => 'bool'
     );
 
     public static function swaggerTypes()
@@ -100,11 +96,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'has_unable_answer',
         'branchrules' => 'branchrules',
         'visiblerules' => 'visiblerules',
-        'is_multiselect' => 'is_multiselect',
-        'options' => 'options',
-        'options_sort' => 'options_sort',
-        'rows' => 'rows',
-        'rows_sort' => 'rows_sort'
+        'is_multiple' => 'is_multiple'
     );
 
     public static function attributeMap()
@@ -125,11 +117,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'setHasUnableAnswer',
         'branchrules' => 'setBranchrules',
         'visiblerules' => 'setVisiblerules',
-        'is_multiselect' => 'setIsMultiselect',
-        'options' => 'setOptions',
-        'options_sort' => 'setOptionsSort',
-        'rows' => 'setRows',
-        'rows_sort' => 'setRowsSort'
+        'is_multiple' => 'setIsMultiple'
     );
 
     public static function setters()
@@ -150,11 +138,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'getHasUnableAnswer',
         'branchrules' => 'getBranchrules',
         'visiblerules' => 'getVisiblerules',
-        'is_multiselect' => 'getIsMultiselect',
-        'options' => 'getOptions',
-        'options_sort' => 'getOptionsSort',
-        'rows' => 'getRows',
-        'rows_sort' => 'getRowsSort'
+        'is_multiple' => 'getIsMultiple'
     );
 
     public static function getters()
@@ -162,40 +146,8 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         return parent::getters() + self::$getters;
     }
 
-    const OPTIONS_SORT_DEFAULT = 'default';
-    const OPTIONS_SORT_ALPHABET = 'alphabet';
-    const OPTIONS_SORT_RANDOM = 'random';
-    const ROWS_SORT_DEFAULT = 'default';
-    const ROWS_SORT_ALPHABET = 'alphabet';
-    const ROWS_SORT_RANDOM = 'random';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getOptionsSortAllowableValues()
-    {
-        return [
-            self::OPTIONS_SORT_DEFAULT,
-            self::OPTIONS_SORT_ALPHABET,
-            self::OPTIONS_SORT_RANDOM,
-        ];
-    }
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getRowsSortAllowableValues()
-    {
-        return [
-            self::ROWS_SORT_DEFAULT,
-            self::ROWS_SORT_ALPHABET,
-            self::ROWS_SORT_RANDOM,
-        ];
-    }
     
 
     /**
@@ -220,11 +172,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         $this->container['has_unable_answer'] = isset($data['has_unable_answer']) ? $data['has_unable_answer'] : null;
         $this->container['branchrules'] = isset($data['branchrules']) ? $data['branchrules'] : null;
         $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
-        $this->container['is_multiselect'] = isset($data['is_multiselect']) ? $data['is_multiselect'] : null;
-        $this->container['options'] = isset($data['options']) ? $data['options'] : null;
-        $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
-        $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
-        $this->container['rows_sort'] = isset($data['rows_sort']) ? $data['rows_sort'] : null;
+        $this->container['is_multiple'] = isset($data['is_multiple']) ? $data['is_multiple'] : null;
     }
 
     /**
@@ -259,31 +207,9 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         if ($this->container['visiblerules'] === null) {
             $invalid_properties[] = "'visiblerules' can't be null";
         }
-        if ($this->container['is_multiselect'] === null) {
-            $invalid_properties[] = "'is_multiselect' can't be null";
+        if ($this->container['is_multiple'] === null) {
+            $invalid_properties[] = "'is_multiple' can't be null";
         }
-        if ($this->container['options'] === null) {
-            $invalid_properties[] = "'options' can't be null";
-        }
-        if ($this->container['options_sort'] === null) {
-            $invalid_properties[] = "'options_sort' can't be null";
-        }
-        $allowed_values = array("default", "alphabet", "random");
-        if (!in_array($this->container['options_sort'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'options_sort', must be one of #{allowed_values}.";
-        }
-
-        if ($this->container['rows'] === null) {
-            $invalid_properties[] = "'rows' can't be null";
-        }
-        if ($this->container['rows_sort'] === null) {
-            $invalid_properties[] = "'rows_sort' can't be null";
-        }
-        $allowed_values = array("default", "alphabet", "random");
-        if (!in_array($this->container['rows_sort'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'rows_sort', must be one of #{allowed_values}.";
-        }
-
         return $invalid_properties;
     }
 
@@ -319,27 +245,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         if ($this->container['visiblerules'] === null) {
             return false;
         }
-        if ($this->container['is_multiselect'] === null) {
-            return false;
-        }
-        if ($this->container['options'] === null) {
-            return false;
-        }
-        if ($this->container['options_sort'] === null) {
-            return false;
-        }
-        $allowed_values = array("default", "alphabet", "random");
-        if (!in_array($this->container['options_sort'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['rows'] === null) {
-            return false;
-        }
-        if ($this->container['rows_sort'] === null) {
-            return false;
-        }
-        $allowed_values = array("default", "alphabet", "random");
-        if (!in_array($this->container['rows_sort'], $allowed_values)) {
+        if ($this->container['is_multiple'] === null) {
             return false;
         }
         return true;
@@ -515,114 +421,22 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
     }
 
     /**
-     * Gets is_multiselect
+     * Gets is_multiple
      * @return bool
      */
-    public function getIsMultiselect()
+    public function getIsMultiple()
     {
-        return $this->container['is_multiselect'];
+        return $this->container['is_multiple'];
     }
 
     /**
-     * Sets is_multiselect
-     * @param bool $is_multiselect Возможность выбора нескольких ответов
+     * Sets is_multiple
+     * @param bool $is_multiple Загрузка нескольких файлов
      * @return $this
      */
-    public function setIsMultiselect($is_multiselect)
+    public function setIsMultiple($is_multiple)
     {
-        $this->container['is_multiselect'] = $is_multiselect;
-
-        return $this;
-    }
-
-    /**
-     * Gets options
-     * @return \AnketologClient\Model\SurveyOption[]
-     */
-    public function getOptions()
-    {
-        return $this->container['options'];
-    }
-
-    /**
-     * Sets options
-     * @param \AnketologClient\Model\SurveyOption[] $options
-     * @return $this
-     */
-    public function setOptions($options)
-    {
-        $this->container['options'] = $options;
-
-        return $this;
-    }
-
-    /**
-     * Gets options_sort
-     * @return string
-     */
-    public function getOptionsSort()
-    {
-        return $this->container['options_sort'];
-    }
-
-    /**
-     * Sets options_sort
-     * @param string $options_sort Сортировка  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке
-     * @return $this
-     */
-    public function setOptionsSort($options_sort)
-    {
-        $allowed_values = array('default', 'alphabet', 'random');
-        if (!in_array($options_sort, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'options_sort', must be one of 'default', 'alphabet', 'random'");
-        }
-        $this->container['options_sort'] = $options_sort;
-
-        return $this;
-    }
-
-    /**
-     * Gets rows
-     * @return \AnketologClient\Model\SurveyRow[]
-     */
-    public function getRows()
-    {
-        return $this->container['rows'];
-    }
-
-    /**
-     * Sets rows
-     * @param \AnketologClient\Model\SurveyRow[] $rows
-     * @return $this
-     */
-    public function setRows($rows)
-    {
-        $this->container['rows'] = $rows;
-
-        return $this;
-    }
-
-    /**
-     * Gets rows_sort
-     * @return string
-     */
-    public function getRowsSort()
-    {
-        return $this->container['rows_sort'];
-    }
-
-    /**
-     * Sets rows_sort
-     * @param string $rows_sort Сортировка  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке
-     * @return $this
-     */
-    public function setRowsSort($rows_sort)
-    {
-        $allowed_values = array('default', 'alphabet', 'random');
-        if (!in_array($rows_sort, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'rows_sort', must be one of 'default', 'alphabet', 'random'");
-        }
-        $this->container['rows_sort'] = $rows_sort;
+        $this->container['is_multiple'] = $is_multiple;
 
         return $this;
     }

@@ -168,6 +168,22 @@ class SurveyQuestionFreelistTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_limited"
+     */
+    public function testPropertyIsLimited()
+    {
+
+    }
+
+    /**
+     * Test attribute "limit"
+     */
+    public function testPropertyLimit()
+    {
+
+    }
+
+    /**
      * Test attribute "datatype"
      */
     public function testPropertyDatatype()

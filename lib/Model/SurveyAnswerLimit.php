@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyEditorAddQuestionBody
+ * SurveyAnswerLimit
  *
  * PHP version 5
  *
@@ -44,32 +44,31 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyEditorAddQuestionBody Class Doc Comment
+ * SurveyAnswerLimit Class Doc Comment
  *
  * @category    Class */
+ // @description Ограничение значения ответа
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyEditorAddQuestionBody implements ArrayAccess
+class SurveyAnswerLimit implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyEditorAddQuestionBody';
+    protected static $swaggerModelName = 'SurveyAnswerLimit';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int',
-        'page_id' => 'int',
-        'type' => 'string',
-        'config' => '\AnketologClient\Model\SurveyeditoraddQuestionConfig'
+        'min' => 'int',
+        'max' => 'int'
     );
 
     public static function swaggerTypes()
@@ -82,10 +81,8 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id',
-        'page_id' => 'page_id',
-        'type' => 'type',
-        'config' => 'config'
+        'min' => 'min',
+        'max' => 'max'
     );
 
     public static function attributeMap()
@@ -98,10 +95,8 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId',
-        'page_id' => 'setPageId',
-        'type' => 'setType',
-        'config' => 'setConfig'
+        'min' => 'setMin',
+        'max' => 'setMax'
     );
 
     public static function setters()
@@ -114,10 +109,8 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId',
-        'page_id' => 'getPageId',
-        'type' => 'getType',
-        'config' => 'getConfig'
+        'min' => 'getMin',
+        'max' => 'getMax'
     );
 
     public static function getters()
@@ -125,52 +118,8 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
         return self::$getters;
     }
 
-    const TYPE_FREE = 'free';
-    const TYPE_FREELIST = 'freelist';
-    const TYPE_FREEMATRIX = 'freematrix';
-    const TYPE_SELECT = 'select';
-    const TYPE_MULTISELECT = 'multiselect';
-    const TYPE_DROPDOWN = 'dropdown';
-    const TYPE_MATRIX = 'matrix';
-    const TYPE_MATRIX3D = 'matrix3d';
-    const TYPE_NAME = 'name';
-    const TYPE_EMAIL = 'email';
-    const TYPE_PHONE = 'phone';
-    const TYPE_FILE = 'file';
-    const TYPE_DATE = 'date';
-    const TYPE_HTML = 'html';
-    const TYPE_SCALE = 'scale';
-    const TYPE_ORDER = 'order';
-    const TYPE_RATINGSCALE = 'ratingscale';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getTypeAllowableValues()
-    {
-        return [
-            self::TYPE_FREE,
-            self::TYPE_FREELIST,
-            self::TYPE_FREEMATRIX,
-            self::TYPE_SELECT,
-            self::TYPE_MULTISELECT,
-            self::TYPE_DROPDOWN,
-            self::TYPE_MATRIX,
-            self::TYPE_MATRIX3D,
-            self::TYPE_NAME,
-            self::TYPE_EMAIL,
-            self::TYPE_PHONE,
-            self::TYPE_FILE,
-            self::TYPE_DATE,
-            self::TYPE_HTML,
-            self::TYPE_SCALE,
-            self::TYPE_ORDER,
-            self::TYPE_RATINGSCALE,
-        ];
-    }
     
 
     /**
@@ -185,10 +134,8 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
-        $this->container['page_id'] = isset($data['page_id']) ? $data['page_id'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['config'] = isset($data['config']) ? $data['config'] : null;
+        $this->container['min'] = isset($data['min']) ? $data['min'] : null;
+        $this->container['max'] = isset($data['max']) ? $data['max'] : null;
     }
 
     /**
@@ -199,17 +146,6 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['survey_id'] === null) {
-            $invalid_properties[] = "'survey_id' can't be null";
-        }
-        if ($this->container['type'] === null) {
-            $invalid_properties[] = "'type' can't be null";
-        }
-        $allowed_values = array("free", "freelist", "freematrix", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "file", "date", "html", "scale", "order", "ratingscale");
-        if (!in_array($this->container['type'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
-        }
-
         return $invalid_properties;
     }
 
@@ -221,104 +157,48 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['survey_id'] === null) {
-            return false;
-        }
-        if ($this->container['type'] === null) {
-            return false;
-        }
-        $allowed_values = array("free", "freelist", "freematrix", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "file", "date", "html", "scale", "order", "ratingscale");
-        if (!in_array($this->container['type'], $allowed_values)) {
-            return false;
-        }
         return true;
     }
 
 
     /**
-     * Gets survey_id
+     * Gets min
      * @return int
      */
-    public function getSurveyId()
+    public function getMin()
     {
-        return $this->container['survey_id'];
+        return $this->container['min'];
     }
 
     /**
-     * Sets survey_id
-     * @param int $survey_id ID опроса
+     * Sets min
+     * @param int $min Минимальное значение
      * @return $this
      */
-    public function setSurveyId($survey_id)
+    public function setMin($min)
     {
-        $this->container['survey_id'] = $survey_id;
+        $this->container['min'] = $min;
 
         return $this;
     }
 
     /**
-     * Gets page_id
+     * Gets max
      * @return int
      */
-    public function getPageId()
+    public function getMax()
     {
-        return $this->container['page_id'];
+        return $this->container['max'];
     }
 
     /**
-     * Sets page_id
-     * @param int $page_id ID страницы
+     * Sets max
+     * @param int $max Максимальное значение
      * @return $this
      */
-    public function setPageId($page_id)
+    public function setMax($max)
     {
-        $this->container['page_id'] = $page_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type Тип вопроса  * `free` - свободный ответ * `freelist` - таблица свободных ответов * `freematrix` - матрица свободных ответов * `select` - одиночный выбор * `multiselect` - множественный выбор * `dropdown` - выпадающий список * `matrix` - матрица * `matrix3d` - матрица 3D * `name` - имя * `email` - e-mail * `phone` - номер телефона * `file` - загрузка файла * `date` - дата * `html` - HTML-вставка * `scale` - шкала * `order` - ранжирование * `ratingscale` - распределительная шкала
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $allowed_values = array('free', 'freelist', 'freematrix', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'file', 'date', 'html', 'scale', 'order', 'ratingscale');
-        if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'free', 'freelist', 'freematrix', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'file', 'date', 'html', 'scale', 'order', 'ratingscale'");
-        }
-        $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets config
-     * @return \AnketologClient\Model\SurveyeditoraddQuestionConfig
-     */
-    public function getConfig()
-    {
-        return $this->container['config'];
-    }
-
-    /**
-     * Sets config
-     * @param \AnketologClient\Model\SurveyeditoraddQuestionConfig $config
-     * @return $this
-     */
-    public function setConfig($config)
-    {
-        $this->container['config'] = $config;
+        $this->container['max'] = $max;
 
         return $this;
     }

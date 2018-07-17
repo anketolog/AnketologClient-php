@@ -76,6 +76,8 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
         'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
         'is_multiline' => 'bool',
+        'is_limited' => 'bool',
+        'limit' => '\AnketologClient\Model\SurveyAnswerLimit',
         'datatype' => 'string',
         'placeholder' => 'string'
     );
@@ -99,6 +101,8 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         'branchrules' => 'branchrules',
         'visiblerules' => 'visiblerules',
         'is_multiline' => 'is_multiline',
+        'is_limited' => 'is_limited',
+        'limit' => 'limit',
         'datatype' => 'datatype',
         'placeholder' => 'placeholder'
     );
@@ -122,6 +126,8 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         'branchrules' => 'setBranchrules',
         'visiblerules' => 'setVisiblerules',
         'is_multiline' => 'setIsMultiline',
+        'is_limited' => 'setIsLimited',
+        'limit' => 'setLimit',
         'datatype' => 'setDatatype',
         'placeholder' => 'setPlaceholder'
     );
@@ -145,6 +151,8 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         'branchrules' => 'getBranchrules',
         'visiblerules' => 'getVisiblerules',
         'is_multiline' => 'getIsMultiline',
+        'is_limited' => 'getIsLimited',
+        'limit' => 'getLimit',
         'datatype' => 'getDatatype',
         'placeholder' => 'getPlaceholder'
     );
@@ -197,6 +205,8 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         $this->container['branchrules'] = isset($data['branchrules']) ? $data['branchrules'] : null;
         $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
         $this->container['is_multiline'] = isset($data['is_multiline']) ? $data['is_multiline'] : null;
+        $this->container['is_limited'] = isset($data['is_limited']) ? $data['is_limited'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['datatype'] = isset($data['datatype']) ? $data['datatype'] : null;
         $this->container['placeholder'] = isset($data['placeholder']) ? $data['placeholder'] : null;
     }
@@ -235,6 +245,12 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
         }
         if ($this->container['is_multiline'] === null) {
             $invalid_properties[] = "'is_multiline' can't be null";
+        }
+        if ($this->container['is_limited'] === null) {
+            $invalid_properties[] = "'is_limited' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalid_properties[] = "'limit' can't be null";
         }
         if ($this->container['datatype'] === null) {
             $invalid_properties[] = "'datatype' can't be null";
@@ -280,6 +296,12 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['is_multiline'] === null) {
+            return false;
+        }
+        if ($this->container['is_limited'] === null) {
+            return false;
+        }
+        if ($this->container['limit'] === null) {
             return false;
         }
         if ($this->container['datatype'] === null) {
@@ -478,6 +500,48 @@ class SurveyQuestionFree extends SurveyQuestion implements ArrayAccess
     public function setIsMultiline($is_multiline)
     {
         $this->container['is_multiline'] = $is_multiline;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_limited
+     * @return bool
+     */
+    public function getIsLimited()
+    {
+        return $this->container['is_limited'];
+    }
+
+    /**
+     * Sets is_limited
+     * @param bool $is_limited Ограничение значения ответа
+     * @return $this
+     */
+    public function setIsLimited($is_limited)
+    {
+        $this->container['is_limited'] = $is_limited;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     * @return \AnketologClient\Model\SurveyAnswerLimit
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param \AnketologClient\Model\SurveyAnswerLimit $limit
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
 
         return $this;
     }

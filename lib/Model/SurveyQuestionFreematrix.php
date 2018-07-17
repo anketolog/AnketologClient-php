@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyQuestionMatrix3D
+ * SurveyQuestionFreematrix
  *
  * PHP version 5
  *
@@ -44,23 +44,23 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyQuestionMatrix3D Class Doc Comment
+ * SurveyQuestionFreematrix Class Doc Comment
  *
  * @category    Class */
- // @description Вопрос \&quot;матрица 3D\&quot;
+ // @description Вопрос \&quot;матрица свободных ответов\&quot;
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
+class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyQuestionMatrix3D';
+    protected static $swaggerModelName = 'SurveyQuestionFreematrix';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -75,7 +75,10 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'bool',
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
         'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
-        'is_multiselect' => 'bool',
+        'is_multiline' => 'bool',
+        'is_limited' => 'bool',
+        'limit' => '\AnketologClient\Model\SurveyAnswerLimit',
+        'datatype' => 'string',
         'options' => '\AnketologClient\Model\SurveyOption[]',
         'options_sort' => 'string',
         'rows' => '\AnketologClient\Model\SurveyRow[]',
@@ -100,7 +103,10 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'has_unable_answer',
         'branchrules' => 'branchrules',
         'visiblerules' => 'visiblerules',
-        'is_multiselect' => 'is_multiselect',
+        'is_multiline' => 'is_multiline',
+        'is_limited' => 'is_limited',
+        'limit' => 'limit',
+        'datatype' => 'datatype',
         'options' => 'options',
         'options_sort' => 'options_sort',
         'rows' => 'rows',
@@ -125,7 +131,10 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'setHasUnableAnswer',
         'branchrules' => 'setBranchrules',
         'visiblerules' => 'setVisiblerules',
-        'is_multiselect' => 'setIsMultiselect',
+        'is_multiline' => 'setIsMultiline',
+        'is_limited' => 'setIsLimited',
+        'limit' => 'setLimit',
+        'datatype' => 'setDatatype',
         'options' => 'setOptions',
         'options_sort' => 'setOptionsSort',
         'rows' => 'setRows',
@@ -150,7 +159,10 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         'has_unable_answer' => 'getHasUnableAnswer',
         'branchrules' => 'getBranchrules',
         'visiblerules' => 'getVisiblerules',
-        'is_multiselect' => 'getIsMultiselect',
+        'is_multiline' => 'getIsMultiline',
+        'is_limited' => 'getIsLimited',
+        'limit' => 'getLimit',
+        'datatype' => 'getDatatype',
         'options' => 'getOptions',
         'options_sort' => 'getOptionsSort',
         'rows' => 'getRows',
@@ -162,6 +174,9 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         return parent::getters() + self::$getters;
     }
 
+    const DATATYPE_DEFAULT = 'default';
+    const DATATYPE_INTEGER = 'integer';
+    const DATATYPE_FLOAT = 'float';
     const OPTIONS_SORT_DEFAULT = 'default';
     const OPTIONS_SORT_ALPHABET = 'alphabet';
     const OPTIONS_SORT_RANDOM = 'random';
@@ -170,6 +185,19 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
     const ROWS_SORT_RANDOM = 'random';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getDatatypeAllowableValues()
+    {
+        return [
+            self::DATATYPE_DEFAULT,
+            self::DATATYPE_INTEGER,
+            self::DATATYPE_FLOAT,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -220,7 +248,10 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         $this->container['has_unable_answer'] = isset($data['has_unable_answer']) ? $data['has_unable_answer'] : null;
         $this->container['branchrules'] = isset($data['branchrules']) ? $data['branchrules'] : null;
         $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
-        $this->container['is_multiselect'] = isset($data['is_multiselect']) ? $data['is_multiselect'] : null;
+        $this->container['is_multiline'] = isset($data['is_multiline']) ? $data['is_multiline'] : null;
+        $this->container['is_limited'] = isset($data['is_limited']) ? $data['is_limited'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['datatype'] = isset($data['datatype']) ? $data['datatype'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
         $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
@@ -259,9 +290,23 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         if ($this->container['visiblerules'] === null) {
             $invalid_properties[] = "'visiblerules' can't be null";
         }
-        if ($this->container['is_multiselect'] === null) {
-            $invalid_properties[] = "'is_multiselect' can't be null";
+        if ($this->container['is_multiline'] === null) {
+            $invalid_properties[] = "'is_multiline' can't be null";
         }
+        if ($this->container['is_limited'] === null) {
+            $invalid_properties[] = "'is_limited' can't be null";
+        }
+        if ($this->container['limit'] === null) {
+            $invalid_properties[] = "'limit' can't be null";
+        }
+        if ($this->container['datatype'] === null) {
+            $invalid_properties[] = "'datatype' can't be null";
+        }
+        $allowed_values = array("default", "integer", "float");
+        if (!in_array($this->container['datatype'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'datatype', must be one of #{allowed_values}.";
+        }
+
         if ($this->container['options'] === null) {
             $invalid_properties[] = "'options' can't be null";
         }
@@ -273,12 +318,6 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
             $invalid_properties[] = "invalid value for 'options_sort', must be one of #{allowed_values}.";
         }
 
-        if ($this->container['rows'] === null) {
-            $invalid_properties[] = "'rows' can't be null";
-        }
-        if ($this->container['rows_sort'] === null) {
-            $invalid_properties[] = "'rows_sort' can't be null";
-        }
         $allowed_values = array("default", "alphabet", "random");
         if (!in_array($this->container['rows_sort'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'rows_sort', must be one of #{allowed_values}.";
@@ -319,7 +358,20 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         if ($this->container['visiblerules'] === null) {
             return false;
         }
-        if ($this->container['is_multiselect'] === null) {
+        if ($this->container['is_multiline'] === null) {
+            return false;
+        }
+        if ($this->container['is_limited'] === null) {
+            return false;
+        }
+        if ($this->container['limit'] === null) {
+            return false;
+        }
+        if ($this->container['datatype'] === null) {
+            return false;
+        }
+        $allowed_values = array("default", "integer", "float");
+        if (!in_array($this->container['datatype'], $allowed_values)) {
             return false;
         }
         if ($this->container['options'] === null) {
@@ -330,12 +382,6 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
         }
         $allowed_values = array("default", "alphabet", "random");
         if (!in_array($this->container['options_sort'], $allowed_values)) {
-            return false;
-        }
-        if ($this->container['rows'] === null) {
-            return false;
-        }
-        if ($this->container['rows_sort'] === null) {
             return false;
         }
         $allowed_values = array("default", "alphabet", "random");
@@ -515,22 +561,89 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
     }
 
     /**
-     * Gets is_multiselect
+     * Gets is_multiline
      * @return bool
      */
-    public function getIsMultiselect()
+    public function getIsMultiline()
     {
-        return $this->container['is_multiselect'];
+        return $this->container['is_multiline'];
     }
 
     /**
-     * Sets is_multiselect
-     * @param bool $is_multiselect Возможность выбора нескольких ответов
+     * Sets is_multiline
+     * @param bool $is_multiline Многострочное поле ввода
      * @return $this
      */
-    public function setIsMultiselect($is_multiselect)
+    public function setIsMultiline($is_multiline)
     {
-        $this->container['is_multiselect'] = $is_multiselect;
+        $this->container['is_multiline'] = $is_multiline;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_limited
+     * @return bool
+     */
+    public function getIsLimited()
+    {
+        return $this->container['is_limited'];
+    }
+
+    /**
+     * Sets is_limited
+     * @param bool $is_limited Ограничение значения ответа
+     * @return $this
+     */
+    public function setIsLimited($is_limited)
+    {
+        $this->container['is_limited'] = $is_limited;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     * @return \AnketologClient\Model\SurveyAnswerLimit
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param \AnketologClient\Model\SurveyAnswerLimit $limit
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets datatype
+     * @return string
+     */
+    public function getDatatype()
+    {
+        return $this->container['datatype'];
+    }
+
+    /**
+     * Sets datatype
+     * @param string $datatype Тип вводимых данных  * `default` - текст * `integer` - целое число * `float` - дробное число
+     * @return $this
+     */
+    public function setDatatype($datatype)
+    {
+        $allowed_values = array('default', 'integer', 'float');
+        if (!in_array($datatype, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'datatype', must be one of 'default', 'integer', 'float'");
+        }
+        $this->container['datatype'] = $datatype;
 
         return $this;
     }

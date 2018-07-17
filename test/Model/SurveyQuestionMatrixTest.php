@@ -144,6 +144,22 @@ class SurveyQuestionMatrixTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_multiselect"
+     */
+    public function testPropertyIsMultiselect()
+    {
+
+    }
+
+    /**
+     * Test attribute "is_multiselect_column"
+     */
+    public function testPropertyIsMultiselectColumn()
+    {
+
+    }
+
+    /**
      * Test attribute "branchrules"
      */
     public function testPropertyBranchrules()

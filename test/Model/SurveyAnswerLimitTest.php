@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyeditorupdateQuestionConfigTest
+ * SurveyAnswerLimitTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyeditorupdateQuestionConfigTest Class Doc Comment
+ * SurveyAnswerLimitTest Class Doc Comment
  *
  * @category    Class */
-// * @description Настройки
+// * @description Ограничение значения ответа
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyeditorupdateQuestionConfigTest extends \PHPUnit_Framework_TestCase
+class SurveyAnswerLimitTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,185 +88,25 @@ class SurveyeditorupdateQuestionConfigTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyeditorupdateQuestionConfig"
+     * Test "SurveyAnswerLimit"
      */
-    public function testSurveyeditorupdateQuestionConfig()
+    public function testSurveyAnswerLimit()
     {
 
     }
 
     /**
-     * Test attribute "title"
+     * Test attribute "min"
      */
-    public function testPropertyTitle()
+    public function testPropertyMin()
     {
 
     }
 
     /**
-     * Test attribute "html_code"
+     * Test attribute "max"
      */
-    public function testPropertyHtmlCode()
-    {
-
-    }
-
-    /**
-     * Test attribute "comment"
-     */
-    public function testPropertyComment()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_comment"
-     */
-    public function testPropertyHasComment()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_required"
-     */
-    public function testPropertyIsRequired()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_enable"
-     */
-    public function testPropertyIsEnable()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_unable_answer"
-     */
-    public function testPropertyHasUnableAnswer()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_multiline"
-     */
-    public function testPropertyIsMultiline()
-    {
-
-    }
-
-    /**
-     * Test attribute "datatype"
-     */
-    public function testPropertyDatatype()
-    {
-
-    }
-
-    /**
-     * Test attribute "placeholder"
-     */
-    public function testPropertyPlaceholder()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_other_answer"
-     */
-    public function testPropertyHasOtherAnswer()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_nothing_answer"
-     */
-    public function testPropertyHasNothingAnswer()
-    {
-
-    }
-
-    /**
-     * Test attribute "has_middle_name"
-     */
-    public function testPropertyHasMiddleName()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_multiple"
-     */
-    public function testPropertyIsMultiple()
-    {
-
-    }
-
-    /**
-     * Test attribute "options_sort"
-     */
-    public function testPropertyOptionsSort()
-    {
-
-    }
-
-    /**
-     * Test attribute "rows_sort"
-     */
-    public function testPropertyRowsSort()
-    {
-
-    }
-
-    /**
-     * Test attribute "max_value"
-     */
-    public function testPropertyMaxValue()
-    {
-
-    }
-
-    /**
-     * Test attribute "max_value_title"
-     */
-    public function testPropertyMaxValueTitle()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_show_residue"
-     */
-    public function testPropertyIsShowResidue()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_unlimit"
-     */
-    public function testPropertyIsUnlimit()
-    {
-
-    }
-
-    /**
-     * Test attribute "is_limited"
-     */
-    public function testPropertyIsLimited()
-    {
-
-    }
-
-    /**
-     * Test attribute "limit"
-     */
-    public function testPropertyLimit()
+    public function testPropertyMax()
     {
 
     }

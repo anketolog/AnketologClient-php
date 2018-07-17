@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **has_unable_answer** | **bool** | Вариант \&quot;затрудняюсь ответить\&quot; | 
 **branchrules** | [**\AnketologClient\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
 **visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
-**is_multiselect** | **bool** | d | 
+**is_multiselect** | **bool** | Возможность выбора нескольких ответов | 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
 **options_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | 
 **rows** | [**\AnketologClient\Model\SurveyRow[]**](SurveyRow.md) |  | 

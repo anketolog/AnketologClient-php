@@ -192,6 +192,14 @@ class SurveyeditoraddQuestionConfigTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_multiple"
+     */
+    public function testPropertyIsMultiple()
+    {
+
+    }
+
+    /**
      * Test attribute "has_nothing_answer"
      */
     public function testPropertyHasNothingAnswer()

@@ -34,6 +34,7 @@ Name | Type | Description | Notes
 **allow_randomization** | **bool** | Разрешено настраивать рандомизацию вопросов/страниц | 
 **allow_related** | **bool** | Разрешено настраивать подстановку вариантов | 
 **allow_calculate_nps** | **bool** | Разрешен автоматический расчет простого индекса NPS | 
+**allow_survey_redirect** | **bool** | Разрешена настройка редиректов в анкете | 
 **allow_insert_params** | **bool** | Разрешена вставка данных в анкету из параметров URL | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

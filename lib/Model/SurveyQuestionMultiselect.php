@@ -80,7 +80,8 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
         'is_limited' => 'bool',
         'limit' => '\AnketologClient\Model\SurveyOptionLimit',
         'options' => '\AnketologClient\Model\SurveyOption[]',
-        'options_sort' => 'string'
+        'options_sort' => 'string',
+        'column_count' => 'string'
     );
 
     public static function swaggerTypes()
@@ -106,7 +107,8 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
         'is_limited' => 'is_limited',
         'limit' => 'limit',
         'options' => 'options',
-        'options_sort' => 'options_sort'
+        'options_sort' => 'options_sort',
+        'column_count' => 'column_count'
     );
 
     public static function attributeMap()
@@ -132,7 +134,8 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
         'is_limited' => 'setIsLimited',
         'limit' => 'setLimit',
         'options' => 'setOptions',
-        'options_sort' => 'setOptionsSort'
+        'options_sort' => 'setOptionsSort',
+        'column_count' => 'setColumnCount'
     );
 
     public static function setters()
@@ -158,7 +161,8 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
         'is_limited' => 'getIsLimited',
         'limit' => 'getLimit',
         'options' => 'getOptions',
-        'options_sort' => 'getOptionsSort'
+        'options_sort' => 'getOptionsSort',
+        'column_count' => 'getColumnCount'
     );
 
     public static function getters()
@@ -169,6 +173,9 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
     const OPTIONS_SORT_DEFAULT = 'default';
     const OPTIONS_SORT_ALPHABET = 'alphabet';
     const OPTIONS_SORT_RANDOM = 'random';
+    const COLUMN_COUNT__1_COLUMN = '1_column';
+    const COLUMN_COUNT__2_COLUMN = '2_column';
+    const COLUMN_COUNT__3_COLUMN = '3_column';
     
 
     
@@ -182,6 +189,19 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
             self::OPTIONS_SORT_DEFAULT,
             self::OPTIONS_SORT_ALPHABET,
             self::OPTIONS_SORT_RANDOM,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getColumnCountAllowableValues()
+    {
+        return [
+            self::COLUMN_COUNT__1_COLUMN,
+            self::COLUMN_COUNT__2_COLUMN,
+            self::COLUMN_COUNT__3_COLUMN,
         ];
     }
     
@@ -214,6 +234,7 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
         $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
+        $this->container['column_count'] = isset($data['column_count']) ? $data['column_count'] : null;
     }
 
     /**
@@ -271,6 +292,14 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
             $invalid_properties[] = "invalid value for 'options_sort', must be one of #{allowed_values}.";
         }
 
+        if ($this->container['column_count'] === null) {
+            $invalid_properties[] = "'column_count' can't be null";
+        }
+        $allowed_values = array("1_column", "2_column", "3_column");
+        if (!in_array($this->container['column_count'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'column_count', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -326,6 +355,13 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
         }
         $allowed_values = array("default", "alphabet", "random");
         if (!in_array($this->container['options_sort'], $allowed_values)) {
+            return false;
+        }
+        if ($this->container['column_count'] === null) {
+            return false;
+        }
+        $allowed_values = array("1_column", "2_column", "3_column");
+        if (!in_array($this->container['column_count'], $allowed_values)) {
             return false;
         }
         return true;
@@ -626,6 +662,31 @@ class SurveyQuestionMultiselect extends SurveyQuestion implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'options_sort', must be one of 'default', 'alphabet', 'random'");
         }
         $this->container['options_sort'] = $options_sort;
+
+        return $this;
+    }
+
+    /**
+     * Gets column_count
+     * @return string
+     */
+    public function getColumnCount()
+    {
+        return $this->container['column_count'];
+    }
+
+    /**
+     * Sets column_count
+     * @param string $column_count Количество колонок  * `1_column` - 1 колонка * `2_column` - 2 колонки * `3_column` - 3 колонки
+     * @return $this
+     */
+    public function setColumnCount($column_count)
+    {
+        $allowed_values = array('1_column', '2_column', '3_column');
+        if (!in_array($column_count, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'column_count', must be one of '1_column', '2_column', '3_column'");
+        }
+        $this->container['column_count'] = $column_count;
 
         return $this;
     }

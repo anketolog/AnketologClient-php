@@ -1,6 +1,6 @@
 <?php
 /**
- * PlanPermissionSchemeTest
+ * SurveyQuestionFreematrixTest
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * PlanPermissionSchemeTest Class Doc Comment
+ * SurveyQuestionFreematrixTest Class Doc Comment
  *
  * @category    Class */
-// * @description Схема ограничений тарифного плана
+// * @description Вопрос \&quot;матрица свободных ответов\&quot;
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PlanPermissionSchemeTest extends \PHPUnit_Framework_TestCase
+class SurveyQuestionFreematrixTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,273 +88,137 @@ class PlanPermissionSchemeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PlanPermissionScheme"
+     * Test "SurveyQuestionFreematrix"
      */
-    public function testPlanPermissionScheme()
+    public function testSurveyQuestionFreematrix()
     {
 
     }
 
     /**
-     * Test attribute "max_surveys"
+     * Test attribute "title"
      */
-    public function testPropertyMaxSurveys()
+    public function testPropertyTitle()
     {
 
     }
 
     /**
-     * Test attribute "max_personalpages"
+     * Test attribute "no"
      */
-    public function testPropertyMaxPersonalpages()
+    public function testPropertyNo()
     {
 
     }
 
     /**
-     * Test attribute "max_questions"
+     * Test attribute "is_required"
      */
-    public function testPropertyMaxQuestions()
+    public function testPropertyIsRequired()
     {
 
     }
 
     /**
-     * Test attribute "max_subscribes"
+     * Test attribute "has_comment"
      */
-    public function testPropertyMaxSubscribes()
+    public function testPropertyHasComment()
     {
 
     }
 
     /**
-     * Test attribute "max_answers_total"
+     * Test attribute "comment"
      */
-    public function testPropertyMaxAnswersTotal()
+    public function testPropertyComment()
     {
 
     }
 
     /**
-     * Test attribute "max_disk_quota"
+     * Test attribute "has_unable_answer"
      */
-    public function testPropertyMaxDiskQuota()
+    public function testPropertyHasUnableAnswer()
     {
 
     }
 
     /**
-     * Test attribute "max_survey_extralinks"
+     * Test attribute "branchrules"
      */
-    public function testPropertyMaxSurveyExtralinks()
+    public function testPropertyBranchrules()
     {
 
     }
 
     /**
-     * Test attribute "max_survey_credentials"
+     * Test attribute "visiblerules"
      */
-    public function testPropertyMaxSurveyCredentials()
+    public function testPropertyVisiblerules()
     {
 
     }
 
     /**
-     * Test attribute "max_personalpage_surveys"
+     * Test attribute "is_multiline"
      */
-    public function testPropertyMaxPersonalpageSurveys()
+    public function testPropertyIsMultiline()
     {
 
     }
 
     /**
-     * Test attribute "allow_alias"
+     * Test attribute "is_limited"
      */
-    public function testPropertyAllowAlias()
+    public function testPropertyIsLimited()
     {
 
     }
 
     /**
-     * Test attribute "allow_theme"
+     * Test attribute "limit"
      */
-    public function testPropertyAllowTheme()
+    public function testPropertyLimit()
     {
 
     }
 
     /**
-     * Test attribute "allow_survey_finish"
+     * Test attribute "datatype"
      */
-    public function testPropertyAllowSurveyFinish()
+    public function testPropertyDatatype()
     {
 
     }
 
     /**
-     * Test attribute "allow_disable_ad"
+     * Test attribute "options"
      */
-    public function testPropertyAllowDisableAd()
+    public function testPropertyOptions()
     {
 
     }
 
     /**
-     * Test attribute "allow_answer_filter"
+     * Test attribute "options_sort"
      */
-    public function testPropertyAllowAnswerFilter()
+    public function testPropertyOptionsSort()
     {
 
     }
 
     /**
-     * Test attribute "allow_export"
+     * Test attribute "rows"
      */
-    public function testPropertyAllowExport()
+    public function testPropertyRows()
     {
 
     }
 
     /**
-     * Test attribute "allow_survey_catalog"
+     * Test attribute "rows_sort"
      */
-    public function testPropertyAllowSurveyCatalog()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_enable_captcha"
-     */
-    public function testPropertyAllowEnableCaptcha()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_hide_question_count"
-     */
-    public function testPropertyAllowHideQuestionCount()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_office_url"
-     */
-    public function testPropertyAllowOfficeUrl()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_personalpage_image"
-     */
-    public function testPropertyAllowPersonalpageImage()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_survey_image"
-     */
-    public function testPropertyAllowSurveyImage()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_hide_survey_name"
-     */
-    public function testPropertyAllowHideSurveyName()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_insert_video"
-     */
-    public function testPropertyAllowInsertVideo()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_personalpage_bgimage"
-     */
-    public function testPropertyAllowPersonalpageBgimage()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_personalpage_bgcolor"
-     */
-    public function testPropertyAllowPersonalpageBgcolor()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_custom_css"
-     */
-    public function testPropertyAllowCustomCss()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_survey_branchrules"
-     */
-    public function testPropertyAllowSurveyBranchrules()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_survey_visiblerules"
-     */
-    public function testPropertyAllowSurveyVisiblerules()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_randomization"
-     */
-    public function testPropertyAllowRandomization()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_related"
-     */
-    public function testPropertyAllowRelated()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_calculate_nps"
-     */
-    public function testPropertyAllowCalculateNps()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_survey_redirect"
-     */
-    public function testPropertyAllowSurveyRedirect()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_insert_params"
-     */
-    public function testPropertyAllowInsertParams()
+    public function testPropertyRowsSort()
     {
 
     }

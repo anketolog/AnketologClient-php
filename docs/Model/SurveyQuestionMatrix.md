@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 **has_comment** | **bool** | Отображать комментарий | 
 **comment** | **string** | Текст комментария | 
 **has_unable_answer** | **bool** | Вариант \&quot;затрудняюсь ответить\&quot; | 
+**is_multiselect** | **bool** | Возможность выбора нескольких ответов в одной строке | 
+**is_multiselect_column** | **bool** | Возможность выбора нескольких ответов в одном столбце | 
 **branchrules** | [**\AnketologClient\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
 **visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 

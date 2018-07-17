@@ -43,7 +43,7 @@ Method | HTTP request | Description
 
 
 
-Добавление правила ветвления  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+Добавление правила ветвления  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
 
 ### Example
 ```php
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 
 
-Добавление варианта вопросу  Для вопросов:  * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale`
+Добавление варианта вопросу  Для вопросов:  * `freelist` * `freematrix` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale`
 
 ### Example
 ```php
@@ -343,7 +343,7 @@ Name | Type | Description  | Notes
 
 
 
-Добавление строки вопросу  Для вопросов:  * `matrix` * `matrix3d`
+Добавление строки вопросу  Для вопросов:  * `matrix` * `matrix3d` * `freematrix`
 
 ### Example
 ```php
@@ -1243,7 +1243,7 @@ Name | Type | Description  | Notes
 
 
 
-Редактирование правила ветвления  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+Редактирование правила ветвления  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
 
 ### Example
 ```php
@@ -1293,7 +1293,7 @@ Name | Type | Description  | Notes
 
 
 
-Редактирование варианта/колонки у вопроса  Для вопросов:  * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale`
+Редактирование варианта/колонки у вопроса  Для вопросов:  * `freelist` * `freematrix` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale`
 
 ### Example
 ```php
@@ -1493,7 +1493,7 @@ Name | Type | Description  | Notes
 
 
 
-Редактирование строки у вопроса  Для вопросов:  * `matrix` * `matrix3d`
+Редактирование строки у вопроса  Для вопросов:  * `matrix` * `matrix3d` * `freematrix`
 
 ### Example
 ```php

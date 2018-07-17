@@ -73,6 +73,8 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'bool',
         'comment' => 'string',
         'has_unable_answer' => 'bool',
+        'is_multiselect' => 'bool',
+        'is_multiselect_column' => 'bool',
         'branchrules' => '\AnketologClient\Model\SurveyBranchrule[]',
         'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]',
         'options' => '\AnketologClient\Model\SurveyOption[]',
@@ -97,6 +99,8 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'has_comment',
         'comment' => 'comment',
         'has_unable_answer' => 'has_unable_answer',
+        'is_multiselect' => 'is_multiselect',
+        'is_multiselect_column' => 'is_multiselect_column',
         'branchrules' => 'branchrules',
         'visiblerules' => 'visiblerules',
         'options' => 'options',
@@ -121,6 +125,8 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'setHasComment',
         'comment' => 'setComment',
         'has_unable_answer' => 'setHasUnableAnswer',
+        'is_multiselect' => 'setIsMultiselect',
+        'is_multiselect_column' => 'setIsMultiselectColumn',
         'branchrules' => 'setBranchrules',
         'visiblerules' => 'setVisiblerules',
         'options' => 'setOptions',
@@ -145,6 +151,8 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
         'has_comment' => 'getHasComment',
         'comment' => 'getComment',
         'has_unable_answer' => 'getHasUnableAnswer',
+        'is_multiselect' => 'getIsMultiselect',
+        'is_multiselect_column' => 'getIsMultiselectColumn',
         'branchrules' => 'getBranchrules',
         'visiblerules' => 'getVisiblerules',
         'options' => 'getOptions',
@@ -214,6 +222,8 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
         $this->container['has_comment'] = isset($data['has_comment']) ? $data['has_comment'] : null;
         $this->container['comment'] = isset($data['comment']) ? $data['comment'] : null;
         $this->container['has_unable_answer'] = isset($data['has_unable_answer']) ? $data['has_unable_answer'] : null;
+        $this->container['is_multiselect'] = isset($data['is_multiselect']) ? $data['is_multiselect'] : null;
+        $this->container['is_multiselect_column'] = isset($data['is_multiselect_column']) ? $data['is_multiselect_column'] : null;
         $this->container['branchrules'] = isset($data['branchrules']) ? $data['branchrules'] : null;
         $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
@@ -247,6 +257,12 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
         }
         if ($this->container['has_unable_answer'] === null) {
             $invalid_properties[] = "'has_unable_answer' can't be null";
+        }
+        if ($this->container['is_multiselect'] === null) {
+            $invalid_properties[] = "'is_multiselect' can't be null";
+        }
+        if ($this->container['is_multiselect_column'] === null) {
+            $invalid_properties[] = "'is_multiselect_column' can't be null";
         }
         if ($this->container['branchrules'] === null) {
             $invalid_properties[] = "'branchrules' can't be null";
@@ -303,6 +319,12 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
             return false;
         }
         if ($this->container['has_unable_answer'] === null) {
+            return false;
+        }
+        if ($this->container['is_multiselect'] === null) {
+            return false;
+        }
+        if ($this->container['is_multiselect_column'] === null) {
             return false;
         }
         if ($this->container['branchrules'] === null) {
@@ -457,6 +479,48 @@ class SurveyQuestionMatrix extends SurveyQuestion implements ArrayAccess
     public function setHasUnableAnswer($has_unable_answer)
     {
         $this->container['has_unable_answer'] = $has_unable_answer;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_multiselect
+     * @return bool
+     */
+    public function getIsMultiselect()
+    {
+        return $this->container['is_multiselect'];
+    }
+
+    /**
+     * Sets is_multiselect
+     * @param bool $is_multiselect Возможность выбора нескольких ответов в одной строке
+     * @return $this
+     */
+    public function setIsMultiselect($is_multiselect)
+    {
+        $this->container['is_multiselect'] = $is_multiselect;
+
+        return $this;
+    }
+
+    /**
+     * Gets is_multiselect_column
+     * @return bool
+     */
+    public function getIsMultiselectColumn()
+    {
+        return $this->container['is_multiselect_column'];
+    }
+
+    /**
+     * Sets is_multiselect_column
+     * @param bool $is_multiselect_column Возможность выбора нескольких ответов в одном столбце
+     * @return $this
+     */
+    public function setIsMultiselectColumn($is_multiselect_column)
+    {
+        $this->container['is_multiselect_column'] = $is_multiselect_column;
 
         return $this;
     }
