@@ -236,7 +236,7 @@ class SurveyeditorupdateBranchruleConfigEvents implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type * `has-answer` - респондент дал ответ * `missing-answer` - респондент не дал ответ * `select-option` - респондент выбрал вариант * `not-select-option` - респондент не выбрал вариант * `select-any-option` - респондент выбрал любой вариант * `unable-answer` - респондент затруднился ответить * `set-order` - респондент поставил вариант на место * `set-value` -  респондент задал варианту значение
+     * @param string $type * `has-answer` - респондент дал ответ * `missing-answer` - респондент не дал ответ * `select-option` - респондент выбрал вариант * `not-select-option` - респондент не выбрал вариант * `select-any-option` - респондент выбрал любой вариант * `unable-answer` - респондент затруднился ответить * `not-unable-answer` - респондент не затруднился ответить * `set-order` - респондент поставил вариант на место * `set-value` -  респондент задал варианту значение
      * @return $this
      */
     public function setType($type)
@@ -257,7 +257,7 @@ class SurveyeditorupdateBranchruleConfigEvents implements ArrayAccess
 
     /**
      * Sets option_id
-     * @param int $option_id ID варианта/столбца  Для question.type:  * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale` * `scale`
+     * @param int $option_id ID варианта/столбца  Для question.type:  * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale` * `scale`
      * @return $this
      */
     public function setOptionId($option_id)

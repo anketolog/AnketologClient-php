@@ -68,12 +68,10 @@ class SurveyFilter implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'name' => 'string',
         'survey_id' => 'int',
-        'join' => 'string',
         'create_date' => 'int',
         'update_date' => 'int',
-        'conditions' => '\AnketologClient\Model\SurveyFilterCondition[]'
+        'data' => '\AnketologClient\Model\SurveyFilterData'
     );
 
     public static function swaggerTypes()
@@ -87,12 +85,10 @@ class SurveyFilter implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'name' => 'name',
         'survey_id' => 'survey_id',
-        'join' => 'join',
         'create_date' => 'create_date',
         'update_date' => 'update_date',
-        'conditions' => 'conditions'
+        'data' => 'data'
     );
 
     public static function attributeMap()
@@ -106,12 +102,10 @@ class SurveyFilter implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'name' => 'setName',
         'survey_id' => 'setSurveyId',
-        'join' => 'setJoin',
         'create_date' => 'setCreateDate',
         'update_date' => 'setUpdateDate',
-        'conditions' => 'setConditions'
+        'data' => 'setData'
     );
 
     public static function setters()
@@ -125,12 +119,10 @@ class SurveyFilter implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'name' => 'getName',
         'survey_id' => 'getSurveyId',
-        'join' => 'getJoin',
         'create_date' => 'getCreateDate',
         'update_date' => 'getUpdateDate',
-        'conditions' => 'getConditions'
+        'data' => 'getData'
     );
 
     public static function getters()
@@ -138,22 +130,8 @@ class SurveyFilter implements ArrayAccess
         return self::$getters;
     }
 
-    const JOIN_AND = 'and';
-    const JOIN_OR = 'or';
     
 
-    
-    /**
-     * Gets allowable values of the enum
-     * @return string[]
-     */
-    public function getJoinAllowableValues()
-    {
-        return [
-            self::JOIN_AND,
-            self::JOIN_OR,
-        ];
-    }
     
 
     /**
@@ -169,12 +147,10 @@ class SurveyFilter implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
-        $this->container['join'] = isset($data['join']) ? $data['join'] : null;
         $this->container['create_date'] = isset($data['create_date']) ? $data['create_date'] : null;
         $this->container['update_date'] = isset($data['update_date']) ? $data['update_date'] : null;
-        $this->container['conditions'] = isset($data['conditions']) ? $data['conditions'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
     }
 
     /**
@@ -188,25 +164,11 @@ class SurveyFilter implements ArrayAccess
         if ($this->container['id'] === null) {
             $invalid_properties[] = "'id' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalid_properties[] = "'name' can't be null";
-        }
         if ($this->container['survey_id'] === null) {
             $invalid_properties[] = "'survey_id' can't be null";
         }
-        if ($this->container['join'] === null) {
-            $invalid_properties[] = "'join' can't be null";
-        }
-        $allowed_values = array("and", "or");
-        if (!in_array($this->container['join'], $allowed_values)) {
-            $invalid_properties[] = "invalid value for 'join', must be one of #{allowed_values}.";
-        }
-
         if ($this->container['create_date'] === null) {
             $invalid_properties[] = "'create_date' can't be null";
-        }
-        if ($this->container['conditions'] === null) {
-            $invalid_properties[] = "'conditions' can't be null";
         }
         return $invalid_properties;
     }
@@ -222,23 +184,10 @@ class SurveyFilter implements ArrayAccess
         if ($this->container['id'] === null) {
             return false;
         }
-        if ($this->container['name'] === null) {
-            return false;
-        }
         if ($this->container['survey_id'] === null) {
             return false;
         }
-        if ($this->container['join'] === null) {
-            return false;
-        }
-        $allowed_values = array("and", "or");
-        if (!in_array($this->container['join'], $allowed_values)) {
-            return false;
-        }
         if ($this->container['create_date'] === null) {
-            return false;
-        }
-        if ($this->container['conditions'] === null) {
             return false;
         }
         return true;
@@ -267,27 +216,6 @@ class SurveyFilter implements ArrayAccess
     }
 
     /**
-     * Gets name
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     * @param string $name Название фильтра
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
      * Gets survey_id
      * @return int
      */
@@ -304,31 +232,6 @@ class SurveyFilter implements ArrayAccess
     public function setSurveyId($survey_id)
     {
         $this->container['survey_id'] = $survey_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets join
-     * @return string
-     */
-    public function getJoin()
-    {
-        return $this->container['join'];
-    }
-
-    /**
-     * Sets join
-     * @param string $join Логический оператор  * `and` - логическое \"и\" * `or` - логическое \"или\"
-     * @return $this
-     */
-    public function setJoin($join)
-    {
-        $allowed_values = array('and', 'or');
-        if (!in_array($join, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'join', must be one of 'and', 'or'");
-        }
-        $this->container['join'] = $join;
 
         return $this;
     }
@@ -376,22 +279,22 @@ class SurveyFilter implements ArrayAccess
     }
 
     /**
-     * Gets conditions
-     * @return \AnketologClient\Model\SurveyFilterCondition[]
+     * Gets data
+     * @return \AnketologClient\Model\SurveyFilterData
      */
-    public function getConditions()
+    public function getData()
     {
-        return $this->container['conditions'];
+        return $this->container['data'];
     }
 
     /**
-     * Sets conditions
-     * @param \AnketologClient\Model\SurveyFilterCondition[] $conditions
+     * Sets data
+     * @param \AnketologClient\Model\SurveyFilterData $data
      * @return $this
      */
-    public function setConditions($conditions)
+    public function setData($data)
     {
-        $this->container['conditions'] = $conditions;
+        $this->container['data'] = $data;
 
         return $this;
     }

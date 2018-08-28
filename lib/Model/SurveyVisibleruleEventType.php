@@ -152,6 +152,7 @@ class SurveyVisibleruleEventType implements ArrayAccess
     const EVENT_TYPE_NOT_SELECT_OPTION = 'not-select-option';
     const EVENT_TYPE_SELECT_ANY_OPTION = 'select-any-option';
     const EVENT_TYPE_UNABLE_ANSWER = 'unable-answer';
+    const EVENT_TYPE_NOT_UNABLE_ANSWER = 'not-unable-answer';
     const EVENT_TYPE_SET_ORDER = 'set-order';
     const EVENT_TYPE_SET_VALUE = 'set-value';
     const OPERATOR_EQ = 'eq';
@@ -173,6 +174,7 @@ class SurveyVisibleruleEventType implements ArrayAccess
             self::EVENT_TYPE_NOT_SELECT_OPTION,
             self::EVENT_TYPE_SELECT_ANY_OPTION,
             self::EVENT_TYPE_UNABLE_ANSWER,
+            self::EVENT_TYPE_NOT_UNABLE_ANSWER,
             self::EVENT_TYPE_SET_ORDER,
             self::EVENT_TYPE_SET_VALUE,
         ];
@@ -229,7 +231,7 @@ class SurveyVisibleruleEventType implements ArrayAccess
         if ($this->container['event_type'] === null) {
             $invalid_properties[] = "'event_type' can't be null";
         }
-        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
+        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "not-unable-answer", "set-order", "set-value");
         if (!in_array($this->container['event_type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'event_type', must be one of #{allowed_values}.";
         }
@@ -256,7 +258,7 @@ class SurveyVisibleruleEventType implements ArrayAccess
         if ($this->container['event_type'] === null) {
             return false;
         }
-        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
+        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "not-unable-answer", "set-order", "set-value");
         if (!in_array($this->container['event_type'], $allowed_values)) {
             return false;
         }
@@ -300,14 +302,14 @@ class SurveyVisibleruleEventType implements ArrayAccess
 
     /**
      * Sets event_type
-     * @param string $event_type Тип события  * `has-answer` - ответил на вопрос * `missing-answer` - пропустил вопрос * `select-option` - респондент выбрал вариант * `not-select-option` - респондент не выбрал вариант * `select-any-option` - респондент выбрал любой вариант * `unable-answer` - затруднился ответить * `set-order` - установил значение * `set-value` - установил значение
+     * @param string $event_type Тип события  * `has-answer` - ответил на вопрос * `missing-answer` - пропустил вопрос * `select-option` - респондент выбрал вариант * `not-select-option` - респондент не выбрал вариант * `select-any-option` - респондент выбрал любой вариант * `unable-answer` - затруднился ответить * `not-unable-answer` - не затруднился ответить * `set-order` - установил значение * `set-value` - установил значение
      * @return $this
      */
     public function setEventType($event_type)
     {
-        $allowed_values = array('has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'set-order', 'set-value');
+        $allowed_values = array('has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'not-unable-answer', 'set-order', 'set-value');
         if (!in_array($event_type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'event_type', must be one of 'has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'set-order', 'set-value'");
+            throw new \InvalidArgumentException("Invalid value for 'event_type', must be one of 'has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'not-unable-answer', 'set-order', 'set-value'");
         }
         $this->container['event_type'] = $event_type;
 

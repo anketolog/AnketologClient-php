@@ -151,6 +151,7 @@ class SurveyeditoraddVisibleruleConfigEvents implements ArrayAccess
     const TYPE_NOT_SELECT_OPTION = 'not-select-option';
     const TYPE_SELECT_ANY_OPTION = 'select-any-option';
     const TYPE_UNABLE_ANSWER = 'unable-answer';
+    const TYPE_NOT_UNABLE_ANSWER = 'not-unable-answer';
     const TYPE_SET_ORDER = 'set-order';
     const TYPE_SET_VALUE = 'set-value';
     const OPERATOR_EQ = 'eq';
@@ -172,6 +173,7 @@ class SurveyeditoraddVisibleruleConfigEvents implements ArrayAccess
             self::TYPE_NOT_SELECT_OPTION,
             self::TYPE_SELECT_ANY_OPTION,
             self::TYPE_UNABLE_ANSWER,
+            self::TYPE_NOT_UNABLE_ANSWER,
             self::TYPE_SET_ORDER,
             self::TYPE_SET_VALUE,
         ];
@@ -228,7 +230,7 @@ class SurveyeditoraddVisibleruleConfigEvents implements ArrayAccess
         if ($this->container['type'] === null) {
             $invalid_properties[] = "'type' can't be null";
         }
-        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
+        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "not-unable-answer", "set-order", "set-value");
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
@@ -258,7 +260,7 @@ class SurveyeditoraddVisibleruleConfigEvents implements ArrayAccess
         if ($this->container['type'] === null) {
             return false;
         }
-        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "set-order", "set-value");
+        $allowed_values = array("has-answer", "missing-answer", "select-option", "not-select-option", "select-any-option", "unable-answer", "not-unable-answer", "set-order", "set-value");
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -305,14 +307,14 @@ class SurveyeditoraddVisibleruleConfigEvents implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type * `has-answer` - респондент дал ответ * `missing-answer` - респондент не дал ответ * `select-option` - респондент выбрал вариант * `not-select-option` - респондент не выбрал вариант * `select-any-option` - респондент выбрал любой вариант * `unable-answer` - респондент затруднился ответить * `set-order` - респондент поставил вариант на место * `set-value` -  респондент задал варианту значение
+     * @param string $type * `has-answer` - респондент дал ответ * `missing-answer` - респондент не дал ответ * `select-option` - респондент выбрал вариант * `not-select-option` - респондент не выбрал вариант * `select-any-option` - респондент выбрал любой вариант * `unable-answer` - респондент затруднился ответить * `not-unable-answer` - респондент не затруднился ответить * `set-order` - респондент поставил вариант на место * `set-value` -  респондент задал варианту значение
      * @return $this
      */
     public function setType($type)
     {
-        $allowed_values = array('has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'set-order', 'set-value');
+        $allowed_values = array('has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'not-unable-answer', 'set-order', 'set-value');
         if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'set-order', 'set-value'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'has-answer', 'missing-answer', 'select-option', 'not-select-option', 'select-any-option', 'unable-answer', 'not-unable-answer', 'set-order', 'set-value'");
         }
         $this->container['type'] = $type;
 
@@ -330,7 +332,7 @@ class SurveyeditoraddVisibleruleConfigEvents implements ArrayAccess
 
     /**
      * Sets option_id
-     * @param int $option_id ID варианта/столбца  Для question.type:  * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale` * `scale`
+     * @param int $option_id ID варианта/столбца  Для question.type:  * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale` * `scale`
      * @return $this
      */
     public function setOptionId($option_id)

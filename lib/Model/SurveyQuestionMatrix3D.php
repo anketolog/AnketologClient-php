@@ -525,7 +525,7 @@ class SurveyQuestionMatrix3D extends SurveyQuestion implements ArrayAccess
 
     /**
      * Sets is_multiselect
-     * @param bool $is_multiselect d
+     * @param bool $is_multiselect Возможность выбора нескольких ответов
      * @return $this
      */
     public function setIsMultiselect($is_multiselect)

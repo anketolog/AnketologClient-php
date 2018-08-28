@@ -80,6 +80,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'has_other_answer' => 'bool',
         'has_nothing_answer' => 'bool',
         'has_middle_name' => 'bool',
+        'is_multiple' => 'bool',
         'options_sort' => 'string',
         'rows_sort' => 'string',
         'max_value' => 'int',
@@ -113,6 +114,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'has_other_answer' => 'has_other_answer',
         'has_nothing_answer' => 'has_nothing_answer',
         'has_middle_name' => 'has_middle_name',
+        'is_multiple' => 'is_multiple',
         'options_sort' => 'options_sort',
         'rows_sort' => 'rows_sort',
         'max_value' => 'max_value',
@@ -146,6 +148,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'has_other_answer' => 'setHasOtherAnswer',
         'has_nothing_answer' => 'setHasNothingAnswer',
         'has_middle_name' => 'setHasMiddleName',
+        'is_multiple' => 'setIsMultiple',
         'options_sort' => 'setOptionsSort',
         'rows_sort' => 'setRowsSort',
         'max_value' => 'setMaxValue',
@@ -179,6 +182,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         'has_other_answer' => 'getHasOtherAnswer',
         'has_nothing_answer' => 'getHasNothingAnswer',
         'has_middle_name' => 'getHasMiddleName',
+        'is_multiple' => 'getIsMultiple',
         'options_sort' => 'getOptionsSort',
         'rows_sort' => 'getRowsSort',
         'max_value' => 'getMaxValue',
@@ -255,6 +259,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
         $this->container['has_other_answer'] = isset($data['has_other_answer']) ? $data['has_other_answer'] : null;
         $this->container['has_nothing_answer'] = isset($data['has_nothing_answer']) ? $data['has_nothing_answer'] : null;
         $this->container['has_middle_name'] = isset($data['has_middle_name']) ? $data['has_middle_name'] : null;
+        $this->container['is_multiple'] = isset($data['is_multiple']) ? $data['is_multiple'] : null;
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
         $this->container['rows_sort'] = isset($data['rows_sort']) ? $data['rows_sort'] : null;
         $this->container['max_value'] = isset($data['max_value']) ? $data['max_value'] : null;
@@ -359,7 +364,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets comment
-     * @param string $comment Комментарий к вопросу (HTML)  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+     * @param string $comment Комментарий к вопросу (HTML)  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setComment($comment)
@@ -380,7 +385,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_comment
-     * @param bool $has_comment Отображать комментарий к вопросу  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $has_comment Отображать комментарий к вопросу  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setHasComment($has_comment)
@@ -401,7 +406,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_required
-     * @param bool $is_required Вопрос обазательный  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $is_required Вопрос обазательный  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setIsRequired($is_required)
@@ -422,7 +427,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_enable
-     * @param bool $is_enable Вопрос виден респонденту  Для вопросов:  * `html` * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $is_enable Вопрос виден респонденту  Для вопросов:  * `html` * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setIsEnable($is_enable)
@@ -443,7 +448,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_unable_answer
-     * @param bool $has_unable_answer Вариант \"затрудняюсь ответить\"  Для вопросов:  * `free` * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $has_unable_answer Вариант \"затрудняюсь ответить\"  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
      * @return $this
      */
     public function setHasUnableAnswer($has_unable_answer)
@@ -464,7 +469,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_multiline
-     * @param bool $is_multiline Многострочное поле ввода  Для вопросов:  * `free` * `freelist`
+     * @param bool $is_multiline Многострочное поле ввода  Для вопросов:  * `free` * `freelist` * `freematrix`
      * @return $this
      */
     public function setIsMultiline($is_multiline)
@@ -485,7 +490,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets datatype
-     * @param string $datatype Тип данных в поле ввода  Для вопросов:  * `free` * `freelist`
+     * @param string $datatype Тип данных в поле ввода  Для вопросов:  * `free` * `freelist` * `freematrix`
      * @return $this
      */
     public function setDatatype($datatype)
@@ -527,7 +532,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_other_answer
-     * @param bool $has_other_answer Вариант \"другое\"  Для вопросов:  * `freelist` * `select` * `multiselect` * `dropdown`
+     * @param bool $has_other_answer Вариант \"другое\"  Для вопросов:  * `freelist` * `select` * `multiselect` * `multidropdown` * `dropdown`
      * @return $this
      */
     public function setHasOtherAnswer($has_other_answer)
@@ -548,7 +553,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_nothing_answer
-     * @param bool $has_nothing_answer Вариант \"ничего из вышеперечисленного\"  Для вопросов:  * `select` * `multiselect` * `dropdown`
+     * @param bool $has_nothing_answer Вариант \"ничего из вышеперечисленного\"  Для вопросов:  * `select` * `multiselect` * `multidropdown` * `dropdown`
      * @return $this
      */
     public function setHasNothingAnswer($has_nothing_answer)
@@ -580,6 +585,27 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
     }
 
     /**
+     * Gets is_multiple
+     * @return bool
+     */
+    public function getIsMultiple()
+    {
+        return $this->container['is_multiple'];
+    }
+
+    /**
+     * Sets is_multiple
+     * @param bool $is_multiple Загрузка нескольких файлов  Для вопросов:  * `file`
+     * @return $this
+     */
+    public function setIsMultiple($is_multiple)
+    {
+        $this->container['is_multiple'] = $is_multiple;
+
+        return $this;
+    }
+
+    /**
      * Gets options_sort
      * @return string
      */
@@ -590,7 +616,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets options_sort
-     * @param string $options_sort Сортировка вариантов  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке  Для вопросов:  * `freelist` * `select` * `multiselect` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale`
+     * @param string $options_sort Сортировка вариантов  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке  Для вопросов:  * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `order` * `ratingscale`
      * @return $this
      */
     public function setOptionsSort($options_sort)
@@ -615,7 +641,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets rows_sort
-     * @param string $rows_sort Сортировка строк  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке  Для вопросов:  * `matrix` * `matrix3d`
+     * @param string $rows_sort Сортировка строк  * `default` - по умолчанию * `alphabet` - в алфавитном порядке * `random` - в случайном порядке  Для вопросов:  * `matrix` * `matrix3d` * `freematrix`
      * @return $this
      */
     public function setRowsSort($rows_sort)
@@ -724,7 +750,7 @@ class SurveyeditorupdateQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_limited
-     * @param bool $is_limited Включить ограничение количества выбранных вариантов  Для вопросов:  * `multiselect`
+     * @param bool $is_limited Включить ограничение количества выбранных вариантов  Для вопросов:  * `multiselect` * `multidropdown` * `free` * `freelist` * `freematrix`
      * @return $this
      */
     public function setIsLimited($is_limited)

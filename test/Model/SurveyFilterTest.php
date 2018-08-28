@@ -104,25 +104,9 @@ class SurveyFilterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "name"
-     */
-    public function testPropertyName()
-    {
-
-    }
-
-    /**
      * Test attribute "survey_id"
      */
     public function testPropertySurveyId()
-    {
-
-    }
-
-    /**
-     * Test attribute "join"
-     */
-    public function testPropertyJoin()
     {
 
     }
@@ -144,9 +128,9 @@ class SurveyFilterTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "conditions"
+     * Test attribute "data"
      */
-    public function testPropertyConditions()
+    public function testPropertyData()
     {
 
     }

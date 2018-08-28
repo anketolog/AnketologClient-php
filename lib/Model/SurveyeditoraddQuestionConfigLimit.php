@@ -47,7 +47,7 @@ use \ArrayAccess;
  * SurveyeditoraddQuestionConfigLimit Class Doc Comment
  *
  * @category    Class */
- // @description Ограничение количества выбранных вариантов  Для вопросов:  * &#x60;multiselect&#x60;  Пример:  * &#x60;min: null, max: 2&#x60;     - необходимо выбрать 2 или менее вариантов * &#x60;min: 2,    max: null&#x60;  - необходимо выбрать 2 или более вариантов * &#x60;min: 2,    max: 2&#x60;     - необходимо выбрать 2 варианта * &#x60;min: 2,    max: 4&#x60;     - необходимо выбрать от 2 до 4 вариантов
+ // @description Ограничение количества выбранных вариантов  Для вопросов:  * &#x60;multiselect&#x60; * &#x60;multidropdown&#x60; * &#x60;free&#x60; * &#x60;freelist&#x60; * &#x60;freematrix&#x60;  Пример:  * &#x60;min: null, max: 2&#x60;     - необходимо выбрать 2 или менее вариантов * &#x60;min: 2,    max: null&#x60;  - необходимо выбрать 2 или более вариантов * &#x60;min: 2,    max: 2&#x60;     - необходимо выбрать 2 варианта * &#x60;min: 2,    max: 4&#x60;     - необходимо выбрать от 2 до 4 вариантов
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen

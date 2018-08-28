@@ -98,6 +98,7 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_randomization' => 'bool',
         'allow_related' => 'bool',
         'allow_calculate_nps' => 'bool',
+        'allow_survey_redirect' => 'bool',
         'allow_insert_params' => 'bool'
     );
 
@@ -142,6 +143,7 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_randomization' => 'allow_randomization',
         'allow_related' => 'allow_related',
         'allow_calculate_nps' => 'allow_calculate_nps',
+        'allow_survey_redirect' => 'allow_survey_redirect',
         'allow_insert_params' => 'allow_insert_params'
     );
 
@@ -186,6 +188,7 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_randomization' => 'setAllowRandomization',
         'allow_related' => 'setAllowRelated',
         'allow_calculate_nps' => 'setAllowCalculateNps',
+        'allow_survey_redirect' => 'setAllowSurveyRedirect',
         'allow_insert_params' => 'setAllowInsertParams'
     );
 
@@ -230,6 +233,7 @@ class PlanPermissionScheme implements ArrayAccess
         'allow_randomization' => 'getAllowRandomization',
         'allow_related' => 'getAllowRelated',
         'allow_calculate_nps' => 'getAllowCalculateNps',
+        'allow_survey_redirect' => 'getAllowSurveyRedirect',
         'allow_insert_params' => 'getAllowInsertParams'
     );
 
@@ -285,6 +289,7 @@ class PlanPermissionScheme implements ArrayAccess
         $this->container['allow_randomization'] = isset($data['allow_randomization']) ? $data['allow_randomization'] : null;
         $this->container['allow_related'] = isset($data['allow_related']) ? $data['allow_related'] : null;
         $this->container['allow_calculate_nps'] = isset($data['allow_calculate_nps']) ? $data['allow_calculate_nps'] : null;
+        $this->container['allow_survey_redirect'] = isset($data['allow_survey_redirect']) ? $data['allow_survey_redirect'] : null;
         $this->container['allow_insert_params'] = isset($data['allow_insert_params']) ? $data['allow_insert_params'] : null;
     }
 
@@ -361,6 +366,9 @@ class PlanPermissionScheme implements ArrayAccess
         }
         if ($this->container['allow_calculate_nps'] === null) {
             $invalid_properties[] = "'allow_calculate_nps' can't be null";
+        }
+        if ($this->container['allow_survey_redirect'] === null) {
+            $invalid_properties[] = "'allow_survey_redirect' can't be null";
         }
         if ($this->container['allow_insert_params'] === null) {
             $invalid_properties[] = "'allow_insert_params' can't be null";
@@ -440,6 +448,9 @@ class PlanPermissionScheme implements ArrayAccess
             return false;
         }
         if ($this->container['allow_calculate_nps'] === null) {
+            return false;
+        }
+        if ($this->container['allow_survey_redirect'] === null) {
             return false;
         }
         if ($this->container['allow_insert_params'] === null) {
@@ -1096,6 +1107,27 @@ class PlanPermissionScheme implements ArrayAccess
     public function setAllowCalculateNps($allow_calculate_nps)
     {
         $this->container['allow_calculate_nps'] = $allow_calculate_nps;
+
+        return $this;
+    }
+
+    /**
+     * Gets allow_survey_redirect
+     * @return bool
+     */
+    public function getAllowSurveyRedirect()
+    {
+        return $this->container['allow_survey_redirect'];
+    }
+
+    /**
+     * Sets allow_survey_redirect
+     * @param bool $allow_survey_redirect Разрешена настройка редиректов в анкете
+     * @return $this
+     */
+    public function setAllowSurveyRedirect($allow_survey_redirect)
+    {
+        $this->container['allow_survey_redirect'] = $allow_survey_redirect;
 
         return $this;
     }

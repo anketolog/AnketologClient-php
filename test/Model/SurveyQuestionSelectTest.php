@@ -191,4 +191,12 @@ class SurveyQuestionSelectTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "column_count"
+     */
+    public function testPropertyColumnCount()
+    {
+
+    }
+
 }

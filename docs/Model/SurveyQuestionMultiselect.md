@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **limit** | [**\AnketologClient\Model\SurveyOptionLimit**](SurveyOptionLimit.md) |  | 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
 **options_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | 
+**column_count** | **string** | Количество колонок  * &#x60;1_column&#x60; - 1 колонка * &#x60;2_column&#x60; - 2 колонки * &#x60;3_column&#x60; - 3 колонки | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

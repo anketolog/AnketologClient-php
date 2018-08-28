@@ -152,6 +152,7 @@ class SurveyFilterCondition implements ArrayAccess
 
     const TYPE_HAS_ANSWER = 'has-answer';
     const TYPE_UNABLE_ANSWER = 'unable-answer';
+    const TYPE_NOT_UNABLE_ANSWER = 'not-unable-answer';
     const OPERATOR_GT = 'gt';
     const OPERATOR_GTE = 'gte';
     const OPERATOR_EQ = 'eq';
@@ -170,6 +171,7 @@ class SurveyFilterCondition implements ArrayAccess
         return [
             self::TYPE_HAS_ANSWER,
             self::TYPE_UNABLE_ANSWER,
+            self::TYPE_NOT_UNABLE_ANSWER,
         ];
     }
     
@@ -228,7 +230,7 @@ class SurveyFilterCondition implements ArrayAccess
         if ($this->container['type'] === null) {
             $invalid_properties[] = "'type' can't be null";
         }
-        $allowed_values = array("has-answer", "unable-answer");
+        $allowed_values = array("has-answer", "unable-answer", "not-unable-answer");
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
@@ -255,7 +257,7 @@ class SurveyFilterCondition implements ArrayAccess
         if ($this->container['type'] === null) {
             return false;
         }
-        $allowed_values = array("has-answer", "unable-answer");
+        $allowed_values = array("has-answer", "unable-answer", "not-unable-answer");
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -299,14 +301,14 @@ class SurveyFilterCondition implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type Тип условия  * `has-answer` - респондент ответил на вопрос * `unable-answer` - респондент затруднился ответить
+     * @param string $type Тип условия  * `has-answer` - респондент ответил на вопрос * `unable-answer` - респондент затруднился ответить * `not-unable-answer` - респондент не затруднился ответить
      * @return $this
      */
     public function setType($type)
     {
-        $allowed_values = array('has-answer', 'unable-answer');
+        $allowed_values = array('has-answer', 'unable-answer', 'not-unable-answer');
         if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'has-answer', 'unable-answer'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'has-answer', 'unable-answer', 'not-unable-answer'");
         }
         $this->container['type'] = $type;
 
@@ -324,7 +326,7 @@ class SurveyFilterCondition implements ArrayAccess
 
     /**
      * Sets option_id
-     * @param int $option_id ID варианта ответа/колонки (question.type IN [matrix, matrix3d, select, multiseelct, dropdown, order, ratingscale])
+     * @param int $option_id ID варианта ответа/колонки (question.type IN [matrix, matrix3d, freematrix, freelistm select, multiseelct, dropdown, order, ratingscale])
      * @return $this
      */
     public function setOptionId($option_id)
@@ -345,7 +347,7 @@ class SurveyFilterCondition implements ArrayAccess
 
     /**
      * Sets row_id
-     * @param int $row_id ID строки (question.type = matrix)
+     * @param int $row_id ID строки (question.type IN [matrix, matrix3d, freematrix])
      * @return $this
      */
     public function setRowId($row_id)
@@ -433,7 +435,7 @@ class SurveyFilterCondition implements ArrayAccess
 
     /**
      * Sets text
-     * @param string $text Текст ответа (question.type IN [free, email, phone, name, freelist])
+     * @param string $text Текст ответа (question.type IN [free, email, name, phone, freelist, freematrix])
      * @return $this
      */
     public function setText($text)

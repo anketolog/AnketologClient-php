@@ -127,14 +127,17 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
 
     const TYPE_FREE = 'free';
     const TYPE_FREELIST = 'freelist';
+    const TYPE_FREEMATRIX = 'freematrix';
     const TYPE_SELECT = 'select';
     const TYPE_MULTISELECT = 'multiselect';
+    const TYPE_MULTIDROPDOWN = 'multidropdown';
     const TYPE_DROPDOWN = 'dropdown';
     const TYPE_MATRIX = 'matrix';
     const TYPE_MATRIX3D = 'matrix3d';
     const TYPE_NAME = 'name';
     const TYPE_EMAIL = 'email';
     const TYPE_PHONE = 'phone';
+    const TYPE_FILE = 'file';
     const TYPE_DATE = 'date';
     const TYPE_HTML = 'html';
     const TYPE_SCALE = 'scale';
@@ -152,14 +155,17 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
         return [
             self::TYPE_FREE,
             self::TYPE_FREELIST,
+            self::TYPE_FREEMATRIX,
             self::TYPE_SELECT,
             self::TYPE_MULTISELECT,
+            self::TYPE_MULTIDROPDOWN,
             self::TYPE_DROPDOWN,
             self::TYPE_MATRIX,
             self::TYPE_MATRIX3D,
             self::TYPE_NAME,
             self::TYPE_EMAIL,
             self::TYPE_PHONE,
+            self::TYPE_FILE,
             self::TYPE_DATE,
             self::TYPE_HTML,
             self::TYPE_SCALE,
@@ -201,7 +207,7 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
         if ($this->container['type'] === null) {
             $invalid_properties[] = "'type' can't be null";
         }
-        $allowed_values = array("free", "freelist", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "date", "html", "scale", "order", "ratingscale");
+        $allowed_values = array("free", "freelist", "freematrix", "select", "multiselect", "multidropdown", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "file", "date", "html", "scale", "order", "ratingscale");
         if (!in_array($this->container['type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'type', must be one of #{allowed_values}.";
         }
@@ -223,7 +229,7 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
         if ($this->container['type'] === null) {
             return false;
         }
-        $allowed_values = array("free", "freelist", "select", "multiselect", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "date", "html", "scale", "order", "ratingscale");
+        $allowed_values = array("free", "freelist", "freematrix", "select", "multiselect", "multidropdown", "dropdown", "matrix", "matrix3d", "name", "email", "phone", "file", "date", "html", "scale", "order", "ratingscale");
         if (!in_array($this->container['type'], $allowed_values)) {
             return false;
         }
@@ -284,14 +290,14 @@ class SurveyEditorAddQuestionBody implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type Тип вопроса  * `free` - свободный ответ * `freelist` - таблица свободных ответов * `select` - одиночный выбор * `multiselect` - множественный выбор * `dropdown` - выпадающий список * `matrix` - матрица * `matrix3d` - матрица 3D * `name` - имя * `email` - e-mail * `phone` - номер телефона * `date` - дата * `html` - HTML-вставка * `scale` - шкала * `order` - ранжирование * `ratingscale` - распределительная шкала
+     * @param string $type Тип вопроса  * `free` - свободный ответ * `freelist` - таблица свободных ответов * `freematrix` - матрица свободных ответов * `select` - одиночный выбор * `multiselect` - множественный выбор * `multidropdown` - множественный выбор * `dropdown` - выпадающий список * `matrix` - матрица * `matrix3d` - матрица 3D * `name` - имя * `email` - e-mail * `phone` - номер телефона * `file` - загрузка файла * `date` - дата * `html` - HTML-вставка * `scale` - шкала * `order` - ранжирование * `ratingscale` - распределительная шкала
      * @return $this
      */
     public function setType($type)
     {
-        $allowed_values = array('free', 'freelist', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'date', 'html', 'scale', 'order', 'ratingscale');
+        $allowed_values = array('free', 'freelist', 'freematrix', 'select', 'multiselect', 'multidropdown', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'file', 'date', 'html', 'scale', 'order', 'ratingscale');
         if (!in_array($type, $allowed_values)) {
-            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'free', 'freelist', 'select', 'multiselect', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'date', 'html', 'scale', 'order', 'ratingscale'");
+            throw new \InvalidArgumentException("Invalid value for 'type', must be one of 'free', 'freelist', 'freematrix', 'select', 'multiselect', 'multidropdown', 'dropdown', 'matrix', 'matrix3d', 'name', 'email', 'phone', 'file', 'date', 'html', 'scale', 'order', 'ratingscale'");
         }
         $this->container['type'] = $type;
 

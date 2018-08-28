@@ -344,6 +344,14 @@ class PlanPermissionSchemeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "allow_survey_redirect"
+     */
+    public function testPropertyAllowSurveyRedirect()
+    {
+
+    }
+
+    /**
      * Test attribute "allow_insert_params"
      */
     public function testPropertyAllowInsertParams()

@@ -200,6 +200,14 @@ class SurveyeditorupdateQuestionConfigTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "is_multiple"
+     */
+    public function testPropertyIsMultiple()
+    {
+
+    }
+
+    /**
      * Test attribute "options_sort"
      */
     public function testPropertyOptionsSort()

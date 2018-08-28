@@ -12,6 +12,8 @@ Name | Type | Description | Notes
 **branchrules** | [**\AnketologClient\Model\SurveyBranchrule[]**](SurveyBranchrule.md) |  | 
 **visiblerules** | [**\AnketologClient\Model\SurveyVisiblerule[]**](SurveyVisiblerule.md) |  | 
 **is_multiline** | **bool** | Многострочное поле ввода | 
+**is_limited** | **bool** | Ограничение значения ответа | 
+**limit** | [**\AnketologClient\Model\SurveyAnswerLimit**](SurveyAnswerLimit.md) |  | 
 **datatype** | **string** | Тип вводимых данных  * &#x60;default&#x60; - текст * &#x60;integer&#x60; - целое число * &#x60;float&#x60; - дробное число | 
 **has_other_answer** | **bool** | Вариант \&quot;другое\&quot; | 
 **options** | [**\AnketologClient\Model\SurveyOption[]**](SurveyOption.md) |  | 
