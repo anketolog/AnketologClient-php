@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **options_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | 
 **rows** | [**\AnketologClient\Model\SurveyRow[]**](SurveyRow.md) |  | [optional] 
 **rows_sort** | **string** | Сортировка  * &#x60;default&#x60; - по умолчанию * &#x60;alphabet&#x60; - в алфавитном порядке * &#x60;random&#x60; - в случайном порядке | [optional] 
+**required_min** | **int** | Минимальное кол-во обязательных заполненных строк | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

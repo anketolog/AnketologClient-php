@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -71,7 +71,9 @@ class SurveyReportDetailBody implements ArrayAccess
         'date_from' => '\DateTime',
         'date_to' => '\DateTime',
         'filters' => 'int[]',
-        'sources' => 'string[]'
+        'sources' => 'string[]',
+        'ap_name' => 'string',
+        'ap_value' => 'string'
     );
 
     public static function swaggerTypes()
@@ -89,7 +91,9 @@ class SurveyReportDetailBody implements ArrayAccess
         'date_from' => 'date_from',
         'date_to' => 'date_to',
         'filters' => 'filters',
-        'sources' => 'sources'
+        'sources' => 'sources',
+        'ap_name' => 'ap_name',
+        'ap_value' => 'ap_value'
     );
 
     public static function attributeMap()
@@ -107,7 +111,9 @@ class SurveyReportDetailBody implements ArrayAccess
         'date_from' => 'setDateFrom',
         'date_to' => 'setDateTo',
         'filters' => 'setFilters',
-        'sources' => 'setSources'
+        'sources' => 'setSources',
+        'ap_name' => 'setApName',
+        'ap_value' => 'setApValue'
     );
 
     public static function setters()
@@ -125,7 +131,9 @@ class SurveyReportDetailBody implements ArrayAccess
         'date_from' => 'getDateFrom',
         'date_to' => 'getDateTo',
         'filters' => 'getFilters',
-        'sources' => 'getSources'
+        'sources' => 'getSources',
+        'ap_name' => 'getApName',
+        'ap_value' => 'getApValue'
     );
 
     public static function getters()
@@ -155,6 +163,8 @@ class SurveyReportDetailBody implements ArrayAccess
         $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
         $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
         $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
+        $this->container['ap_name'] = isset($data['ap_name']) ? $data['ap_name'] : null;
+        $this->container['ap_value'] = isset($data['ap_value']) ? $data['ap_value'] : null;
     }
 
     /**
@@ -308,6 +318,48 @@ class SurveyReportDetailBody implements ArrayAccess
     public function setSources($sources)
     {
         $this->container['sources'] = $sources;
+
+        return $this;
+    }
+
+    /**
+     * Gets ap_name
+     * @return string
+     */
+    public function getApName()
+    {
+        return $this->container['ap_name'];
+    }
+
+    /**
+     * Sets ap_name
+     * @param string $ap_name Имя доп. параметра
+     * @return $this
+     */
+    public function setApName($ap_name)
+    {
+        $this->container['ap_name'] = $ap_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets ap_value
+     * @return string
+     */
+    public function getApValue()
+    {
+        return $this->container['ap_value'];
+    }
+
+    /**
+     * Sets ap_value
+     * @param string $ap_value Значение доп. параметра
+     * @return $this
+     */
+    public function setApValue($ap_value)
+    {
+        $this->container['ap_value'] = $ap_value;
 
         return $this;
     }

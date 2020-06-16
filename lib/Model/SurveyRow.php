@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -68,7 +68,12 @@ class SurveyRow implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'id' => 'int',
-        'title' => 'string'
+        'title' => 'string',
+        'image_id' => 'int',
+        'image_width' => 'int',
+        'image_height' => 'int',
+        'image_alt' => 'string',
+        'image_align' => 'string'
     );
 
     public static function swaggerTypes()
@@ -82,7 +87,12 @@ class SurveyRow implements ArrayAccess
      */
     protected static $attributeMap = array(
         'id' => 'id',
-        'title' => 'title'
+        'title' => 'title',
+        'image_id' => 'image_id',
+        'image_width' => 'image_width',
+        'image_height' => 'image_height',
+        'image_alt' => 'image_alt',
+        'image_align' => 'image_align'
     );
 
     public static function attributeMap()
@@ -96,7 +106,12 @@ class SurveyRow implements ArrayAccess
      */
     protected static $setters = array(
         'id' => 'setId',
-        'title' => 'setTitle'
+        'title' => 'setTitle',
+        'image_id' => 'setImageId',
+        'image_width' => 'setImageWidth',
+        'image_height' => 'setImageHeight',
+        'image_alt' => 'setImageAlt',
+        'image_align' => 'setImageAlign'
     );
 
     public static function setters()
@@ -110,7 +125,12 @@ class SurveyRow implements ArrayAccess
      */
     protected static $getters = array(
         'id' => 'getId',
-        'title' => 'getTitle'
+        'title' => 'getTitle',
+        'image_id' => 'getImageId',
+        'image_width' => 'getImageWidth',
+        'image_height' => 'getImageHeight',
+        'image_alt' => 'getImageAlt',
+        'image_align' => 'getImageAlign'
     );
 
     public static function getters()
@@ -118,8 +138,24 @@ class SurveyRow implements ArrayAccess
         return self::$getters;
     }
 
+    const IMAGE_ALIGN_LEFT = 'left';
+    const IMAGE_ALIGN_CENTER = 'center';
+    const IMAGE_ALIGN_RIGHT = 'right';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getImageAlignAllowableValues()
+    {
+        return [
+            self::IMAGE_ALIGN_LEFT,
+            self::IMAGE_ALIGN_CENTER,
+            self::IMAGE_ALIGN_RIGHT,
+        ];
+    }
     
 
     /**
@@ -136,6 +172,11 @@ class SurveyRow implements ArrayAccess
     {
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
+        $this->container['image_id'] = isset($data['image_id']) ? $data['image_id'] : null;
+        $this->container['image_width'] = isset($data['image_width']) ? $data['image_width'] : null;
+        $this->container['image_height'] = isset($data['image_height']) ? $data['image_height'] : null;
+        $this->container['image_alt'] = isset($data['image_alt']) ? $data['image_alt'] : null;
+        $this->container['image_align'] = isset($data['image_align']) ? $data['image_align'] : null;
     }
 
     /**
@@ -152,6 +193,11 @@ class SurveyRow implements ArrayAccess
         if ($this->container['title'] === null) {
             $invalid_properties[] = "'title' can't be null";
         }
+        $allowed_values = array("left", "center", "right");
+        if (!in_array($this->container['image_align'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'image_align', must be one of #{allowed_values}.";
+        }
+
         return $invalid_properties;
     }
 
@@ -167,6 +213,10 @@ class SurveyRow implements ArrayAccess
             return false;
         }
         if ($this->container['title'] === null) {
+            return false;
+        }
+        $allowed_values = array("left", "center", "right");
+        if (!in_array($this->container['image_align'], $allowed_values)) {
             return false;
         }
         return true;
@@ -211,6 +261,115 @@ class SurveyRow implements ArrayAccess
     public function setTitle($title)
     {
         $this->container['title'] = $title;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_id
+     * @return int
+     */
+    public function getImageId()
+    {
+        return $this->container['image_id'];
+    }
+
+    /**
+     * Sets image_id
+     * @param int $image_id ID изображения
+     * @return $this
+     */
+    public function setImageId($image_id)
+    {
+        $this->container['image_id'] = $image_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_width
+     * @return int
+     */
+    public function getImageWidth()
+    {
+        return $this->container['image_width'];
+    }
+
+    /**
+     * Sets image_width
+     * @param int $image_width Ширина изображения
+     * @return $this
+     */
+    public function setImageWidth($image_width)
+    {
+        $this->container['image_width'] = $image_width;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_height
+     * @return int
+     */
+    public function getImageHeight()
+    {
+        return $this->container['image_height'];
+    }
+
+    /**
+     * Sets image_height
+     * @param int $image_height Высота изображения
+     * @return $this
+     */
+    public function setImageHeight($image_height)
+    {
+        $this->container['image_height'] = $image_height;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_alt
+     * @return string
+     */
+    public function getImageAlt()
+    {
+        return $this->container['image_alt'];
+    }
+
+    /**
+     * Sets image_alt
+     * @param string $image_alt Подпись к изображению изображения
+     * @return $this
+     */
+    public function setImageAlt($image_alt)
+    {
+        $this->container['image_alt'] = $image_alt;
+
+        return $this;
+    }
+
+    /**
+     * Gets image_align
+     * @return string
+     */
+    public function getImageAlign()
+    {
+        return $this->container['image_align'];
+    }
+
+    /**
+     * Sets image_align
+     * @param string $image_align Выравнивание изображения
+     * @return $this
+     */
+    public function setImageAlign($image_align)
+    {
+        $allowed_values = array('left', 'center', 'right');
+        if (!in_array($image_align, $allowed_values)) {
+            throw new \InvalidArgumentException("Invalid value for 'image_align', must be one of 'left', 'center', 'right'");
+        }
+        $this->container['image_align'] = $image_align;
 
         return $this;
     }

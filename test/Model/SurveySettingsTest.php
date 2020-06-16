@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -115,6 +115,46 @@ class SurveySettingsTest extends \PHPUnit_Framework_TestCase
      * Test attribute "multiple_answers"
      */
     public function testPropertyMultipleAnswers()
+    {
+
+    }
+
+    /**
+     * Test attribute "archive_on_date"
+     */
+    public function testPropertyArchiveOnDate()
+    {
+
+    }
+
+    /**
+     * Test attribute "archive_on_answer_count"
+     */
+    public function testPropertyArchiveOnAnswerCount()
+    {
+
+    }
+
+    /**
+     * Test attribute "archive_description"
+     */
+    public function testPropertyArchiveDescription()
+    {
+
+    }
+
+    /**
+     * Test attribute "archive_date"
+     */
+    public function testPropertyArchiveDate()
+    {
+
+    }
+
+    /**
+     * Test attribute "archive_answer_count"
+     */
+    public function testPropertyArchiveAnswerCount()
     {
 
     }
@@ -283,6 +323,78 @@ class SurveySettingsTest extends \PHPUnit_Framework_TestCase
      * Test attribute "credentials"
      */
     public function testPropertyCredentials()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_finish"
+     */
+    public function testPropertyRedirectFinish()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_finish_url"
+     */
+    public function testPropertyRedirectFinishUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_finish_timeout"
+     */
+    public function testPropertyRedirectFinishTimeout()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_disqualification"
+     */
+    public function testPropertyRedirectDisqualification()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_disqualification_url"
+     */
+    public function testPropertyRedirectDisqualificationUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_disqualification_timeout"
+     */
+    public function testPropertyRedirectDisqualificationTimeout()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_disqualification_quote"
+     */
+    public function testPropertyRedirectDisqualificationQuote()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_disqualification_quote_url"
+     */
+    public function testPropertyRedirectDisqualificationQuoteUrl()
+    {
+
+    }
+
+    /**
+     * Test attribute "redirect_disqualification_quote_timeout"
+     */
+    public function testPropertyRedirectDisqualificationQuoteTimeout()
     {
 
     }

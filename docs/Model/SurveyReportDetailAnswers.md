@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **start_date** | **int** |  | 
 **finish_date** | **int** |  | 
 **questions_answers** | [**\AnketologClient\Model\SurveyReportDetailQuestionsAnswers[]**](SurveyReportDetailQuestionsAnswers.md) |  | 
-**additional_params** | [**\AnketologClient\Model\SurveyReportDetailAdditionalParams[]**](SurveyReportDetailAdditionalParams.md) |  | 
+**additional_params** | [**\AnketologClient\Model\SurveyAnswerAdditionalParams[]**](SurveyAnswerAdditionalParams.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

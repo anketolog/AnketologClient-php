@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -66,7 +66,14 @@ class SurveyAnswerListBody implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'survey_id' => 'int'
+        'survey_id' => 'int',
+        'offset' => 'int',
+        'date_from' => '\DateTime',
+        'date_to' => '\DateTime',
+        'filters' => 'int[]',
+        'sources' => 'string[]',
+        'ap_name' => 'string',
+        'ap_value' => 'string'
     );
 
     public static function swaggerTypes()
@@ -79,7 +86,14 @@ class SurveyAnswerListBody implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'survey_id' => 'survey_id'
+        'survey_id' => 'survey_id',
+        'offset' => 'offset',
+        'date_from' => 'date_from',
+        'date_to' => 'date_to',
+        'filters' => 'filters',
+        'sources' => 'sources',
+        'ap_name' => 'ap_name',
+        'ap_value' => 'ap_value'
     );
 
     public static function attributeMap()
@@ -92,7 +106,14 @@ class SurveyAnswerListBody implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'survey_id' => 'setSurveyId'
+        'survey_id' => 'setSurveyId',
+        'offset' => 'setOffset',
+        'date_from' => 'setDateFrom',
+        'date_to' => 'setDateTo',
+        'filters' => 'setFilters',
+        'sources' => 'setSources',
+        'ap_name' => 'setApName',
+        'ap_value' => 'setApValue'
     );
 
     public static function setters()
@@ -105,7 +126,14 @@ class SurveyAnswerListBody implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'survey_id' => 'getSurveyId'
+        'survey_id' => 'getSurveyId',
+        'offset' => 'getOffset',
+        'date_from' => 'getDateFrom',
+        'date_to' => 'getDateTo',
+        'filters' => 'getFilters',
+        'sources' => 'getSources',
+        'ap_name' => 'getApName',
+        'ap_value' => 'getApValue'
     );
 
     public static function getters()
@@ -130,6 +158,13 @@ class SurveyAnswerListBody implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['date_from'] = isset($data['date_from']) ? $data['date_from'] : null;
+        $this->container['date_to'] = isset($data['date_to']) ? $data['date_to'] : null;
+        $this->container['filters'] = isset($data['filters']) ? $data['filters'] : null;
+        $this->container['sources'] = isset($data['sources']) ? $data['sources'] : null;
+        $this->container['ap_name'] = isset($data['ap_name']) ? $data['ap_name'] : null;
+        $this->container['ap_value'] = isset($data['ap_value']) ? $data['ap_value'] : null;
     }
 
     /**
@@ -178,6 +213,153 @@ class SurveyAnswerListBody implements ArrayAccess
     public function setSurveyId($survey_id)
     {
         $this->container['survey_id'] = $survey_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets offset
+     * @return int
+     */
+    public function getOffset()
+    {
+        return $this->container['offset'];
+    }
+
+    /**
+     * Sets offset
+     * @param int $offset Offset
+     * @return $this
+     */
+    public function setOffset($offset)
+    {
+        $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_from
+     * @return \DateTime
+     */
+    public function getDateFrom()
+    {
+        return $this->container['date_from'];
+    }
+
+    /**
+     * Sets date_from
+     * @param \DateTime $date_from Дата \"с\"
+     * @return $this
+     */
+    public function setDateFrom($date_from)
+    {
+        $this->container['date_from'] = $date_from;
+
+        return $this;
+    }
+
+    /**
+     * Gets date_to
+     * @return \DateTime
+     */
+    public function getDateTo()
+    {
+        return $this->container['date_to'];
+    }
+
+    /**
+     * Sets date_to
+     * @param \DateTime $date_to Дата \"до\"
+     * @return $this
+     */
+    public function setDateTo($date_to)
+    {
+        $this->container['date_to'] = $date_to;
+
+        return $this;
+    }
+
+    /**
+     * Gets filters
+     * @return int[]
+     */
+    public function getFilters()
+    {
+        return $this->container['filters'];
+    }
+
+    /**
+     * Sets filters
+     * @param int[] $filters Фильтры
+     * @return $this
+     */
+    public function setFilters($filters)
+    {
+        $this->container['filters'] = $filters;
+
+        return $this;
+    }
+
+    /**
+     * Gets sources
+     * @return string[]
+     */
+    public function getSources()
+    {
+        return $this->container['sources'];
+    }
+
+    /**
+     * Sets sources
+     * @param string[] $sources Источники
+     * @return $this
+     */
+    public function setSources($sources)
+    {
+        $this->container['sources'] = $sources;
+
+        return $this;
+    }
+
+    /**
+     * Gets ap_name
+     * @return string
+     */
+    public function getApName()
+    {
+        return $this->container['ap_name'];
+    }
+
+    /**
+     * Sets ap_name
+     * @param string $ap_name Имя доп. параметра
+     * @return $this
+     */
+    public function setApName($ap_name)
+    {
+        $this->container['ap_name'] = $ap_name;
+
+        return $this;
+    }
+
+    /**
+     * Gets ap_value
+     * @return string
+     */
+    public function getApValue()
+    {
+        return $this->container['ap_value'];
+    }
+
+    /**
+     * Sets ap_value
+     * @param string $ap_value Значение доп. параметра
+     * @return $this
+     */
+    public function setApValue($ap_value)
+    {
+        $this->container['ap_value'] = $ap_value;
 
         return $this;
     }

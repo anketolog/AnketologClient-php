@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -82,7 +82,8 @@ class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
         'options' => '\AnketologClient\Model\SurveyOption[]',
         'options_sort' => 'string',
         'rows' => '\AnketologClient\Model\SurveyRow[]',
-        'rows_sort' => 'string'
+        'rows_sort' => 'string',
+        'required_min' => 'int'
     );
 
     public static function swaggerTypes()
@@ -110,7 +111,8 @@ class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
         'options' => 'options',
         'options_sort' => 'options_sort',
         'rows' => 'rows',
-        'rows_sort' => 'rows_sort'
+        'rows_sort' => 'rows_sort',
+        'required_min' => 'required_min'
     );
 
     public static function attributeMap()
@@ -138,7 +140,8 @@ class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
         'options' => 'setOptions',
         'options_sort' => 'setOptionsSort',
         'rows' => 'setRows',
-        'rows_sort' => 'setRowsSort'
+        'rows_sort' => 'setRowsSort',
+        'required_min' => 'setRequiredMin'
     );
 
     public static function setters()
@@ -166,7 +169,8 @@ class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
         'options' => 'getOptions',
         'options_sort' => 'getOptionsSort',
         'rows' => 'getRows',
-        'rows_sort' => 'getRowsSort'
+        'rows_sort' => 'getRowsSort',
+        'required_min' => 'getRequiredMin'
     );
 
     public static function getters()
@@ -256,6 +260,7 @@ class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
         $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
         $this->container['rows_sort'] = isset($data['rows_sort']) ? $data['rows_sort'] : null;
+        $this->container['required_min'] = isset($data['required_min']) ? $data['required_min'] : null;
     }
 
     /**
@@ -736,6 +741,27 @@ class SurveyQuestionFreematrix extends SurveyQuestion implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'rows_sort', must be one of 'default', 'alphabet', 'random'");
         }
         $this->container['rows_sort'] = $rows_sort;
+
+        return $this;
+    }
+
+    /**
+     * Gets required_min
+     * @return int
+     */
+    public function getRequiredMin()
+    {
+        return $this->container['required_min'];
+    }
+
+    /**
+     * Sets required_min
+     * @param int $required_min Минимальное кол-во обязательных заполненных строк
+     * @return $this
+     */
+    public function setRequiredMin($required_min)
+    {
+        $this->container['required_min'] = $required_min;
 
         return $this;
     }

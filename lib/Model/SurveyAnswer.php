@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -73,7 +73,9 @@ class SurveyAnswer implements ArrayAccess
         'start_date' => 'int',
         'finish_date' => 'int',
         'status' => 'string',
-        'collector' => '\AnketologClient\Model\SurveyCollector'
+        'collector' => '\AnketologClient\Model\SurveyCollector',
+        'answer' => '\AnketologClient\Model\SurveyReportAggregateAnswer',
+        'additional_params' => '\AnketologClient\Model\SurveyAnswerAdditionalParams[]'
     );
 
     public static function swaggerTypes()
@@ -92,7 +94,9 @@ class SurveyAnswer implements ArrayAccess
         'start_date' => 'start_date',
         'finish_date' => 'finish_date',
         'status' => 'status',
-        'collector' => 'collector'
+        'collector' => 'collector',
+        'answer' => 'answer',
+        'additional_params' => 'additional_params'
     );
 
     public static function attributeMap()
@@ -111,7 +115,9 @@ class SurveyAnswer implements ArrayAccess
         'start_date' => 'setStartDate',
         'finish_date' => 'setFinishDate',
         'status' => 'setStatus',
-        'collector' => 'setCollector'
+        'collector' => 'setCollector',
+        'answer' => 'setAnswer',
+        'additional_params' => 'setAdditionalParams'
     );
 
     public static function setters()
@@ -130,7 +136,9 @@ class SurveyAnswer implements ArrayAccess
         'start_date' => 'getStartDate',
         'finish_date' => 'getFinishDate',
         'status' => 'getStatus',
-        'collector' => 'getCollector'
+        'collector' => 'getCollector',
+        'answer' => 'getAnswer',
+        'additional_params' => 'getAdditionalParams'
     );
 
     public static function getters()
@@ -179,6 +187,8 @@ class SurveyAnswer implements ArrayAccess
         $this->container['finish_date'] = isset($data['finish_date']) ? $data['finish_date'] : null;
         $this->container['status'] = isset($data['status']) ? $data['status'] : null;
         $this->container['collector'] = isset($data['collector']) ? $data['collector'] : null;
+        $this->container['answer'] = isset($data['answer']) ? $data['answer'] : null;
+        $this->container['additional_params'] = isset($data['additional_params']) ? $data['additional_params'] : null;
     }
 
     /**
@@ -396,6 +406,48 @@ class SurveyAnswer implements ArrayAccess
     public function setCollector($collector)
     {
         $this->container['collector'] = $collector;
+
+        return $this;
+    }
+
+    /**
+     * Gets answer
+     * @return \AnketologClient\Model\SurveyReportAggregateAnswer
+     */
+    public function getAnswer()
+    {
+        return $this->container['answer'];
+    }
+
+    /**
+     * Sets answer
+     * @param \AnketologClient\Model\SurveyReportAggregateAnswer $answer
+     * @return $this
+     */
+    public function setAnswer($answer)
+    {
+        $this->container['answer'] = $answer;
+
+        return $this;
+    }
+
+    /**
+     * Gets additional_params
+     * @return \AnketologClient\Model\SurveyAnswerAdditionalParams[]
+     */
+    public function getAdditionalParams()
+    {
+        return $this->container['additional_params'];
+    }
+
+    /**
+     * Sets additional_params
+     * @param \AnketologClient\Model\SurveyAnswerAdditionalParams[] $additional_params
+     * @return $this
+     */
+    public function setAdditionalParams($additional_params)
+    {
+        $this->container['additional_params'] = $additional_params;
 
         return $this;
     }

@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -70,6 +70,11 @@ class SurveySettings implements ArrayAccess
         'name' => 'string',
         'public_result' => 'bool',
         'multiple_answers' => 'bool',
+        'archive_on_date' => 'bool',
+        'archive_on_answer_count' => 'bool',
+        'archive_description' => 'bool',
+        'archive_date' => 'int',
+        'archive_answer_count' => 'int',
         'logo_id' => 'int',
         'language' => 'string',
         'theme' => 'string',
@@ -90,7 +95,16 @@ class SurveySettings implements ArrayAccess
         'disable_ad' => 'bool',
         'custom_css' => 'string',
         'credentials_enable' => 'bool',
-        'credentials' => '\AnketologClient\Model\SurveyCredential[]'
+        'credentials' => '\AnketologClient\Model\SurveyCredential[]',
+        'redirect_finish' => 'bool',
+        'redirect_finish_url' => 'string',
+        'redirect_finish_timeout' => 'int',
+        'redirect_disqualification' => 'bool',
+        'redirect_disqualification_url' => 'string',
+        'redirect_disqualification_timeout' => 'int',
+        'redirect_disqualification_quote' => 'bool',
+        'redirect_disqualification_quote_url' => 'string',
+        'redirect_disqualification_quote_timeout' => 'int'
     );
 
     public static function swaggerTypes()
@@ -106,6 +120,11 @@ class SurveySettings implements ArrayAccess
         'name' => 'name',
         'public_result' => 'public_result',
         'multiple_answers' => 'multiple_answers',
+        'archive_on_date' => 'archive_on_date',
+        'archive_on_answer_count' => 'archive_on_answer_count',
+        'archive_description' => 'archive_description',
+        'archive_date' => 'archive_date',
+        'archive_answer_count' => 'archive_answer_count',
         'logo_id' => 'logo_id',
         'language' => 'language',
         'theme' => 'theme',
@@ -126,7 +145,16 @@ class SurveySettings implements ArrayAccess
         'disable_ad' => 'disable_ad',
         'custom_css' => 'custom_css',
         'credentials_enable' => 'credentials_enable',
-        'credentials' => 'credentials'
+        'credentials' => 'credentials',
+        'redirect_finish' => 'redirect_finish',
+        'redirect_finish_url' => 'redirect_finish_url',
+        'redirect_finish_timeout' => 'redirect_finish_timeout',
+        'redirect_disqualification' => 'redirect_disqualification',
+        'redirect_disqualification_url' => 'redirect_disqualification_url',
+        'redirect_disqualification_timeout' => 'redirect_disqualification_timeout',
+        'redirect_disqualification_quote' => 'redirect_disqualification_quote',
+        'redirect_disqualification_quote_url' => 'redirect_disqualification_quote_url',
+        'redirect_disqualification_quote_timeout' => 'redirect_disqualification_quote_timeout'
     );
 
     public static function attributeMap()
@@ -142,6 +170,11 @@ class SurveySettings implements ArrayAccess
         'name' => 'setName',
         'public_result' => 'setPublicResult',
         'multiple_answers' => 'setMultipleAnswers',
+        'archive_on_date' => 'setArchiveOnDate',
+        'archive_on_answer_count' => 'setArchiveOnAnswerCount',
+        'archive_description' => 'setArchiveDescription',
+        'archive_date' => 'setArchiveDate',
+        'archive_answer_count' => 'setArchiveAnswerCount',
         'logo_id' => 'setLogoId',
         'language' => 'setLanguage',
         'theme' => 'setTheme',
@@ -162,7 +195,16 @@ class SurveySettings implements ArrayAccess
         'disable_ad' => 'setDisableAd',
         'custom_css' => 'setCustomCss',
         'credentials_enable' => 'setCredentialsEnable',
-        'credentials' => 'setCredentials'
+        'credentials' => 'setCredentials',
+        'redirect_finish' => 'setRedirectFinish',
+        'redirect_finish_url' => 'setRedirectFinishUrl',
+        'redirect_finish_timeout' => 'setRedirectFinishTimeout',
+        'redirect_disqualification' => 'setRedirectDisqualification',
+        'redirect_disqualification_url' => 'setRedirectDisqualificationUrl',
+        'redirect_disqualification_timeout' => 'setRedirectDisqualificationTimeout',
+        'redirect_disqualification_quote' => 'setRedirectDisqualificationQuote',
+        'redirect_disqualification_quote_url' => 'setRedirectDisqualificationQuoteUrl',
+        'redirect_disqualification_quote_timeout' => 'setRedirectDisqualificationQuoteTimeout'
     );
 
     public static function setters()
@@ -178,6 +220,11 @@ class SurveySettings implements ArrayAccess
         'name' => 'getName',
         'public_result' => 'getPublicResult',
         'multiple_answers' => 'getMultipleAnswers',
+        'archive_on_date' => 'getArchiveOnDate',
+        'archive_on_answer_count' => 'getArchiveOnAnswerCount',
+        'archive_description' => 'getArchiveDescription',
+        'archive_date' => 'getArchiveDate',
+        'archive_answer_count' => 'getArchiveAnswerCount',
         'logo_id' => 'getLogoId',
         'language' => 'getLanguage',
         'theme' => 'getTheme',
@@ -198,7 +245,16 @@ class SurveySettings implements ArrayAccess
         'disable_ad' => 'getDisableAd',
         'custom_css' => 'getCustomCss',
         'credentials_enable' => 'getCredentialsEnable',
-        'credentials' => 'getCredentials'
+        'credentials' => 'getCredentials',
+        'redirect_finish' => 'getRedirectFinish',
+        'redirect_finish_url' => 'getRedirectFinishUrl',
+        'redirect_finish_timeout' => 'getRedirectFinishTimeout',
+        'redirect_disqualification' => 'getRedirectDisqualification',
+        'redirect_disqualification_url' => 'getRedirectDisqualificationUrl',
+        'redirect_disqualification_timeout' => 'getRedirectDisqualificationTimeout',
+        'redirect_disqualification_quote' => 'getRedirectDisqualificationQuote',
+        'redirect_disqualification_quote_url' => 'getRedirectDisqualificationQuoteUrl',
+        'redirect_disqualification_quote_timeout' => 'getRedirectDisqualificationQuoteTimeout'
     );
 
     public static function getters()
@@ -281,6 +337,11 @@ class SurveySettings implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['public_result'] = isset($data['public_result']) ? $data['public_result'] : null;
         $this->container['multiple_answers'] = isset($data['multiple_answers']) ? $data['multiple_answers'] : null;
+        $this->container['archive_on_date'] = isset($data['archive_on_date']) ? $data['archive_on_date'] : null;
+        $this->container['archive_on_answer_count'] = isset($data['archive_on_answer_count']) ? $data['archive_on_answer_count'] : null;
+        $this->container['archive_description'] = isset($data['archive_description']) ? $data['archive_description'] : null;
+        $this->container['archive_date'] = isset($data['archive_date']) ? $data['archive_date'] : null;
+        $this->container['archive_answer_count'] = isset($data['archive_answer_count']) ? $data['archive_answer_count'] : null;
         $this->container['logo_id'] = isset($data['logo_id']) ? $data['logo_id'] : null;
         $this->container['language'] = isset($data['language']) ? $data['language'] : null;
         $this->container['theme'] = isset($data['theme']) ? $data['theme'] : null;
@@ -302,6 +363,15 @@ class SurveySettings implements ArrayAccess
         $this->container['custom_css'] = isset($data['custom_css']) ? $data['custom_css'] : null;
         $this->container['credentials_enable'] = isset($data['credentials_enable']) ? $data['credentials_enable'] : null;
         $this->container['credentials'] = isset($data['credentials']) ? $data['credentials'] : null;
+        $this->container['redirect_finish'] = isset($data['redirect_finish']) ? $data['redirect_finish'] : null;
+        $this->container['redirect_finish_url'] = isset($data['redirect_finish_url']) ? $data['redirect_finish_url'] : null;
+        $this->container['redirect_finish_timeout'] = isset($data['redirect_finish_timeout']) ? $data['redirect_finish_timeout'] : null;
+        $this->container['redirect_disqualification'] = isset($data['redirect_disqualification']) ? $data['redirect_disqualification'] : null;
+        $this->container['redirect_disqualification_url'] = isset($data['redirect_disqualification_url']) ? $data['redirect_disqualification_url'] : null;
+        $this->container['redirect_disqualification_timeout'] = isset($data['redirect_disqualification_timeout']) ? $data['redirect_disqualification_timeout'] : null;
+        $this->container['redirect_disqualification_quote'] = isset($data['redirect_disqualification_quote']) ? $data['redirect_disqualification_quote'] : null;
+        $this->container['redirect_disqualification_quote_url'] = isset($data['redirect_disqualification_quote_url']) ? $data['redirect_disqualification_quote_url'] : null;
+        $this->container['redirect_disqualification_quote_timeout'] = isset($data['redirect_disqualification_quote_timeout']) ? $data['redirect_disqualification_quote_timeout'] : null;
     }
 
     /**
@@ -320,6 +390,15 @@ class SurveySettings implements ArrayAccess
         }
         if ($this->container['multiple_answers'] === null) {
             $invalid_properties[] = "'multiple_answers' can't be null";
+        }
+        if ($this->container['archive_on_date'] === null) {
+            $invalid_properties[] = "'archive_on_date' can't be null";
+        }
+        if ($this->container['archive_on_answer_count'] === null) {
+            $invalid_properties[] = "'archive_on_answer_count' can't be null";
+        }
+        if ($this->container['archive_description'] === null) {
+            $invalid_properties[] = "'archive_description' can't be null";
         }
         if ($this->container['language'] === null) {
             $invalid_properties[] = "'language' can't be null";
@@ -393,6 +472,15 @@ class SurveySettings implements ArrayAccess
             return false;
         }
         if ($this->container['multiple_answers'] === null) {
+            return false;
+        }
+        if ($this->container['archive_on_date'] === null) {
+            return false;
+        }
+        if ($this->container['archive_on_answer_count'] === null) {
+            return false;
+        }
+        if ($this->container['archive_description'] === null) {
             return false;
         }
         if ($this->container['language'] === null) {
@@ -509,6 +597,111 @@ class SurveySettings implements ArrayAccess
     public function setMultipleAnswers($multiple_answers)
     {
         $this->container['multiple_answers'] = $multiple_answers;
+
+        return $this;
+    }
+
+    /**
+     * Gets archive_on_date
+     * @return bool
+     */
+    public function getArchiveOnDate()
+    {
+        return $this->container['archive_on_date'];
+    }
+
+    /**
+     * Sets archive_on_date
+     * @param bool $archive_on_date Архивировать анкету по дате
+     * @return $this
+     */
+    public function setArchiveOnDate($archive_on_date)
+    {
+        $this->container['archive_on_date'] = $archive_on_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets archive_on_answer_count
+     * @return bool
+     */
+    public function getArchiveOnAnswerCount()
+    {
+        return $this->container['archive_on_answer_count'];
+    }
+
+    /**
+     * Sets archive_on_answer_count
+     * @param bool $archive_on_answer_count Архивировать анкету по кол-ву ответов
+     * @return $this
+     */
+    public function setArchiveOnAnswerCount($archive_on_answer_count)
+    {
+        $this->container['archive_on_answer_count'] = $archive_on_answer_count;
+
+        return $this;
+    }
+
+    /**
+     * Gets archive_description
+     * @return bool
+     */
+    public function getArchiveDescription()
+    {
+        return $this->container['archive_description'];
+    }
+
+    /**
+     * Sets archive_description
+     * @param bool $archive_description Причина архивирования
+     * @return $this
+     */
+    public function setArchiveDescription($archive_description)
+    {
+        $this->container['archive_description'] = $archive_description;
+
+        return $this;
+    }
+
+    /**
+     * Gets archive_date
+     * @return int
+     */
+    public function getArchiveDate()
+    {
+        return $this->container['archive_date'];
+    }
+
+    /**
+     * Sets archive_date
+     * @param int $archive_date Дата архивации анкеты в формате timestamp
+     * @return $this
+     */
+    public function setArchiveDate($archive_date)
+    {
+        $this->container['archive_date'] = $archive_date;
+
+        return $this;
+    }
+
+    /**
+     * Gets archive_answer_count
+     * @return int
+     */
+    public function getArchiveAnswerCount()
+    {
+        return $this->container['archive_answer_count'];
+    }
+
+    /**
+     * Sets archive_answer_count
+     * @param int $archive_answer_count Кол-во ответов для архивации анкеты
+     * @return $this
+     */
+    public function setArchiveAnswerCount($archive_answer_count)
+    {
+        $this->container['archive_answer_count'] = $archive_answer_count;
 
         return $this;
     }
@@ -962,6 +1155,195 @@ class SurveySettings implements ArrayAccess
     public function setCredentials($credentials)
     {
         $this->container['credentials'] = $credentials;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_finish
+     * @return bool
+     */
+    public function getRedirectFinish()
+    {
+        return $this->container['redirect_finish'];
+    }
+
+    /**
+     * Sets redirect_finish
+     * @param bool $redirect_finish Включить редирект при завершении анкеты
+     * @return $this
+     */
+    public function setRedirectFinish($redirect_finish)
+    {
+        $this->container['redirect_finish'] = $redirect_finish;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_finish_url
+     * @return string
+     */
+    public function getRedirectFinishUrl()
+    {
+        return $this->container['redirect_finish_url'];
+    }
+
+    /**
+     * Sets redirect_finish_url
+     * @param string $redirect_finish_url URL страницы для редиректа при завершении анкеты
+     * @return $this
+     */
+    public function setRedirectFinishUrl($redirect_finish_url)
+    {
+        $this->container['redirect_finish_url'] = $redirect_finish_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_finish_timeout
+     * @return int
+     */
+    public function getRedirectFinishTimeout()
+    {
+        return $this->container['redirect_finish_timeout'];
+    }
+
+    /**
+     * Sets redirect_finish_timeout
+     * @param int $redirect_finish_timeout Таймаут редиректа в секундах (0 - 60сек) при завершении анкеты
+     * @return $this
+     */
+    public function setRedirectFinishTimeout($redirect_finish_timeout)
+    {
+        $this->container['redirect_finish_timeout'] = $redirect_finish_timeout;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_disqualification
+     * @return bool
+     */
+    public function getRedirectDisqualification()
+    {
+        return $this->container['redirect_disqualification'];
+    }
+
+    /**
+     * Sets redirect_disqualification
+     * @param bool $redirect_disqualification Включить редирект при дисквалификации
+     * @return $this
+     */
+    public function setRedirectDisqualification($redirect_disqualification)
+    {
+        $this->container['redirect_disqualification'] = $redirect_disqualification;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_disqualification_url
+     * @return string
+     */
+    public function getRedirectDisqualificationUrl()
+    {
+        return $this->container['redirect_disqualification_url'];
+    }
+
+    /**
+     * Sets redirect_disqualification_url
+     * @param string $redirect_disqualification_url URL страницы для редиректа при дисквалификации
+     * @return $this
+     */
+    public function setRedirectDisqualificationUrl($redirect_disqualification_url)
+    {
+        $this->container['redirect_disqualification_url'] = $redirect_disqualification_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_disqualification_timeout
+     * @return int
+     */
+    public function getRedirectDisqualificationTimeout()
+    {
+        return $this->container['redirect_disqualification_timeout'];
+    }
+
+    /**
+     * Sets redirect_disqualification_timeout
+     * @param int $redirect_disqualification_timeout Таймаут редиректа в секундах (0 - 60сек) при дисквалификации
+     * @return $this
+     */
+    public function setRedirectDisqualificationTimeout($redirect_disqualification_timeout)
+    {
+        $this->container['redirect_disqualification_timeout'] = $redirect_disqualification_timeout;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_disqualification_quote
+     * @return bool
+     */
+    public function getRedirectDisqualificationQuote()
+    {
+        return $this->container['redirect_disqualification_quote'];
+    }
+
+    /**
+     * Sets redirect_disqualification_quote
+     * @param bool $redirect_disqualification_quote Включить редирект при дисквалификации по квоте
+     * @return $this
+     */
+    public function setRedirectDisqualificationQuote($redirect_disqualification_quote)
+    {
+        $this->container['redirect_disqualification_quote'] = $redirect_disqualification_quote;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_disqualification_quote_url
+     * @return string
+     */
+    public function getRedirectDisqualificationQuoteUrl()
+    {
+        return $this->container['redirect_disqualification_quote_url'];
+    }
+
+    /**
+     * Sets redirect_disqualification_quote_url
+     * @param string $redirect_disqualification_quote_url URL страницы для редиректа при дисквалификации по квоте
+     * @return $this
+     */
+    public function setRedirectDisqualificationQuoteUrl($redirect_disqualification_quote_url)
+    {
+        $this->container['redirect_disqualification_quote_url'] = $redirect_disqualification_quote_url;
+
+        return $this;
+    }
+
+    /**
+     * Gets redirect_disqualification_quote_timeout
+     * @return int
+     */
+    public function getRedirectDisqualificationQuoteTimeout()
+    {
+        return $this->container['redirect_disqualification_quote_timeout'];
+    }
+
+    /**
+     * Sets redirect_disqualification_quote_timeout
+     * @param int $redirect_disqualification_quote_timeout Таймаут редиректа в секундах (0 - 60сек) при дисквалификации по квоте
+     * @return $this
+     */
+    public function setRedirectDisqualificationQuoteTimeout($redirect_disqualification_quote_timeout)
+    {
+        $this->container['redirect_disqualification_quote_timeout'] = $redirect_disqualification_quote_timeout;
 
         return $this;
     }

@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -80,6 +80,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'has_other_answer' => 'bool',
         'has_middle_name' => 'bool',
         'is_multiple' => 'bool',
+        'kind' => 'string',
         'has_nothing_answer' => 'bool',
         'options_sort' => 'string',
         'rows_sort' => 'string',
@@ -91,7 +92,8 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'limit' => '\AnketologClient\Model\SurveyeditoraddQuestionConfigLimit',
         'options' => '\AnketologClient\Model\SurveyeditoraddQuestionConfigOptions[]',
         'rows' => '\AnketologClient\Model\SurveyRow[]',
-        'ranges' => '\AnketologClient\Model\SurveyRange[]'
+        'ranges' => '\AnketologClient\Model\SurveyRange[]',
+        'required_min' => 'int'
     );
 
     public static function swaggerTypes()
@@ -117,6 +119,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'has_other_answer' => 'has_other_answer',
         'has_middle_name' => 'has_middle_name',
         'is_multiple' => 'is_multiple',
+        'kind' => 'kind',
         'has_nothing_answer' => 'has_nothing_answer',
         'options_sort' => 'options_sort',
         'rows_sort' => 'rows_sort',
@@ -128,7 +131,8 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'limit' => 'limit',
         'options' => 'options',
         'rows' => 'rows',
-        'ranges' => 'ranges'
+        'ranges' => 'ranges',
+        'required_min' => 'required_min'
     );
 
     public static function attributeMap()
@@ -154,6 +158,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'has_other_answer' => 'setHasOtherAnswer',
         'has_middle_name' => 'setHasMiddleName',
         'is_multiple' => 'setIsMultiple',
+        'kind' => 'setKind',
         'has_nothing_answer' => 'setHasNothingAnswer',
         'options_sort' => 'setOptionsSort',
         'rows_sort' => 'setRowsSort',
@@ -165,7 +170,8 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'limit' => 'setLimit',
         'options' => 'setOptions',
         'rows' => 'setRows',
-        'ranges' => 'setRanges'
+        'ranges' => 'setRanges',
+        'required_min' => 'setRequiredMin'
     );
 
     public static function setters()
@@ -191,6 +197,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'has_other_answer' => 'getHasOtherAnswer',
         'has_middle_name' => 'getHasMiddleName',
         'is_multiple' => 'getIsMultiple',
+        'kind' => 'getKind',
         'has_nothing_answer' => 'getHasNothingAnswer',
         'options_sort' => 'getOptionsSort',
         'rows_sort' => 'getRowsSort',
@@ -202,7 +209,8 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         'limit' => 'getLimit',
         'options' => 'getOptions',
         'rows' => 'getRows',
-        'ranges' => 'getRanges'
+        'ranges' => 'getRanges',
+        'required_min' => 'getRequiredMin'
     );
 
     public static function getters()
@@ -271,6 +279,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         $this->container['has_other_answer'] = isset($data['has_other_answer']) ? $data['has_other_answer'] : null;
         $this->container['has_middle_name'] = isset($data['has_middle_name']) ? $data['has_middle_name'] : null;
         $this->container['is_multiple'] = isset($data['is_multiple']) ? $data['is_multiple'] : null;
+        $this->container['kind'] = isset($data['kind']) ? $data['kind'] : null;
         $this->container['has_nothing_answer'] = isset($data['has_nothing_answer']) ? $data['has_nothing_answer'] : null;
         $this->container['options_sort'] = isset($data['options_sort']) ? $data['options_sort'] : null;
         $this->container['rows_sort'] = isset($data['rows_sort']) ? $data['rows_sort'] : null;
@@ -283,6 +292,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
         $this->container['options'] = isset($data['options']) ? $data['options'] : null;
         $this->container['rows'] = isset($data['rows']) ? $data['rows'] : null;
         $this->container['ranges'] = isset($data['ranges']) ? $data['ranges'] : null;
+        $this->container['required_min'] = isset($data['required_min']) ? $data['required_min'] : null;
     }
 
     /**
@@ -379,7 +389,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
 
     /**
      * Sets comment
-     * @param string $comment Комментарий к вопросу (HTML)  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
+     * @param string $comment Комментарий к вопросу (HTML)  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale` * `map`
      * @return $this
      */
     public function setComment($comment)
@@ -400,7 +410,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_comment
-     * @param bool $has_comment Отображать комментарий к вопросу  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $has_comment Отображать комментарий к вопросу  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale` * `map`
      * @return $this
      */
     public function setHasComment($has_comment)
@@ -421,7 +431,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_required
-     * @param bool $is_required Вопрос обазательный  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $is_required Вопрос обазательный  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale` * `map`
      * @return $this
      */
     public function setIsRequired($is_required)
@@ -442,7 +452,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_enable
-     * @param bool $is_enable Вопрос виден респонденту  Для вопросов:  * `html` * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $is_enable Вопрос виден респонденту  Для вопросов:  * `html` * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale` * `map`
      * @return $this
      */
     public function setIsEnable($is_enable)
@@ -463,7 +473,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
 
     /**
      * Sets has_unable_answer
-     * @param bool $has_unable_answer Вариант \"затрудняюсь ответить\"  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale`
+     * @param bool $has_unable_answer Вариант \"затрудняюсь ответить\"  Для вопросов:  * `free` * `freelist` * `freematrix` * `select` * `multiselect` * `multidropdown` * `dropdown` * `matrix` * `matrix3d` * `name` * `email` * `phone` * `file` * `date` * `scale` * `order` * `ratingscale` * `map`
      * @return $this
      */
     public function setHasUnableAnswer($has_unable_answer)
@@ -595,6 +605,27 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
     public function setIsMultiple($is_multiple)
     {
         $this->container['is_multiple'] = $is_multiple;
+
+        return $this;
+    }
+
+    /**
+     * Gets kind
+     * @return string
+     */
+    public function getKind()
+    {
+        return $this->container['kind'];
+    }
+
+    /**
+     * Sets kind
+     * @param string $kind Тип выделяемых объектов  Для вопросов:  * `map`
+     * @return $this
+     */
+    public function setKind($kind)
+    {
+        $this->container['kind'] = $kind;
 
         return $this;
     }
@@ -765,7 +796,7 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
 
     /**
      * Sets is_limited
-     * @param bool $is_limited Включить ограничение количества выбранных вариантов  Для вопросов:  * `multiselect` * `multidropdown` * `free` * `freelist` * `freematrix`
+     * @param bool $is_limited Включить ограничение количества выбранных вариантов  Для вопросов:  * `multiselect` * `multidropdown` * `free` * `freelist` * `freematrix` * `map`
      * @return $this
      */
     public function setIsLimited($is_limited)
@@ -855,6 +886,27 @@ class SurveyeditoraddQuestionConfig implements ArrayAccess
     public function setRanges($ranges)
     {
         $this->container['ranges'] = $ranges;
+
+        return $this;
+    }
+
+    /**
+     * Gets required_min
+     * @return int
+     */
+    public function getRequiredMin()
+    {
+        return $this->container['required_min'];
+    }
+
+    /**
+     * Sets required_min
+     * @param int $required_min Минимальное кол-во обязательных заполненных строк  Для вопросов:  * `freematrix` * `freelist`
+     * @return $this
+     */
+    public function setRequiredMin($required_min)
+    {
+        $this->container['required_min'] = $required_min;
 
         return $this;
     }

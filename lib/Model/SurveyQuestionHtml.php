@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -67,7 +67,8 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'html_code' => 'string'
+        'html_code' => 'string',
+        'visiblerules' => '\AnketologClient\Model\SurveyVisiblerule[]'
     );
 
     public static function swaggerTypes()
@@ -80,7 +81,8 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'html_code' => 'html_code'
+        'html_code' => 'html_code',
+        'visiblerules' => 'visiblerules'
     );
 
     public static function attributeMap()
@@ -93,7 +95,8 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'html_code' => 'setHtmlCode'
+        'html_code' => 'setHtmlCode',
+        'visiblerules' => 'setVisiblerules'
     );
 
     public static function setters()
@@ -106,7 +109,8 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'html_code' => 'getHtmlCode'
+        'html_code' => 'getHtmlCode',
+        'visiblerules' => 'getVisiblerules'
     );
 
     public static function getters()
@@ -133,6 +137,7 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
         parent::__construct($data);
 
         $this->container['html_code'] = isset($data['html_code']) ? $data['html_code'] : null;
+        $this->container['visiblerules'] = isset($data['visiblerules']) ? $data['visiblerules'] : null;
     }
 
     /**
@@ -146,6 +151,9 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
         if ($this->container['html_code'] === null) {
             $invalid_properties[] = "'html_code' can't be null";
         }
+        if ($this->container['visiblerules'] === null) {
+            $invalid_properties[] = "'visiblerules' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -158,6 +166,9 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
     public function valid()
     {
         if ($this->container['html_code'] === null) {
+            return false;
+        }
+        if ($this->container['visiblerules'] === null) {
             return false;
         }
         return true;
@@ -181,6 +192,27 @@ class SurveyQuestionHtml extends SurveyQuestion implements ArrayAccess
     public function setHtmlCode($html_code)
     {
         $this->container['html_code'] = $html_code;
+
+        return $this;
+    }
+
+    /**
+     * Gets visiblerules
+     * @return \AnketologClient\Model\SurveyVisiblerule[]
+     */
+    public function getVisiblerules()
+    {
+        return $this->container['visiblerules'];
+    }
+
+    /**
+     * Sets visiblerules
+     * @param \AnketologClient\Model\SurveyVisiblerule[] $visiblerules
+     * @return $this
+     */
+    public function setVisiblerules($visiblerules)
+    {
+        $this->container['visiblerules'] = $visiblerules;
 
         return $this;
     }

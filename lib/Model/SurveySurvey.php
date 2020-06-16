@@ -14,7 +14,7 @@
 /**
  * Документация к Анкетолог API (beta-версия)
  *
- * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).
+ * ### Библиотеки для работы с API  * **PHP** https://github.com/anketolog/AnketologClient-php  ### Библиотеки на других языках  Вы можете самостоятельно сгенерировать библиотеку, [на любом доступном языке](https://github.com/swagger-api/swagger-codegen#api-clients), воспользовавшись [генератором](http://swagger.io/swagger-codegen). Конфигурационный файл можно скачать по [этой ссылке](https://anketolog.ru/api/external/v2/anketolog.yaml).  ### Работа с API  Работа с API осуществляется при помощи отправки POST-запросов на адрес:  ``` https://apiv2.anketolog.ru/{resource} ```  Необходимые параметры передаются в теле запроса в виде JSON-строки:  ``` {     \"survey_id\": \"ID опроса\" } ```  Для авторизации необходимо передать заголовок **X-Anketolog-ApiKey** в запросе:  ``` X-Anketolog-ApiKey: API_KEY ```  Ключ доступа к API можно получить в [разделе настроек](https://anketolog.ru/user/account/apikey).   ### Пример запроса  ``` curl -X POST \\   --header 'X-Anketolog-ApiKey: API_KEY' \\   -d '{\"survey_id\": \"ID опроса\"}' \\   'https://apiv2.anketolog.ru/survey/manage/info' ```  ### Webhook  Webhook – это уведомление сторонних приложений о событиях, произошедших на сайте anketolog.ru, путем отправки уведомлений. Во время возникновения события сервер посылает POST-запрос по адресу, который указан в URL. Настроить Webhook можно в [разделе настроек](https://anketolog.loc/user/account/apikey).  ### Webhook : Ответ на анкету  ``` action=new-answer data={     \"answer\": {         \"id\": 0,         \"survey_id\": 0,         \"revision_id\": 0,         \"start_date\": 0,         \"finish_date\": 0,         \"status\": \"v\",         \"collector\": {             \"type\": \"string\",             \"name\": \"string\",             \"swagger_type\": \"string\"         }   } } date=Fri, 26 Oct 2018 05:46:30 +0300 ```
  *
  * OpenAPI spec version: 2.0
  * 
@@ -77,9 +77,9 @@ class SurveySurvey implements ArrayAccess
         'is_locked' => 'int',
         'is_archive' => 'int',
         'revision_id' => 'int',
-        'personalpage' => '\AnketologClient\Model\SurveyPersonalPage',
         'meta' => '\AnketologClient\Model\SurveyMeta',
-        'settings' => '\AnketologClient\Model\SurveySettings'
+        'settings' => '\AnketologClient\Model\SurveySettings',
+        'folder' => '\AnketologClient\Model\SurveyFolder'
     );
 
     public static function swaggerTypes()
@@ -102,9 +102,9 @@ class SurveySurvey implements ArrayAccess
         'is_locked' => 'is_locked',
         'is_archive' => 'is_archive',
         'revision_id' => 'revision_id',
-        'personalpage' => 'personalpage',
         'meta' => 'meta',
-        'settings' => 'settings'
+        'settings' => 'settings',
+        'folder' => 'folder'
     );
 
     public static function attributeMap()
@@ -127,9 +127,9 @@ class SurveySurvey implements ArrayAccess
         'is_locked' => 'setIsLocked',
         'is_archive' => 'setIsArchive',
         'revision_id' => 'setRevisionId',
-        'personalpage' => 'setPersonalpage',
         'meta' => 'setMeta',
-        'settings' => 'setSettings'
+        'settings' => 'setSettings',
+        'folder' => 'setFolder'
     );
 
     public static function setters()
@@ -152,9 +152,9 @@ class SurveySurvey implements ArrayAccess
         'is_locked' => 'getIsLocked',
         'is_archive' => 'getIsArchive',
         'revision_id' => 'getRevisionId',
-        'personalpage' => 'getPersonalpage',
         'meta' => 'getMeta',
-        'settings' => 'getSettings'
+        'settings' => 'getSettings',
+        'folder' => 'getFolder'
     );
 
     public static function getters()
@@ -188,9 +188,9 @@ class SurveySurvey implements ArrayAccess
         $this->container['is_locked'] = isset($data['is_locked']) ? $data['is_locked'] : null;
         $this->container['is_archive'] = isset($data['is_archive']) ? $data['is_archive'] : null;
         $this->container['revision_id'] = isset($data['revision_id']) ? $data['revision_id'] : null;
-        $this->container['personalpage'] = isset($data['personalpage']) ? $data['personalpage'] : null;
         $this->container['meta'] = isset($data['meta']) ? $data['meta'] : null;
         $this->container['settings'] = isset($data['settings']) ? $data['settings'] : null;
+        $this->container['folder'] = isset($data['folder']) ? $data['folder'] : null;
     }
 
     /**
@@ -225,6 +225,9 @@ class SurveySurvey implements ArrayAccess
         if ($this->container['settings'] === null) {
             $invalid_properties[] = "'settings' can't be null";
         }
+        if ($this->container['folder'] === null) {
+            $invalid_properties[] = "'folder' can't be null";
+        }
         return $invalid_properties;
     }
 
@@ -258,6 +261,9 @@ class SurveySurvey implements ArrayAccess
             return false;
         }
         if ($this->container['settings'] === null) {
+            return false;
+        }
+        if ($this->container['folder'] === null) {
             return false;
         }
         return true;
@@ -475,27 +481,6 @@ class SurveySurvey implements ArrayAccess
     }
 
     /**
-     * Gets personalpage
-     * @return \AnketologClient\Model\SurveyPersonalPage
-     */
-    public function getPersonalpage()
-    {
-        return $this->container['personalpage'];
-    }
-
-    /**
-     * Sets personalpage
-     * @param \AnketologClient\Model\SurveyPersonalPage $personalpage
-     * @return $this
-     */
-    public function setPersonalpage($personalpage)
-    {
-        $this->container['personalpage'] = $personalpage;
-
-        return $this;
-    }
-
-    /**
      * Gets meta
      * @return \AnketologClient\Model\SurveyMeta
      */
@@ -533,6 +518,27 @@ class SurveySurvey implements ArrayAccess
     public function setSettings($settings)
     {
         $this->container['settings'] = $settings;
+
+        return $this;
+    }
+
+    /**
+     * Gets folder
+     * @return \AnketologClient\Model\SurveyFolder
+     */
+    public function getFolder()
+    {
+        return $this->container['folder'];
+    }
+
+    /**
+     * Sets folder
+     * @param \AnketologClient\Model\SurveyFolder $folder
+     * @return $this
+     */
+    public function setFolder($folder)
+    {
+        $this->container['folder'] = $folder;
 
         return $this;
     }
