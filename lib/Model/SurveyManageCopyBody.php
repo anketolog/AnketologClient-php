@@ -67,7 +67,8 @@ class SurveyManageCopyBody implements ArrayAccess
       */
     protected static $swaggerTypes = array(
         'survey_id' => 'int',
-        'name' => 'string'
+        'name' => 'string',
+        'folder_path' => 'string'
     );
 
     public static function swaggerTypes()
@@ -81,7 +82,8 @@ class SurveyManageCopyBody implements ArrayAccess
      */
     protected static $attributeMap = array(
         'survey_id' => 'survey_id',
-        'name' => 'name'
+        'name' => 'name',
+        'folder_path' => 'folder_path'
     );
 
     public static function attributeMap()
@@ -95,7 +97,8 @@ class SurveyManageCopyBody implements ArrayAccess
      */
     protected static $setters = array(
         'survey_id' => 'setSurveyId',
-        'name' => 'setName'
+        'name' => 'setName',
+        'folder_path' => 'setFolderPath'
     );
 
     public static function setters()
@@ -109,7 +112,8 @@ class SurveyManageCopyBody implements ArrayAccess
      */
     protected static $getters = array(
         'survey_id' => 'getSurveyId',
-        'name' => 'getName'
+        'name' => 'getName',
+        'folder_path' => 'getFolderPath'
     );
 
     public static function getters()
@@ -135,6 +139,7 @@ class SurveyManageCopyBody implements ArrayAccess
     {
         $this->container['survey_id'] = isset($data['survey_id']) ? $data['survey_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['folder_path'] = isset($data['folder_path']) ? $data['folder_path'] : null;
     }
 
     /**
@@ -210,6 +215,27 @@ class SurveyManageCopyBody implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets folder_path
+     * @return string
+     */
+    public function getFolderPath()
+    {
+        return $this->container['folder_path'];
+    }
+
+    /**
+     * Sets folder_path
+     * @param string $folder_path Папка в которую необходимо поместить анкету. Папка должна существовать. Пример: \"Мои анкеты\", \"Мои анкеты/Подпапка\"
+     * @return $this
+     */
+    public function setFolderPath($folder_path)
+    {
+        $this->container['folder_path'] = $folder_path;
 
         return $this;
     }

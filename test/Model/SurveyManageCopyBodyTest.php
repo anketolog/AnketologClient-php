@@ -111,4 +111,12 @@ class SurveyManageCopyBodyTest extends \PHPUnit_Framework_TestCase
 
     }
 
+    /**
+     * Test attribute "folder_path"
+     */
+    public function testPropertyFolderPath()
+    {
+
+    }
+
 }
