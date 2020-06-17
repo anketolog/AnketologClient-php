@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyFolderTest
+ * SurveyFilterCreateBody4Test
  *
  * PHP version 5
  *
@@ -42,17 +42,17 @@
 namespace AnketologClient;
 
 /**
- * SurveyFolderTest Class Doc Comment
+ * SurveyFilterCreateBody4Test Class Doc Comment
  *
  * @category    Class */
-// * @description Папка анкеты
+// * @description SurveyFilterCreateBody4
 /**
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyFolderTest extends \PHPUnit_Framework_TestCase
+class SurveyFilterCreateBody4Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -88,57 +88,25 @@ class SurveyFolderTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "SurveyFolder"
+     * Test "SurveyFilterCreateBody4"
      */
-    public function testSurveyFolder()
+    public function testSurveyFilterCreateBody4()
     {
 
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "folder_name"
      */
-    public function testPropertyName()
+    public function testPropertyFolderName()
     {
 
     }
 
     /**
-     * Test attribute "path"
+     * Test attribute "folder_path"
      */
-    public function testPropertyPath()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_rename"
-     */
-    public function testPropertyAllowRename()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_remove"
-     */
-    public function testPropertyAllowRemove()
-    {
-
-    }
-
-    /**
-     * Test attribute "allow_children"
-     */
-    public function testPropertyAllowChildren()
-    {
-
-    }
-
-    /**
-     * Test attribute "childrens"
-     */
-    public function testPropertyChildrens()
+    public function testPropertyFolderPath()
     {
 
     }

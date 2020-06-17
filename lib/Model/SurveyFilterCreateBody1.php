@@ -1,6 +1,6 @@
 <?php
 /**
- * SurveyFolder
+ * SurveyFilterCreateBody1
  *
  * PHP version 5
  *
@@ -44,35 +44,30 @@ namespace AnketologClient\Model;
 use \ArrayAccess;
 
 /**
- * SurveyFolder Class Doc Comment
+ * SurveyFilterCreateBody1 Class Doc Comment
  *
  * @category    Class */
- // @description Папка анкеты
 /** 
  * @package     AnketologClient
  * @author      http://github.com/swagger-api/swagger-codegen
  * @license     http://www.apache.org/licenses/LICENSE-2.0 Apache Licene v2
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class SurveyFolder implements ArrayAccess
+class SurveyFilterCreateBody1 implements ArrayAccess
 {
     /**
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'SurveyFolder';
+    protected static $swaggerModelName = 'SurveyFilterCreateBody_1';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = array(
-        'name' => 'string',
-        'path' => 'string',
-        'allow_rename' => 'bool',
-        'allow_remove' => 'bool',
-        'allow_children' => 'bool',
-        'childrens' => '\AnketologClient\Model\SurveyFolder[]'
+        'folder_name' => 'string',
+        'folder_path' => 'string'
     );
 
     public static function swaggerTypes()
@@ -85,12 +80,8 @@ class SurveyFolder implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = array(
-        'name' => 'name',
-        'path' => 'path',
-        'allow_rename' => 'allow_rename',
-        'allow_remove' => 'allow_remove',
-        'allow_children' => 'allow_children',
-        'childrens' => 'childrens'
+        'folder_name' => 'folder_name',
+        'folder_path' => 'folder_path'
     );
 
     public static function attributeMap()
@@ -103,12 +94,8 @@ class SurveyFolder implements ArrayAccess
      * @var string[]
      */
     protected static $setters = array(
-        'name' => 'setName',
-        'path' => 'setPath',
-        'allow_rename' => 'setAllowRename',
-        'allow_remove' => 'setAllowRemove',
-        'allow_children' => 'setAllowChildren',
-        'childrens' => 'setChildrens'
+        'folder_name' => 'setFolderName',
+        'folder_path' => 'setFolderPath'
     );
 
     public static function setters()
@@ -121,12 +108,8 @@ class SurveyFolder implements ArrayAccess
      * @var string[]
      */
     protected static $getters = array(
-        'name' => 'getName',
-        'path' => 'getPath',
-        'allow_rename' => 'getAllowRename',
-        'allow_remove' => 'getAllowRemove',
-        'allow_children' => 'getAllowChildren',
-        'childrens' => 'getChildrens'
+        'folder_name' => 'getFolderName',
+        'folder_path' => 'getFolderPath'
     );
 
     public static function getters()
@@ -150,12 +133,8 @@ class SurveyFolder implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['path'] = isset($data['path']) ? $data['path'] : null;
-        $this->container['allow_rename'] = isset($data['allow_rename']) ? $data['allow_rename'] : null;
-        $this->container['allow_remove'] = isset($data['allow_remove']) ? $data['allow_remove'] : null;
-        $this->container['allow_children'] = isset($data['allow_children']) ? $data['allow_children'] : null;
-        $this->container['childrens'] = isset($data['childrens']) ? $data['childrens'] : null;
+        $this->container['folder_name'] = isset($data['folder_name']) ? $data['folder_name'] : null;
+        $this->container['folder_path'] = isset($data['folder_path']) ? $data['folder_path'] : null;
     }
 
     /**
@@ -166,23 +145,11 @@ class SurveyFolder implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = array();
-        if ($this->container['name'] === null) {
-            $invalid_properties[] = "'name' can't be null";
+        if ($this->container['folder_name'] === null) {
+            $invalid_properties[] = "'folder_name' can't be null";
         }
-        if ($this->container['path'] === null) {
-            $invalid_properties[] = "'path' can't be null";
-        }
-        if ($this->container['allow_rename'] === null) {
-            $invalid_properties[] = "'allow_rename' can't be null";
-        }
-        if ($this->container['allow_remove'] === null) {
-            $invalid_properties[] = "'allow_remove' can't be null";
-        }
-        if ($this->container['allow_children'] === null) {
-            $invalid_properties[] = "'allow_children' can't be null";
-        }
-        if ($this->container['childrens'] === null) {
-            $invalid_properties[] = "'childrens' can't be null";
+        if ($this->container['folder_path'] === null) {
+            $invalid_properties[] = "'folder_path' can't be null";
         }
         return $invalid_properties;
     }
@@ -195,22 +162,10 @@ class SurveyFolder implements ArrayAccess
      */
     public function valid()
     {
-        if ($this->container['name'] === null) {
+        if ($this->container['folder_name'] === null) {
             return false;
         }
-        if ($this->container['path'] === null) {
-            return false;
-        }
-        if ($this->container['allow_rename'] === null) {
-            return false;
-        }
-        if ($this->container['allow_remove'] === null) {
-            return false;
-        }
-        if ($this->container['allow_children'] === null) {
-            return false;
-        }
-        if ($this->container['childrens'] === null) {
+        if ($this->container['folder_path'] === null) {
             return false;
         }
         return true;
@@ -218,127 +173,43 @@ class SurveyFolder implements ArrayAccess
 
 
     /**
-     * Gets name
+     * Gets folder_name
      * @return string
      */
-    public function getName()
+    public function getFolderName()
     {
-        return $this->container['name'];
+        return $this->container['folder_name'];
     }
 
     /**
-     * Sets name
-     * @param string $name Название
+     * Sets folder_name
+     * @param string $folder_name Название папки
      * @return $this
      */
-    public function setName($name)
+    public function setFolderName($folder_name)
     {
-        $this->container['name'] = $name;
+        $this->container['folder_name'] = $folder_name;
 
         return $this;
     }
 
     /**
-     * Gets path
+     * Gets folder_path
      * @return string
      */
-    public function getPath()
+    public function getFolderPath()
     {
-        return $this->container['path'];
+        return $this->container['folder_path'];
     }
 
     /**
-     * Sets path
-     * @param string $path Путь
+     * Sets folder_path
+     * @param string $folder_path Папка в которой необходимо создать папку.  Примеры: * \"Мои анкеты\" * \"Мои анкеты/Подпапка\"  Папка должна существовать.
      * @return $this
      */
-    public function setPath($path)
+    public function setFolderPath($folder_path)
     {
-        $this->container['path'] = $path;
-
-        return $this;
-    }
-
-    /**
-     * Gets allow_rename
-     * @return bool
-     */
-    public function getAllowRename()
-    {
-        return $this->container['allow_rename'];
-    }
-
-    /**
-     * Sets allow_rename
-     * @param bool $allow_rename Возможность переименовать папку
-     * @return $this
-     */
-    public function setAllowRename($allow_rename)
-    {
-        $this->container['allow_rename'] = $allow_rename;
-
-        return $this;
-    }
-
-    /**
-     * Gets allow_remove
-     * @return bool
-     */
-    public function getAllowRemove()
-    {
-        return $this->container['allow_remove'];
-    }
-
-    /**
-     * Sets allow_remove
-     * @param bool $allow_remove Возможность удалить папку
-     * @return $this
-     */
-    public function setAllowRemove($allow_remove)
-    {
-        $this->container['allow_remove'] = $allow_remove;
-
-        return $this;
-    }
-
-    /**
-     * Gets allow_children
-     * @return bool
-     */
-    public function getAllowChildren()
-    {
-        return $this->container['allow_children'];
-    }
-
-    /**
-     * Sets allow_children
-     * @param bool $allow_children Возможность создать подпапку
-     * @return $this
-     */
-    public function setAllowChildren($allow_children)
-    {
-        $this->container['allow_children'] = $allow_children;
-
-        return $this;
-    }
-
-    /**
-     * Gets childrens
-     * @return \AnketologClient\Model\SurveyFolder[]
-     */
-    public function getChildrens()
-    {
-        return $this->container['childrens'];
-    }
-
-    /**
-     * Sets childrens
-     * @param \AnketologClient\Model\SurveyFolder[] $childrens
-     * @return $this
-     */
-    public function setChildrens($childrens)
-    {
-        $this->container['childrens'] = $childrens;
+        $this->container['folder_path'] = $folder_path;
 
         return $this;
     }
